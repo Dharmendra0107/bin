@@ -1908,8 +1908,12 @@
         // Apply saved theme or default to light
         if (savedTheme === 'dark-mode') {
           applyTheme('dark-mode');
-        } else {
+        } else if (savedTheme === 'light-mode') {
           applyTheme('light-mode');
+        } else {
+          // Default to dark mode if no preference is saved
+          applyTheme('dark-mode');
+          localStorage.setItem('color-mode', 'dark-mode');
         }
 
         colorModeIcon.addEventListener('click', function () {
