@@ -1,0 +1,1934 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1">
+  <meta name="description"
+    content="Dharmendra Kumar Yadav - Full Stack Developer Portfolio. Passionate about crafting robust, scalable web applications with cutting-edge technologies.">
+  <meta name="author" content="Dharmendra Kumar Yadav">
+  <meta name="keywords"
+    content="Full Stack Developer, Web Developer, Software Engineer, JavaScript, Python, Java, HTML, CSS">
+  <title>DK | Portfolio - Full Stack Developer</title>
+  <link id='favicon' rel="shortcut icon" href="images/dlogo.png" type="image/x-png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/unicons.css">
+  <!--Sroll Animation-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://kit.fontawesome.com/27a24d1a74.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 does not require jQuery -->
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--for style in project section-->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="css/unicons.css">
+  
+  <link rel="stylesheet" href="css/aos.css">
+  
+  <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  
+  <!-- <link rel="stylesheet" href="css/nothingbutnav.css"> -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("dkmom00@gmail.com"); // Replace with your EmailJS user ID
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  <body>
+
+    <!--Global Particle Background-->
+    <div id="particles-js"></div>
+
+
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-sm navbar-light" data-aos="fade-down">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img class='uil' src="images/dklogo.png"> Dharmendra</a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link"><span data-hover="Home">Home</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link"><span data-hover="Skills">Skills</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#education" class="nav-link"><span data-hover="Education">Education</span></a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+            </li> -->
+            <li class="nav-item">
+              <a href="project.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#experiences" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#achievements" class="nav-link"><span data-hover="Achievements">Achievements</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <div class="ml-lg-4">
+            <div class="color-mode">
+              <i class="color-mode-icon" title="Toggle light/dark mode"></i>
+            </div>
+          </div>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="mainNavbarToggler">
+          <!-- Hamburger (menu) FontAwesome icon -->
+          <span class="navbar-toggler-icon" style="display:inline; font-size: 2rem;">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+          <!-- Close (X) FontAwesome icon -->
+          <span class="navbar-toggler-close" style="display:none; font-size:2rem; line-height:1;">
+            <i class="fa-solid fa-xmark"></i>
+          </span>
+        </button>
+        <style>
+          /* --- Modern Glassmorphism Project Card: Fixed Height for All Cards --- */
+          .projects .card.swiper-slide {
+            background: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border-radius: 2.2rem;
+            border: 2.5px solid rgba(255, 255, 255, 0.32);
+            transition: box-shadow 0.3s, background 0.3s, transform 0.25s;
+            overflow: hidden;
+            position: relative;
+            height: 410px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-bottom: 150px;
+          }
+
+          /* Modern hover effect for Projects cards (matches edu-list) */
+          .projects .card.swiper-slide {
+            transition: box-shadow 0.3s, transform 0.3s, background 0.3s, border 0.3s;
+          }
+
+          .projects .card.swiper-slide:hover {
+            background: rgba(255, 194, 0, 0.13);
+            box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+            transform: translateY(-6px) scale(1.03);
+            border: 2px solid #ffc200;
+          }
+
+          .projects .card.swiper-slide:hover .project-image img {
+            transform: scale(1.07) rotate(-1deg);
+          }
+
+          .projects .card .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2.2rem 2.2rem 0 2.2rem;
+            transition: transform 0.4s cubic-bezier(.39, .575, .56, 1);
+          }
+
+          .projects .card .image-content {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          .projects .card .project-content {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+
+          @media (max-width: 991px) {
+            .projects .card.swiper-slide {
+              height: 340px;
+            }
+
+            .projects .card .image-content {
+              height: 110px;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .projects .card.swiper-slide {
+              border-radius: 1.2rem;
+              height: 270px;
+            }
+
+            .projects .card .image-content {
+              height: 80px;
+            }
+          }
+        </style>
+        <script>
+          // Navbar toggler icon switch (hamburger <-> close) for Bootstrap 5
+          document.addEventListener('DOMContentLoaded', function () {
+            var toggler = document.getElementById('mainNavbarToggler');
+            var navCollapse = document.getElementById('navbarNav');
+            var icon = toggler.querySelector('.navbar-toggler-icon');
+            var closeIcon = toggler.querySelector('.navbar-toggler-close');
+            function updateCloseIconColor() {
+              var closeFa = closeIcon.querySelector('i');
+              var menuFa = icon.querySelector('i');
+              if (document.body.classList.contains('dark-mode')) {
+                closeIcon.style.color = '#fff';
+                if (closeFa) closeFa.style.color = '#fff';
+                if (menuFa) menuFa.style.color = '#212121';
+              } else {
+                closeIcon.style.color = '#212121';
+                if (closeFa) closeFa.style.color = '#212121';
+                if (menuFa) menuFa.style.color = '#212121';
+              }
+            }
+            if (toggler && navCollapse && icon && closeIcon) {
+              navCollapse.addEventListener('show.bs.collapse', function () {
+                icon.style.display = 'none';
+                closeIcon.style.display = 'inline';
+                updateCloseIconColor();
+              });
+              navCollapse.addEventListener('hide.bs.collapse', function () {
+                icon.style.display = 'inline';
+                closeIcon.style.display = 'none';
+                updateCloseIconColor();
+              });
+            }
+            // Also update color on theme toggle
+            var colorModeIcon = document.querySelector('.color-mode-icon');
+            if (colorModeIcon) {
+              colorModeIcon.addEventListener('click', function () {
+                setTimeout(updateCloseIconColor, 250);
+              });
+            }
+          });
+        </script>
+        <style>
+          .navbar-toggler-close {
+            color: #ffc200;
+            font-weight: bold;
+            background: none;
+            border: none;
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            z-index: 10001;
+            cursor: pointer;
+          }
+
+          @media (min-width: 576px) {
+            .navbar-toggler-close {
+              display: none !important;
+            }
+          }
+        </style>
+        <script>
+          // Navbar toggler icon switch (hamburger <-> close)
+          document.addEventListener('DOMContentLoaded', function () {
+            var toggler = document.getElementById('mainNavbarToggler');
+            var navCollapse = document.getElementById('navbarNav');
+            var icon = toggler.querySelector('.navbar-toggler-icon');
+            var closeIcon = toggler.querySelector('.navbar-toggler-close');
+            if (toggler && navCollapse && icon && closeIcon) {
+              toggler.addEventListener('click', function () {
+                setTimeout(function () {
+                  var isOpen = navCollapse.classList.contains('show');
+                  if (isOpen) {
+                    icon.style.display = 'none';
+                    closeIcon.style.display = 'inline';
+                  } else {
+                    icon.style.display = 'inline';
+                    closeIcon.style.display = 'none';
+                  }
+                }, 10);
+              });
+            }
+          });
+        </script>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+
+
+
+    <!-- home section start -->
+    <section class="home full-screen d-lg-flex justify-content-center align-items-center" id="home">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+            <div class="home-text" data-aos="fade-right">
+              <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+              <h1 class="animated animated-text">
+                <span class="mr-2">Hi folk, I'm</span>
+                <span class="name-dk">Dharmendra</span><br>
+                <div class="animated-info">
+                  <span class="animated-item">Full Stack Developer</span>
+                  <span class="animated-item">Software Engineer</span>
+                </div>
+              </h1>
+
+              <h6 class="intro">Passionate Full Stack Developer dedicated to crafting robust, scalable web applications
+                with cutting-edge technologies. Specializing in end-to-end development from intuitive frontend
+                interfaces
+                to powerful backend architectures that drive exceptional user experiences.</h6>
+
+              <div class="custom-btn-group mt-4">
+                <a href="https://drive.google.com/file/d/1GBBDEjphBzie9Gexl8zA13Oo2CB1baRy/view?usp=drive_link"
+                  class="btn mr-lg-2 custom-btn" target="blank"><i class='uil uil-file-alt'></i>Resume</a>
+                <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-12">
+            <div class="home-image png" data-aos="fade-left">
+              <img src="images/dkplogo.png" class="img-fluid" alt="about image">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- home section end -->
+
+
+
+    <!-- home-cards section start -->
+    <section class="home-cards">
+      <div class="modern-card-container">
+        <div class="modern-card" data-aos="fade-right" >
+          <div class="modern-card-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="modern-card-content">
+            <h6 class="modern-card-title">Highlight</h6>
+            <h3 class="modern-card-header">Graduate B Tech</h3>
+            <p>Computer Science and Engineering<br>Batch 2021 - 2025</p>
+            <span class="modern-card-badge">AKTU</span>
+            <div class="modern-card-links">
+              <a href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin" target="_blank"
+                aria-label="LinkedIn"></a>
+              <a href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
+            </div>
+          </div>
+        </div>
+        <div class="modern-card" data-aos="zoom-in">
+          <div class="modern-card-icon">
+            <i class="fa-brands fa-laravel"></i>
+          </div>
+          <div class="modern-card-content">
+            <h6 class="modern-card-title">Currently Working</h6>
+            <h3 class="modern-card-header">Laravel Web Application</h3>
+            <p>Intermediate Level • Real-World Project<br>E Commerce Efficient Solutions</p>
+            <span class="modern-card-badge">Fullstack</span>
+            <div class="modern-card-links">
+              <a href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin" target="_blank"
+                aria-label="LinkedIn"></a>
+              <a href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
+            </div>
+          </div>
+        </div>
+        <div class="modern-card" data-aos="fade-left">
+          <div class="modern-card-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="modern-card-content">
+            <h6 class="modern-card-title">Ongoing Project</h6>
+            <h3 class="modern-card-header">Quiz App</h3>
+            <p>A Project based on MERN<br>Building... (details soon)</p>
+            <span class="modern-card-badge">In Progress</span>
+            <div class="modern-card-links">
+              <a href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin" target="_blank"
+                aria-label="LinkedIn"></a>
+              <a href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .modern-card-container {
+          display: flex;
+          gap: 2.2rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .modern-card {
+          background: transparent;
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+          border-radius: 2.2rem;
+          border: 2.5px solid rgba(255, 255, 255, 0.32);
+          transition: box-shadow 0.3s, background 0.3s, transform 0.25s, border 0.3s;
+          overflow: hidden;
+          position: relative;
+          width: 340px;
+          min-height: 340px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .modern-card:hover {
+          box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+          transform: translateY(-8px) scale(1.04);
+          border: 2.5px solid #ffc200;
+        }
+
+        .modern-card-icon {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1.2rem;
+          box-shadow: 0 4px 18px 0 #ffc20033;
+          border: 3px solid #ffc200cc;
+          position: relative;
+          z-index: 2;
+          transition: box-shadow 0.3s, border 0.3s;
+        }
+
+        .modern-card:hover .modern-card-icon {
+          box-shadow: 0 8px 32px 0 #ffc20099;
+          border: 3px solid #fff;
+        }
+
+        .modern-card-icon i {
+          font-size: 2.5rem;
+          color: #fff;
+          text-shadow: 0 2px 8px #0007;
+          transition: color 0.3s, transform 0.3s;
+        }
+
+        .modern-card:hover .modern-card-icon i {
+          color: #ffc200;
+          transform: scale(1.15) rotate(-8deg);
+        }
+
+        .modern-card-content {
+          text-align: center;
+          color: #fff;
+          flex: 1 1 auto;
+        }
+
+        .modern-card-title {
+          font-size: 1.05rem;
+          font-weight: 600;
+          color: #ffc200;
+          margin-bottom: 0.3rem;
+          letter-spacing: 0.5px;
+        }
+
+        .modern-card-header {
+          font-size: 1.45rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          color: #fff;
+        }
+
+        .modern-card-content p {
+          font-size: 1.05rem;
+          color: #eaeaea;
+          margin-bottom: 0.7rem;
+        }
+
+        .modern-card-badge {
+          display: inline-block;
+          background: linear-gradient(90deg, #ffc200 60%, #ffb300 100%);
+          color: #232323;
+          font-weight: 700;
+          border-radius: 1.2rem;
+          padding: 0.3rem 1.1rem;
+          font-size: 0.95rem;
+          margin-bottom: 0.7rem;
+          margin-top: 0.2rem;
+          box-shadow: 0 2px 8px #ffc20033;
+        }
+
+        .modern-card-links {
+          margin-top: 0.7rem;
+        }
+
+        .modern-card-links a {
+          color: #ffc200;
+          font-size: 1.5rem;
+          margin: 0 0.5rem;
+          transition: color 0.2s, transform 0.2s;
+        }
+
+        .modern-card-links a:hover {
+          color: #fff;
+          transform: scale(1.18);
+        }
+
+        @media (max-width: 991px) {
+          .modern-card-container {
+            gap: 1.2rem;
+          }
+
+          .modern-card {
+            width: 90vw;
+            min-width: 220px;
+            max-width: 340px;
+            min-height: 260px;
+            padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .modern-card-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.1rem;
+          }
+
+          .modern-card {
+            width: 98vw;
+            min-width: 180px;
+            max-width: 99vw;
+            min-height: 180px;
+            padding: 1.1rem 0.5rem 0.5rem 0.5rem;
+          }
+        }
+      </style>
+    </section>
+    <!-- home-cards section end -->
+
+
+
+
+
+    <!-- ABOUT ME start -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="sectionhead">
+          <h1 data-aos="fade-up"><i class="fa-solid fa-user-graduate"></i> About <span class="glitch"
+              data-text="Me">Me</span></h1>
+        </div>
+        <div class="box flex-direction">
+          <div class="about-me" data-aos="fade-right">
+            <img src="images/dkabout.png" alt="About Me Image" />
+          </div>
+          <div class="about-details">
+            <p data-aos="fade-left">
+              I’m <strong>Dharmendra Kumar Yadav</strong>, a passionate and goal-oriented Computer Science graduate from
+              <strong>Dr. A.P.J. Abdul Kalam Technical University</strong>. With hands-on experience in full-stack web
+              development,
+              I specialize in building secure, scalable, and responsive applications using technologies like
+              <strong>Django, REST APIs, HTML/CSS, Bootstrap</strong>, and modern frontend tools.
+            </p>
+
+            <h6 data-aos="fade-left">Full Stack Developer (Python + Django):</h6>
+            <p data-aos="fade-left">
+              From backend logic using <strong>Python & Django</strong> to frontend design using <strong>HTML, CSS, and
+                Bootstrap</strong>,
+              I develop complete web solutions. I’ve built real-time systems such as an <em>Online Admission System</em>
+              and a responsive
+              <em>Portfolio Website</em>, focusing on clean architecture, CRUD operations, and seamless deployment.
+            </p>
+
+            <h6 data-aos="fade-left">Innovation & Growth:</h6>
+            <p data-aos="fade-left">
+              During my internship at <strong>Softpro India</strong>, I delivered over 2 full-stack projects and earned
+              the
+              <em>“Outstanding Intern”</em> award. I'm also fascinated by AI/ML integration and automation, constantly
+              exploring
+              new areas like <strong>JWT authentication</strong>, <strong>cloud deployment</strong>, and <strong>data
+                analytics</strong>.
+            </p>
+
+            <h6 data-aos="fade-left">
+              Committed to continuous learning, clean coding practices, and building digital solutions that drive
+              impact. <div class="mt-1"></div>
+              </br>
+              Let’s connect and build something amazing together!
+            </h6>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <!-- ABOUT ME end -->
+
+
+
+
+    <!-- skills section starts -->
+    <section class="skills" id="skills">
+      <div class="container mb-5">
+        <div class="col-lg-11 text-center mx-auto col-12">
+          <div class="sectionhead">
+            <h1 data-aos="fade-up"><i class="fa-solid fa-code"></i> Skills & <span>Abilities</span></h1>
+          </div>
+          <p data-aos="fade-up">Explore my toolkit! This section showcases the languages, frameworks, and tools that
+            empower my creative and technical journey. Each skill is a building block in crafting innovative solutions
+            and seamless user experiences.</p>
+          <div class="tech-visualization">
+            <div class="w-100 text-center" data-aos="fade-up">
+              <h3 style="letter-spacing:1px;
+                display:inline-block; color: #e6a204d7;">Languages</h3>
+            </div>
+            <div class="tech-bubble" data-tech="python" data-aos="fade-right">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-bubble" data-tech="java" data-aos="flip-left">
+              <i class="fab fa-java"></i>
+              <span>Java</span>
+            </div>
+            <div class="tech-bubble" data-tech="php" data-aos="fade-left">
+              <i class="fab fa-php"></i>
+              <span>PHP</span>
+            </div>
+
+            <div class="w-100 text-center" data-aos="fade-up">
+              <h3 style="letter-spacing:1px;display:inline-block; color: #e6a204d7;">Frameworks & Libraries</h3>
+            </div>
+            <div class="tech-bubble" data-tech="django" data-aos="fade-right">
+              <i class="fab fa-python"></i>
+              <span>Django</span>
+            </div>
+            <div class="tech-bubble" data-tech="laravel" data-aos="flip-left">
+              <i class="fab fa-laravel"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="tech-bubble" data-tech="mern" data-aos="flip-left">
+              <i class="fab fa-react"></i>
+              <span>MERN</span>
+            </div>
+            <div class="tech-bubble" data-tech="bootstrap" data-aos="flip-left">
+              <i class="fab fa-bootstrap"></i>
+              <span>Bootstrap</span>
+            </div>
+            <div class="tech-bubble" data-tech="tailwind" data-aos="fade-left">
+              <i class="fa-solid fa-wind"></i>
+              <span>Tailwind</span>
+            </div>
+
+            <div class="w-100 text-center" data-aos="fade-up">
+              <h3 style="letter-spacing:1px;
+                display:inline-block;color: #e6a204d7;">
+                Databases</h3>
+            </div>
+            <div class="tech-bubble" data-tech="mysql" data-aos="fade-right">
+              <i class="fas fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-bubble" data-tech="sqlite" data-aos="flip-left">
+              <i class="fas fa-database"></i>
+              <span>SQLite</span>
+            </div>
+            <div class="tech-bubble" data-tech="mongodb" data-aos="fade-left">
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </div>
+
+            <div class=" w-100 text-center" data-aos="fade-up">
+              <h3 style="letter-spacing:1px;
+                display:inline-block;color: #e6a204d7;">
+                Tools & Platforms</h3>
+            </div>
+            <div class="tech-bubble" data-tech="git" data-aos="fade-right">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-bubble" data-tech="github" data-aos="flip-left">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </div>
+            <div class="tech-bubble" data-tech="docker" data-aos="flip-left">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+            <div class="tech-bubble" data-tech="api" data-aos="fade-left">
+              <i class="fa-solid fa-plug"></i>
+              <span>API</span>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col">
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fab fa-java"></i>
+                  <span>Java</span>
+                  <span>85%</span>
+                </div>
+                <div class="line java"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fa-solid fa-paintbrush"></i>
+                  <span>Canva</span>
+                  <span>80%</span>
+                </div>
+                <div class="line cpp"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fab fa-html5"></i>
+                  <span>HTML/CSS</span>
+                  <span>90%</span>
+                </div>
+                <div class="line html"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fas fa-c"></i>
+                  <span>C Language</span>
+                  <span>90%</span>
+                </div>
+                <div class="line c"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fas fa-database"></i>
+                  <span>Bootstrap</span>
+                  <span>80%</span>
+                </div>
+                <div class="line content"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="bar" data-aos="fade-left">
+                <div class="info">
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                  <span>65%</span>
+                </div>
+                <div class="line python"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-left">
+                <div class="info">
+                  <i class="fab fa-react"></i>
+                  <span>Graphics Designing</span>
+                  <span>75%</span>
+                </div>
+                <div class="line graphics"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-left">
+                <div class="info">
+                  <i class="fab fa-microsoft"></i>
+                  <span>Microsoft Office Suite</span>
+                  <span>80%</span>
+                </div>
+                <div class="line msoffice"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-left">
+                <div class="info">
+                  <i class="fa-solid fa-list-check"></i>
+                  <span>Project Management</span>
+                  <span>85%</span>
+                </div>
+                <div class="line project"></div>
+              </div>
+
+              <div class="bar" data-aos="fade-right">
+                <div class="info">
+                  <i class="fab fa-google cloud"></i>
+                  <span>Tailwind CSS</span>
+                  <span>60%</span>
+                </div>
+                <div class="line gcp"></div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <style>
+        .tech-visualization {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2.2rem;
+          margin-top: 1.5rem;
+        }
+
+        .tech-bubble {
+          background: transparent;
+          border: 2.5px solid rgba(255, 255, 255, 0.32);
+          border-radius: 2rem;
+          box-shadow: 0 4px 24px 0 #0003;
+          width: 120px;
+          height: 120px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: box-shadow 0.3s, background 0.3s, transform 0.25s, border 0.3s;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          padding: 0;
+        }
+
+
+
+        .tech-bubble:hover {
+          box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+          transform: translateY(-8px) scale(1.04);
+          border: 2.5px solid #ffc200;
+        }
+
+
+        .tech-bubble i {
+          font-size: 2.8rem;
+          color: #ffc200;
+          margin-bottom: 0.7rem;
+          filter: drop-shadow(0 2px 8px #0006);
+          transition: color 0.2s;
+        }
+
+        .tech-bubble span {
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          text-shadow: 0 1px 4px #0007;
+        }
+
+        @media (max-width: 767px) {
+          .tech-visualization {
+            gap: 1.1rem;
+          }
+
+          .tech-bubble {
+            min-width: 90px;
+            min-height: 90px;
+            padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+          }
+
+          .tech-bubble i {
+            font-size: 2rem;
+          }
+
+          .tech-bubble span {
+            font-size: 0.95rem;
+          }
+        }
+      </style>
+    </section>
+    <!-- skills section ends -->
+
+
+
+    <!--Education Section Starts-->
+    <section class="education" id="education">
+      <div class="container">
+        <div class="col-lg-11 text-center mx-auto col-12">
+          <div class="sectionhead">
+            <h1 data-aos="fade-up"><i class="fa-solid fa-graduation-cap"></i> </i> Education & <span>Trainings</span>
+            </h1>
+          </div>
+          <p data-aos="fade-up">A journey of learning and growth! Here you'll find my academic milestones and
+            professional trainings that have shaped my expertise and fueled my passion for technology.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 m-15px-tb">
+            <h2 class="heading-text" style="text-align:center;" data-aos="fade-up">Education</h2>
+            <div class="edu-list" data-aos="fade-right">
+              <div class="edu-content">
+                <h2>SVN institute of Engineering and Technology </h2>
+                <h3>2022-2026</h3>
+                <p class="position"><b>Bachelor of Technology</b></p>
+                <p class="Organisation">Dr. A. P. J. Abdul Kalam Technical University (AKTU)</p>
+              </div>
+            </div>
+            <div class="edu-list" data-aos="fade-right">
+              <div class="edu-content">
+                <h2>MDM Public Inter College, Lucknow </h2>
+                <h3>2020-2021</h3>
+                <p class="position"><b>Intermediate</b></p>
+                <p class="Organisation">UP Board</p>
+              </div>
+            </div>
+            <div class="edu-list" data-aos="fade-right">
+              <div class="edu-content">
+                <h2>MDM Public Inter College, Lucknow </h2>
+                <h3>2018-2019</h3>
+                <p><b>Hight School</b></p>
+                <p class="Organisation">UP Board</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 m-15px-tb">
+            <h2 class="heading-text" style="text-align:center;" data-aos="fade-up">Trainings</h2>
+            <div class="edu-list" data-aos="fade-left">
+              <div class="edu-content">
+                <h2>ICT Academy</h2>
+                <h3>February 2025 - March 2025</h3>
+                <p>Java Developer Training</p>
+                <p>Fullstack Development with Java</p>
+              </div>
+            </div>
+            <div class="edu-list" data-aos="fade-left">
+              <div class="edu-content">
+                <h2>Softpro India</h2>
+                <h3>July 2024 - september 2024</h3>
+                <p>Django Training</p>
+                <p>Fullstack Development with Python</p>
+              </div>
+            </div>
+            <div class="edu-list" data-aos="fade-left">
+              <div class="edu-content">
+                <h2>Job simulation in IAM with Tata Consultancy Services</h2>
+                <h3>Fabruary 2024</h3>
+                <p>Cybersecurity</p>
+                <p>Effective communication and Presentation Training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        /* Modern hover effect for Education & Trainings section */
+        .edu-list {
+          transition: box-shadow 0.3s, transform 0.3s, background 0.3s, border 0.3s;
+          border-radius: 1.2rem;
+          background: rgba(255, 255, 255, 0.08);
+          box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+          border: 1.5px solid rgba(255, 255, 255, 0.18);
+          margin-bottom: 18px;
+        }
+
+        .edu-list:hover {
+          background: rgba(255, 194, 0, 0.13);
+          box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+          transform: translateY(-6px) scale(1.03);
+          border: 2px solid #ffc200;
+        }
+      </style>
+    </section>
+    <!--Education Section Ends-->
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects py-5">
+      <div class="container">
+
+        <!-- Heading -->
+        <div class="col-lg-10 mx-auto text-center mb-5">
+          <div class="sectionhead" data-aos="fade-up">
+            <h1><i class="fa-solid fa-brain"></i> <span> Projects</span></h1>
+          </div>
+          <p class="mt-3" data-aos="fade-up">
+            Discover my digital canvas! This project section unveils my creative odyssey, where
+            ideas morph into reality. From code symphonies to design poetry, each project narrates a story of
+            innovation and precision. Welcome to my realm of creation!
+          </p>
+        </div>
+
+        <!-- Bootstrap Carousel -->
+        <div id="projectsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"
+          data-bs-pause="hover" data-aos="zoom-in">
+
+          <!-- Carousel Indicators (Navigation Dots) -->
+          <div class="carousel-indicators" style="margin-bottom: -30px;">
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner" style="overflow:visible;">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="overflow:visible;">
+              <div class="row g-4" style="overflow:visible;">
+                <!-- Project 1 -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/1Portfolio web.png" alt="Portfolio Website">
+                    <div class="card-body">
+                      <h5 class="card-title">Portfolio Website</h5>
+                      <p class="card-text">A personal portfolio site showcasing my skills, projects, and achievements.
+                        Built with HTML, CSS, and JavaScript for a modern, responsive experience.</p>
+                      <div>
+                        <a href="#" target="_blank" class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="#" target="_blank"><button class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/2Food web.png" alt="Hotel Website">
+                    <div class="card-body">
+                      <h5 class="card-title">Hotel Website</h5>
+                      <p class="card-text">A restaurant and food services website with menu, recipes, and booking.
+                        Responsive design using Bootstrap and custom CSS. Focuses on user-friendly navigation and
+                        engaging visuals.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/Hotel_Web"><button class="button"><i
+                              class="fa-brands fa-github"></i> Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project: Age Calculator -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/11age_calculator.png" alt="Age Calculator">
+                    <div class="card-body">
+                      <h5 class="card-title">Age Calculator</h5>
+                      <p class="card-text">A web app to calculate age in years, months, and days from date of birth.
+                        Features a clean, animated UI with modern design. Built with HTML, CSS, and JavaScript for
+                        instant results.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/age_calculater/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/age_calculater" target="_blank"><button
+                            class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="overflow:visible;">
+              <div class="row g-4" style="overflow:visible;">
+                <!-- Project: Blogger Website -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/9BloggerWebsite.png" alt="Blogger Website">
+                    <div class="card-body">
+                      <h5 class="card-title">Blogger Website</h5>
+                      <p class="card-text">A blogging platform with post creation, categories, and archives. Includes a
+                        modern UI, navigation. Responsive and interactive for seamless
+                        reading and writing.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank"><button
+                            class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project: BMI Calculator -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/5BMI calculator.png" alt="BMI Calculator">
+                    <div class="card-body">
+                      <h5 class="card-title">BMI Calculator</h5>
+                      <p class="card-text">Calculate your Body Mass Index (BMI) based on height and weight. Instantly
+                        shows results and provides a BMI weight guide. Simple, user-friendly interface for quick health
+                        checks.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/BMI_calculator/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/BMI_calculator" target="_blank"><button
+                            class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project: Clinic Website -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/10ClinicWebsite.png" alt="Clinic Website">
+                    <div class="card-body">
+                      <h5 class="card-title">Clinic Website</h5>
+                      <p class="card-text">A hospital website for appointments, services, and doctor info. Features
+                        sections for doctors, patient portal, and FAQs. Modern design with easy navigation and
+                        healthcare focus.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/clinic/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/clinic" target="_blank"><button class="button"><i
+                              class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="overflow:visible;">
+              <div class="row g-4" style="overflow:visible;">
+                <!-- Project: Travel Fun -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/8Travelling web.png" alt="Travel Fun">
+                    <div class="card-body">
+                      <h5 class="card-title">Travel Fun</h5>
+                      <p class="card-text">A travel website to explore destinations and plan your trips. Includes flight
+                        and stay search, destination highlights, and booking. Vibrant visuals and interactive features
+                        for travel lovers.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/Travel_Fun/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/Travel_Fun" target="_blank"><button class="button"><i
+                              class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project: Weather App -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/4Weather.png" alt="Weather App">
+                    <div class="card-body">
+                      <h5 class="card-title">Weather App</h5>
+                      <p class="card-text">A weather app to get real-time updates for any city. Search by city or use
+                        location access for local weather. Modern UI with icons, temperature, and weather details.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank"><button
+                            class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Project: Simple Calculator -->
+                <div class="col-md-4 col-sm-6">
+                  <div class="card">
+                    <img src="images/project/3Calculator.png" alt="Simple Calculator">
+                    <div class="card-body">
+                      <h5 class="card-title">Simple Calculator</h5>
+                      <p class="card-text">A basic calculator for arithmetic operations like +, -, ×, ÷. Clean interface
+                        with instant calculation and clear/delete options. Built for quick, everyday math tasks in the
+                        browser.</p>
+                      <div>
+                        <a href="https://dharmendra0107.github.io/Simple_Calculator/" target="_blank"
+                          class="btn btn-primary btn-sm">
+                          <i class="fa-solid fa-up-right-from-square"></i> View
+                        </a>
+                        <a href="https://github.com/Dharmendra0107/Simple_Calculator" target="_blank"><button
+                            class="button"><i class="fa-brands fa-github"></i>
+                            Details</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev" data-aos="zoom-in">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next" data-aos="zoom-in ">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+
+        <style>
+          /* --- Modern Glassmorphism Project Card: Fixed Height for All Cards --- */
+          .projects .card {
+            background: rgba(255, 255, 255, 0);
+            border-radius: 1.6rem;
+            border: 2px solid rgba(255, 255, 255, 0.32);
+            overflow: hidden;
+            height: 460px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.28s cubic-bezier(.4, 1.4, .6, 1), box-shadow 0.28s, border 0.28s;
+          }
+
+          .projects .card:hover {
+            border: 2px solid #ffb300;
+            transform: scale(1.045);
+            box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
+            z-index: 2;
+          }
+
+          .projects .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            flex-shrink: 0;
+            padding: 10px;
+            border-radius: 1.6rem;
+          }
+
+          .projects .card .card-body {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+          }
+
+          .projects .card .card-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+          }
+
+          .projects .card .card-text {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+          }
+
+          .projects .card .btn,
+          .projects .card .button {
+            border-radius: 12px;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            transition: all 0.3s ease;
+          }
+
+
+
+          /* --- Responsive Adjustments --- */
+          @media (max-width: 991px) {
+            .projects .card {
+              height: 340px;
+            }
+
+            .projects .card img {
+              height: 140px;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .projects .card {
+              border-radius: 1rem;
+              height: 270px;
+            }
+
+            .projects .card img {
+              height: 100px;
+            }
+          }
+
+          .carousel-control-prev {
+            left: -30px;
+            top: 200px;
+
+          }
+
+          .carousel-control-next {
+            right: -30px;
+            top: 200px;
+
+          }
+        </style>
+    </section>
+    <!-- Projects Section Ends -->
+
+
+
+
+
+    <!-- Experience Section start-->
+    <section class="experience" id="experiences">
+      <div class="container">
+        <div class="col-lg-11 text-center mx-auto col-12">
+          <div class="sectionhead">
+            <h1 data-aos="fade-up"><i class="fa-solid fa-briefcase"></i> Jobs <span> & Internships</span></h1>
+          </div>
+          <p data-aos="fade-up">From internships to impactful roles, this section highlights my professional
+            journey—where every job and internship has contributed to my growth, skills, and real-world experience.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8 col-md-10 col-12 m-15px-tb d-flex justify-content-center">
+          <div class="experience-box w-100" style="max-width:700px; margin:0 auto;">
+            <ul>
+
+              <li data-aos="fade-left">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <span class="time">June 2025 - August 2025</span>
+                <h5>MERN Devoloper Intern</h5>
+                <div class="company-name"><strong>Company:</strong> Softpro India</div>
+                <p>Designed and developed a full-stack quiz application, delivering a seamless user experience and
+                  implementing an
+                  efficient, scalable backend architecture.
+                  Built dedicated student and admin panels, enabling role-based access, quiz management, and performance
+                  tracking.</p>
+              </li>
+
+
+              <li data-aos="fade-right">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <span class="time">Sep 2023 to Jan 2024
+                </span>
+                <h5>Drop shipping and Digital Marketing Intern
+                </h5>
+                <div class="company-name"><strong>Company:</strong> Digital Heroes</div>
+                <p>I specialize in website development and design using Shopify. This includes managing the backend,
+                  designing the front end, adding features, and more. I'm dedicated, eager to learn, and thrive on
+                  new
+                  challenges.</p>
+              </li>
+
+              <li data-aos="fade-left">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <span class="time">May 2022 to Jun 2022
+                </span>
+                <h5>Digital Marketing Intern
+                </h5>
+                <div class="company-name"><strong>Company:</strong> Hamari Pahchan NGO</div>
+                <p>Successfully crafted compelling content for diverse social media platforms, boosting brand
+                  presence
+                  and engagement. Orchestrated effective crowdfunding initiatives through persuasive storytelling,
+                  surpassing fundraising objectives. Implemented strategic digital marketing campaigns across
+                  various
+                  channels, amplifying website traffic and conversion rates. Produced visually captivating posters
+                  and
+                  graphics to bolster marketing efforts and promotional endeavors.</p>
+              </li>
+
+
+              <!-- <li data-aos="fade-right">
+                  <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <span class="time">May 2022 to Jun 2022</span>
+                  <h5>Brand Promotion - Let Us Do It For You</h5>
+                  <p>Implemented robust digital marketing strategies to enhance brand visibility and boost online
+                    presence. Established key partnerships to broaden market outreach and seize new business
+                    prospects.
+                    Conducted thorough market research and competitor analysis to stay ahead of industry trends,
+                    facilitating the development of cutting-edge marketing solutions.
+                  </p>
+                </li> -->
+
+
+              <!-- <li data-aos="fade-left">
+                  <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <span class="time">DEC 2022 - FEB 2023</span>
+                  <h5>INTERNSHALA STUDENT PARTNER - 32,33 - INTERNSHALA</h5>
+                  <p>Internshala Student Partner Program is a 45-day transformational journey in which I shall help my
+                    college mates to meet their career goals.</p>
+                </li> -->
+
+
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- <div class="col-lg-6 m-15px-tb">
+            <div class="experience-box">
+              <ul>
+
+
+              </ul>
+            </div>
+          </div> -->
+
+
+      </div>
+      </div>
+      <style>
+        .company-name {
+          color: #fff;
+          font-weight: 600;
+          margin-bottom: 4px;
+          margin-top: 2px;
+          letter-spacing: 0.2px;
+        }
+
+        body:not(.dark-mode) .company-name {
+          color: #232323;
+        }
+      </style>
+    </section>
+    <!-- Experience Section end-->
+
+
+
+
+
+    <!--Achievements and Certifications start-->
+
+    <section class="achievements" id="achievements">
+      <div class="container">
+        <div class="col-lg-11 text-center mx-auto col-12">
+          <div class="sectionhead">
+            <h1 data-aos="fade-up"><i class="fa-solid fa-medal"></i> Achievements & <span>Certifications</span></h1>
+          </div>
+          <p data-aos="fade-up">Celebrating milestones! This section features my achievements and certifications—each a
+            testament to dedication, learning, and a drive for excellence in the tech world.</p>
+
+          <div class="box-container row" id="achievementsContainer">
+            <!-- First 3 Certificates Always Visible -->
+            <div class="box achievement-item" data-aos="zoom-in">
+              <img src="images/certificates/1_Coursera Foundations of User Experience (UX) Design.jpg">
+              <button class="read-more"
+                data-url="images/certificates/1_Coursera Foundations of User Experience (UX) Design.pdf"
+                data-title="Foundations of User Experience (UX) Design - Google"
+                data-description="Master the fundamental principles and methodologies essential for crafting intuitive and impactful user experiences in the Foundations of User Experience (UX) Design course.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item" data-aos="zoom-in">
+              <img src="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.jpg">
+              <button class="read-more" data-url="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.pdf"
+                data-title="Cybersecurity Analyst Job Simulation - TATA"
+                data-description="Hands-on tasks encompassing Identity and Access Management (IAM) fundamentals, strategy assessment, custom solution crafting, and platform integration, essential for a Cybersecurity Analyst role.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item" data-aos="zoom-in">
+              <img src="images/certificates/3_TCS soft skill  Dharmendra Yadav.jpg">
+              <button class="read-more" data-url="images/certificates/3_TCS soft skill  Dharmendra Yadav.pdf"
+                data-title="TCS ION Career Edge Young Professional - TCS"
+                data-description="Master essential professional competencies and career readiness with TCS ION Career Edge Young Professional.">Read
+                More</button>
+            </div>
+
+            <!-- Remaining Certificates Initially Hidden on Mobile -->
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/4_Coursera Create a Website Using Wordpress.jpg">
+              <button class="read-more" data-url="images/certificates/4_Coursera Create a Website Using Wordpress.pdf"
+                data-title="Create a Website Using Wordpress - Coursera"
+                data-description="Learn to build a website using WordPress with free hosting and a sub-domain in this comprehensive course.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/5_infyosis AI.jpg">
+              <button class="read-more" data-url="images/certificates/5_infyosis AI.pdf"
+                data-title="Artificial Intelligence Primer Certification - Infosys"
+                data-description="Unlock the potential of AI with our comprehensive Artificial Intelligence Primer Certification.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/6_infyosis deta science.jpg">
+              <button class="read-more" data-url="images/certificates/6_infyosis deta science.pdf"
+                data-title="Data Science Foundation Certification - Infosys"
+                data-description="Master the fundamentals of data science with our comprehensive Data Science Foundation Certification course.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/7_linkdin Digital Marketing Foundation.jpg">
+              <button class="read-more" data-url="images/certificates/7_linkdin Digital Marketing Foundation.pdf"
+                data-title="Digital Marketing Foundations - Linkedin"
+                data-description="Dive into the core principles, strategies, and tools essential for navigating the digital marketing landscape.">Read
+                More</button>
+            </div>
+
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/8_iiit computer.jpg">
+              <button class="read-more" data-url="images/certificates/8_iiit computer.pdf"
+                data-title="BASIC COMPUTER SKILLS - IIIT KOTA">Read More</button>
+            </div>
+
+            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
+              <img src="images/certificates/9_Skillup Ethical Hacking.jpg">
+              <button class="read-more" data-url="images/certificates/9_Skillup Ethical Hacking.pdf"
+                data-title="9_Skillup Ethical Hacking - Skillup">Read More</button>
+            </div>
+
+            <!-- See More Button (Mobile Only) -->
+            <div class="box see-more-box mobile-only" onclick="toggleAchievements()">
+              <div class="see-more-content">
+                <i class="fas fa-plus-circle"></i>
+                <h2>See More</h2>
+                <p>View all certificates</p>
+                <div class="certificate-count">+6 more</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show Less Button -->
+          <div class="show-less-container mobile-only" id="showLessBtn" style="display: none;">
+            <button class="show-less-btn" onclick="toggleAchievements()">
+              <i class="fas fa-chevron-up"></i> Show Less
+            </button>
+          </div>
+        </div>
+      </div>
+      <style>
+        @media (max-width: 768px) {
+          #achievements .box-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 0 10px;
+          }
+
+          #achievements .box {
+            width: 100%;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+          }
+
+          #achievements .box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+
+          .hidden-mobile {
+            display: none !important;
+          }
+
+          .achievements-expanded .hidden-mobile {
+            display: flex !important;
+            animation: slideDown 0.3s ease-out;
+          }
+
+          .see-more-box {
+            background: linear-gradient(135deg, #ffc200 0%, #ffb300 100%);
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+          }
+
+          .see-more-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 194, 0, 0.4);
+          }
+
+          .see-more-content {
+            text-align: center;
+            color: #1a1a1a;
+          }
+
+          .see-more-content i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+          }
+
+          .see-more-content h2,
+          .see-more-content p {
+            margin: 5px 0;
+          }
+
+          .certificate-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 8px;
+          }
+
+          .show-less-container {
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          .show-less-btn {
+            background: rgba(255, 194, 0, 0.1);
+            border: 2px solid #ffc200;
+            color: #ffc200;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+          }
+
+          .show-less-btn:hover {
+            background: #ffc200;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+          }
+        }
+
+        @media (min-width: 769px) {
+          .mobile-only {
+            display: none !important;
+          }
+
+          .hidden-mobile {
+            display: flex !important;
+          }
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+
+      <script>
+        function toggleAchievements() {
+          const container = document.getElementById('achievementsContainer');
+          const showLessBtn = document.getElementById('showLessBtn');
+
+          container.classList.toggle('achievements-expanded');
+
+          if (container.classList.contains('achievements-expanded')) {
+            showLessBtn.style.display = 'block';
+            document.querySelector('.see-more-box').style.display = 'none';
+          } else {
+            showLessBtn.style.display = 'none';
+            document.querySelector('.see-more-box').style.display = 'flex';
+          }
+        }
+      </script>
+    </section>
+    <!--Achievements and Certifications end-->
+
+
+
+
+
+    <!-- CONTACT start -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="sectionhead">
+          <h1 data-aos="fade-up"><i class="fa-solid fa-address-book"></i> Contact <span>Me</span></h1>
+        </div>
+        <p data-aos="fade-up" style="text-align:center;">Let's connect! Whether you have a project in mind, a question,
+          or just want to say hello, I'm always open to new opportunities and collaborations. Reach out and let's build
+          something amazing together.</p>
+        <div class="box flex-direction">
+          <div class="contact-image" data-aos="fade-right">
+            <img src="./images/contact_img.png" alt="Contact Image">
+          </div>
+          <div class="form">
+            <!-- Start of Form -->
+            <form class="contact-form" onsubmit="sendEmail(); return false;" action="https://api.web3forms.com/submit"
+              method="POST">
+              <!-- Name field with pattern for letters and spaces -->
+              <input type="hidden" name="access_key" value="e9bdcabb-21ec-4382-b939-b1802b0193d4">
+              <input class="form-controls" id="name" type="text" placeholder="Your Name" pattern="^[a-zA-Z\s]+$"
+                data-aos="fade-left" required title="Name should only contain letters and spaces" name="name">
+
+              <!-- Gmail email pattern -->
+              <input class="form-controls" id="email" type="email" placeholder="Your Gmail"
+                pattern="[a-z0-9._%+-]+@gmail\.com$" data-aos="fade-left" required
+                title="Please enter a valid Gmail address" name="email">
+
+              <!-- Phone number pattern for 10-digit number -->
+              <input class="form-controls" id="phone" type="text" placeholder="Your Phone" pattern="^\d{10}$"
+                data-aos="fade-left" required title="Please enter a valid 10-digit phone number (digits only)"
+                name="number">
+
+              <!-- Message text area -->
+              <textarea class="form-controls" id="message" placeholder="Write your message" name="message" cols="30"
+                rows="4" data-aos="fade-left" required></textarea>
+
+
+              <!-- Submit button -->
+              <div>
+                <input class="form-btn btn common-btn" type="submit" value="Send Message" data-aos="zoom-in">
+              </div>
+            </form>
+            <!-- End of Form -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT end -->
+
+
+
+    <!-- footer section starts -->
+    <section class="footer">
+      <div class="social" data-aos="zoom-in-down">
+
+        <a data-aos="zoom-in"
+          href="https://api.whatsapp.com/send/?phone=916306008818&text&type=phone_number&app_absent=0"
+          class="fa-brands fa-whatsapp" target="_blank"></a>
+
+        <a data-aos="zoom-in" href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin"
+          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank"></a>
+        <a data-aos="zoom-in" href="mailto:dkmom00@gmail.com" class="fas fa-envelope" target="_blank"></a>
+        <a data-aos="zoom-in" href="https://www.instagram.com/dksilentkiller/" class="fab fa-instagram"
+          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://www.facebook.com/dksilentkiller/" class="fab fa-facebook"
+          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://in.pinterest.com/dksilentkiller/" class="fa-brands fa-pinterest"
+          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1"
+          class="fa-brands fa-youtube" target="_blank"></a>
+      </div>
+      <div class="note" data-aos="zoom-in-down">
+        <p>Coding, learning, evolving. Join me on this journey of continuous improvement</p>
+      </div>
+      <div class="credit" data-aos="zoom-in-down">
+        <p>Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/dharmendra0107/">
+            Dharmendra</a>
+        </p>
+      </div>
+
+    </section>
+    <!-- footer section ends -->
+
+
+
+    <!-- Modern Skip to Main Content Button start -->
+    <div class="modern-scroll-to-top" style="margin-right: 24px;" data-aos="zoom-in-down">
+      <a href="#home" class="scroll-btn" title="Back to Top" aria-label="Scroll to top">
+        <div class="scroll-icon">
+          <div class="arrow-up"></div>
+        </div>
+        <div class="scroll-text">
+          <span>TOP</span>
+        </div>
+        <div class="progress-ring">
+          <svg class="progress-svg" width="60" height="60">
+            <circle class="progress-circle" cx="30" cy="30" r="25" stroke-width="2"></circle>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <!-- Modern Skip to Main Content Button End -->
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Smooth Scroll-->
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 700, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: true, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      });
+
+    </script>
+    <!--Partile.js-->
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/global-particles.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <!-- Include Popup script -->
+    <script src="js/popup.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/message.js"></script>
+    <!-- Enhanced Responsive JavaScript -->
+    <script src="js/responsive.js"></script>
+
+    <!-- Loading States & Skeleton Screens -->
+    <script src="js/loading.js"></script>
+
+    <!-- Modern Scroll to Top JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // === Scroll to Top + Progress Circle ===
+        const scrollToTopBtn = document.querySelector('.modern-scroll-to-top');
+        const progressCircle = document.querySelector('.progress-circle');
+        const circumference = 2 * Math.PI * 25; // 2 * π * radius
+
+        // Set initial state for progress circle
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        function updateScrollProgress() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = scrollTop / docHeight;
+
+          // Update circle
+          const offset = circumference - (scrollPercent * circumference);
+          progressCircle.style.strokeDashoffset = offset;
+
+          // Toggle button visibility
+          if (scrollTop > 300) {
+            scrollToTopBtn.classList.add('show');
+          } else {
+            scrollToTopBtn.classList.remove('show');
+          }
+        }
+
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', updateScrollProgress);
+        document.querySelector('.scroll-btn').addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollToTop();
+        });
+
+        updateScrollProgress(); // Initial call
+
+        // === Image Fade-in on Load ===
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          img.classList.add('fade-in-image');
+          img.addEventListener('load', function () {
+            this.classList.add('loaded');
+          });
+
+          // If already cached
+          if (img.complete) {
+            img.classList.add('loaded');
+          }
+        });
+
+        // === requestAnimationFrame Scroll Optimization ===
+        let ticking = false;
+        function requestTick() {
+          if (!ticking) {
+            requestAnimationFrame(updateScrollProgress);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener('scroll', () => {
+          requestTick();
+          ticking = false;
+        });
+
+        // === Dark/Light Mode Toggle ===
+        const colorModeIcon = document.querySelector('.color-mode-icon');
+        const body = document.body;
+
+        // Check saved theme preference
+        const savedTheme = localStorage.getItem('color-mode');
+
+        function applyTheme(theme) {
+          if (theme === 'dark-mode') {
+            body.classList.add('dark-mode');
+            colorModeIcon.classList.add('active');
+          } else {
+            body.classList.remove('dark-mode');
+            colorModeIcon.classList.remove('active');
+          }
+        }
+
+        // Apply saved theme or default to light
+        if (savedTheme === 'dark-mode') {
+          applyTheme('dark-mode');
+        } else {
+          applyTheme('light-mode');
+        }
+
+        colorModeIcon.addEventListener('click', function () {
+          const isDark = body.classList.contains('dark-mode');
+          if (isDark) {
+            applyTheme('light-mode');
+            localStorage.setItem('color-mode', 'light-mode');
+          } else {
+            applyTheme('dark-mode');
+            localStorage.setItem('color-mode', 'dark-mode');
+          }
+        });
+      });
+    </script>
+    </script>
+    <!-- Modern Scroll to Top JavaScript End -->
+
+
+
+  </body>
+
+</html>
