@@ -23,21 +23,21 @@
   <!--for style in project section-->
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-  
+
 
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  
+
   <link rel="stylesheet" href="css/unicons.css">
-  
+
   <link rel="stylesheet" href="css/aos.css">
-  
+
   <script src="js/fontawesome.js" crossorigin="anonymous"></script>
-  
+
   <link rel="stylesheet" href="css/style.css">
-  
+
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  
+
   <!-- <link rel="stylesheet" href="css/nothingbutnav.css"> -->
 
 
@@ -53,32 +53,19 @@
 
 <body>
   <!-- Mobile Toast Message -->
-  <div id="mobile-toast" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;justify-content:center;align-items:center;backdrop-filter:blur(2.5px);background:rgba(0,0,0,0.18);transition:opacity 0.4s;opacity:0;">
-    <div style="background:rgba(35,35,35,0.98);padding:28px 32px 24px 32px;border-radius:2.2rem;box-shadow:0 8px 32px 0 #23232355, 0 1.5px 12px 0 #ffc20033 inset;display:flex;flex-direction:column;align-items:center;max-width:90vw;">
-      <div style="background:linear-gradient(90deg,#ffc200 60%,#ffb300 100%);border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 2px 8px #ffc20033;">
+  <div id="mobile-toast"
+    style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;justify-content:center;align-items:center;backdrop-filter:blur(2.5px);background:rgba(0,0,0,0.18);transition:opacity 0.4s;opacity:0;">
+    <div
+      style="background:rgba(35,35,35,0.98);padding:28px 32px 24px 32px;border-radius:2.2rem;box-shadow:0 8px 32px 0 #23232355, 0 1.5px 12px 0 #ffc20033 inset;display:flex;flex-direction:column;align-items:center;max-width:90vw;">
+      <div
+        style="background:linear-gradient(90deg,#ffc200 60%,#ffb300 100%);border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 2px 8px #ffc20033;">
         <i class="fa-solid fa-mobile-screen-button" style="font-size:2rem;color:#232323;"></i>
       </div>
       <div style="color:#fff;font-size:1.13rem;font-weight:500;text-align:center;letter-spacing:0.1px;line-height:1.5;">
         For the best experience,<br>please view this site on a bigger screen.<br>
-        <span style="font-size:0.98rem;color:#ffc200;opacity:0.95;">(Some features may not display perfectly on mobile.)</span>
+        <span style="font-size:0.98rem;color:#ffc200;opacity:0.95;">(Some features may not display perfectly on
+          mobile.)</span>
       </div>
-      <button id="modal-mode-switch" style="margin-top:18px;padding:8px 22px;border-radius:1.2rem;border:none;background:linear-gradient(90deg,#ffc200 60%,#ffb300 100%);color:#232323;font-weight:600;font-size:1rem;box-shadow:0 2px 8px #ffc20033;cursor:pointer;transition:background 0.2s;">Switch Mode</button>
-  <script>
-
-
-    // Modal mode switch button logic
-    document.addEventListener('DOMContentLoaded', function () {
-      var modalModeSwitch = document.getElementById('modal-mode-switch');
-      if (modalModeSwitch) {
-        modalModeSwitch.addEventListener('click', function () {
-          var colorModeIcon = document.querySelector('.color-mode-icon');
-          if (colorModeIcon) {
-            colorModeIcon.click();
-          }
-        });
-      }
-    });
-  </script>
     </div>
   </div>
 
@@ -335,8 +322,8 @@
                 to powerful backend architectures that drive exceptional user experiences.</h6>
 
               <div class="custom-btn-group mt-4">
-                <a href="images\Dharmendra resume.pdf"
-                  class="btn mr-lg-2 custom-btn" ><i class='uil uil-file-alt'></i>Resume</a>
+                <a href="images\Dharmendra resume.pdf" class="btn mr-lg-2 custom-btn"><i
+                    class='uil uil-file-alt'></i>Resume</a>
                 <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact</a>
               </div>
             </div>
@@ -358,7 +345,7 @@
     <!-- home-cards section start -->
     <section class="home-cards">
       <div class="modern-card-container">
-        <div class="modern-card" data-aos="fade-right" >
+        <div class="modern-card" data-aos="fade-right">
           <div class="modern-card-icon">
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
@@ -1213,11 +1200,13 @@
         </div>
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev" data-aos="zoom-in">
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev"
+          data-aos="zoom-in">
           <span class="carousel-control-prev-icon"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next" data-aos="zoom-in ">
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next"
+          data-aos="zoom-in ">
           <span class="carousel-control-next-icon"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -1770,20 +1759,27 @@
 
         <a data-aos="zoom-in"
           href="https://api.whatsapp.com/send/?phone=916306008818&text&type=phone_number&app_absent=0"
-          class="fa-brands fa-whatsapp" target="_blank"></a>
+          class="fa-brands fa-whatsapp social-footer-icon" target="_blank" data-bs-toggle="tooltip"
+          data-bs-placement="top" title="WhatsApp"></a>
 
-        <a data-aos="zoom-in" href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank"></a>
-        <a data-aos="zoom-in" href="mailto:dkmom00@gmail.com" class="fas fa-envelope" target="_blank"></a>
-        <a data-aos="zoom-in" href="https://www.instagram.com/dksilentkiller/" class="fab fa-instagram"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://www.facebook.com/dksilentkiller/" class="fab fa-facebook"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://in.pinterest.com/dksilentkiller/" class="fa-brands fa-pinterest"
-          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://www.linkedin.com/in/dharmendra0107/"
+          class="fab fa-linkedin social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="LinkedIn"></a>
+        <a data-aos="zoom-in" href="https://github.com/dharmendra0107" class="fab fa-github social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub"></a>
+        <a data-aos="zoom-in" href="mailto:dkmom00@gmail.com" class="fas fa-envelope social-footer-icon" target="_blank"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Email"></a>
+        <a data-aos="zoom-in" href="https://www.instagram.com/dksilentkiller/"
+          class="fab fa-instagram social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+          title="Instagram"></a>
+        <a data-aos="zoom-in" href="https://www.facebook.com/dksilentkiller/" class="fab fa-facebook social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"></a>
+        <a data-aos="zoom-in" href="https://in.pinterest.com/dksilentkiller/"
+          class="fa-brands fa-pinterest social-footer-icon" target="_blank" data-bs-toggle="tooltip"
+          data-bs-placement="top" title="Pinterest"></a>
         <a data-aos="zoom-in" href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1"
-          class="fa-brands fa-youtube" target="_blank"></a>
+          class="fa-brands fa-youtube social-footer-icon" target="_blank" data-bs-toggle="tooltip"
+          data-bs-placement="top" title="YouTube"></a>
       </div>
       <div class="note" data-aos="zoom-in-down">
         <p>Coding, learning, evolving. Join me on this journey of continuous improvement</p>
@@ -1793,6 +1789,37 @@
             Dharmendra</a>
         </p>
       </div>
+      <style>
+        .social-footer-icon {
+          font-size: 2.1rem;
+          margin: 0 0.5rem;
+          color: #ffc200;
+          background: transparent;
+          border-radius: 50%;
+          padding: 0.35em 0.45em;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.18s, background 0.18s, box-shadow 0.22s, transform 0.22s;
+        }
+
+        .social-footer-icon:hover,
+        .social-footer-icon:focus {
+          color: #fff;
+          background: rgba(255, 194, 0, 0.18);
+          box-shadow: 0 0 0 6px #ffc20033, 0 4px 18px #ffc20055;
+          transform: scale(1.13) rotate(-4deg);
+          outline: none;
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        });
+      </script>
 
     </section>
     <!-- footer section ends -->
@@ -1832,10 +1859,10 @@
         var toast = document.getElementById('mobile-toast');
         if (toast && isMobile()) {
           toast.style.display = 'flex';
-          setTimeout(function() { toast.style.opacity = 1; }, 100);
-          setTimeout(function() {
+          setTimeout(function () { toast.style.opacity = 1; }, 100);
+          setTimeout(function () {
             toast.style.opacity = 0;
-            setTimeout(function() { toast.style.display = 'none'; }, 500);
+            setTimeout(function () { toast.style.display = 'none'; }, 500);
           }, 5000);
         }
       }

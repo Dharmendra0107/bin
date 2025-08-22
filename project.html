@@ -17,12 +17,21 @@
             color: #fff;
         }
 
-        html, body {
+        html,
+        body {
             max-width: 100vw;
             overflow-x: hidden !important;
         }
+
         @media (max-width: 600px) {
-            .container, .projects-container, .row, section, header, main, footer {
+
+            .container,
+            .projects-container,
+            .row,
+            section,
+            header,
+            main,
+            footer {
                 max-width: 100vw !important;
                 width: 100% !important;
                 margin-left: 0 !important;
@@ -36,38 +45,41 @@
 </head>
 
 <body class="dark-mode">
+
     <!-- Particles.js Background Start -->
-    <div id="particles-js"></div>
-    <style>
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffc200" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: false },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffc200", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-            },
-            retina_detect: true
-        });
-    </script>
+    <section>
+        <div id="particles-js"></div>
+        <style>
+            #particles-js {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -1;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ffc200" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: false },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#ffc200", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+                },
+                retina_detect: true
+            });
+        </script>
+    </section>
     <!-- Particles.js Background End -->
 
 
@@ -76,7 +88,7 @@
 
     <!-- Back to Home Button Start -->
     <section class="back_to_home">
-        <a href="index.html" class="back-to-home btn-project btn-outline" >
+        <a href="index.html" class="back-to-home btn-project btn-outline">
             <i class="fas fa-arrow-left"></i>
             <span>Back to Home</span>
         </a>
@@ -136,17 +148,20 @@
 
 
     <!-- Header Section Start -->
-    <section class="header-section" >
-        <h1 ><i class="fas fa-code"></i> My Projects</h1>
+    <section class="header-section">
+        <h1><i class="fas fa-code"></i> My Projects</h1>
         <p>Explore my journey through code - from concept to creation, each project tells a story of innovation and
             learning.</p>
         <style>
-
             .header-section {
                 text-align: center;
                 padding: 120px 0 40px;
                 position: relative;
                 z-index: 2;
+            }
+
+            .header-section i {
+                color: white;
             }
 
             .header-section h1 {
@@ -228,7 +243,6 @@
             <span class="stat-label">Technologies</span>
         </div>
         <style>
-
             /* Project Stats Styles */
             .project-stats {
                 display: flex;
@@ -467,7 +481,8 @@
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="fullstack">Full Stack</button>
                 <button class="filter-btn" data-filter="frontend">Frontend</button>
-                <select id="otherTechFilter" class="tech-filter-dropdown" style="margin-left:18px; border-radius:20px; padding:8px 18px; background:rgba(30,30,30,0.95); color:#ffc200; font-weight:600; font-size:1rem; border:none;">
+                <select id="otherTechFilter" class="tech-filter-dropdown"
+                    style="margin-left:18px; border-radius:20px; padding:8px 18px; background:rgba(30,30,30,0.95); color:#ffc200; font-weight:600; font-size:1rem; border:none;">
                     <option value="">Other Technologies</option>
                     <option value="MongoDB">MongoDB</option>
                     <option value="Express.js">Express.js</option>
@@ -648,7 +663,8 @@
                         <div class="project-links">
                             <a href="#" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="#" class="btn-project btn-outline" onclick="showToast('Please run the server to view the demo.')"
+                            <a href="#" class="btn-project btn-outline"
+                                onclick="showToast('Please run the server to view the demo.')"
                                 title="Demo not available">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
@@ -675,9 +691,11 @@
                             <span class="tech-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Clinic_Management_Django" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Clinic_Management_Django"
+                                class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="#" class="btn-project btn-outline" onclick="showToast('Please run the server to view the demo.')"
+                            <a href="#" class="btn-project btn-outline"
+                                onclick="showToast('Please run the server to view the demo.')"
                                 title="Demo not available">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
@@ -703,9 +721,11 @@
                             <span class="tech-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/NAU-e-gyan-Portal-Django" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/NAU-e-gyan-Portal-Django"
+                                class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="#" class="btn-project btn-outline" onclick="showToast('Please run the server to view the demo.')"
+                            <a href="#" class="btn-project btn-outline"
+                                onclick="showToast('Please run the server to view the demo.')"
                                 title="Demo not available">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
@@ -731,9 +751,11 @@
                             <span class="tech-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Online-Admission-System-Django" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Online-Admission-System-Django"
+                                class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="#" class="btn-project btn-outline" onclick="showToast('Please run the server to view the demo.')"
+                            <a href="#" class="btn-project btn-outline"
+                                onclick="showToast('Please run the server to view the demo.')"
                                 title="Demo not available">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
@@ -759,9 +781,11 @@
                             <span class="tech-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/School-Management-System-Django" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/School-Management-System-Django"
+                                class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="#" class="btn-project btn-outline" onclick="showToast('Please run the server to view the demo.')"
+                            <a href="#" class="btn-project btn-outline"
+                                onclick="showToast('Please run the server to view the demo.')"
                                 title="Demo not available">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
@@ -801,7 +825,7 @@
             </div> -->
 
 
-            
+
             <!-- Age Calculator Project Card -->
             <div class="col-lg-6 col-md-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
@@ -819,10 +843,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/age_calculater" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/age_calculater" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/age_calculater/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/age_calculater/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -845,10 +870,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Blogger_Website" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Blogger_Website" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/Blogger_Website/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/Blogger_Website/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -871,10 +897,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/BMI_calculator" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/BMI_calculator" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/BMI_calculator/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/BMI_calculator/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -884,7 +911,8 @@
             <div class="col-lg-6 col-md-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
-                        <img class="project-screenshot" src="images/project/10ClinicWebsite.png" alt="Clinic Website Screenshot">
+                        <img class="project-screenshot" src="images/project/10ClinicWebsite.png"
+                            alt="Clinic Website Screenshot">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Clinic Website</h3>
@@ -896,10 +924,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/clinic" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/clinic" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/clinic/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/clinic/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -921,10 +950,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Hotel_Web" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Hotel_Web" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/Hotel_Web/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/Hotel_Web/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -947,10 +977,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/IIIM_Ayodhya" class="btn-project btn-primary" target="_blank">
+                            <a href="https://github.com/Dharmendra0107/IIIM_Ayodhya" class="btn-project btn-primary"
+                                target="_blank">
                                 <i class="fab fa-github"></i>View Code</a>
-                            <a href="https://dharmendra0107.github.io/IIIM_Ayodhya/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/IIIM_Ayodhya/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -973,10 +1004,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Simple_Calculator" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Simple_Calculator"
+                                class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/Simple_Calculator/"target="_blank" class="btn-project btn-outline" ><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/Simple_Calculator/" target="_blank"
+                                class="btn-project btn-outline"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -986,7 +1018,8 @@
             <div class="col-lg-6 col-md-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
-                        <img class="project-screenshot" src="images/project/8Travelling web.png" alt="Travel Fun Screenshot">
+                        <img class="project-screenshot" src="images/project/8Travelling web.png"
+                            alt="Travel Fun Screenshot">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Travel Fun</h3>
@@ -998,10 +1031,11 @@
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Travel_Fun" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Travel_Fun" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/Travel_Fun/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/Travel_Fun/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1011,8 +1045,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web api">
                     <div class="project-image">
-                        <img class="project-screenshot" src="images/project/4Weather.png"
-                            alt="Weather App Screenshot">
+                        <img class="project-screenshot" src="images/project/4Weather.png" alt="Weather App Screenshot">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Weather App</h3>
@@ -1025,10 +1058,11 @@
                             <span class="tech-tag">OpenWeather API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Dharmendra0107/Weather_App" class="btn-project btn-primary" target="_blank"><i class="fab fa-github"></i>
+                            <a href="https://github.com/Dharmendra0107/Weather_App" class="btn-project btn-primary"
+                                target="_blank"><i class="fab fa-github"></i>
                                 View Code</a>
-                            <a href="https://dharmendra0107.github.io/Weather_App/" class="btn-project btn-outline" target="_blank"><i
-                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://dharmendra0107.github.io/Weather_App/" class="btn-project btn-outline"
+                                target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1075,7 +1109,7 @@
         .project-card:hover {
             box-shadow: 0 0 12px 3px #ffc200, 0 12px 36px 0 rgba(255, 194, 0, 0.22), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
         }
-        
+
 
         @keyframes cardGlow {
             0% {
@@ -1096,7 +1130,7 @@
                 outline-color: #ffc200;
             }
         }
-        
+
 
         .project-image {
             overflow: hidden;
@@ -1193,7 +1227,7 @@
         .project-card:hover .project-image .project-bg {
             opacity: 1;
         }
-        
+
 
         @media (max-width: 991px) {
             .project-card {
@@ -1418,7 +1452,9 @@
                                     <option value="other_specify">📝 Other (please specify)</option>
                                 </select>
                                 <div id="otherSubjectBox" style="display:none; margin-top:10px;">
-                                    <input type="text" id="otherSubjectInput" name="other_subject" placeholder="Please specify your subject..." class="form-control" style="background:rgba(255,255,255,0.07); color:#fff; border:2px solid #ffc200; border-radius:12px; font-size:15px; margin-top:4px;" />
+                                    <input type="text" id="otherSubjectInput" name="other_subject"
+                                        placeholder="Please specify your subject..." class="form-control"
+                                        style="background:rgba(255,255,255,0.07); color:#fff; border:2px solid #ffc200; border-radius:12px; font-size:15px; margin-top:4px;" />
                                 </div>
                             </div>
 
@@ -1638,10 +1674,10 @@
                 width: 96%;
                 max-height: 82vh;
                 overflow-y: auto;
-                box-shadow: 0 12px 40px 0 rgba(255, 194, 0, 0.18), 0 2px 12px 0 rgba(0,0,0,0.18);
+                box-shadow: 0 12px 40px 0 rgba(255, 194, 0, 0.18), 0 2px 12px 0 rgba(0, 0, 0, 0.18);
                 animation: bounceIn 0.5s ease forwards;
                 backdrop-filter: blur(18px) saturate(1.2);
-                border: 1.5px solid rgba(255,255,255,0.13);
+                border: 1.5px solid rgba(255, 255, 255, 0.13);
                 color: #fff;
             }
 
@@ -1651,7 +1687,7 @@
                 align-items: center;
                 margin-bottom: 18px;
                 padding-bottom: 12px;
-                border-bottom: 2px solid rgba(255,255,255,0.08);
+                border-bottom: 2px solid rgba(255, 255, 255, 0.08);
             }
 
             .modal-close {
@@ -1670,6 +1706,7 @@
                 background: #ffc200;
                 transform: scale(1.18);
             }
+
             /* Enhanced Contact Modal Styles */
             .modal-body p {
                 color: #ffc200;
@@ -1678,14 +1715,17 @@
                 text-align: center;
                 font-size: 1.08rem;
             }
+
             .contact-form {
                 margin: 18px 0 0 0;
             }
+
             .form-group {
                 margin-bottom: 18px;
                 position: relative;
                 animation: slideInUp 0.4s ease forwards;
             }
+
             .form-group label {
                 display: block;
                 margin-bottom: 7px;
@@ -1694,10 +1734,12 @@
                 font-size: 14px;
                 letter-spacing: 0.01em;
             }
+
             .form-group i {
                 color: #ffc200;
                 margin-right: 6px;
             }
+
             .form-group input,
             .form-group select,
             .form-group textarea {
@@ -1706,7 +1748,7 @@
                 border: 2px solid #ffc200;
                 border-radius: 12px;
                 font-size: 15px;
-                background: rgba(255,255,255,0.07);
+                background: rgba(255, 255, 255, 0.07);
                 color: #fff;
                 font-family: inherit;
                 transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
@@ -1716,19 +1758,24 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
             }
-            .form-group select:focus, .form-group select:active {
-                background: rgba(255,255,255,0.13);
+
+            .form-group select:focus,
+            .form-group select:active {
+                background: rgba(255, 255, 255, 0.13);
                 color: #181818;
                 border-color: #ffc200;
             }
+
             .form-group select option {
                 background: #181818;
                 color: #ffc200;
             }
+
             .form-group select:disabled {
                 background: #333;
                 color: #888;
             }
+
             /* Custom arrow for select */
             .form-group select {
                 background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffc200" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
@@ -1737,17 +1784,20 @@
                 background-size: 22px 22px;
                 padding-right: 40px;
             }
+
             .form-group input:focus,
             .form-group select:focus,
             .form-group textarea:focus {
                 border-color: #fff;
-                background: rgba(255,255,255,0.13);
+                background: rgba(255, 255, 255, 0.13);
                 box-shadow: 0 4px 20px rgba(255, 194, 0, 0.18);
             }
+
             .form-group textarea {
                 resize: vertical;
                 min-height: 90px;
             }
+
             .form-actions {
                 display: flex;
                 gap: 12px;
@@ -1755,6 +1805,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
+
             .btn-contact {
                 padding: 12px 24px;
                 border-radius: 25px;
@@ -1770,33 +1821,40 @@
                 min-width: 120px;
                 justify-content: center;
             }
+
             .btn-contact.btn-primary {
                 background: linear-gradient(135deg, #ffc200, #ffb300);
                 color: #181818;
                 box-shadow: 0 4px 15px rgba(255, 194, 0, 0.13);
             }
+
             .btn-contact.btn-outline {
                 background: transparent;
                 color: #ffc200;
                 border: 2px solid #ffc200;
             }
+
             .btn-contact:hover {
                 transform: translateY(-3px) scale(1.04);
                 box-shadow: 0 8px 25px rgba(255, 194, 0, 0.18);
             }
+
             .btn-contact.btn-primary:hover {
                 background: linear-gradient(135deg, #ffb300, #ffc200);
                 color: #181818;
             }
+
             .btn-contact.btn-outline:hover {
                 background: #ffc200;
                 color: #181818;
             }
+
             .contact-alternatives {
                 margin-top: 24px;
                 padding-top: 18px;
-                border-top: 2px solid rgba(255,255,255,0.08);
+                border-top: 2px solid rgba(255, 255, 255, 0.08);
             }
+
             .alternatives-title {
                 text-align: center;
                 margin-bottom: 14px;
@@ -1804,11 +1862,13 @@
                 color: #ffc200;
                 font-size: 1.01rem;
             }
+
             .contact-buttons {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
                 gap: 12px;
             }
+
             .contact-btn {
                 display: flex;
                 flex-direction: column;
@@ -1822,6 +1882,7 @@
                 border: 2px solid transparent;
                 font-weight: 600;
             }
+
             .contact-btn:hover {
                 transform: translateY(-5px) scale(1.04);
                 background: #ffc200;
@@ -1829,30 +1890,36 @@
                 border-color: #ffc200;
                 box-shadow: 0 10px 25px rgba(255, 194, 0, 0.18);
             }
+
             .contact-btn i {
                 font-size: 22px;
                 margin-bottom: 6px;
             }
+
             .contact-btn span {
                 font-size: 12px;
                 font-weight: 600;
                 text-transform: uppercase;
             }
+
             @media (max-width: 600px) {
                 .modal-content {
                     padding: 16px 6px 18px 6px;
                     max-width: 98vw;
                 }
+
                 .form-group input,
                 .form-group select,
                 .form-group textarea {
                     font-size: 0.98rem;
                     padding: 10px 10px;
                 }
+
                 .btn-contact {
                     min-width: 90px;
                     font-size: 13px;
                 }
+
                 .contact-btn {
                     padding: 10px 4px;
                 }
@@ -1927,7 +1994,24 @@
 
 
     </section>
-    
+
+
+
+
+    <!-- Footer Start -->
+    <footer class="thankful-footer text-center py-3"
+        style="background: #18181880; color: #ffc200; position:relative; z-index:2; font-size:1.08rem; letter-spacing:0.5px;">
+        <div class="container">
+            <span class="footer-text">Thank you for exploring my projects <span
+                    style="color:#fff;">&#10084;&#65039;</span> <span style="font-size:0.98em; opacity:0.8;">&mdash;
+                    Dharmendra Yadav</span></span>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+
 </body>
 
-</html> 
+</html>

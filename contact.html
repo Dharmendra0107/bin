@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
+    <title>Contact Me - Dharmendra</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Dharmendra</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/othercss.css">
     <link rel="icon" href="images/dklogo.png">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fontawesome.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/global-particles.js"></script>
 
 
     <style>
@@ -22,7 +27,9 @@
         }
     </style>
 </head>
+
 <body>
+
     <!-- Particles.js Background Start -->
     <section>
         <div id="particles-js"></div>
@@ -60,70 +67,42 @@
     <!-- Particles.js Background End -->
 
 
-
-    <!-- Back to Home Button Start -->
-    <section class="backtohomebtn">
-        <a href="index.html" class="back-to-home btn-project btn-outline">
+    <!-- Back to Home Button Start  -->
+    <section class="backtohomebtn position-absolute" style="top:30px;left:30px;z-index:1000;" data-aos="fade-right"
+        data-aos-duration="800">
+        <a href="index.html"
+            class="btn btn-outline-warning back-home-btn d-inline-flex align-items-center gap-2 fw-semibold rounded-pill px-4 py-2 shadow-sm"
+            style="border-width:2px;">
             <i class="fas fa-arrow-left"></i>
-            <span>Back to Home</span>
+            <span class="d-none d-sm-inline">Back to Home</span>
         </a>
         <style>
-            .back-to-home {
-                position: absolute;
-                top: 30px;
-                left: 30px;
-                z-index: 1000;
-                display: inline-flex;
-                width: auto;
-                align-items: center;
-                gap: 10px;
-                font-weight: 600;
-                font-size: 14px;
-                border-radius: 50px;
-                padding: 15px 25px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                border: 2px solid #ffc200;
-                background: transparent;
-                color: #ffc200;
-                text-decoration: none;
-                transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
-                outline: none;
+            .back-home-btn:hover,
+            .back-home-btn:focus {
+                background: #ffb300;
+                color: #ffffff;
+                border: 2px solid #ffffff;
             }
 
-            @media (max-width: 600px) {
-                .back-to-home {
-                    top: 8px;
-                    left: 6px;
-                    padding: 7px 10px;
-                    font-size: 11px;
-                    border-radius: 30px;
-                }
-
-                .back-to-home span {
-                    display: none;
-                }
-            }
-
-            @media (max-width: 1024px) {
-                .back-to-home {
-                    top: 16px;
-                    left: 12px;
-                    padding: 10px 14px;
-                    font-size: 13px;
-                    border-radius: 40px;
-                }
+            .back-home-btn:hover i,
+            .back-home-btn:focus i {
+                color: #fff !important;
             }
         </style>
     </section>
     <!-- Back to Home Button End -->
-     
 
 
-    <!-- Header Section Start -->
-    <section class="header-section"> 
-        <h1> <i class="fas fa-address-card"></i>&nbsp; Connect with Me </h1>
-        <p>Let's connect! Reach out to me through any of the platforms below or send a direct message. I'm always open
-            to networking, collaboration, and new opportunities.</p>
+    <!-- - Header Section Start -->
+    <section class="header-section container text-center" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="fw-bold display-4">
+            <i class="fas fa-address-card"></i>&nbsp; Connect with Me
+        </h1>
+        <p class="mx-auto">
+            Let's connect! Reach out to me through any of the platforms below or send a direct message.
+            I'm always open to networking, collaboration, and new opportunities.
+        </p>
+
         <style>
             .header-section {
                 text-align: center;
@@ -165,11 +144,12 @@
 
             @media (max-width: 600px) {
                 .header-section {
+                    margin-top: 50px;
                     padding: 48px 0 18px;
                 }
 
                 .header-section h1 {
-                    font-size: 1.35rem;
+                    font-size: 2rem;
                     margin-bottom: 12px;
                 }
 
@@ -186,14 +166,592 @@
 
 
 
+    <!-- Interactive Contact Form Start -->
+    <section class="contact-form-section container" data-aos="zoom-in" data-aos-duration="1000">
+        <!-- Modern Toast Notification -->
+        <div id="toast" class="modern-toast"></div>
+        <!-- Loading Spinner Overlay -->
+        <div id="formSpinner" class="form-spinner-overlay" style="display:none;">
+            <div class="form-spinner"></div>
+        </div>
+        <form id="contactForm" novalidate>
+            <div class="form-group mb-3">
+                <label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" required placeholder=" " />
+                    <span>Name</span>
+                </label>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group mb-3">
+                <label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="gmail" name="gmail" required placeholder=" "
+                        pattern="^[a-zA-Z0-9._%+-]+@gmail\\.com$" />
+                    <span>Gmail</span>
+                </label>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group mb-3">
+                <label>
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" name="phone" required placeholder=" " pattern="^[0-9]{10,15}$"
+                        maxlength="15" />
+                    <span>Phone</span>
+                </label>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group mb-3">
+                <label>
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" name="message" required rows="3" placeholder=" " maxlength="500"></textarea>
+                    <span>Message</span>
+                </label>
+                <div class="d-flex justify-content-end">
+                    <small id="messageCounter" class="text-secondary" style="font-size:0.95rem;">0/500</small>
+                </div>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit" class="submit-btn w-100 d-flex align-items-center justify-content-center gap-2">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="formSuccess" class="success-message"></div>
+        </form>
+        <style>
+            .form-spinner-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.45);
+                z-index: 4000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.3s;
+            }
+
+            .form-spinner {
+                width: 60px;
+                height: 60px;
+                border: 6px solid #232323;
+                border-top: 6px solid #ffc200;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                background: transparent;
+                box-shadow: 0 4px 24px #ffc20033;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .modern-toast {
+                display: none;
+                position: fixed;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #181818ee;
+                color: #ffc200;
+                padding: 18px 38px;
+                border-radius: 24px;
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+                font-weight: 700;
+                font-size: 1.13rem;
+                border: 2px solid #ffc200;
+                z-index: 3000;
+                min-width: 220px;
+                text-align: center;
+                transition: opacity 0.3s;
+                opacity: 0;
+            }
+
+            .modern-toast.show {
+                display: block;
+                opacity: 1;
+                animation: toastPop 0.4s cubic-bezier(.4, 1.6, .6, 1);
+            }
+
+            @keyframes toastPop {
+                0% {
+                    transform: translateX(-50%) scale(0.8);
+                    opacity: 0;
+                }
+
+                80% {
+                    transform: translateX(-50%) scale(1.05);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateX(-50%) scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .modern-toast.error {
+                color: #fff;
+                background: #ff4d4d;
+                border-color: #ff4d4d;
+            }
+
+            .modern-toast.success {
+                color: #181818;
+                background: #ffc200;
+                border-color: #ffc200;
+            }
+        </style>
+        <style>
+            .contact-form-section {
+                max-width: 420px;
+                margin: 0 auto 60px;
+                background: rgba(30, 30, 30, 0.384);
+                border-radius: 18px;
+                padding: 36px 28px 28px;
+                z-index: 2;
+                position: relative;
+                border: 1px solid #ffc200;
+            }
+
+
+
+            .contact-form-section form {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+            }
+
+            .form-group {
+                position: relative;
+                margin-bottom: 8px;
+            }
+
+            .form-group label {
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .form-group i {
+                color: #ffc200;
+                font-size: 1.2rem;
+                margin-right: 10px;
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 14px 14px 14px 38px;
+                background: #19200493;
+                border: 2px solid #ffffff;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 1.08rem;
+                outline: none;
+                transition: border 0.2s;
+            }
+
+            .form-group input:focus,
+            .form-group textarea:focus {
+                border-color: #ffc200;
+            }
+
+            .form-group label span {
+                position: absolute;
+                left: 38px;
+                top: 14px;
+                color: #b9b8b8;
+                font-size: 1.08rem;
+                pointer-events: none;
+                transition: 0.2s;
+                background: transparent;
+            }
+
+            .form-group input:focus+span,
+            .form-group input:not(:placeholder-shown)+span,
+            .form-group textarea:focus+span,
+            .form-group textarea:not(:placeholder-shown)+span {
+                top: -12px;
+                left: 32px;
+                font-size: 0.92rem;
+                color: #ffc200;
+                background: #181818;
+                padding: 0 4px;
+            }
+
+            .form-group input:invalid,
+            .form-group textarea:invalid {
+                border-color: #ffffff;
+            }
+
+            .error-message {
+                color: #ff4d4d;
+                font-size: 0.93rem;
+                margin-top: 2px;
+                min-height: 18px;
+                display: block;
+            }
+
+            .success-message {
+                color: green;
+                font-size: 1.1rem;
+                margin-top: 18px;
+                text-align: center;
+                min-height: 24px;
+            }
+
+            .submit-btn {
+                background: #ffc200;
+                color: #181818;
+                border: none;
+                border-radius: 8px;
+                padding: 13px 0;
+                font-size: 1.13rem;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+                margin-top: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            }
+
+            .submit-btn:hover {
+                background: #ffb300;
+                color: #ffffff;
+                border: 2px solid #ffffff;
+            }
+
+            @media (max-width: 600px) {
+                .contact-form-section {
+                    padding: 18px 6px 18px;
+                }
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('contactForm');
+                const fields = ['name', 'gmail', 'phone', 'message'];
+                const errorMessages = {
+                    name: 'Please enter your name.',
+                    gmail: 'Please enter a valid Gmail address (must end with @gmail.com).',
+                    phone: 'Please enter a valid phone number (10-15 digits).',
+                    message: 'Please enter your message.'
+                };
+
+                // Live character counter for message textarea
+                const messageInput = document.getElementById('message');
+                const messageCounter = document.getElementById('messageCounter');
+                function updateMessageCounter() {
+                    messageCounter.textContent = `${messageInput.value.length}/500`;
+                }
+                messageInput.addEventListener('input', updateMessageCounter);
+                updateMessageCounter();
+
+                function validateField(field) {
+                    const input = document.getElementById(field);
+                    const error = input.closest('.form-group').querySelector('.error-message');
+                    let valid = true;
+                    if (!input.value.trim()) {
+                        error.textContent = errorMessages[field];
+                        valid = false;
+                    } else if (field === 'gmail' && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(input.value.trim())) {
+                        error.textContent = errorMessages[field];
+                        valid = false;
+                    } else if (field === 'phone' && !/^[0-9]{10,15}$/.test(input.value.trim())) {
+                        error.textContent = errorMessages[field];
+                        valid = false;
+                    } else {
+                        error.textContent = '';
+                    }
+                    return valid;
+                }
+
+                function showToast(message, type = 'success') {
+                    const toast = document.getElementById('toast');
+                    toast.textContent = message;
+                    toast.className = `modern-toast show ${type}`;
+                    setTimeout(() => {
+                        toast.className = `modern-toast ${type}`;
+                        toast.textContent = '';
+                    }, 3500);
+                }
+
+                function showSpinner(show) {
+                    const spinner = document.getElementById('formSpinner');
+                    spinner.style.display = show ? 'flex' : 'none';
+                }
+
+                fields.forEach(field => {
+                    document.getElementById(field).addEventListener('input', () => validateField(field));
+                });
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    let allValid = true;
+                    fields.forEach(field => {
+                        if (!validateField(field)) allValid = false;
+                    });
+                    if (allValid) {
+                        showSpinner(true);
+                        setTimeout(() => {
+                            showSpinner(false);
+                            showToast('Thank you! Your message has been sent.', 'success');
+                            form.reset();
+                            updateMessageCounter();
+                        }, 1800); // Simulate async submit
+                    } else {
+                        showToast('Please fill all fields correctly.', 'error');
+                    }
+                });
+            });
+        </script>
+    </section>
+    <!-- Interactive Contact Form End -->
+
+
+
+    <!-- Download vCard Button Start -->
+    <section class="download-vcard-section text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+        <a href="images/DharmendraYadav.vcf" download
+            class="download-vcard-btn d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="fas fa-id-card"></i> Download vCard
+        </a>
+
+        <style>
+            .download-vcard-btn {
+                background: #ffc200;
+                color: #181818;
+                border: 2px solid #ffc200;
+                border-radius: 30px;
+                padding: 12px 28px;
+                font-size: 1.08rem;
+                font-weight: 600;
+                text-decoration: none;
+                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+                margin-top: 10px;
+            }
+
+            .download-vcard-btn:hover {
+                background: #ffb300;
+                color: #ffffff;
+                border: 2px solid #ffffff;
+                text-decoration: none;
+            }
+        </style>
+    </section>
+    <!-- Download vCard Button End -->
+
+
+
+
+
+    <!-- Social Media Links Start -->
+    <section class="social-media-section py-5 text-center" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-once="true">
+        <div class="container">
+            <h2 class="social-title mb-4 position-relative d-inline-block" data-aos="zoom-in" data-aos-delay="100"
+                style="font-size:2.1rem; font-weight:700; color:#ffc200; letter-spacing:1.5px; text-shadow:0 2px 12px #18181899;">
+                <span style="vertical-align:middle; margin-right:10px; color:#fff; font-size:1.3em;"><i
+                        class="fas fa-share-alt"></i></span>
+                Connect Me Here
+            </h2>
+            <div class="row justify-content-center g-3">
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+                    <a href="https://www.linkedin.com/in/dharmendra0107/" class="social-btn linkedin" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                    <a href="https://github.com/dharmendra0107" class="social-btn github" target="_blank"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                    <a href="https://www.instagram.com/dksilentkiller/" class="social-btn instagram" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+                    <a href="https://in.pinterest.com/dksilentkiller/" class="social-btn pinterest" target="_blank"
+                        aria-label="Pinterest">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                    <a href="https://wa.me/916306008818" class="social-btn whatsapp" target="_blank"
+                        aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="700" data-aos-once="true">
+                    <a href="https://www.facebook.com/dksilentkiller/" class="social-btn facebook" target="_blank"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="800" data-aos-once="true">
+                    <a href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1" class="social-btn youtube"
+                        target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="col-auto" data-aos="fade-up" data-aos-delay="900" data-aos-once="true">
+                    <a href="tel:+916306008818" class="social-btn call" aria-label="Call">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .social-title {
+                color: #ffc200;
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            .social-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                font-size: 1.7rem;
+                color: #ffc200;
+                background: #181818;
+                border: 2px solid #ffc200;
+                transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+                text-decoration: none;
+            }
+
+            .social-btn:active {
+                transform: scale(0.97);
+            }
+
+            /* Individual hover effects */
+            .social-btn.call:hover {
+                background: #ffc200;
+                color: #181818;
+                border-color: #ffc200;
+                transform: scale(1.12) rotate(6deg);
+                box-shadow: 0 4px 18px #ffc20080;
+            }
+
+            .social-btn.linkedin:hover {
+                background: #0077b5;
+                color: #fff;
+                border-color: #0077b5;
+                transform: scale(1.12) rotate(-6deg);
+                box-shadow: 0 4px 18px #0077b580;
+            }
+
+            .social-btn.github:hover {
+                background: #24292e;
+                color: #fff;
+                border-color: #24292e;
+                transform: scale(1.12) rotate(6deg);
+                box-shadow: 0 4px 18px #24292e80;
+            }
+
+            .social-btn.instagram:hover {
+                background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                color: #fff;
+                border-color: #d6249f;
+                transform: scale(1.12) rotate(-6deg);
+                box-shadow: 0 4px 18px #d6249f80;
+            }
+
+            .social-btn.pinterest:hover {
+                background: #e60023;
+                color: #fff;
+                border-color: #e60023;
+                transform: scale(1.12) rotate(6deg);
+                box-shadow: 0 4px 18px #e6002380;
+            }
+
+            .social-btn.whatsapp:hover {
+                background: #25d366;
+                color: #fff;
+                border-color: #25d366;
+                transform: scale(1.12) rotate(-6deg);
+                box-shadow: 0 4px 18px #25d36680;
+            }
+
+            .social-btn.facebook:hover {
+                background: #1877f3;
+                color: #fff;
+                border-color: #1877f3;
+                transform: scale(1.12) rotate(6deg);
+                box-shadow: 0 4px 18px #1877f380;
+            }
+
+            .social-btn.youtube:hover {
+                background: #ff0000;
+                color: #fff;
+                border-color: #ff0000;
+                transform: scale(1.12) rotate(-6deg);
+                box-shadow: 0 4px 18px #ff000080;
+            }
+
+            /* Mobile adjustments */
+            @media (max-width: 576px) {
+                .social-btn {
+                    width: 42px;
+                    height: 42px;
+                    font-size: 1.2rem;
+                }
+
+                .social-title {
+                    font-size: 1.2rem;
+                }
+            }
+        </style>
+    </section>
+    <!-- Social Media Links End -->
 
 
 
 
 
 
-    <script src="js/particles.min.js"></script>
-    <script src="js/global-particles.js"></script>
+
+
+    <!-- Footer Start -->
+    <footer class="thankful-footer text-center py-3"
+        style="background: #18181880; color: #ffc200; position:relative; z-index:2; font-size:1.08rem; letter-spacing:0.5px;">
+        <div class="container">
+            <span>Thank you for visiting my portfolio. Made with <span style="color:#fff;">&#10084;&#65039;</span> by
+                Dharmendra Yadav</span>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- AOS Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
