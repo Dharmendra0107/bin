@@ -62,6 +62,23 @@
         For the best experience,<br>please view this site on a bigger screen.<br>
         <span style="font-size:0.98rem;color:#ffc200;opacity:0.95;">(Some features may not display perfectly on mobile.)</span>
       </div>
+      <button id="modal-mode-switch" style="margin-top:18px;padding:8px 22px;border-radius:1.2rem;border:none;background:linear-gradient(90deg,#ffc200 60%,#ffb300 100%);color:#232323;font-weight:600;font-size:1rem;box-shadow:0 2px 8px #ffc20033;cursor:pointer;transition:background 0.2s;">Switch Mode</button>
+  <script>
+
+
+    // Modal mode switch button logic
+    document.addEventListener('DOMContentLoaded', function () {
+      var modalModeSwitch = document.getElementById('modal-mode-switch');
+      if (modalModeSwitch) {
+        modalModeSwitch.addEventListener('click', function () {
+          var colorModeIcon = document.querySelector('.color-mode-icon');
+          if (colorModeIcon) {
+            colorModeIcon.click();
+          }
+        });
+      }
+    });
+  </script>
     </div>
   </div>
 
@@ -104,7 +121,7 @@
               <a href="#achievements" class="nav-link"><span data-hover="Achievements">Achievements</span></a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+              <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
             </li>
           </ul>
         </div>
