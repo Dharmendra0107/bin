@@ -591,7 +591,7 @@ body {
 }
 
 .dark-mode .small-text {
-  background: #0d0c15;
+  background: #0d0c1500;
   color: #ffffff;
 }
 
@@ -658,7 +658,7 @@ a:hover {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
-  color: #5b5b5b;
+  color: #474559;
 }
 
 h1,
@@ -1405,7 +1405,7 @@ body:not(.dark-mode) .navbar-toggler .navbar-toggler-icon,
 }
 
 .edu-content h2 {
-  color: wheat;
+  color: rgb(243, 191, 94);
   font-weight: 600;
   font-size: 20px;
 }
@@ -1418,20 +1418,17 @@ body:not(.dark-mode) .navbar-toggler .navbar-toggler-icon,
 }
 
 .edu-content p {
-  color: #ffffff;
+  color: #474559;
   font-size: 15px;
   margin: 0;
 }
 
-/*Project Section*/
+body.dark-mode .edu-content p {
+  color: #ffffff;
+}
 
-/*#projects{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-}*/
+
+
 #projects {
   overflow: hidden;
 }
@@ -2412,14 +2409,7 @@ textarea {
     width: 80%;
   }
 
-  .intro {
-    text-align: justify;
-  }
-
-  .animated .mr-2,
-  .animated .name-dk {
-    font-size: 26px;
-  }
+  
 
   .animated-item {
     font-size: 24px;
@@ -3155,10 +3145,6 @@ textarea {
     font-size: 0.9rem;
   }
 
-  .home-text .intro {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
 
   .custom-btn-group {
     flex-direction: column;
