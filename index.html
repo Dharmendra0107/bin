@@ -331,9 +331,62 @@
               </style>
 
               <div class="custom-btn-group mt-4">
-                <a href="images\Dharmendra resume.pdf" class="btn mr-lg-2 custom-btn"><i
-                    class='uil uil-file-alt'></i>Resume</a>
-                <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact</a>
+                <div class="btn-pill-group">
+                  <a href="images\Dharmendra resume.pdf" class="btn custom-btn btn-pill-left"><i
+                      class='uil uil-file-alt'></i>Resume</a>
+                  <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link btn-pill-right">Contact</a>
+                </div>
+                <style>
+                  /* Pill button group for Resume and Contact - updated for equal size and spacing */
+                  .btn-pill-group {
+                    display: inline-flex;
+                    align-items: center;
+                    box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+                  }
+
+                  .btn-pill-group .btn {
+                    border-radius: 0;
+                    margin: 0 6px 0 0;
+                    min-width: 140px;
+                    text-align: center;
+                    flex: 1 1 0;
+                  }
+
+                  .btn-pill-group .btn:last-child {
+                    margin-right: 0;
+                  }
+
+                  .btn-pill-group .btn-pill-left {
+                    border-radius: 30px 0 0 30px !important;
+                  }
+
+                  .btn-pill-group .btn-pill-right {
+                    border-radius: 0 30px 30px 0 !important;
+                  }
+
+                  .btn-pill-group .btn-pill-left:only-child,
+                  .btn-pill-group .btn-pill-right:only-child {
+                    border-radius: 30px !important;
+                  }
+
+                  @media (max-width: 767px) {
+                    .btn-pill-group {
+                      flex-direction: column;
+                      box-shadow: none;
+                    }
+
+                    .btn-pill-group .btn {
+                      border-radius: 30px !important;
+                      border: none;
+                      margin: 0 0 10px 0;
+                      min-width: 120px;
+                    }
+
+                    .btn-pill-group .btn:last-child {
+                      margin-bottom: 0;
+                    }
+                  }
+                </style>
               </div>
             </div>
           </div>
@@ -1038,8 +1091,8 @@
         </div>
 
         <!-- Swiper Slider -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+        <div class="swiper mySwiper" data-aos="zoom-in">
+          <div class="swiper-wrapper" data-aos="zoom-in">
 
             <!-- Project Card 1 -->
             <div class="swiper-slide">
@@ -1264,14 +1317,14 @@
           </div>
 
           <!-- Swiper Pagination + Navigation -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination" data-aos="fade-up" data-aos-duration="3000"></div>
         </div>
 
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev" data-aos="zoom-in-right"></div>
+        <div class="swiper-button-next" data-aos="zoom-in-left"></div>
 
         <!-- See All Projects -->
-        <div class="text-center mt-3">
+        <div class="text-center mt-3" data-aos="fade-up">
           <a href="project.html" class="btn btn-all">
             <i class="fa-solid fa-arrow-right"></i> See All Projects
           </a>
@@ -1281,6 +1334,13 @@
         /* ===== PROJECT SECTION ===== */
         .project {
           background: #00000000;
+        }
+
+        .sectionhead p {
+          color: #474559 !important;
+        }
+
+        body.dark-mode .sectionhead p {
           color: #fff;
         }
 
@@ -1696,6 +1756,7 @@
               <i class="fas fa-chevron-up"></i> Show Less
             </button>
           </div>
+          
         </div>
       </div>
       <style>
