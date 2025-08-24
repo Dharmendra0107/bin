@@ -47,39 +47,34 @@
   </script>
   <title>DK | Portfolio - Full Stack Developer</title>
   <link id='favicon' rel="shortcut icon" href="images/dlogo.png" type="image/x-png">
+
+
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/unicons.css">
-  <!--Sroll Animation-->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <script src="https://kit.fontawesome.com/27a24d1a74.js" crossorigin="anonymous"></script>
-  <!-- Bootstrap 5 does not require jQuery -->
-  <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="css/style.css">
-  <!--for style in project section-->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-
-
-
-
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="css/unicons.css">
 
   <link rel="stylesheet" href="css/aos.css">
 
-  <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/unicons.css">
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://kit.fontawesome.com/27a24d1a74.js" crossorigin="anonymous"></script>
+
+  <!-- MAIN STYLE -->
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="js/fontawesome.js" crossorigin="anonymous"></script>
 
   <!-- LottieFiles Player CDN -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   <!-- <link rel="stylesheet" href="css/nothingbutnav.css"> -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -88,6 +83,12 @@
     })();
   </script>
 
+
+  <!-- SwiperJS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- FontAwesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 </head>
 
@@ -170,85 +171,7 @@
             <i class="fa-solid fa-xmark"></i>
           </span>
         </button>
-        <style>
-          /* --- Modern Glassmorphism Project Card: Fixed Height for All Cards --- */
-          .projects .card.swiper-slide {
-            background: rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
-            backdrop-filter: blur(18px) saturate(160%);
-            -webkit-backdrop-filter: blur(18px) saturate(160%);
-            border-radius: 2.2rem;
-            border: 2.5px solid rgba(255, 255, 255, 0.32);
-            transition: box-shadow 0.3s, background 0.3s, transform 0.25s;
-            overflow: hidden;
-            position: relative;
-            height: 410px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding-bottom: 150px;
-          }
 
-          /* Modern hover effect for Projects cards (matches edu-list) */
-          .projects .card.swiper-slide {
-            transition: box-shadow 0.3s, transform 0.3s, background 0.3s, border 0.3s;
-          }
-
-          .projects .card.swiper-slide:hover {
-            background: rgba(255, 194, 0, 0.13);
-            box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
-            transform: translateY(-6px) scale(1.03);
-            border: 2px solid #ffc200;
-          }
-
-          .projects .card.swiper-slide:hover .project-image img {
-            transform: scale(1.07) rotate(-1deg);
-          }
-
-          .projects .card .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 2.2rem 2.2rem 0 2.2rem;
-            transition: transform 0.4s cubic-bezier(.39, .575, .56, 1);
-          }
-
-          .projects .card .image-content {
-            position: relative;
-            width: 100%;
-            height: 180px;
-            overflow: hidden;
-            flex-shrink: 0;
-          }
-
-          .projects .card .project-content {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-
-          @media (max-width: 991px) {
-            .projects .card.swiper-slide {
-              height: 340px;
-            }
-
-            .projects .card .image-content {
-              height: 110px;
-            }
-          }
-
-          @media (max-width: 767px) {
-            .projects .card.swiper-slide {
-              border-radius: 1.2rem;
-              height: 270px;
-            }
-
-            .projects .card .image-content {
-              height: 80px;
-            }
-          }
-        </style>
         <script>
           // Navbar toggler icon switch (hamburger <-> close) for Bootstrap 5
           document.addEventListener('DOMContentLoaded', function () {
@@ -290,25 +213,6 @@
             }
           });
         </script>
-        <style>
-          .navbar-toggler-close {
-            color: #ffc200;
-            font-weight: bold;
-            background: none;
-            border: none;
-            position: absolute;
-            right: 16px;
-            top: 12px;
-            z-index: 10001;
-            cursor: pointer;
-          }
-
-          @media (min-width: 576px) {
-            .navbar-toggler-close {
-              display: none !important;
-            }
-          }
-        </style>
         <script>
           // Navbar toggler icon switch (hamburger <-> close)
           document.addEventListener('DOMContentLoaded', function () {
@@ -332,6 +236,27 @@
             }
           });
         </script>
+
+        <style>
+          .navbar-toggler-close {
+            color: #ffc200;
+            font-weight: bold;
+            background: none;
+            border: none;
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            z-index: 10001;
+            cursor: pointer;
+          }
+
+          @media (min-width: 576px) {
+            .navbar-toggler-close {
+              display: none !important;
+            }
+          }
+        </style>
+
       </div>
     </nav>
     <!-- navbar end -->
@@ -718,7 +643,7 @@
         .about-details {
           color: #474559;
         }
-      
+
         body.dark-mode .about-details {
           color: #ffffff;
         }
@@ -1096,361 +1021,448 @@
 
 
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects py-5">
+    <!-- PROJECT SECTION -->
+    <section id="projects" class="project py-5">
       <div class="container">
 
         <!-- Heading -->
-        <div class="col-lg-10 mx-auto text-center mb-5">
+        <div class="col-lg-10 mx-auto text-center">
           <div class="sectionhead" data-aos="fade-up">
             <h1><i class="fa-solid fa-brain"></i> <span> Projects</span></h1>
           </div>
           <p class="mt-3" data-aos="fade-up">
             Discover my digital canvas! This project section unveils my creative odyssey, where
             ideas morph into reality. From code symphonies to design poetry, each project narrates a story of
-            innovation and precision. Welcome to my realm of creation!
+            innovation and precision.
           </p>
         </div>
 
-        <!-- Bootstrap Carousel -->
-        <div id="projectsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"
-          data-bs-pause="hover" data-aos="zoom-in">
+        <!-- Swiper Slider -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
-          <!-- Carousel Indicators (Navigation Dots) -->
-          <div class="carousel-indicators" style="margin-bottom: -30px;">
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <!-- Project Card 1 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/1Portfolio web.png" alt="Portfolio Website" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title">Portfolio Website</h5>
+                  <p class="card-text">
+                    A personal portfolio site showcasing my skills, projects, and achievements.
+                    Built with HTML, CSS, and JavaScript for a modern, responsive experience.
+                  </p>
+                  <div class="btn-group">
+                    <a href="#" target="_blank" class="btn btn-view"><i class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="#" target="_blank" class="btn btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/4Weather.png" alt="Weather App" class="project-image" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title"> Weather App</h5>
+                  <p class="card-text">
+                    A weather app to get real-time updates for any city. Search by city or use
+                    location access for local weather. Modern UI with icons, temperature, and weather details.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/3Calculator.png" alt="Simple Calculator" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title"> Simple Calculator</h5>
+                  <p class="card-text">
+                    A basic calculator for arithmetic operations like +, -, ×, ÷. Clean interface
+                    with instant calculation and clear/delete options. Built for quick, everyday math tasks in the
+                    browser. </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/Simple_Calculator/" target="_blank"
+                      class="btn btn-view"><i class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/Simple_Calculator" target="_blank"
+                      class="btn btn-code"><i class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/9BloggerWebsite.png" alt="Blogger Website" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title">Blogger Website</h5>
+                  <p class="card-text">
+                    A blogging platform with post creation, categories, and archives. Includes a
+                    modern UI, navigation. Responsive and interactive for seamless
+                    reading and writing.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/5BMI calculator.png" alt="BMI Calculator" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title"> BMI Calculator</h5>
+                  <p class="card-text">
+                    Calculate your Body Mass Index (BMI) based on height and weight. Instantly
+                    shows results and provides a BMI weight guide. Simple, user-friendly interface for quick health
+                    checks.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/BMI_calculator/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/BMI_calculator" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/10ClinicWebsite.png" alt="Clinic Website" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title"> Clinic Website</h5>
+                  <p class="card-text">
+                    A Clinic website for appointments, services, and doctor info. Features
+                    sections for doctors, patient portal, and FAQs. Modern design with easy navigation and
+                    healthcare focus.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/clinic/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/clinic" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 7 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/8Travelling web.png" alt="Travel Fun" class="project-image" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title"> Travel Fun</h5>
+                  <p class="card-text">
+                    A travel website to explore destinations and plan your trips. Includes flight
+                    and stay search, destination highlights, and booking. Vibrant visuals and interactive features
+                    for travel lovers.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/Travel_Fun/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/Travel_Fun" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 8 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/2Food web.png" alt="Hotel Website" class="project-image" loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title">Hotel Website</h5>
+                  <p class="card-text">
+                    A restaurant and food services website with menu, recipes, and booking.
+                    Responsive design using Bootstrap and custom CSS. Focuses on user-friendly navigation and
+                    engaging visuals.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/Hotel_Web" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 9 -->
+            <div class="swiper-slide">
+              <div class="card project-card">
+                <div class="image-content">
+                  <img src="images/project/11age_calculator.png" alt="Age Calculator" class="project-image"
+                    loading="lazy">
+                </div>
+                <div class="project-content">
+                  <h5 class="card-title">Age Calculator</h5>
+                  <p class="card-text">
+                    A web app to calculate age in years, months, and days from date of birth.
+                    Features a clean, animated UI with modern design. Built with HTML, CSS, and JavaScript for
+                    instant results.
+                  </p>
+                  <div class="btn-group">
+                    <a href="https://dharmendra0107.github.io/age_calculater/" target="_blank" class="btn btn-view"><i
+                        class="fa-solid fa-up-right-from-square"></i>
+                      View</a>
+                    <a href="https://github.com/Dharmendra0107/age_calculater" target="_blank" class="btn btn-code"><i
+                        class="fa-brands fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card sooon -->
+
+
           </div>
-          <div class="carousel-inner" style="overflow:visible;">
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="overflow:visible;">
-              <div class="row g-4" style="overflow:visible;">
-                <!-- Project 1 -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/1Portfolio web.png" alt="Portfolio Website" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Portfolio Website</h5>
-                      <p class="card-text">A personal portfolio site showcasing my skills, projects, and achievements.
-                        Built with HTML, CSS, and JavaScript for a modern, responsive experience.</p>
-                      <div>
-                        <a href="#" target="_blank" class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="#" target="_blank"><button class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/2Food web.png" alt="Hotel Website" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Hotel Website</h5>
-                      <p class="card-text">A restaurant and food services website with menu, recipes, and booking.
-                        Responsive design using Bootstrap and custom CSS. Focuses on user-friendly navigation and
-                        engaging visuals.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/Hotel_Web"><button class="button"><i
-                              class="fa-brands fa-github"></i> Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project: Age Calculator -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/11age_calculator.png" alt="Age Calculator" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Age Calculator</h5>
-                      <p class="card-text">A web app to calculate age in years, months, and days from date of birth.
-                        Features a clean, animated UI with modern design. Built with HTML, CSS, and JavaScript for
-                        instant results.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/age_calculater/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/age_calculater" target="_blank"><button
-                            class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="overflow:visible;">
-              <div class="row g-4" style="overflow:visible;">
-                <!-- Project: Blogger Website -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/9BloggerWebsite.png" alt="Blogger Website" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Blogger Website</h5>
-                      <p class="card-text">A blogging platform with post creation, categories, and archives. Includes a
-                        modern UI, navigation. Responsive and interactive for seamless
-                        reading and writing.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank"><button
-                            class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project: BMI Calculator -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/5BMI calculator.png" alt="BMI Calculator" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">BMI Calculator</h5>
-                      <p class="card-text">Calculate your Body Mass Index (BMI) based on height and weight. Instantly
-                        shows results and provides a BMI weight guide. Simple, user-friendly interface for quick health
-                        checks.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/BMI_calculator/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/BMI_calculator" target="_blank"><button
-                            class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project: Clinic Website -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/10ClinicWebsite.png" alt="Clinic Website" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Clinic Website</h5>
-                      <p class="card-text">A hospital website for appointments, services, and doctor info. Features
-                        sections for doctors, patient portal, and FAQs. Modern design with easy navigation and
-                        healthcare focus.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/clinic/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/clinic" target="_blank"><button class="button"><i
-                              class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item" style="overflow:visible;">
-              <div class="row g-4" style="overflow:visible;">
-                <!-- Project: Travel Fun -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/8Travelling web.png" alt="Travel Fun" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Travel Fun</h5>
-                      <p class="card-text">A travel website to explore destinations and plan your trips. Includes flight
-                        and stay search, destination highlights, and booking. Vibrant visuals and interactive features
-                        for travel lovers.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/Travel_Fun/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/Travel_Fun" target="_blank"><button class="button"><i
-                              class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project: Weather App -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/4Weather.png" alt="Weather App" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Weather App</h5>
-                      <p class="card-text">A weather app to get real-time updates for any city. Search by city or use
-                        location access for local weather. Modern UI with icons, temperature, and weather details.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank"><button
-                            class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project: Simple Calculator -->
-                <div class="col-md-4 col-sm-6">
-                  <div class="card">
-                    <img src="images/project/3Calculator.png" alt="Simple Calculator" loading="lazy">
-                    <div class="card-body">
-                      <h5 class="card-title">Simple Calculator</h5>
-                      <p class="card-text">A basic calculator for arithmetic operations like +, -, ×, ÷. Clean interface
-                        with instant calculation and clear/delete options. Built for quick, everyday math tasks in the
-                        browser.</p>
-                      <div>
-                        <a href="https://dharmendra0107.github.io/Simple_Calculator/" target="_blank"
-                          class="btn btn-primary btn-sm">
-                          <i class="fa-solid fa-up-right-from-square"></i> View
-                        </a>
-                        <a href="https://github.com/Dharmendra0107/Simple_Calculator" target="_blank"><button
-                            class="button"><i class="fa-brands fa-github"></i>
-                            Details</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-
+          <!-- Swiper Pagination + Navigation -->
+          <div class="swiper-pagination"></div>
         </div>
 
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev"
-          data-aos="zoom-in">
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next"
-          data-aos="zoom-in ">
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-        <div class="text-center mb-4 mt-5">
-          <a href="project.html" class="btn customp-btn"
-            style="color: #ffb300; font-weight:600; border: 1px solid #ffc200; border-radius: 30px; padding: 10px 32px;">
+        <!-- See All Projects -->
+        <div class="text-center mt-3">
+          <a href="project.html" class="btn btn-all">
             <i class="fa-solid fa-arrow-right"></i> See All Projects
           </a>
         </div>
-        <style>
-          .btn.customp-btn:hover {
-            background: #ffc200 !important;
-            color: #232323 !important;
+      </div>
+      <style>
+        /* ===== PROJECT SECTION ===== */
+        .project {
+          background: #00000000;
+          color: #fff;
+        }
+
+        .project-card {
+          background: #00000000;
+          border-radius: 20px;
+          overflow: hidden;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+          border: 1px solid #e6a100;
+        }
+
+        .image-content {
+          padding: 10px;
+          width: 100%;
+          height: 180px;
+          overflow: hidden;
+        }
+
+        .project-image {
+          border-radius: 20px 20px 0 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+          transform: scale(1.1);
+        }
+
+        .project-content {
+          padding: 20px;
+          text-align: center;
+          background-color: transparent;
+        }
+
+        .card-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #fff;
+
+        }
+
+        .card-text {
+          font-size: 0.95rem;
+          color: #aaa;
+          margin-bottom: 15px;
+        }
+
+        .btn-group {
+          display: flex;
+          gap: 10px;
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 8px 15px;
+          border-radius: 30px;
+          font-size: 0.85rem;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .btn-view {
+          background: #ffb300;
+          color: #000;
+        }
+
+        .btn-view:hover {
+          background: #000;
+          color: #ffc200;
+          transform: scale(1.08);
+          box-shadow: 0 0 18px 0 #ffc20099, 0 2px 8px 0 #0006;
+          border: 1.5px solid #ffc200;
+          z-index: 2;
+          transition: all 0.25s cubic-bezier(.4, 2, .6, 1);
+        }
+
+        .btn-code {
+          background: transparent;
+          border: 1px solid #ffb300;
+          color: #ffb300;
+        }
+
+        .btn-code:hover {
+          background: #ffc200;
+          color: #000 !important;
+          transform: scale(1.08);
+          box-shadow: 0 0 18px 0 #ffc20099, 0 2px 8px 0 #0006;
+          border: 1.5px solid #ffc200;
+          z-index: 2;
+          transition: all 0.25s cubic-bezier(.4, 2, .6, 1);
+        }
+
+        .btn-all {
+          padding: 10px 32px;
+          border: 1px solid #ffc200;
+          border-radius: 30px;
+          color: #ffb300;
+          font-weight: 600;
+          text-decoration: none;
+          transition: 0.3s ease;
+        }
+
+        .btn-all:hover {
+          background: #ffb300;
+          color: #000 !important;
+        }
+
+        /* Swiper Fixes */
+        .swiper {
+          padding: 20px 10px 40px 10px;
+        }
+
+        .swiper-slide {
+          height: auto;
+        }
+
+        .swiper-button-prev {
+          color: #ffb300;
+          margin-top: 15px;
+          margin-left: 70px;
+        }
+
+        .swiper-button-next {
+          color: #ffb300;
+          margin-top: 15px;
+          margin-right: 70px;
+        }
+
+        /* Enhanced Swiper Pagination UI */
+        .swiper-pagination-bullet {
+          width: 14px;
+          height: 14px;
+          background: transparent;
+          border: 2px solid #ffc200;
+          opacity: 1;
+          transition: background 0.3s, border 0.3s, transform 0.2s;
+          box-shadow: 0 2px 8px #ffc20022;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: linear-gradient(90deg, #ffc200 60%, #ffb300 100%);
+          border: 2.5px solid #ffb300;
+          transform: scale(1.18);
+          box-shadow: 0 4px 16px #ffc20055;
+        }
+
+        .swiper-pagination-bullet:hover {
+          background: #ffc200;
+          border: 2.5px solid transparent;
+          transform: scale(1.1);
+        }
+      </style>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: { slidesPerView: 2 },
+            940: { slidesPerView: 3 },
           }
-        </style>
-
-
-
-        <style>
-          /* --- Modern Glassmorphism Project Card: Fixed Height for All Cards --- */
-          .projects .card {
-            background: rgba(255, 255, 255, 0);
-            border-radius: 1.6rem;
-            border: 2px solid rgba(255, 255, 255, 0.32);
-            overflow: hidden;
-            height: 460px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.28s cubic-bezier(.4, 1.4, .6, 1), box-shadow 0.28s, border 0.28s;
-          }
-
-          .projects .card:hover {
-            border: 2px solid #ffb300;
-            transform: scale(1.045);
-            box-shadow: 0 8px 32px 0 #ffc20055, 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
-            z-index: 2;
-          }
-
-          .projects .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            flex-shrink: 0;
-            padding: 10px;
-            border-radius: 1.6rem;
-          }
-
-          .projects .card .card-body {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 10px;
-          }
-
-          .projects .card .card-title {
-            font-weight: 600;
-            font-size: 1.2rem;
-          }
-
-          .projects .card .card-text {
-            flex-grow: 1;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            opacity: 0.9;
-          }
-
-          .projects .card .btn,
-          .projects .card .button {
-            border-radius: 12px;
-            font-size: 0.85rem;
-            padding: 6px 14px;
-            transition: all 0.3s ease;
-          }
-
-
-
-          /* --- Responsive Adjustments --- */
-          @media (max-width: 991px) {
-            .projects .card {
-              height: 340px;
-            }
-
-            .projects .card img {
-              height: 140px;
-            }
-          }
-
-          @media (max-width: 767px) {
-            .projects .card {
-              border-radius: 1rem;
-              height: 270px;
-            }
-
-            .projects .card img {
-              height: 100px;
-            }
-          }
-
-          .carousel-control-prev {
-            left: -30px;
-            top: 200px;
-
-          }
-
-          .carousel-control-next {
-            right: -30px;
-            top: 200px;
-
-          }
-        </style>
+        });
+      </script>
     </section>
-    <!-- Projects Section Ends -->
-
 
 
 
@@ -1762,7 +1774,7 @@
           }
 
           .show-less-btn {
-            background: rgba(255, 194, 0, 0.1);
+            background: rgba(255, 196, 0, 0);
             border: 2px solid #ffc200;
             color: #ffc200;
             padding: 12px 30px;
@@ -2008,10 +2020,8 @@
 
 
 
-    <!-- JavaScript Libraries -->
-
+    <!-- Show toast on mobile devices, centered with modern UI -->
     <script>
-      // Show toast on mobile devices, centered with modern UI
       function isMobile() {
         return window.innerWidth <= 767;
       }
@@ -2028,45 +2038,7 @@
       }
       window.addEventListener('DOMContentLoaded', showMobileToast);
     </script>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!--Smooth Scroll-->
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 700, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: true, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-      });
-
-    </script>
-    <!--Partile.js-->
-    <script src="./js/particles.min.js"></script>
-    <script src="./js/global-particles.js"></script>
-    <!-- Swiper JS -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-    <!-- Include Popup script -->
-    <script src="js/popup.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/message.js"></script>
-    <!-- Enhanced Responsive JavaScript -->
-    <script src="js/responsive.js"></script>
-
-    <!-- Loading States & Skeleton Screens -->
-    <script src="js/loading.js"></script>
+    <!-- Show toast on mobile devices, centered with modern UI -->
 
     <!-- Modern Scroll to Top JavaScript -->
     <script>
@@ -2177,9 +2149,64 @@
         });
       });
     </script>
-    </script>
     <!-- Modern Scroll to Top JavaScript End -->
 
+
+
+
+    <!-- jQuery (if needed by old plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Headroom.js (Sticky Header) -->
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/Headroom.js"></script>
+
+    <!-- Owl Carousel (if you’re still using it elsewhere) -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 700,
+        easing: 'ease',
+        once: false,
+        mirror: true,
+        anchorPlacement: 'top-bottom',
+      });
+    </script>
+
+    <!-- Particles.js -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/global-particles.js"></script>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("dkmom00@gmail.com"); // Replace with your EmailJS user ID
+      })();
+    </script>
+
+    <!-- SMTP.js (for mails if using) -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/custom.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/message.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/loading.js"></script>
 
 
   </body>
