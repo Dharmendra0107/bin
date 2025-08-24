@@ -337,7 +337,7 @@
                   <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link btn-pill-right">Contact</a>
                 </div>
                 <style>
-                  /* Pill button group for Resume and Contact - updated for equal size and spacing */
+                  /* Pill button group for Resume and Contact - improved readability and spacing */
                   .btn-pill-group {
                     display: inline-flex;
                     align-items: center;
@@ -350,6 +350,9 @@
                     min-width: 140px;
                     text-align: center;
                     flex: 1 1 0;
+                    font-size: 1.08rem;
+                    padding: 0.7rem 1.2rem;
+                    letter-spacing: 0.2px;
                   }
 
                   .btn-pill-group .btn:last-child {
@@ -371,19 +374,40 @@
 
                   @media (max-width: 767px) {
                     .btn-pill-group {
-                      flex-direction: column;
+                      flex-direction: row;
+                      align-items: center;
+                      width: 100%;
                       box-shadow: none;
+                      gap: 0;
                     }
 
                     .btn-pill-group .btn {
-                      border-radius: 30px !important;
+                      border-radius: 0;
                       border: none;
-                      margin: 0 0 10px 0;
-                      min-width: 120px;
+                      margin: 0 6px 0 0;
+                      min-width: 0;
+                      width: 50%;
+                      font-size: 1.15rem;
+                      padding: 1.1rem 0.7rem;
+                      box-shadow: 0 2px 8px #ffc20022;
+                      letter-spacing: 0.3px;
                     }
 
                     .btn-pill-group .btn:last-child {
-                      margin-bottom: 0;
+                      margin-right: 0;
+                    }
+
+                    .btn-pill-group .btn-pill-left {
+                      border-radius: 30px 0 0 30px !important;
+                    }
+
+                    .btn-pill-group .btn-pill-right {
+                      border-radius: 0 30px 30px 0 !important;
+                    }
+
+                    .btn-pill-group .btn-pill-left:only-child,
+                    .btn-pill-group .btn-pill-right:only-child {
+                      border-radius: 30px !important;
                     }
                   }
                 </style>
@@ -576,8 +600,8 @@
         .modern-card-badge:hover {
           background: linear-gradient(90deg, #fffbe6 60%, #ffe082 100%);
           color: #e6a204;
-          box-shadow: 0 4px 18px 0 #ffc20099, 0 1.5px 12px 0 #fffbe6cc inset;
           letter-spacing: 1.2px;
+          border: 1px solid #ffc200;
         }
 
         body.dark-mode .modern-card-badge:hover {
@@ -1668,97 +1692,349 @@
             testament to dedication, learning, and a drive for excellence in the tech world.</p>
 
           <div class="box-container row" id="achievementsContainer">
-            <!-- First 3 Certificates Always Visible -->
-            <div class="box achievement-item" data-aos="zoom-in">
-              <img src="images/certificates/1_Coursera Foundations of User Experience (UX) Design.jpg" loading="lazy">
-              <button class="read-more"
-                data-url="images/certificates/1_Coursera Foundations of User Experience (UX) Design.pdf"
-                data-title="Foundations of User Experience (UX) Design - Google"
-                data-description="Master the fundamental principles and methodologies essential for crafting intuitive and impactful user experiences in the Foundations of User Experience (UX) Design course.">Read
-                More</button>
-            </div>
+            <!-- Bootstrap Card Grid for Certificates -->
+            <div class="row w-100 g-4">
+              <!-- Certificate 1 -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/1_Coursera Foundations of User Experience (UX) Design.jpg"
+                    class="card-img-top achievement-img" alt="UX Design Certificate" loading="lazy">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Foundations of User Experience (UX) Design</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/1_Coursera Foundations of User Experience (UX) Design.pdf"
+                      data-title="Foundations of User Experience (UX) Design - Google"
+                      data-description="Master the fundamental principles and methodologies essential for crafting intuitive and impactful user experiences in the Foundations of User Experience (UX) Design course."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 2 -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.jpg"
+                    class="card-img-top achievement-img" alt="Cybersecurity Analyst Certificate" loading="lazy">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Cybersecurity Analyst Job Simulation</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.pdf"
+                      data-title="Cybersecurity Analyst Job Simulation - TATA"
+                      data-description="Hands-on tasks encompassing Identity and Access Management (IAM) fundamentals, strategy assessment, custom solution crafting, and platform integration, essential for a Cybersecurity Analyst role."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 3 -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/3_TCS soft skill  Dharmendra Yadav.jpg"
+                    class="card-img-top achievement-img" alt="TCS Soft Skill Certificate" loading="lazy">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">TCS ION Career Edge Young Professional</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/3_TCS soft skill  Dharmendra Yadav.pdf"
+                      data-title="TCS ION Career Edge Young Professional - TCS"
+                      data-description="Master essential professional competencies and career readiness with TCS ION Career Edge Young Professional."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 4 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/4_Coursera Create a Website Using Wordpress.jpg"
+                    class="card-img-top achievement-img" alt="Wordpress Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Create a Website Using Wordpress</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/4_Coursera Create a Website Using Wordpress.pdf"
+                      data-title="Create a Website Using Wordpress - Coursera"
+                      data-description="Learn to build a website using WordPress with free hosting and a sub-domain in this comprehensive course."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 5 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/5_infyosis AI.jpg" class="card-img-top achievement-img"
+                    alt="AI Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Artificial Intelligence Primer Certification
+                    </h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/5_infyosis AI.pdf"
+                      data-title="Artificial Intelligence Primer Certification - Infosys"
+                      data-description="Unlock the potential of AI with our comprehensive Artificial Intelligence Primer Certification."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 6 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/6_infyosis deta science.jpg" class="card-img-top achievement-img"
+                    alt="Data Science Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Data Science Foundation Certification</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/6_infyosis deta science.pdf"
+                      data-title="Data Science Foundation Certification - Infosys"
+                      data-description="Master the fundamentals of data science with our comprehensive Data Science Foundation Certification course."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 7 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/7_linkdin Digital Marketing Foundation.jpg"
+                    class="card-img-top achievement-img" alt="Digital Marketing Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Digital Marketing Foundations</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/7_linkdin Digital Marketing Foundation.pdf"
+                      data-title="Digital Marketing Foundations - Linkedin"
+                      data-description="Dive into the core principles, strategies, and tools essential for navigating the digital marketing landscape."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 8 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/8_iiit computer.jpg" class="card-img-top achievement-img"
+                    alt="Computer Skills Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">BASIC COMPUTER SKILLS</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/8_iiit computer.pdf" data-title="BASIC COMPUTER SKILLS - IIIT KOTA"
+                      data-description="Certified by IIIT KOTA." data-bs-toggle="modal"
+                      data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate 9 (hidden-mobile) -->
+              <div class="col-md-4 col-sm-6 mb-4 achievement-item hidden-mobile" data-aos="zoom-in">
+                <div class="card achievement-card border-0 bg-dark text-light position-relative overflow-hidden">
+                  <img src="images/certificates/9_Skillup Ethical Hacking.jpg" class="card-img-top achievement-img"
+                    alt="Ethical Hacking Certificate">
+                  <div class="achievement-overlay d-flex flex-column justify-content-end align-items-center p-3">
+                    <h5 class="card-title text-warning text-center mb-2">Skillup Ethical Hacking</h5>
+                    <button class="btn btn-warning btn-sm read-more px-3"
+                      data-url="images/certificates/9_Skillup Ethical Hacking.pdf"
+                      data-title="9_Skillup Ethical Hacking - Skillup" data-description="Certified by Skillup."
+                      data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
+                  </div>
+                </div>
+              </div>
+              
+              <style>
+                /* Achievements Card Overlay UI */
+                .achievement-card {
+                  height: 210px;
+                  background: #181818;
+                  position: relative;
+                  overflow: hidden;
+                  display: flex;
+                  align-items: stretch;
+                  border-radius: 1.1rem;
+                  border: 2.5px solid rgba(255, 194, 0, 0.32);
+                  transition: box-shadow 0.32s cubic-bezier(.4, 2, .6, 1), border-color 0.32s cubic-bezier(.4, 2, .6, 1);
+                }
 
-            <div class="box achievement-item" data-aos="zoom-in">
-              <img src="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.jpg" loading="lazy">
-              <button class="read-more" data-url="images/certificates/2_TATA Cybersecurity Analyst Job Simulation.pdf"
-                data-title="Cybersecurity Analyst Job Simulation - TATA"
-                data-description="Hands-on tasks encompassing Identity and Access Management (IAM) fundamentals, strategy assessment, custom solution crafting, and platform integration, essential for a Cybersecurity Analyst role.">Read
-                More</button>
-            </div>
+                .achievement-img {
+                  object-fit: cover;
+                  height: 210px;
+                  width: 100%;
+                  filter: brightness(0.85) contrast(1.08);
+                  transition: filter 0.2s, transform 0.35s cubic-bezier(.4, 2, .6, 1);
+                  display: block;
+                  border-radius: 1.1rem;
+                }
 
-            <div class="box achievement-item" data-aos="zoom-in">
-              <img src="images/certificates/3_TCS soft skill  Dharmendra Yadav.jpg" loading="lazy">
-              <button class="read-more" data-url="images/certificates/3_TCS soft skill  Dharmendra Yadav.pdf"
-                data-title="TCS ION Career Edge Young Professional - TCS"
-                data-description="Master essential professional competencies and career readiness with TCS ION Career Edge Young Professional.">Read
-                More</button>
-            </div>
+                .achievement-card:hover .achievement-img {
+                  filter: brightness(1) contrast(1.12) saturate(1.1);
+                  transform: scale(1.08) rotate(-1deg);
+                }
 
-            <!-- Remaining Certificates Initially Hidden on Mobile -->
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/4_Coursera Create a Website Using Wordpress.jpg">
-              <button class="read-more" data-url="images/certificates/4_Coursera Create a Website Using Wordpress.pdf"
-                data-title="Create a Website Using Wordpress - Coursera"
-                data-description="Learn to build a website using WordPress with free hosting and a sub-domain in this comprehensive course.">Read
-                More</button>
-            </div>
+                .achievement-card:hover {
+                  box-shadow:
+                    0 0 0 4px #ffc200cc,
+                    0 0 24px 8px #ffc200cc,
+                    0 8px 32px 0 #ffc20055;
+                  border-color: #ffc200;
+                }
 
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/5_infyosis AI.jpg">
-              <button class="read-more" data-url="images/certificates/5_infyosis AI.pdf"
-                data-title="Artificial Intelligence Primer Certification - Infosys"
-                data-description="Unlock the potential of AI with our comprehensive Artificial Intelligence Primer Certification.">Read
-                More</button>
-            </div>
+                .achievement-overlay {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(24, 24, 24, 0.68);
+                  z-index: 2;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  pointer-events: none;
+                }
 
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/6_infyosis deta science.jpg">
-              <button class="read-more" data-url="images/certificates/6_infyosis deta science.pdf"
-                data-title="Data Science Foundation Certification - Infosys"
-                data-description="Master the fundamentals of data science with our comprehensive Data Science Foundation Certification course.">Read
-                More</button>
-            </div>
+                .achievement-overlay .card-title,
+                .achievement-overlay .read-more {
+                  pointer-events: auto;
+                }
 
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/7_linkdin Digital Marketing Foundation.jpg">
-              <button class="read-more" data-url="images/certificates/7_linkdin Digital Marketing Foundation.pdf"
-                data-title="Digital Marketing Foundations - Linkedin"
-                data-description="Dive into the core principles, strategies, and tools essential for navigating the digital marketing landscape.">Read
-                More</button>
-            </div>
+                .achievement-overlay .card-title {
+                  font-size: 1.15rem;
+                  font-weight: 700;
+                  color: #ffc200;
+                  margin-bottom: 0.7rem;
+                  letter-spacing: 0.5px;
+                  text-shadow: 0 2px 8px #000a;
+                  border-radius: 0.7rem;
+                  padding: 0.4rem 1.2rem;
+                }
 
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/8_iiit computer.jpg">
-              <button class="read-more" data-url="images/certificates/8_iiit computer.pdf"
-                data-title="BASIC COMPUTER SKILLS - IIIT KOTA">Read More</button>
-            </div>
+                .achievement-overlay .read-more {
+                  font-size: 1rem;
+                  font-weight: 600;
+                  border-radius: 1.2rem;
+                  box-shadow: 0 2px 8px #ffc20033;
+                  margin-bottom: 2.4rem;
+                  background: linear-gradient(90deg, #ffc200 60%, #ffb300 100%);
+                  color: #232323;
+                  border: none;
+                  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+                  letter-spacing: 0.5px;
+                  outline: none;
+                  position: relative;
+                  z-index: 2;
+                }
 
-            <div class="box achievement-item hidden-mobile" data-aos="zoom-in">
-              <img src="images/certificates/9_Skillup Ethical Hacking.jpg">
-              <button class="read-more" data-url="images/certificates/9_Skillup Ethical Hacking.pdf"
-                data-title="9_Skillup Ethical Hacking - Skillup">Read More</button>
-            </div>
+                .achievement-overlay .read-more:hover,
+                .achievement-overlay .read-more:focus {
+                  background: linear-gradient(90deg, #fffbe6 60%, #ffe082 100%);
+                  color: #e6a204;
 
-            <!-- See More Button (Mobile Only) -->
-            <div class="box see-more-box mobile-only" onclick="toggleAchievements()">
-              <div class="see-more-content">
-                <i class="fas fa-plus-circle"></i>
-                <h2>See More</h2>
-                <p>View all certificates</p>
-                <div class="certificate-count">+6 more</div>
+                  transform: scale(1.08);
+                  border: 1.5px solid #ffc200;
+                }
+
+                body.dark-mode .achievement-overlay .read-more:hover,
+                body.dark-mode .achievement-overlay .read-more:focus {
+                  background: #23232300;
+                  color: #ffc200;
+                }
+
+                @media (max-width: 767px) {
+                  .achievement-card {
+                    height: 150px;
+                    min-height: 150px;
+                    max-height: 150px;
+                    width: 100%;
+                    min-width: 0;
+                    border-radius: 0.8rem;
+                    display: flex;
+                    flex-direction: column;
+                  }
+
+                  .achievement-img {
+                    height: 150px;
+                    min-height: 150px;
+                    max-height: 150px;
+                    width: 100%;
+                    border-radius: 0.8rem;
+                    transition: filter 0.2s, transform 0.35s cubic-bezier(.4, 2, .6, 1);
+                    object-fit: cover;
+                  }
+
+                  .achievement-card:hover .achievement-img {
+                    transform: scale(1.06) rotate(-1deg);
+                  }
+
+                  .achievement-overlay .read-more {
+                    font-size: 0.95rem;
+                    padding: 0.3rem 1.1rem;
+                  }
+
+                  .achievement-overlay {
+                    min-height: 40px;
+                    padding-bottom: 0;
+                  }
+
+                  .achievement-overlay .card-title {
+                    font-size: 1rem;
+                    padding: 0.2rem 0.7rem;
+                  }
+                }
+              </style>
+
+
+              <!-- See More Button (Mobile Only) -->
+              <div class="show-less-container mobile-only text-center mt-3" id="toggleAchievementsBtnContainer">
+                <button class="btn btn-outline-warning see-more-btn px-4 py-2" id="toggleAchievementsBtn" onclick="toggleAchievements()">
+                  <i class="fas fa-chevron-down" id="toggleAchievementsIcon"></i> <span id="toggleAchievementsText">See More <span class="see-more-btn-count">+6</span></span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Certificate Modal -->
+          <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-warning" id="certificateModalLabel"></h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="certificateModalDescription"></p>
+                  <a id="certificateModalLink" href="#" target="_blank" class="btn btn-warning mt-3">View Certificate
+                    (PDF)</a>
+                  <style>
+                    #certificateModalLink.btn-warning {
+                      background: linear-gradient(90deg, #ffc200 60%, #ffb300 100%);
+                      color: #232323;
+                      border: none;
+                      font-weight: 600;
+                      border-radius: 1.2rem;
+                      box-shadow: 0 2px 8px #ffc20033;
+                      letter-spacing: 0.5px;
+                      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+                      outline: none;
+                      position: relative;
+                    }
+
+                    #certificateModalLink.btn-warning:hover,
+                    #certificateModalLink.btn-warning:focus {
+                      background: linear-gradient(90deg, #fffbe6 60%, #ffe082 100%);
+                      color: #e6a204;
+                      transform: scale(1.08);
+                      border: 1.5px solid #ffc200;
+                    }
+
+                    body.dark-mode #certificateModalLink.btn-warning:hover,
+                    body.dark-mode #certificateModalLink.btn-warning:focus {
+                      background: #23232300;
+                      color: #ffc200;
+                    }
+                  </style>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Show Less Button -->
-          <div class="show-less-container mobile-only" id="showLessBtn" style="display: none;">
-            <button class="show-less-btn" onclick="toggleAchievements()">
-              <i class="fas fa-chevron-up"></i> Show Less
-            </button>
-          </div>
-          
         </div>
       </div>
+
       <style>
         @media (max-width: 768px) {
           #achievements .box-container {
@@ -1791,18 +2067,24 @@
           }
 
           .see-more-box {
-            background: linear-gradient(135deg, #ffc200 0%, #ffb300 100%);
+            background: #fffbe6;
             display: flex !important;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px dashed rgba(255, 255, 255, 0.3);
+            transition: box-shadow 0.2s, background 0.2s, border 0.2s, transform 0.18s;
+            border-radius: 1.2rem;
+            border: 2px solid #ffc200;
+            box-shadow: 0 2px 8px #ffc20022;
+            min-height: 90px;
+            margin-bottom: 1.2rem;
           }
 
           .see-more-box:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(255, 194, 0, 0.4);
+            background: #ffe082;
+            box-shadow: 0 4px 18px #ffc20055;
+            border: 2px solid #e6a204;
+            transform: scale(1.03);
           }
 
           .see-more-content {
@@ -1883,19 +2165,40 @@
       <script>
         function toggleAchievements() {
           const container = document.getElementById('achievementsContainer');
-          const showLessBtn = document.getElementById('showLessBtn');
-
+          const btn = document.getElementById('toggleAchievementsBtn');
+          const icon = document.getElementById('toggleAchievementsIcon');
+          const text = document.getElementById('toggleAchievementsText');
           container.classList.toggle('achievements-expanded');
-
           if (container.classList.contains('achievements-expanded')) {
-            showLessBtn.style.display = 'block';
-            document.querySelector('.see-more-box').style.display = 'none';
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+            text.innerHTML = 'Show Less';
           } else {
-            showLessBtn.style.display = 'none';
-            document.querySelector('.see-more-box').style.display = 'flex';
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+            text.innerHTML = 'See More <span class="see-more-btn-count">+6</span>';
           }
         }
+
+        // Modal logic for Achievements section
+        document.addEventListener('DOMContentLoaded', function () {
+          const modal = document.getElementById('certificateModal');
+          const modalTitle = document.getElementById('certificateModalLabel');
+          const modalDesc = document.getElementById('certificateModalDescription');
+          const modalLink = document.getElementById('certificateModalLink');
+          document.querySelectorAll('.read-more').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              const title = btn.getAttribute('data-title') || '';
+              const desc = btn.getAttribute('data-description') || '';
+              const url = btn.getAttribute('data-url') || '#';
+              if (modalTitle) modalTitle.textContent = title;
+              if (modalDesc) modalDesc.textContent = desc;
+              if (modalLink) modalLink.href = url;
+            });
+          });
+        });
       </script>
+
     </section>
     <!--Achievements and Certifications end-->
 
@@ -1974,7 +2277,7 @@
 
               <!-- Submit button -->
               <div>
-                <input class="form-btn btn common-btn" type="submit" value="Send Message" data-aos="zoom-in">
+                <input class="form-btn btn common-btn mb-5" type="submit" value="Send Message" data-aos="zoom-in">
               </div>
             </form>
             <!-- End of Form -->
@@ -2060,7 +2363,7 @@
 
 
     <!-- Modern Skip to Main Content Button start -->
-    <div class="modern-scroll-to-top" style="margin-right: 24px;" data-aos="zoom-in-down">
+    <div class="modern-scroll-to-top" data-aos="zoom-in-down">
       <a href="#home" class="scroll-btn" title="Back to Top" aria-label="Scroll to top">
         <div class="scroll-icon">
           <div class="arrow-up"></div>
@@ -2079,7 +2382,9 @@
 
 
 
+    
 
+    <div style="height: 10px;"></div>
 
     <!-- Show toast on mobile devices, centered with modern UI -->
     <script>
