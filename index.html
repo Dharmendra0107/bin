@@ -1772,7 +1772,7 @@
                     <button class="btn btn-warning btn-sm read-more px-3"
                       data-url="images/certificates/5_infyosis AI.pdf"
                       data-title="Artificial Intelligence Primer Certification - Infosys"
-                      data-description="Unlock the potential of AI with our comprehensive Artificial Intelligence Primer Certification."
+                      data-description="Artificial Intelligence Primer Certification – Infosys Springboard (May 2022). Gained foundational knowledge of Artificial Intelligence concepts, applications, and real-world use cases. Completion Date: May 5, 2022. Issued By: Infosys Springboard. Issue Date: May 12, 2022. Authorized Signatory: Thirumala Arohi, Senior Vice President and Head – Education, Training & Assessment (ETA), Infosys Limited. Verification: Can be verified via QR code at verify.onwingspan.com"
                       data-bs-toggle="modal" data-bs-target="#certificateModal">Read More</button>
                   </div>
                 </div>
@@ -1872,7 +1872,7 @@
                       border: none;
                       font-weight: 600;
                       border-radius: 1.2rem;
-                      box-shadow: 0 6px 28px rgba(255,194,0,0.2);
+                      box-shadow: 0 6px 28px rgba(255, 194, 0, 0.2);
                       letter-spacing: 0.5px;
                       transition: background 0.28s, color 0.28s, transform 0.18s;
                       outline: none;
@@ -1897,15 +1897,15 @@
                     /* Backdrop blur when modal is visible */
                     .modal-backdrop.show {
                       backdrop-filter: blur(6px) saturate(1.05);
-                      background-color: rgba(0,0,0,0.48);
+                      background-color: rgba(0, 0, 0, 0.48);
                     }
 
                     /* Glassy modal look */
                     #certificateModal .modal-content {
-                      background: rgba(24,24,24,0.72);
+                      background: rgba(24, 24, 24, 0.72);
                       border-radius: 14px;
-                      border: 1px solid rgba(255,255,255,0.06);
-                      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+                      border: 1px solid rgba(255, 255, 255, 0.06);
+                      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
                       backdrop-filter: blur(4px) brightness(0.95);
                       overflow: hidden;
                     }
@@ -1920,8 +1920,14 @@
                     }
 
                     @media (max-width: 576px) {
-                      #certificateModal .modal-dialog { max-width: 95%; margin: 1.5rem; }
-                      #certificateModal .modal-content { border-radius: 10px; }
+                      #certificateModal .modal-dialog {
+                        max-width: 95%;
+                        margin: 1.5rem;
+                      }
+
+                      #certificateModal .modal-content {
+                        border-radius: 10px;
+                      }
                     }
                   </style>
                 </div>
@@ -2222,12 +2228,14 @@
           }
         }
 
-        // Modal logic for Achievements section
+        // Modal logic for Achievements section (content population + accessibility)
         document.addEventListener('DOMContentLoaded', function () {
           const modal = document.getElementById('certificateModal');
           const modalTitle = document.getElementById('certificateModalLabel');
           const modalDesc = document.getElementById('certificateModalDescription');
           const modalLink = document.getElementById('certificateModalLink');
+
+          // Populate modal from data-* attributes on trigger buttons
           document.querySelectorAll('.read-more').forEach(function (btn) {
             btn.addEventListener('click', function () {
               const title = btn.getAttribute('data-title') || '';
@@ -2242,11 +2250,82 @@
           // add/remove body class when Bootstrap modal opens/closes for additional styling hooks
           const certificateModalEl = document.getElementById('certificateModal');
           if (certificateModalEl) {
-            certificateModalEl.addEventListener('show.bs.modal', function () {
+            // Accessibility: focus trap, ESC to close, and focus restore
+            let lastFocusedElement = null;
+            let keydownHandler = null;
+
+            certificateModalEl.addEventListener('show.bs.modal', function (event) {
               document.body.classList.add('modal-open-glass');
+
+              // Save the element that triggered the modal so we can restore focus later
+              lastFocusedElement = event && event.relatedTarget ? event.relatedTarget : document.activeElement;
+
+              // Find focusable elements inside the modal
+              const FOCUSABLE_SELECTORS = 'a[href], area[href], input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
+              const focusable = Array.prototype.slice.call(certificateModalEl.querySelectorAll(FOCUSABLE_SELECTORS));
+
+              // If there are focusable elements, focus the first one (prefer close button)
+              const closeBtn = certificateModalEl.querySelector('.btn-close');
+              const firstFocusable = closeBtn || focusable[0];
+              if (firstFocusable && typeof firstFocusable.focus === 'function') {
+                // Slight timeout so bootstrap finishes its focusing behavior first
+                setTimeout(function () { firstFocusable.focus(); }, 10);
+              } else {
+                // Ensure the modal container is focusable as a fallback
+                certificateModalEl.setAttribute('tabindex', '-1');
+                certificateModalEl.focus();
+              }
+
+              // Keydown handler traps TAB inside the modal and closes on ESC
+              keydownHandler = function (e) {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                  // Close using Bootstrap's API if available
+                  try {
+                    const bsInstance = bootstrap.Modal.getInstance(certificateModalEl) || new bootstrap.Modal(certificateModalEl);
+                    bsInstance.hide();
+                  } catch (err) {
+                    // Fallback: hide by removing the show classes (best-effort)
+                    certificateModalEl.classList.remove('show');
+                  }
+                  return;
+                }
+
+                if (e.key === 'Tab') {
+                  const focusables = Array.prototype.slice.call(certificateModalEl.querySelectorAll(FOCUSABLE_SELECTORS)).filter(function (el) {
+                    return el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement;
+                  });
+                  if (focusables.length === 0) { return; }
+                  const first = focusables[0];
+                  const last = focusables[focusables.length - 1];
+                  if (e.shiftKey) {
+                    if (document.activeElement === first || certificateModalEl === document.activeElement) {
+                      e.preventDefault();
+                      last.focus();
+                    }
+                  } else {
+                    if (document.activeElement === last) {
+                      e.preventDefault();
+                      first.focus();
+                    }
+                  }
+                }
+              };
+
+              document.addEventListener('keydown', keydownHandler);
             });
+
             certificateModalEl.addEventListener('hidden.bs.modal', function () {
               document.body.classList.remove('modal-open-glass');
+              // Remove keydown listener
+              if (keydownHandler) {
+                document.removeEventListener('keydown', keydownHandler);
+                keydownHandler = null;
+              }
+              // Restore focus to the element that opened the modal
+              if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+                try { lastFocusedElement.focus(); } catch (err) { /* ignore */ }
+              }
+              lastFocusedElement = null;
             });
           }
         });
