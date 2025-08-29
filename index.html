@@ -118,7 +118,7 @@
 
 
     <!-- navbar start -->
-    <nav class="navbar navbar-expand-sm navbar-light" data-aos="fade-down">
+    <nav class="navbar navbar-expand-sm navbar-light " data-aos="fade-down">
       <div class="container">
         <a class="navbar-brand" href="index.html"><img class='uil' src="images/dklogo.png" loading="lazy"
             data-aos="fade-down"> Dharmendra</a>
@@ -126,31 +126,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a href="#home" class="nav-link"><span data-hover="Home">Home</span></a>
+              <a href="#home" class="nav-link"><span>Home</span></a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+              <a href="#about" class="nav-link"><span>About</span></a>
             </li>
             <li class="nav-item">
-              <a href="#skills" class="nav-link"><span data-hover="Skills">Skills</span></a>
+              <a href="#skills" class="nav-link"><span>Skills</span></a>
             </li>
             <li class="nav-item">
-              <a href="#education" class="nav-link"><span data-hover="Education">Education</span></a>
+              <a href="#education" class="nav-link"><span>Education</span></a>
             </li>
             <!-- <li class="nav-item">
-              <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+              <a href="#projects" class="nav-link"><span>Projects</span></a>
             </li> -->
             <li class="nav-item">
-              <a href="project.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+              <a href="project.html" class="nav-link"><span>Projects</span></a>
             </li>
             <li class="nav-item">
-              <a href="#experiences" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+              <a href="#experiences" class="nav-link"><span>Experiences</span></a>
             </li>
             <li class="nav-item">
-              <a href="#achievements" class="nav-link"><span data-hover="Achievements">Achievements</span></a>
+              <a href="#achievements" class="nav-link"><span>Achievements</span></a>
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
+              <a href="contact.html" class="nav-link"><span>Contact</span></a>
             </li>
           </ul>
         </div>
@@ -161,6 +161,7 @@
             </div>
           </div>
         </ul>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="mainNavbarToggler">
           <!-- Hamburger (menu) FontAwesome icon -->
@@ -172,7 +173,6 @@
             <i class="fa-solid fa-xmark"></i>
           </span>
         </button>
-
         <script>
           // Navbar toggler icon switch (hamburger <-> close) for Bootstrap 5
           document.addEventListener('DOMContentLoaded', function () {
@@ -214,51 +214,11 @@
             }
           });
         </script>
-        <script>
-          // Navbar toggler icon switch (hamburger <-> close)
-          document.addEventListener('DOMContentLoaded', function () {
-            var toggler = document.getElementById('mainNavbarToggler');
-            var navCollapse = document.getElementById('navbarNav');
-            var icon = toggler.querySelector('.navbar-toggler-icon');
-            var closeIcon = toggler.querySelector('.navbar-toggler-close');
-            if (toggler && navCollapse && icon && closeIcon) {
-              toggler.addEventListener('click', function () {
-                setTimeout(function () {
-                  var isOpen = navCollapse.classList.contains('show');
-                  if (isOpen) {
-                    icon.style.display = 'none';
-                    closeIcon.style.display = 'inline';
-                  } else {
-                    icon.style.display = 'inline';
-                    closeIcon.style.display = 'none';
-                  }
-                }, 10);
-              });
-            }
-          });
-        </script>
-
         <style>
-          .navbar-toggler-close {
-            color: #ffc200;
-            font-weight: bold;
-            background: none;
-            border: none;
-            position: absolute;
-            right: 16px;
-            top: 12px;
-            z-index: 10001;
-            cursor: pointer;
-          }
 
-          @media (min-width: 576px) {
-            .navbar-toggler-close {
-              display: none !important;
-            }
-          }
         </style>
-
       </div>
+
     </nav>
     <!-- navbar end -->
 
@@ -493,8 +453,8 @@
         .modern-card {
           background: transparent;
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 12px 0 rgba(255, 255, 255, 0.18) inset;
-          border-radius: 2.2rem;
-          border: 2.5px solid rgba(255, 255, 255, 0.32);
+          border-radius: 2rem;
+          border: 0.1px solid rgba(255, 255, 255, 0.32);
           transition: box-shadow 0.3s, background 0.3s, transform 0.25s, border 0.3s;
           overflow: hidden;
           position: relative;
@@ -834,100 +794,6 @@
               <span>API</span>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col">
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fab fa-java"></i>
-                  <span>Java</span>
-                  <span>85%</span>
-                </div>
-                <div class="line java"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fa-solid fa-paintbrush"></i>
-                  <span>Canva</span>
-                  <span>80%</span>
-                </div>
-                <div class="line cpp"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fab fa-html5"></i>
-                  <span>HTML/CSS</span>
-                  <span>90%</span>
-                </div>
-                <div class="line html"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fas fa-c"></i>
-                  <span>C Language</span>
-                  <span>90%</span>
-                </div>
-                <div class="line c"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fas fa-database"></i>
-                  <span>Bootstrap</span>
-                  <span>80%</span>
-                </div>
-                <div class="line content"></div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bar" data-aos="fade-left">
-                <div class="info">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                  <span>65%</span>
-                </div>
-                <div class="line python"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-left">
-                <div class="info">
-                  <i class="fab fa-react"></i>
-                  <span>Graphics Designing</span>
-                  <span>75%</span>
-                </div>
-                <div class="line graphics"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-left">
-                <div class="info">
-                  <i class="fab fa-microsoft"></i>
-                  <span>Microsoft Office Suite</span>
-                  <span>80%</span>
-                </div>
-                <div class="line msoffice"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-left">
-                <div class="info">
-                  <i class="fa-solid fa-list-check"></i>
-                  <span>Project Management</span>
-                  <span>85%</span>
-                </div>
-                <div class="line project"></div>
-              </div>
-
-              <div class="bar" data-aos="fade-right">
-                <div class="info">
-                  <i class="fab fa-google cloud"></i>
-                  <span>Tailwind CSS</span>
-                  <span>60%</span>
-                </div>
-                <div class="line gcp"></div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
       <style>
@@ -941,8 +807,8 @@
 
         .tech-bubble {
           background: transparent;
-          border: 2.5px solid rgba(255, 255, 255, 0.32);
           border-radius: 2rem;
+          border: 0.1px solid rgba(255, 255, 255, 0.32);
           box-shadow: 0 4px 24px 0 #0003;
           width: 120px;
           height: 120px;
@@ -1089,11 +955,13 @@
         /* Modern hover effect for Education & Trainings section */
         .edu-list {
           transition: box-shadow 0.3s, transform 0.3s, background 0.3s, border 0.3s;
-          border-radius: 1.2rem;
-          background: rgba(255, 255, 255, 0.08);
           box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
-          border: 1.5px solid rgba(255, 255, 255, 0.18);
+          border-radius: 2rem;
+          border: 0.1px solid rgba(255, 255, 255, 0.32);
           margin-bottom: 18px;
+          width: 100%;
+          float: left;
+          padding: 30px 10px;
         }
 
         .edu-list:hover {
@@ -1174,6 +1042,31 @@
               </div>
             </div>
 
+                        <!-- Project Card 4 -->
+                        <div class="swiper-slide">
+                          <div class="card project-card">
+                            <div class="image-content">
+                              <img src="images/project/9BloggerWebsite.png" alt="Blogger Website" class="project-image" loading="lazy"
+                                data-aos="fade-up" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                              <h5 class="card-title">Blogger Website</h5>
+                              <p class="card-text">
+                                A blogging platform with post creation, categories, and archives. Includes a
+                                modern UI, navigation. Responsive and interactive for seamless
+                                reading and writing.
+                              </p>
+                              <div class="btn-group">
+                                <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" class="btn btn-view"><i
+                                    class="fa-solid fa-up-right-from-square"></i>
+                                  View</a>
+                                <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" class="btn btn-code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
             <!-- Project Card 3 -->
             <div class="swiper-slide">
               <div class="card project-card">
@@ -1198,30 +1091,7 @@
               </div>
             </div>
 
-            <!-- Project Card 4 -->
-            <div class="swiper-slide">
-              <div class="card project-card">
-                <div class="image-content">
-                  <img src="images/project/9BloggerWebsite.png" alt="Blogger Website" class="project-image"
-                    loading="lazy" data-aos="fade-up" loading="lazy">
-                </div>
-                <div class="project-content">
-                  <h5 class="card-title">Blogger Website</h5>
-                  <p class="card-text">
-                    A blogging platform with post creation, categories, and archives. Includes a
-                    modern UI, navigation. Responsive and interactive for seamless
-                    reading and writing.
-                  </p>
-                  <div class="btn-group">
-                    <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" class="btn btn-view"><i
-                        class="fa-solid fa-up-right-from-square"></i>
-                      View</a>
-                    <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" class="btn btn-code"><i
-                        class="fa-brands fa-github"></i> Code</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
 
             <!-- Project Card 5 -->
             <div class="swiper-slide">
@@ -1383,10 +1253,10 @@
 
         .project-card {
           background: #00000000;
-          border-radius: 20px;
           overflow: hidden;
           backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 2rem;
+          border: 0.1px solid rgba(255, 255, 255, 0.32);
           transition: all 0.3s ease;
         }
 
@@ -1980,9 +1850,12 @@
         .achievement-card:hover {
           box-shadow:
             0 0 0 4px #ffc200cc,
-            0 0 24px 8px #ffc200cc,
-            0 8px 32px 0 #ffc20055;
+            0 0 24px 8px #ffffffcc,
+            0 8px 32px 0 #ffffff55;
           border-color: #ffc200;
+
+
+
         }
 
         .achievement-overlay {
@@ -2503,29 +2376,296 @@
 
 
 
-    <!-- Modern Skip to Main Content Button start -->
-    <div class="modern-scroll-to-top" data-aos="zoom-in-down">
-      <a href="#home" class="scroll-btn" title="Back to Top" aria-label="Scroll to top">
-        <div class="scroll-icon">
-          <div class="arrow-up"></div>
-        </div>
-        <div class="scroll-text">
-          <span>TOP</span>
-        </div>
-        <div class="progress-ring">
-          <svg class="progress-svg" width="60" height="60">
-            <circle class="progress-circle" cx="30" cy="30" r="25" stroke-width="2"></circle>
-          </svg>
-        </div>
-      </a>
-    </div>
-    <!-- Modern Skip to Main Content Button End -->
 
 
 
 
 
-    <div style="height: 10px;"></div>
+
+    <section class="footer button">
+      <!-- Modern Skip to Main Content Button start -->
+      <div class="modern-scroll-to-top" data-aos="zoom-in-down">
+        <a href="#home" class="scroll-btn" title="Back to Top" aria-label="Scroll to top">
+          <div class="scroll-icon">
+            <div class="arrow-up"></div>
+          </div>
+          <div class="scroll-text">
+            <span>TOP</span>
+          </div>
+          <div class="progress-ring">
+            <svg class="progress-svg" width="60" height="60">
+              <circle class="progress-circle" cx="30" cy="30" r="25" stroke-width="2"></circle>
+            </svg>
+          </div>
+        </a>
+        <style>
+          /* Modern Scroll to Top Button */
+          .modern-scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+          }
+
+          .modern-scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .scroll-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), #667eea);
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+          }
+
+          .scroll-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+          }
+
+          .scroll-icon {
+            position: relative;
+            z-index: 3;
+            transition: all 0.3s ease;
+          }
+
+          .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 12px solid white;
+            transition: all 0.3s ease;
+          }
+
+          .scroll-btn:hover .arrow-up {
+            transform: translateY(-3px);
+            border-bottom-color: #fff;
+          }
+
+          .scroll-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            font-size: 10px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            z-index: 2;
+          }
+
+          .scroll-btn:hover .scroll-text {
+            opacity: 1;
+          }
+
+          .scroll-btn:hover .scroll-icon {
+            opacity: 0;
+          }
+
+          .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          .progress-svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+          }
+
+          .progress-circle {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.3);
+            stroke-linecap: round;
+            stroke-dasharray: 157;
+            /* 2 * π * 25 */
+            stroke-dashoffset: 157;
+            transition: stroke-dashoffset 0.3s ease;
+          }
+
+          /* Pulse Animation */
+          .scroll-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), #667eea);
+            border-radius: 50%;
+            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            z-index: -1;
+          }
+
+          @keyframes pulse-ring {
+            0% {
+              transform: scale(1);
+              opacity: 1;
+            }
+
+            100% {
+              transform: scale(1.8);
+              opacity: 0;
+            }
+          }
+
+          /* Ripple Effect */
+          .scroll-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            z-index: 1;
+          }
+
+          .scroll-btn:active::after {
+            width: 100%;
+            height: 100%;
+          }
+
+          /* Dark mode adjustments */
+          .dark-mode .scroll-btn {
+            background: linear-gradient(135deg, #667eea, var(--primary-color));
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+          }
+
+          .dark-mode .scroll-btn:hover {
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+          }
+
+          /* Mobile optimizations */
+          @media (max-width: 768px) {
+            .modern-scroll-to-top {
+              bottom: 20px;
+              right: 20px;
+            }
+
+            .scroll-btn {
+              width: 50px;
+              height: 50px;
+            }
+
+            .arrow-up {
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 10px solid white;
+            }
+
+            .scroll-text span {
+              font-size: 8px;
+            }
+          }
+
+          /* Alternative floating design */
+          .scroll-btn.floating {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+          }
+
+          .scroll-btn.floating:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.3);
+          }
+
+
+          /* Creative Glitch Effect */
+          .glitch {
+            position: relative;
+            display: inline-block;
+          }
+
+          .glitch::before,
+          .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          .glitch::before {
+            animation: glitch-1 0.3s infinite linear alternate-reverse;
+          }
+
+          .glitch::after {
+            animation: glitch-2 0.3s infinite linear alternate-reverse;
+          }
+
+          @keyframes glitch-1 {
+            0% {
+              clip: rect(42px, 9999px, 44px, 0);
+              transform: skew(0.85deg);
+            }
+
+            5% {
+              clip: rect(12px, 9999px, 59px, 0);
+              transform: skew(0.4deg);
+            }
+
+            10% {
+              clip: rect(48px, 9999px, 29px, 0);
+              transform: skew(0.7deg);
+            }
+
+            100% {
+              clip: rect(42px, 9999px, 44px, 0);
+              transform: skew(0.85deg);
+            }
+          }
+
+          @keyframes glitch-2 {
+            0% {
+              clip: rect(65px, 9999px, 119px, 0);
+              transform: skew(0.74deg);
+            }
+
+            5% {
+              clip: rect(52px, 9999px, 33px, 0);
+              transform: skew(0.9deg);
+            }
+
+            10% {
+              clip: rect(79px, 9999px, 85px, 0);
+              transform: skew(0.6deg);
+            }
+
+            100% {
+              clip: rect(65px, 9999px, 119px, 0);
+              transform: skew(0.74deg);
+            }
+          }
+        </style>
+      </div>
+
+      <!-- Modern Skip to Main Content Button End -->
+    </section>
 
     <!-- Show toast on mobile devices, centered with modern UI -->
     <script>
