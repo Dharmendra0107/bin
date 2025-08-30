@@ -7,10 +7,7 @@ Static portfolio website (HTML, CSS, JS) showcasing projects, skills and certifi
 - Quick (no server): open `index.html` in your browser. This works for most pages but some features (fetches, Service Worker, relative PDF previews) behave better when served over HTTP.
 - Recommended (Python 3): from the repo root run:
 
-```powershell
-python -m http.server 8000
-# then open http://localhost:8000
-```
+
 
 - VS Code: install the Live Server extension and click "Go Live".
 

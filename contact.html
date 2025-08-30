@@ -3,26 +3,30 @@
 
 <head>
 
-        <title>Contact Me - Dharmendra</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
-        <meta name="author" content="Dharmendra Kumar Yadav">
-        <meta name="keywords" content="Contact, Full Stack Developer, Dharmendra Kumar Yadav, Email, Portfolio, Collaboration, Project, Web Developer">
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="Contact Me - Dharmendra Kumar Yadav">
-        <meta property="og:description" content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://dharmendra0107.github.io/contact.html">
-        <meta property="og:image" content="images/dkmainlogo.png">
-        <meta property="og:site_name" content="DK Portfolio">
-        <!-- Twitter Card Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Contact Me - Dharmendra Kumar Yadav">
-        <meta name="twitter:description" content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
-        <meta name="twitter:image" content="images/dkmainlogo.png">
-        <!-- Structured Data (JSON-LD) -->
-        <script type="application/ld+json">
+    <title>Contact Me - Dharmendra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
+    <meta name="author" content="Dharmendra Kumar Yadav">
+    <meta name="keywords"
+        content="Contact, Full Stack Developer, Dharmendra Kumar Yadav, Email, Portfolio, Collaboration, Project, Web Developer">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Me - Dharmendra Kumar Yadav">
+    <meta property="og:description"
+        content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dharmendra0107.github.io/contact.html">
+    <meta property="og:image" content="images/dkmainlogo.png">
+    <meta property="og:site_name" content="DK Portfolio">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Me - Dharmendra Kumar Yadav">
+    <meta name="twitter:description"
+        content="Contact Dharmendra Kumar Yadav, Full Stack Developer. Get in touch for collaborations, projects, or opportunities.">
+    <meta name="twitter:image" content="images/dkmainlogo.png">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
@@ -194,9 +198,6 @@
         </style>
     </section>
     <!-- Header Section End -->
-
-
-
 
 
     <!-- Interactive Contact Form Start -->
@@ -469,7 +470,46 @@
 
             @media (max-width: 600px) {
                 .contact-form-section {
-                    padding: 18px 6px 18px;
+                    padding: 10px 2vw 10px;
+                    max-width: 98vw;
+                }
+
+                .contact-form-section form {
+                    padding: 8px 2vw;
+                }
+
+                .form-group input,
+                .form-group textarea {
+                    font-size: 0.98rem;
+                    padding: 10px 10px 10px 32px;
+                }
+
+                .form-group label span {
+                    font-size: 0.98rem;
+                    left: 32px;
+                    top: 10px;
+                }
+
+                .form-group input:focus+span,
+                .form-group input:not(:placeholder-shown)+span,
+                .form-group textarea:focus+span,
+                .form-group textarea:not(:placeholder-shown)+span {
+                    top: -10px;
+                    left: 28px;
+                    font-size: 0.85rem;
+                }
+
+                .submit-btn {
+                    font-size: 1rem;
+                    padding: 10px 0;
+                }
+
+                .success-message {
+                    font-size: 1rem;
+                }
+
+                .error-message {
+                    font-size: 0.85rem;
                 }
             }
         </style>
@@ -556,7 +596,6 @@
     <!-- Interactive Contact Form End -->
 
 
-
     <!-- Download vCard Button Start -->
     <section class="download-vcard-section text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
         <a href="images/DharmendraYadav.vcf" download
@@ -579,6 +618,13 @@
                 margin-top: 10px;
             }
 
+            @media (max-width: 600px) {
+                .download-vcard-btn {
+                    font-size: 0.95rem;
+                    padding: 9px 16px;
+                }
+            }
+
             .download-vcard-btn:hover {
                 background: #ffb300;
                 color: #ffffff;
@@ -588,9 +634,6 @@
         </style>
     </section>
     <!-- Download vCard Button End -->
-
-
-
 
 
     <!-- Social Media Links Start -->
@@ -750,24 +793,18 @@
             /* Mobile adjustments */
             @media (max-width: 576px) {
                 .social-btn {
-                    width: 42px;
-                    height: 42px;
-                    font-size: 1.2rem;
+                    width: 38px;
+                    height: 38px;
+                    font-size: 1rem;
                 }
 
                 .social-title {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
             }
         </style>
     </section>
     <!-- Social Media Links End -->
-
-
-
-
-
-
 
 
     <!-- Footer Start -->
@@ -780,18 +817,19 @@
     </footer>
     <!-- Footer End -->
 
+
     <!-- AOS Library -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-        <script>
-            // Disable right-click context menu
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-        </script>
-    </body>
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
 
 </html>

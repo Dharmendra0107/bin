@@ -2382,9 +2382,9 @@
 
 
 
-    <section class="footer button">
+    <section class="footer button m-5">
       <!-- Modern Skip to Main Content Button start -->
-      <div class="modern-scroll-to-top" data-aos="zoom-in-down">
+      <div class="modern-scroll-to-top " data-aos="zoom-in-down">
         <a href="#home" class="scroll-btn" title="Back to Top" aria-label="Scroll to top">
           <div class="scroll-icon">
             <div class="arrow-up"></div>
@@ -2403,7 +2403,7 @@
           .modern-scroll-to-top {
             position: fixed;
             bottom: 30px;
-            right: 0px;
+            right: 50px;
             z-index: 1000;
             opacity: 0;
             visibility: hidden;
@@ -2558,29 +2558,6 @@
             box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
           }
 
-          /* Mobile optimizations */
-          @media (max-width: 768px) {
-            .modern-scroll-to-top {
-              bottom: 20px;
-              right: 20px;
-            }
-
-            .scroll-btn {
-              width: 50px;
-              height: 50px;
-            }
-
-            .arrow-up {
-              border-left: 6px solid transparent;
-              border-right: 6px solid transparent;
-              border-bottom: 10px solid white;
-            }
-
-            .scroll-text span {
-              font-size: 8px;
-            }
-          }
-
           /* Alternative floating design */
           .scroll-btn.floating {
             background: rgba(255, 255, 255, 0.15);
@@ -2661,16 +2638,55 @@
               transform: skew(0.74deg);
             }
           }
+            /* Mobile optimizations */
+          @media (max-width: 768px) {
+            .modern-scroll-to-top {
+              bottom: 18px;
+              right: 14px;
+              z-index: 1000;
+              /* Add a little shadow for visibility */
+              box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            }
+
+            .scroll-btn {
+              width: 58px;
+              height: 58px;
+              min-width: 56px;
+              min-height: 56px;
+              border-radius: 50%;
+              font-size: 1.2rem;
+              box-shadow: 0 2px 8px #0002;
+              padding: 0;
+              /* Make sure it's easy to tap */
+              touch-action: manipulation;
+            }
+
+            .arrow-up {
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 14px solid #fff;
+              margin-top: 2px;
+            }
+
+            .scroll-text span {
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+              color: #fff;
+              text-shadow: 0 1px 4px #0008;
+            }
+          }
         </style>
-      </div>
-
-      <!-- Modern Skip to Main Content Button End -->
+      </div>  
     </section>
+    <!-- Modern Skip to Main Content Button End -->
 
+    
     <!-- Show toast on mobile devices, centered with modern UI -->
     <script>
       function isMobile() {
-        return window.innerWidth <= 767;
+        return window.inne
+        rWidth <= 767;
       }
       function showMobileToast() {
         var toast = document.getElementById('mobile-toast');
