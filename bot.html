@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Live Chat / FAQ Bot - Dharmendra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live Chat and FAQ Bot for Dharmendra Kumar Yadav's portfolio.">
+    <meta name="author" content="Dharmendra Kumar Yadav">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="icon" href="images/dklogo.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <style>
+        body { background: #000; min-height: 100vh; }
+        .bot-container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
+        .bot-title { color: #ffc200; font-size: 2.2rem; font-weight: 700; margin-bottom: 18px; }
+        .bot-desc { color: #b9b8b8; font-size: 1.1rem; margin-bottom: 32px; text-align: center; max-width: 480px; }
+    </style>
+</head>
+<body>
+    <!-- Floating Chatbot Icon Button -->
+    <button id="chatbot-widget-btn" title="Chat or FAQ" aria-label="Open chat"><i class="fas fa-comments"></i></button>
+    <div id="chatbot-modal" role="dialog" aria-modal="true" tabindex="-1">
+        <div id="chatbot-modal-header">Live Chat / FAQ Bot <button aria-label="Close chat" onclick="closeChatbot()">&times;</button></div>
+        <div id="chatbot-modal-body">
+            <div class="chatbot-msg bot">Hi! 👋 How can I help you? You can ask about contact info, resume, or portfolio.</div>
+        </div>
+        <div id="chatbot-modal-footer">
+            <input id="chatbot-input" type="text" placeholder="Type your question..." autocomplete="off" />
+            <button id="chatbot-send-btn">Send</button>
+        </div>
+    </div>
+    <style>
+        #chatbot-widget-btn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 9999;
+            background: #ffc200;
+            color: #232323;
+            border: none;
+            border-radius: 50%;
+            width: 62px;
+            height: 62px;
+            box-shadow: 0 4px 18px #ffc20055;
+            font-size: 2.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        #chatbot-widget-btn:hover { background: #232323; color: #ffc200; }
+        #chatbot-modal {
+            display: none;
+            position: fixed;
+            bottom: 110px;
+            right: 32px;
+            width: 340px;
+            max-width: 95vw;
+            background: #232323;
+            color: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 32px #23232399, 0 1.5px 12px #ffc20033 inset;
+            z-index: 10000;
+            flex-direction: column;
+            overflow: hidden;
+            animation: chatbot-pop 0.3s cubic-bezier(.4,2,.6,1);
+        }
+        @keyframes chatbot-pop { 0% { transform: scale(0.7); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+        #chatbot-modal.active { display: flex; }
+        #chatbot-modal-header {
+            background: #ffc200;
+            color: #232323;
+            font-weight: 700;
+            padding: 1rem 1.2rem;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #chatbot-modal-header button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #232323;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        #chatbot-modal-body {
+            padding: 1.1rem 1.2rem 1.2rem 1.2rem;
+            background: #232323;
+            min-height: 120px;
+            max-height: 260px;
+            overflow-y: auto;
+            font-size: 1.02rem;
+        }
+        #chatbot-modal-footer {
+            background: #232323;
+            padding: 0.7rem 1.2rem 1.1rem 1.2rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        #chatbot-input {
+            flex: 1 1 auto;
+            border-radius: 1.2rem;
+            border: 1.5px solid #ffc200;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            outline: none;
+            background: #181818;
+            color: #fff;
+        }
+        #chatbot-send-btn {
+            background: #ffc200;
+            color: #232323;
+            border: none;
+            border-radius: 1.2rem;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        #chatbot-send-btn:hover { background: #232323; color: #ffc200; border: 1.5px solid #ffc200; }
+        .chatbot-msg { margin-bottom: 0.7rem; }
+        .chatbot-msg.user { text-align: right; color: #ffc200; }
+        .chatbot-msg.bot { text-align: left; color: #fff; }
+    </style>
+    <script>
+        // Chatbot open/close logic
+        const chatbotBtn = document.getElementById('chatbot-widget-btn');
+        const chatbotModal = document.getElementById('chatbot-modal');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotBody = document.getElementById('chatbot-modal-body');
+        chatbotBtn.onclick = function() {
+            chatbotModal.classList.add('active');
+            setTimeout(() => chatbotInput.focus(), 200);
+        };
+        function closeChatbot() {
+            chatbotModal.classList.remove('active');
+        }
+        window.closeChatbot = closeChatbot;
+        // Close on Esc
+        window.addEventListener('keydown', function(e) {
+            if (chatbotModal.classList.contains('active') && e.key === 'Escape') closeChatbot();
+        });
+        // FAQ logic
+        const faqs = [
+            { q: /email|contact/i, a: "You can email me at <b>dkmom00@gmail.com</b> or use the contact form on this page." },
+            { q: /resume|cv/i, a: "You can download my resume from the Resume button on the homepage or request it here." },
+            { q: /portfolio|projects?/i, a: "Check out my projects on the Projects page or ask about a specific one!" },
+            { q: /github/i, a: "My GitHub: <a href='https://github.com/dharmendra0107' target='_blank'>dharmendra0107</a>" },
+            { q: /linkedin/i, a: "My LinkedIn: <a href='https://www.linkedin.com/in/dharmendra0107/' target='_blank'>dharmendra0107</a>" },
+            { q: /phone|mobile/i, a: "For privacy, I prefer email or LinkedIn for first contact." },
+            { q: /hello|hi|hey/i, a: "Hello! How can I help you today?" },
+            { q: /thank/i, a: "You're welcome! 😊" },
+            { q: /help|support/i, a: "You can ask about my contact info, resume, or portfolio. I'm here to help!" },
+            // Expanded FAQs
+            { q: /skills?|technolog(y|ies)|stack/i, a: "My main skills include HTML, CSS, JavaScript, Bootstrap, Python, and web development frameworks." },
+            { q: /location|where.*based|city|country/i, a: "I'm based in India, but I work with clients worldwide." },
+            { q: /available|availability|freelance|hire/i, a: "I'm open to new opportunities, collaborations, and freelance work. Feel free to reach out!" },
+            { q: /education|degree|study|college|university/i, a: "I have a background in Computer Science and have completed several online certifications in web development and related fields." },
+            { q: /language(s)?\b/i, a: "I am fluent in English and Hindi." },
+            { q: /instagram/i, a: "My Instagram: <a href='https://www.instagram.com/dksilentkiller/' target='_blank'>@dksilentkiller</a>" },
+            { q: /facebook/i, a: "My Facebook: <a href='https://www.facebook.com/dksilentkiller/' target='_blank'>dksilentkiller</a>" },
+            { q: /youtube/i, a: "My YouTube: <a href='https://youtube.com/@dksilentkiller/channel?sub_confirmation=1' target='_blank'>@dksilentkiller</a>" },
+            { q: /pinterest/i, a: "My Pinterest: <a href='https://in.pinterest.com/dksilentkiller/' target='_blank'>dksilentkiller</a>" },
+            { q: /whatsapp/i, a: "You can message me on WhatsApp: <a href='https://wa.me/916306008818' target='_blank'>+91 6306008818</a>" },
+            { q: /vcard/i, a: "You can download my vCard from the Contact page to save my contact info easily." },
+            { q: /certificate|certification|course/i, a: "You can view my certificates in the Certificates section of my portfolio." },
+            { q: /about( you)?|bio|yourself/i, a: "I'm Dharmendra Kumar Yadav, a passionate Full Stack Developer focused on building modern, user-friendly web experiences." },
+        ];
+        // Simple fuzzy matching using string similarity
+        function stringSimilarity(a, b) {
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            if (a === b) return 1;
+            if (a.length === 0 || b.length === 0) return 0;
+            let matches = 0;
+            for (let word of b.split(/\W+/)) {
+                if (word && a.includes(word)) matches++;
+            }
+            return matches / b.split(/\W+/).length;
+        }
+
+        function botReply(msg) {
+            // 1. Try regex match
+            for (let f of faqs) if (f.q.test(msg)) return f.a;
+            // 2. Fuzzy match: find FAQ with highest similarity
+            let best = { score: 0, answer: null };
+            for (let f of faqs) {
+                // Use the regex source as a string for similarity
+                let pattern = f.q.source.replace(/\\b|\\W\+|\\/g, ' ');
+                let score = stringSimilarity(msg, pattern);
+                if (score > best.score) {
+                    best.score = score;
+                    best.answer = f.a;
+                }
+            }
+            if (best.score > 0.4) return best.answer;
+            return "Sorry, I don't have an answer for that. Try asking about contact, resume, or portfolio.";
+        }
+        function addMsg(msg, who) {
+            const div = document.createElement('div');
+            div.className = 'chatbot-msg ' + who;
+            div.innerHTML = msg;
+            chatbotBody.appendChild(div);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+        function sendMsg() {
+            const msg = chatbotInput.value.trim();
+            if (!msg) return;
+            addMsg(msg, 'user');
+            setTimeout(() => addMsg(botReply(msg), 'bot'), 400);
+            chatbotInput.value = '';
+        }
+        document.getElementById('chatbot-send-btn').onclick = sendMsg;
+        chatbotInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') sendMsg();
+        });
+    </script>
+</body>
+</html>

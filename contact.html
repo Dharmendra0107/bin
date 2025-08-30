@@ -132,9 +132,11 @@
 
     <!-- - Header Section Start -->
     <section class="header-section container text-center" data-aos="fade-up" data-aos-duration="1000">
-        <h1 class="fw-bold display-4">
-            <i class="fas fa-address-card"></i>&nbsp; Connect with Me
-        </h1>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <h1 class="fw-bold display-4" style="margin-top:-18px;">
+                <i class="fas fa-address-card"></i>&nbsp; Connect with Me
+            </h1>
+        </div>
         <p class="mx-auto">
             Let's connect! Reach out to me through any of the platforms below or send a direct message.
             I'm always open to networking, collaboration, and new opportunities.
@@ -202,6 +204,7 @@
 
     <!-- Interactive Contact Form Start -->
     <section class="contact-form-section container" data-aos="zoom-in" data-aos-duration="1000">
+    <!-- Removed Lottie Animation for form -->
         <!-- Modern Toast Notification -->
         <div id="toast" class="modern-toast"></div>
         <!-- Loading Spinner Overlay -->
@@ -640,6 +643,7 @@
     <section class="social-media-section py-5 text-center" data-aos="fade-up" data-aos-duration="1000"
         data-aos-once="true">
         <div class="container">
+            <!-- Removed Lottie Animation for social -->
             <h2 class="social-title mb-4 position-relative d-inline-block" data-aos="zoom-in" data-aos-delay="100"
                 style="font-size:2.1rem; font-weight:700; color:#ffc200; letter-spacing:1.5px; text-shadow:0 2px 12px #18181899;">
                 <span style="vertical-align:middle; margin-right:10px; color:#fff; font-size:1.3em;"><i
@@ -718,7 +722,12 @@
                 border: 2px solid #ffc200;
                 transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
-                text-decoration: none;
+                text-decoration: none !important;
+            }
+
+            .social-btn:hover,
+            .social-btn:focus {
+                text-decoration: none !important;
             }
 
             .social-btn:active {
@@ -815,6 +824,7 @@
                 Dharmendra Yadav</span>
         </div>
     </footer>
+    <!-- Live Chat/FAQ Bot Widget removed. -->
     <!-- Footer End -->
 
 
