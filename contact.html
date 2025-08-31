@@ -1000,7 +1000,21 @@
                 padding-bottom: 8px;
                 display: flex;
                 flex-direction: column;
-                gap: 8px;
+                gap: 8px;    scrollbar-width: thin;
+                scrollbar-color: #ffc200 #232323;
+            }
+            .chatbot-body::-webkit-scrollbar {
+                width: 8px;
+                background: #232323;
+                border-radius: 8px;
+            }
+            .chatbot-body::-webkit-scrollbar-thumb {
+                background: #ffc200;
+                border-radius: 8px;
+                min-height: 24px;
+            }
+            .chatbot-body::-webkit-scrollbar-thumb:hover {
+                background: #ffb300;
             }
 
             .chatbot-footer {
