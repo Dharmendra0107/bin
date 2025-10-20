@@ -670,8 +670,17 @@
         </div>
         <div class="box flex-direction">
           <div class="about-me" data-aos="fade-right">
-            <img src="images/dkabout.png" alt="About Me Image" loading="lazy" data-aos="fade-right" />
+            <!-- Lottie animation placeholder (replace data-src with your lottie JSON or link later) -->
+            <div class="lottie-wrapper" aria-hidden="false">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_tfb3estd.json"  background="transparent"  speed="1"  style="width:100%; height:100%;"  loop  autoplay></lottie-player>
+            </div>
           </div>
+
+          <!-- <div class="about-me" data-aos="fade-right">
+            <img src="images/dkabout.png" alt="About Me Image" loading="lazy" data-aos="fade-right" />
+          </div> -->
+
           <div class="about-details">
             <p data-aos="fade-left">
               I’m <strong>Dharmendra Kumar Yadav</strong>, a passionate and goal-oriented Computer Science graduate from
@@ -717,6 +726,19 @@
 
         body.dark-mode .about-details {
           color: #ffffff;
+        }
+        /* Lottie placeholder sizing */
+        .about-me .lottie-wrapper {
+          width: 320px;
+          height: 320px;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+        @media (max-width: 991px) {
+          .about-me .lottie-wrapper {
+            width: 260px;
+            height: 260px;
+          }
         }
       </style>
 
@@ -1260,6 +1282,7 @@
             <i class="fa-solid fa-arrow-right"></i> See All Projects
           </a>
         </div>
+       
       </div>
       <style>
         /* ===== PROJECT SECTION ===== */
@@ -2363,6 +2386,22 @@
             Dharmendra</a>
         </p>
       </div>
+       <!-- Social Share Buttons -->
+        <div class="share-buttons text-center mt-4" data-aos="fade-up">
+          <span style="font-weight:600; color:#ffffff; margin-right:10px;">Share my portfolio:</span>
+          <a href="https://wa.me/?text=Check%20out%20this%20awesome%20portfolio%20by%20Dharmendra%20Kumar%20Yadav%20https://dharmendra0107.github.io/" target="_blank" class="btn btn-icon mx-1" title="Share on WhatsApp" style="background:#25d366; color:#fff; border-radius:50%; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://dharmendra0107.github.io/" target="_blank" class="btn btn-icon mx-1" title="Share on LinkedIn" style="background:#0077b5; color:#fff; border-radius:50%; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https://dharmendra0107.github.io/&text=Check%20out%20this%20awesome%20portfolio%20by%20Dharmendra%20Kumar%20Yadav" target="_blank" class="btn btn-icon mx-1" title="Share on Twitter" style="background:#1da1f2; color:#fff; border-radius:50%; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://dharmendra0107.github.io/" target="_blank" class="btn btn-icon mx-1" title="Share on Facebook" style="background:#1877f3; color:#fff; border-radius:50%; width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <style>
+          .share-buttons .btn-icon:hover {
+            opacity: 0.85;
+            box-shadow: 0 2px 8px #ffc20033;
+            transform: scale(1.08);
+            transition: all 0.18s;
+          }
+        </style>
       <style>
         .social-footer-icon {
           font-size: 2.1rem;
