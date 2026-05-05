@@ -104,7 +104,7 @@
               <a href="#achievements" class="nav-link"><span data-hover="Achievements">Achievements</span></a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+              <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
             </li>
           </ul>
         </div>
@@ -1753,20 +1753,20 @@
 
         <a data-aos="zoom-in"
           href="https://api.whatsapp.com/send/?phone=916306008818&text&type=phone_number&app_absent=0"
-          class="fa-brands fa-whatsapp" target="_blank"></a>
+          class="fa-brands fa-whatsapp social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="WhatsApp"></a>
 
-        <a data-aos="zoom-in" href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://github.com/dharmendra0107" class="fab fa-github" target="_blank"></a>
-        <a data-aos="zoom-in" href="mailto:dkmom00@gmail.com" class="fas fa-envelope" target="_blank"></a>
-        <a data-aos="zoom-in" href="https://www.instagram.com/dksilentkiller/" class="fab fa-instagram"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://www.facebook.com/dksilentkiller/" class="fab fa-facebook"
-          target="_blank"></a>
-        <a data-aos="zoom-in" href="https://in.pinterest.com/dksilentkiller/" class="fa-brands fa-pinterest"
-          target="_blank"></a>
+        <a data-aos="zoom-in" href="https://www.linkedin.com/in/dharmendra0107/" class="fab fa-linkedin social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="LinkedIn"></a>
+        <a data-aos="zoom-in" href="https://github.com/dharmendra0107" class="fab fa-github social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub"></a>
+        <a data-aos="zoom-in" href="mailto:dkmom00@gmail.com" class="fas fa-envelope social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Email"></a>
+        <a data-aos="zoom-in" href="https://www.instagram.com/dksilentkiller/" class="fab fa-instagram social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"></a>
+        <a data-aos="zoom-in" href="https://www.facebook.com/dksilentkiller/" class="fab fa-facebook social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"></a>
+        <a data-aos="zoom-in" href="https://in.pinterest.com/dksilentkiller/" class="fa-brands fa-pinterest social-footer-icon"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest"></a>
         <a data-aos="zoom-in" href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1"
-          class="fa-brands fa-youtube" target="_blank"></a>
+          class="fa-brands fa-youtube social-footer-icon" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="YouTube"></a>
       </div>
       <div class="note" data-aos="zoom-in-down">
         <p>Coding, learning, evolving. Join me on this journey of continuous improvement</p>
@@ -1776,6 +1776,35 @@
             Dharmendra</a>
         </p>
       </div>
+      <style>
+        .social-footer-icon {
+          font-size: 2.1rem;
+          margin: 0 0.5rem;
+          color: #ffc200;
+          background: transparent;
+          border-radius: 50%;
+          padding: 0.35em 0.45em;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.18s, background 0.18s, box-shadow 0.22s, transform 0.22s;
+        }
+        .social-footer-icon:hover, .social-footer-icon:focus {
+          color: #fff;
+          background: rgba(255, 194, 0, 0.18);
+          box-shadow: 0 0 0 6px #ffc20033, 0 4px 18px #ffc20055;
+          transform: scale(1.13) rotate(-4deg);
+          outline: none;
+        }
+      </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+        });
+      </script>
 
     </section>
     <!-- footer section ends -->
