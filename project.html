@@ -37,8 +37,6 @@
 
 <body class="dark-mode">
 
-    <!-- Particles.js Background Start -->
-   <section>
     <div id="particles-js"></div>
     <style>
         #particles-js {
@@ -52,26 +50,26 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffc200" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: false },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffc200", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-            },
-            retina_detect: true
+        window.addEventListener('load', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 75, density: { enable: true, value_area: 800 } },
+                    color: { value: '#ffc200' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: false },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: '#ffc200', opacity: 0.35, width: 1 },
+                    move: { enable: true, speed: 4, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                },
+                interactivity: {
+                    detect_on: 'window',
+                    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                    modes: { repulse: { distance: 120, duration: 0.4 }, push: { particles_nb: 4 } }
+                },
+                retina_detect: true
+            });
         });
     </script>
-   </section>
-    <!-- Particles.js Background End -->
 
 
 
@@ -373,7 +371,7 @@
                 width: 100%;
                 padding: 12px 40px 12px 18px;
                 border-radius: 30px;
-                border: 2px solid #ffc200;
+                border: 1px solid rgba(255, 194, 0, 0.16);
                 font-size: 1rem;
                 background: rgba(255, 255, 255, 0.08);
                 color: #fff;
@@ -383,8 +381,8 @@
             }
 
             .search-box:focus {
-                border-color: #fff;
-                box-shadow: 0 4px 20px rgba(255, 194, 0, 0.15);
+                border-color: #ffc200;
+                box-shadow: 0 0 0 3px rgba(255, 194, 0, 0.08);
             }
 
             .search-box::placeholder {
@@ -403,19 +401,18 @@
             .dark-mode .search-box {
                 background: rgba(30, 30, 30, 0.95);
                 color: #fff;
-                border-color: #ffc200;
+                border-color: rgba(255, 194, 0, 0.16);
             }
 
             /* Search Box Hover Effect */
             .search-container:hover .search-box {
-                border-color: #fff;
-                box-shadow: 0 4px 20px rgba(255, 194, 0, 0.25);
+                border-color: #ffc200;
+                box-shadow: 0 8px 24px rgba(255, 194, 0, 0.12);
             }
 
             .search-container:hover .search-icon {
-                color: #fff;
-                text-shadow: 0 0 8px #ffc200, 0 0 2px #fff;
-                transition: color 0.3s, text-shadow 0.3s;
+                color: #ffc200;
+                transition: color 0.3s;
             }
 
             @media (max-width: 600px) {
@@ -633,7 +630,7 @@
     <div class="projects-container container">
         <div class="row" id="projectsRow">
             <!-- MERN ExamPrep Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category=" mern fullstack">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/examprep.jpg"
@@ -665,7 +662,7 @@
             </div>
 
             <!-- Clinic Management Django Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="fullstack django">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/healwith.png"
@@ -693,7 +690,7 @@
                 </div>
             </div>
             <!-- NAU e-gyan Portal Django Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="fullstack django">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/egyan.png"
@@ -721,7 +718,7 @@
                 </div>
             </div>
             <!-- Online Admission System Django Project Card (Biotech Park Lucknow) -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="fullstack django">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/biotech.png"
@@ -749,7 +746,7 @@
                 </div>
             </div>
             <!-- School Management System Django Project Card (Seth Anandram Jaipuria School) -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="fullstack django">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/sms.png"
@@ -780,7 +777,7 @@
 
 
             <!-- Django Project Card
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="web fullstack">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/django_project.png"
@@ -810,7 +807,7 @@
 
             
             <!-- Age Calculator Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/11age_calculator.png"
@@ -836,7 +833,7 @@
             </div>
 
             <!-- Blogger Website Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/9BloggerWebsite.png"
@@ -862,7 +859,7 @@
             </div>
 
             <!-- BMI Calculator Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/5BMI calculator.png"
@@ -888,7 +885,7 @@
             </div>
 
             <!-- Clinic Website Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/10ClinicWebsite.png" alt="Clinic Website Screenshot">
@@ -913,7 +910,7 @@
             </div>
 
             <!-- Hotel Web Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/2Food web.png" alt="Hotel Web Screenshot">
@@ -938,7 +935,7 @@
             </div>
 
             <!-- IIIM Ayodhya Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/7College web.png"
@@ -964,7 +961,7 @@
             </div>
 
             <!-- Simple Calculator Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/3Calculator.png"
@@ -990,7 +987,7 @@
             </div>
 
             <!-- Travel Fun Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/8Travelling web.png" alt="Travel Fun Screenshot">
@@ -1015,7 +1012,7 @@
             </div>
 
             <!-- Weather App Project Card -->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div class="project-card animate-on-scroll" data-category="frontend web api">
                     <div class="project-image">
                         <img class="project-screenshot" src="images/project/4Weather.png"
@@ -1051,57 +1048,18 @@
             background: rgba(255, 255, 255, 0.07);
             border-radius: 18px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            padding: 32px 28px 24px 28px;
-            margin-bottom: 32px;
+            padding: 22px 20px 18px 20px;
+            margin-bottom: 24px;
             transition: box-shadow 0.3s, transform 0.3s;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 194, 0, 0.16);
         }
 
         .project-card:hover {
-            box-shadow: 0 12px 36px 0 rgba(255, 194, 0, 0.22), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 32px rgba(255, 194, 0, 0.22);
             transform: translateY(-10px) scale(1.01);
             border-color: #ffc200;
-            outline: 3px solid #ffc200;
-            outline-offset: 4px;
-            background: linear-gradient(120deg, rgba(255, 194, 0, 0.13) 0%, rgba(255, 255, 255, 0.05) 100%);
-            animation: cardGlow 1.2s cubic-bezier(.4, 1.6, .6, 1) infinite alternate, cardFloat 1.6s ease-in-out infinite alternate;
-        }
-
-        @keyframes cardFloat {
-            0% {
-                transform: translateY(-10px) scale(1.01);
-            }
-
-            100% {
-                transform: translateY(-16px) scale(1.018);
-            }
-        }
-
-        .project-card:hover {
-            box-shadow: 0 0 12px 3px #ffc200, 0 12px 36px 0 rgba(255, 194, 0, 0.22), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
-        }
-        
-
-        @keyframes cardGlow {
-            0% {
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06), 0 0 0 0 #ffc200;
-                border-color: #ffc200;
-                outline-color: #ffc200;
-            }
-
-            60% {
-                box-shadow: 0 12px 36px 0 rgba(255, 194, 0, 0.18), 0 0 8px 2px #ffc200;
-                border-color: #fffbe6;
-                outline-color: #fffbe6;
-            }
-
-            100% {
-                box-shadow: 0 8px 24px 0 rgba(255, 194, 0, 0.12), 0 0 4px 1px #ffc200;
-                border-color: #ffc200;
-                outline-color: #ffc200;
-            }
         }
         
 
@@ -1109,33 +1067,16 @@
             overflow: hidden;
         }
 
-        .project-image::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(120deg, rgba(255, 194, 0, 0.13) 0%, rgba(0, 0, 0, 0.18) 100%);
-            opacity: 0;
-            transition: opacity 0.4s;
-            pointer-events: none;
-        }
-
-        .project-card:hover .project-image::after {
-            opacity: 1;
-        }
-
         .project-card:hover .project-screenshot {
-            transform: scale(1.07) rotate(-1deg);
-            filter: brightness(1.08) saturate(1.25);
+            transform: scale(1.02);
+            filter: brightness(1.04) saturate(1.18);
         }
 
         .project-screenshot {
             transition: filter 0.3s, transform 0.4s;
             position: relative;
             width: 100%;
-            height: 180px;
+            height: 160px;
             aspect-ratio: 16/9;
             margin-bottom: 18px;
             border-radius: 16px 16px 0 0;
@@ -1146,7 +1087,7 @@
 
         .project-screenshot {
             width: 100%;
-            height: 180px;
+            height: 160px;
             aspect-ratio: 16/9;
             object-fit: cover;
             display: block;
@@ -1156,7 +1097,7 @@
         }
 
         .project-card:hover .project-screenshot {
-            filter: brightness(1) saturate(1.2);
+            filter: brightness(1.02) saturate(1.15);
         }
 
         .project-icon-wrap {
@@ -1204,7 +1145,7 @@
 
         @media (max-width: 991px) {
             .project-card {
-                padding: 18px 6px 16px 6px;
+                padding: 16px 8px 14px 8px;
             }
         }
 
@@ -1215,15 +1156,15 @@
             }
 
             .project-card {
-                padding: 10px 2px 10px 2px;
-                margin-bottom: 18px;
+                padding: 10px 4px 10px 4px;
+                margin-bottom: 16px;
                 border-radius: 12px;
             }
 
             .project-image {
-                height: 180px;
-                min-height: 120px;
-                max-height: 220px;
+                height: 150px;
+                min-height: 110px;
+                max-height: 190px;
                 border-radius: 16px 16px 0 0;
                 overflow: hidden;
                 display: flex;
@@ -1236,16 +1177,16 @@
             }
 
             .project-title {
-                font-size: 1.05rem;
+                font-size: 1rem;
             }
 
             .project-description {
-                font-size: 0.95rem;
+                font-size: 0.92rem;
             }
 
             .tech-tag {
-                font-size: 0.85rem;
-                padding: 3px 8px;
+                font-size: 0.82rem;
+                padding: 3px 7px;
             }
         }
 
@@ -1327,17 +1268,17 @@
 
         @media (max-width: 991px) {
             .project-card {
-                padding: 24px 12px;
+                padding: 18px 10px;
             }
         }
 
         @media (max-width: 600px) {
             .project-card {
-                padding: 16px 6px;
+                padding: 14px 6px;
             }
 
             .project-title {
-                font-size: 1.1rem;
+                font-size: 1.02rem;
             }
         }
     </style>
