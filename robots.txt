@@ -1,0 +1,24 @@
+# robots.txt – Dharmendra Kumar Yadav Portfolio
+# https://dharmendra0107.github.io/
+
+# ── Allow all well-behaved crawlers ──
+User-agent: *
+Allow: /
+
+# Block crawlers from private/asset folders
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/certificates/
+
+# ── Google-specific ──
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# ── Bing ──
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# ── Sitemap location ──
+Sitemap: https://dharmendra0107.github.io/sitemap.xml

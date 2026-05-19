@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>Contact | Dharmendra Kumar Yadav – Full Stack Developer</title>
+  <meta name="description" content="Get in touch with Dharmendra Kumar Yadav – Full Stack Developer from Lucknow. Available for freelance, full-time, and collaboration opportunities."/>
+  <meta name="author" content="Dharmendra Kumar Yadav"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#ffc200"/>
+  <link rel="canonical" href="https://dharmendra0107.github.io/contact.html"/>
+  <meta property="og:title"       content="Contact | Dharmendra Kumar Yadav"/>
+  <meta property="og:description" content="Let's build something amazing together."/>
+  <meta property="og:image"       content="https://dharmendra0107.github.io/images/og-cover.png"/>
+  <meta property="og:url"         content="https://dharmendra0107.github.io/contact.html"/>
+  <meta name="twitter:card"       content="summary_large_image"/>
+  <link rel="icon" href="images/dklogo.png" type="image/png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("YOUR_PUBLIC_KEY");</script>
+
+  <style>
+  /* ═══════════════════════════════════════════
+     ROOT & BASE
+  ═══════════════════════════════════════════ */
+  :root {
+    --gold:       #ffc200;
+    --gold-dark:  #ffb300;
+    --gold-dim:   rgba(255,194,0,.12);
+    --bg:         #000;
+    --card:       rgba(255,255,255,.04);
+    --border:     rgba(255,194,0,.18);
+    --muted:      #888;
+    --font:       'Maven Pro', sans-serif;
+    --serif:      'Cormorant Garamond', serif;
+    --mono:       'Space Mono', monospace;
+    --ease:       cubic-bezier(.22,.61,.36,1);
+    --ease-back:  cubic-bezier(.34,1.56,.64,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: var(--font); background: var(--bg); color: #fff;
+         overflow-x: hidden; padding-top: 92px; }
+  a { text-decoration: none !important; transition: color .3s; }
+  a:hover { color: var(--gold) !important; }
+  p { color: var(--muted); line-height: 1.7; }
+  #particles-js { position: fixed; inset: 0; z-index: -1; }
+
+  /* ═══════════════════════════════════════════
+     NAVBAR
+  ═══════════════════════════════════════════ */
+  .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;
+    background: transparent !important; transition: transform .3s, opacity .3s;
+    padding: 12px 0 0; animation: navFade .9s linear forwards; }
+  .navbar.navbar-hidden  { transform: translateY(-115%); opacity: 0; pointer-events: none; }
+  .navbar.navbar-visible { transform: translateY(0);     opacity: 1; pointer-events: auto; }
+  .navbar > .container { max-width: 1240px; background: rgba(18,18,18,.62);
+    backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid rgba(255,194,0,.18); border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+    padding: 12px 18px; transition: border-color .3s, box-shadow .3s; }
+  .navbar:hover > .container { border-color: var(--gold);
+    box-shadow: 0 16px 40px rgba(0,0,0,.35), 0 0 22px rgba(255,194,0,.2), inset 0 1px 0 rgba(255,255,255,.05); }
+  .navbar-brand { font-weight: 800; font-size: 1.18rem; color: #fff !important;
+    display: flex; align-items: center; gap: 10px; }
+  .navbar-brand img { width: 36px; height: 36px; border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255,194,0,.18); }
+  .navbar-collapse { justify-content: center; }
+  .navbar-nav { gap: .35rem; align-items: center; }
+  .nav-link { color: rgba(255,255,255,.82) !important; font-weight: 600; font-size: .95rem;
+    padding: .55rem 1rem !important; border-radius: 999px;
+    transition: color .3s, background .3s, transform .3s, border-color .3s;
+    border: 1px solid transparent; }
+  .nav-link:hover, .nav-link.active { color: var(--gold) !important;
+    background: rgba(255,194,0,.12); border-color: rgba(255,194,0,.18); transform: translateY(-1px); }
+  .navbar-toggler { width: 46px; height: 46px; border-radius: 14px;
+    background: rgba(255,255,255,.03); border: none !important; outline: none !important; box-shadow: none !important; }
+  .navbar-toggler i { color: var(--gold); font-size: 1.6rem; }
+  .navbar-collapse.show { margin-top: 12px; padding: 14px 12px 6px; border-radius: 18px;
+    background: rgba(12,12,12,.72); border: 1px solid rgba(255,194,0,.16); backdrop-filter: blur(18px); }
+  .navbar-collapse.show .nav-link { text-align: center; width: 100%; }
+  @keyframes navFade { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ═══════════════════════════════════════════
+     HERO HEADLINE
+  ═══════════════════════════════════════════ */
+  .contact-hero {
+    padding: 70px 6% 0;
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: flex-start;
+    overflow: hidden;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 18px;
+  }
+  .eyebrow-line { width: 32px; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent); border-radius: 2px; }
+  .eyebrow-text { font-family: var(--mono); font-size: .68rem; font-weight: 700;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 700; line-height: .95; letter-spacing: -.04em;
+    color: #fff; margin-bottom: 0;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-title .outline {
+    -webkit-text-stroke: 1px rgba(255,194,0,.4);
+    color: transparent;
+  }
+
+  /* animated typing cursor */
+  .cursor-blink {
+    display: inline-block; width: 3px; height: .85em;
+    background: var(--gold); margin-left: 4px;
+    animation: blink .9s step-end infinite; vertical-align: middle;
+  }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+  .hero-sub {
+    font-size: 1rem; color: var(--muted); max-width: 460px;
+    margin-top: 22px; line-height: 1.75;
+  }
+
+  /* ═══════════════════════════════════════════
+     AVAILABILITY PILL
+  ═══════════════════════════════════════════ */
+  .avail-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(34,197,94,.08); border: 1px solid rgba(34,197,94,.3);
+    border-radius: 50px; padding: 8px 18px; margin-top: 26px;
+    font-size: .78rem; font-weight: 700; color: #4ade80;
+    font-family: var(--mono);
+  }
+  .avail-dot { width: 8px; height: 8px; border-radius: 50%;
+    background: #22c55e; box-shadow: 0 0 8px #22c55e;
+    animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .6; transform: scale(.85); } }
+
+  /* ═══════════════════════════════════════════
+     MAIN SPLIT LAYOUT
+  ═══════════════════════════════════════════ */
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 80vh;
+    position: relative; z-index: 2;
+    padding: 60px 6% 80px;
+  }
+
+  /* ─── LEFT PANEL — info ─── */
+  .left-panel { padding-right: 60px; display: flex; flex-direction: column; gap: 44px; }
+
+  /* channel cards */
+  .channels { display: flex; flex-direction: column; gap: 14px; }
+  .channel-card {
+    display: flex; align-items: center; gap: 18px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,194,0,.14);
+    border-radius: 16px; padding: 18px 20px;
+    text-decoration: none !important;
+    transition: all .3s var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .channel-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--gold); transform: scaleY(0); transform-origin: bottom;
+    transition: transform .3s var(--ease);
+  }
+  .channel-card:hover {
+    background: rgba(255,194,0,.06);
+    border-color: rgba(255,194,0,.4);
+    transform: translateX(6px);
+    box-shadow: 0 8px 32px rgba(255,194,0,.1);
+  }
+  .channel-card:hover::before { transform: scaleY(1); }
+  .channel-icon {
+    width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+    background: rgba(255,194,0,.1); border: 1.5px solid rgba(255,194,0,.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; color: var(--gold);
+    transition: background .3s, transform .3s;
+  }
+  .channel-card:hover .channel-icon {
+    background: var(--gold); color: #181818; transform: scale(1.08) rotate(-4deg);
+  }
+  .channel-info { flex: 1; min-width: 0; }
+  .channel-label { font-size: .68rem; font-weight: 700; color: var(--gold);
+    letter-spacing: .12em; text-transform: uppercase; font-family: var(--mono); margin-bottom: 3px; }
+  .channel-value { font-size: .95rem; font-weight: 700; color: #fff;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .channel-arrow { color: rgba(255,194,0,.4); font-size: .8rem;
+    transition: color .3s, transform .3s; flex-shrink: 0; }
+  .channel-card:hover .channel-arrow { color: var(--gold); transform: translateX(4px); }
+
+  /* socials grid */
+  .socials-section {}
+  .socials-label { font-family: var(--mono); font-size: .65rem; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .socials-label::after { content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, rgba(255,194,0,.2), transparent); }
+  .socials-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .social-btn {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 14px 10px; border-radius: 14px;
+    background: rgba(255,255,255,.03); border: 1px solid rgba(255,194,0,.12);
+    color: rgba(255,255,255,.6); font-size: .68rem; font-weight: 700;
+    text-decoration: none !important; transition: all .25s var(--ease-back);
+  }
+  .social-btn i { font-size: 1.3rem; color: var(--gold); transition: transform .25s; }
+  .social-btn:hover {
+    background: rgba(255,194,0,.1); border-color: rgba(255,194,0,.4);
+    color: var(--gold) !important; transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255,194,0,.15);
+  }
+  .social-btn:hover i { transform: scale(1.2); }
+
+  /* quote */
+  .contact-quote {
+    background: rgba(255,194,0,.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 20px;
+  }
+  .contact-quote p {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1.1rem; color: rgba(255,255,255,.75); line-height: 1.6; margin: 0;
+  }
+  .contact-quote cite {
+    font-size: .72rem; color: var(--gold); font-family: var(--mono);
+    font-style: normal; letter-spacing: .1em; margin-top: 8px; display: block;
+  }
+
+  /* ─── RIGHT PANEL — form ─── */
+  .right-panel { position: relative; }
+
+  /* terminal window frame */
+  .terminal-frame {
+    background: rgba(10,10,10,.92);
+    border: 1.5px solid rgba(255,194,0,.22);
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,194,0,.08);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    position: relative;
+  }
+
+  /* terminal top bar */
+  .terminal-bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,.03);
+    border-bottom: 1px solid rgba(255,194,0,.1);
+  }
+  .t-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .t-dot.red    { background: #ff5f57; }
+  .t-dot.yellow { background: #febc2e; }
+  .t-dot.green  { background: #28c840; }
+  .t-title { font-family: var(--mono); font-size: .72rem; color: rgba(255,255,255,.35);
+    margin-left: auto; margin-right: auto; letter-spacing: .08em; }
+
+  /* terminal body */
+  .terminal-body { padding: 28px 30px 32px; }
+
+  /* prompt line */
+  .prompt-line {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: .78rem; color: rgba(255,255,255,.3);
+    margin-bottom: 24px;
+  }
+  .prompt-line .ps { color: var(--gold); }
+  .prompt-line .cmd { color: rgba(255,255,255,.6); }
+
+  /* form fields */
+  .form-grid { display: flex; flex-direction: column; gap: 18px; }
+
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .field-wrap { position: relative; }
+  .field-label-top {
+    font-family: var(--mono); font-size: .62rem; font-weight: 700;
+    color: var(--gold); letter-spacing: .14em; text-transform: uppercase;
+    margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
+  }
+  .field-label-top .req { color: #ff6b6b; font-size: .8em; }
+
+  .form-input {
+    width: 100%; padding: 13px 16px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,194,0,.18);
+    border-radius: 10px; color: #fff;
+    font-family: var(--font); font-size: .9rem;
+    outline: none; transition: all .3s;
+    position: relative;
+  }
+  .form-input::placeholder { color: rgba(255,255,255,.2); font-size: .82rem; }
+  .form-input:focus {
+    border-color: var(--gold);
+    background: rgba(255,194,0,.04);
+    box-shadow: 0 0 0 3px rgba(255,194,0,.1), inset 0 1px 0 rgba(255,194,0,.05);
+    color: #fff;
+  }
+  .form-input.valid   { border-color: #22c55e; }
+  .form-input.invalid { border-color: #ff6b6b; }
+
+  /* field icon */
+  .field-icon-wrap { position: relative; }
+  .field-icon-wrap .field-icon {
+    position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    font-size: .8rem; color: rgba(255,255,255,.2); pointer-events: none;
+    transition: color .3s;
+  }
+  .field-icon-wrap .form-input { padding-right: 40px; }
+  .field-icon-wrap .form-input:focus + .field-icon,
+  .field-icon-wrap .form-input.valid + .field-icon { color: var(--gold); }
+  .field-icon-wrap .form-input.valid + .field-icon::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #22c55e; }
+
+  textarea.form-input { resize: vertical; min-height: 120px; }
+
+  /* subject chips */
+  .subject-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .schip {
+    padding: 6px 14px; border-radius: 20px; font-size: .75rem; font-weight: 700;
+    border: 1.5px solid rgba(255,194,0,.22); background: transparent;
+    color: rgba(255,255,255,.55); cursor: pointer; font-family: var(--font);
+    transition: all .22s var(--ease-back);
+  }
+  .schip:hover { border-color: rgba(255,194,0,.5); color: var(--gold); }
+  .schip.picked {
+    background: var(--gold); color: #181818;
+    border-color: var(--gold);
+    box-shadow: 0 4px 14px rgba(255,194,0,.3);
+    transform: scale(1.04);
+  }
+
+  /* hidden input for subject */
+  #subjectVal { display: none; }
+
+  /* send button */
+  .send-btn {
+    width: 100%; padding: 15px;
+    background: var(--gold); color: #181818;
+    border: 2px solid var(--gold); border-radius: 12px;
+    font-weight: 900; font-size: 1rem; font-family: var(--font);
+    cursor: pointer; transition: all .3s;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    position: relative; overflow: hidden; letter-spacing: .03em;
+  }
+  .send-btn::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.15) 0%, transparent 60%);
+  }
+  .send-btn:hover {
+    background: transparent; color: var(--gold);
+    box-shadow: 0 0 30px rgba(255,194,0,.25), inset 0 0 30px rgba(255,194,0,.05);
+    transform: translateY(-2px);
+  }
+  .send-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+  .send-btn .btn-icon { transition: transform .3s; }
+  .send-btn:hover .btn-icon { transform: translateX(4px) rotate(-10deg); }
+
+  /* progress line under button */
+  .send-progress {
+    height: 2px; background: rgba(255,194,0,.15);
+    border-radius: 2px; margin-top: 10px; overflow: hidden;
+  }
+  .send-progress-bar {
+    height: 100%; width: 0; background: var(--gold);
+    border-radius: 2px; transition: width .4s ease;
+  }
+
+  /* ─── success overlay ─── */
+  .success-overlay {
+    position: absolute; inset: 0; border-radius: 20px;
+    background: rgba(0,0,0,.95);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 18px;
+    opacity: 0; pointer-events: none;
+    transition: opacity .5s ease;
+    z-index: 10; text-align: center; padding: 40px;
+  }
+  .success-overlay.show { opacity: 1; pointer-events: auto; }
+  .success-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(34,197,94,.1); border: 2px solid #22c55e;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; color: #22c55e;
+    animation: popIn .5s var(--ease-back) both;
+  }
+  @keyframes popIn { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .success-title { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: #fff; }
+  .success-msg { font-size: .88rem; color: var(--muted); line-height: 1.7; max-width: 300px; }
+  .success-back {
+    padding: 10px 24px; border-radius: 50px;
+    background: transparent; border: 1.5px solid var(--gold);
+    color: var(--gold); font-family: var(--font); font-size: .82rem;
+    font-weight: 700; cursor: pointer; transition: all .25s;
+  }
+  .success-back:hover { background: var(--gold); color: #181818; }
+
+  /* ═══════════════════════════════════════════
+     MAP / LOCATION CARD
+  ═══════════════════════════════════════════ */
+  .location-section {
+    padding: 0 6% 80px;
+    position: relative; z-index: 2;
+  }
+  .location-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px;
+  }
+  .loc-info-card {
+    background: rgba(255,255,255,.03);
+    border: 1.5px solid rgba(255,194,0,.18);
+    border-radius: 20px; padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .loc-label { font-family: var(--mono); font-size: .65rem; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .loc-city { font-family: var(--serif); font-size: 2.4rem; font-weight: 700;
+    color: #fff; line-height: 1.1; margin-top: 4px; }
+  .loc-state { font-size: .9rem; color: var(--muted); margin-top: 3px; }
+
+  .loc-details { display: flex; flex-direction: column; gap: 12px; }
+  .loc-row { display: flex; align-items: center; gap: 12px; }
+  .loc-row-icon { width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(255,194,0,.08); border: 1px solid rgba(255,194,0,.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; color: var(--gold); flex-shrink: 0; }
+  .loc-row-text { font-size: .85rem; color: rgba(255,255,255,.75); line-height: 1.4; }
+  .loc-row-text b { color: #fff; font-weight: 700; }
+
+  .loc-timezone {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px; border-radius: 12px;
+    background: rgba(255,194,0,.06); border: 1px solid rgba(255,194,0,.18);
+  }
+  .tz-label { font-family: var(--mono); font-size: .65rem; color: var(--gold);
+    letter-spacing: .12em; text-transform: uppercase; }
+  .tz-time { font-family: var(--mono); font-size: 1.2rem; font-weight: 700;
+    color: #fff; letter-spacing: .05em; }
+  .tz-live { font-size: .65rem; color: #22c55e; font-family: var(--mono); }
+
+  /* map card */
+  .loc-map-card {
+    background: rgba(255,255,255,.03);
+    border: 1.5px solid rgba(255,194,0,.18);
+    border-radius: 20px; overflow: hidden;
+    position: relative; min-height: 320px;
+  }
+  .map-overlay {
+    position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(135deg, rgba(0,0,0,.6) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .map-label-box {
+    position: absolute; top: 20px; left: 20px; z-index: 3;
+    background: rgba(0,0,0,.8); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,194,0,.3);
+    border-radius: 12px; padding: 12px 16px;
+  }
+  .map-label-box .city { font-size: 1rem; font-weight: 800; color: #fff; }
+  .map-label-box .country { font-size: .72rem; color: var(--gold);
+    font-family: var(--mono); letter-spacing: .1em; }
+  .map-pin {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; text-align: center;
+  }
+  .map-pin i { font-size: 2.5rem; color: var(--gold);
+    filter: drop-shadow(0 4px 16px rgba(255,194,0,.5));
+    animation: pinBounce 2s ease-in-out infinite; }
+  @keyframes pinBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .map-pin-pulse {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(255,194,0,.12); border: 1.5px solid rgba(255,194,0,.3);
+    margin: 4px auto 0; animation: ripple 2s ease-out infinite;
+  }
+  @keyframes ripple { 0% { transform: scale(.5); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+  /* stylised map grid lines */
+  .map-grid {
+    position: absolute; inset: 0; z-index: 1;
+    background-image:
+      linear-gradient(rgba(255,194,0,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,194,0,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .map-grid::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(255,194,0,.06) 0%, transparent 65%);
+  }
+
+  /* ═══════════════════════════════════════════
+     FAQ / QUICK Q
+  ═══════════════════════════════════════════ */
+  .faq-section {
+    padding: 0 6% 80px; position: relative; z-index: 2;
+  }
+  .faq-header { margin-bottom: 32px; }
+  .faq-title { font-family: var(--serif); font-size: clamp(1.6rem,3vw,2.4rem);
+    font-weight: 700; color: #fff; line-height: 1.1; }
+  .faq-title span { color: var(--gold); font-style: italic; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .faq-item {
+    background: rgba(255,255,255,.03); border: 1px solid rgba(255,194,0,.14);
+    border-radius: 14px; padding: 20px 22px; cursor: pointer;
+    transition: all .3s var(--ease);
+  }
+  .faq-item:hover { background: rgba(255,194,0,.05); border-color: rgba(255,194,0,.35); }
+  .faq-item.open { border-color: rgba(255,194,0,.45); background: rgba(255,194,0,.06); }
+  .faq-q { display: flex; align-items: flex-start; gap: 12px; }
+  .faq-q-icon { width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+    background: rgba(255,194,0,.1); border: 1px solid rgba(255,194,0,.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .7rem; color: var(--gold); transition: all .25s; }
+  .faq-item.open .faq-q-icon, .faq-item:hover .faq-q-icon { background: var(--gold); color: #181818; }
+  .faq-q-text { font-size: .9rem; font-weight: 700; color: #fff; line-height: 1.4;
+    flex: 1; }
+  .faq-chevron { color: rgba(255,194,0,.4); font-size: .7rem; flex-shrink: 0;
+    margin-top: 3px; transition: transform .3s, color .3s; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--gold); }
+  .faq-answer { max-height: 0; overflow: hidden;
+    transition: max-height .4s var(--ease), opacity .3s; opacity: 0; }
+  .faq-item.open .faq-answer { max-height: 200px; opacity: 1; }
+  .faq-answer-inner { padding-top: 12px; font-size: .82rem; color: var(--muted);
+    line-height: 1.7; border-top: 1px solid rgba(255,194,0,.1); margin-top: 12px; }
+
+  /* ═══════════════════════════════════════════
+     TOAST
+  ═══════════════════════════════════════════ */
+  .dk-toast { position: fixed; top: 28px; left: 50%;
+    transform: translateX(-50%) scale(.85);
+    background: rgba(24,24,24,.95); color: var(--gold);
+    border: 2px solid var(--gold); border-radius: 30px;
+    padding: 14px 32px; font-weight: 700; font-size: 1rem;
+    z-index: 99999; opacity: 0;
+    transition: opacity .35s, transform .35s;
+    pointer-events: none; white-space: nowrap; }
+  .dk-toast.show { opacity: 1; transform: translateX(-50%) scale(1); }
+  .dk-toast.error { border-color: #ff6b6b; background: #ff6b6b; color: #fff; }
+  .dk-toast.success { border-color: var(--gold); background: var(--gold); color: #181818; }
+
+  /* ═══════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════ */
+  .site-footer { background: rgba(18,18,18,.62);
+    backdrop-filter: blur(18px) saturate(150%);
+    border-top: 1px solid rgba(255,194,0,.18);
+    padding: 40px 0 24px; text-align: center;
+    position: relative; z-index: 2; }
+  .footer-socials a { display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 50%; color: var(--gold);
+    font-size: 1.35rem; border: 2px solid rgba(255,194,0,.3); margin: 0 5px 12px;
+    transition: color .25s, background .25s, transform .25s, border-color .25s; }
+  .footer-socials a:hover { background: rgba(255,194,0,.12); color: var(--gold) !important;
+    transform: scale(1.12) rotate(-4deg); border-color: var(--gold); }
+  .footer-tagline { color: var(--muted); font-size: .95rem; margin: 12px 0 6px; }
+  .footer-credit { color: rgba(255,255,255,.5); font-size: .88rem; }
+  .footer-credit a { color: var(--gold); }
+  .footer-credit i { color: #e74c3c; animation: hb 1.2s infinite; }
+  @keyframes hb { 0%,100% { transform: scale(1); } 50% { transform: scale(1.3); } }
+
+  .scroll-top-btn { position: fixed; bottom: 30px; right: 30px;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--gold); color: #181818;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; z-index: 9998; opacity: 0; pointer-events: none;
+    transition: opacity .4s, transform .3s; border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(255,194,0,.35); }
+  .scroll-top-btn.show { opacity: 1; pointer-events: auto; }
+  .scroll-top-btn:hover { transform: translateY(-4px); background: var(--gold-dark); }
+
+  /* mobile */
+  .mobile-bottom-tab { display: none; }
+  @media(max-width: 991px) {
+    .navbar > .container { padding: 10px 14px; border-radius: 18px; }
+    .mobile-bottom-tab { position: fixed; left: 12px; right: 12px;
+      bottom: calc(14px + env(safe-area-inset-bottom));
+      z-index: 9997; display: flex; justify-content: center; pointer-events: none; }
+    .mobile-bottom-tab-link { pointer-events: auto; display: flex; align-items: center;
+      gap: 9px; justify-content: center; width: 100%; padding: 13px 22px;
+      border-radius: 18px; background: rgba(18,18,18,.78);
+      border: 1px solid rgba(255,194,0,.18);
+      box-shadow: 0 14px 32px rgba(0,0,0,.34);
+      backdrop-filter: blur(18px); color: rgba(255,255,255,.86) !important;
+      font-weight: 700; font-size: .95rem; transition: all .25s; }
+    .mobile-bottom-tab-link i { color: var(--gold); font-size: 1rem; }
+  }
+  @media(max-width: 900px) {
+    .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
+    .left-panel { padding-right: 0; }
+    .socials-grid { grid-template-columns: repeat(4, 1fr); }
+    .location-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
+  }
+  @media(max-width: 768px) {
+    body { padding-top: 84px; padding-bottom: 88px; }
+    .navbar { padding: 12px 12px 0; }
+    .contact-hero { padding: 50px 5% 0; }
+    .contact-wrap { padding: 40px 5% 60px; }
+    .location-section, .faq-section { padding-left: 5%; padding-right: 5%; }
+    .hero-title { font-size: clamp(2.8rem, 10vw, 5rem); }
+    .socials-grid { grid-template-columns: repeat(4, 1fr); }
+    .loc-map-card { min-height: 240px; }
+  }
+  @media(max-width: 480px) {
+    .socials-grid { grid-template-columns: repeat(4, 1fr); }
+    .social-btn { padding: 10px 6px; font-size: .6rem; }
+    .social-btn i { font-size: 1.1rem; }
+  }
+  </style>
+</head>
+<body>
+<div id="particles-js" aria-hidden="true"></div>
+<div class="dk-toast" id="dkToast"></div>
+
+<!-- ─── NAVBAR ───────────────────────────── -->
+<header role="banner">
+<nav class="navbar navbar-expand-lg navbar-visible" id="siteNavbar" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/dklogo.png" alt="DK Logo" onerror="this.style.display='none'" width="36" height="36">
+      Dharmendra
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li><a class="nav-link" href="index.html#home">Home</a></li>
+        <li><a class="nav-link" href="index.html#about">About</a></li>
+        <li><a class="nav-link" href="index.html#skills">Skills</a></li>
+        <li><a class="nav-link" href="index.html#education">Education</a></li>
+        <li><a class="nav-link" href="project.html">Projects</a></li>
+        <li><a class="nav-link" href="index.html#experiences">Experience</a></li>
+        <li><a class="nav-link" href="index.html#achievements">Achievements</a></li>
+        <li><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ─── HERO ──────────────────────────── -->
+  <div class="contact-hero">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Let's talk</span>
+    </div>
+    <h1 class="hero-title">
+      Say<br>
+      <em>Hello</em><span class="cursor-blink"></span><br>
+      <span class="outline">to me.</span>
+    </h1>
+    <p class="hero-sub">Whether it's a full-stack project, a quick freelance task, or just a conversation about code — my inbox is always open.</p>
+    <div class="avail-pill">
+      <div class="avail-dot"></div>
+      Available for new opportunities
+    </div>
+  </div>
+
+  <!-- ─── SPLIT CONTACT LAYOUT ──────────── -->
+  <div class="contact-wrap">
+
+    <!-- LEFT — info channels -->
+    <div class="left-panel">
+
+      <div class="channels">
+        <a href="mailto:dkmom00@gmail.com" class="channel-card">
+          <div class="channel-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+          <div class="channel-info">
+            <div class="channel-label">Email</div>
+            <div class="channel-value">dkmom00@gmail.com</div>
+          </div>
+          <i class="fa-solid fa-arrow-right channel-arrow" aria-hidden="true"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=916306008818" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+          <div class="channel-info">
+            <div class="channel-label">WhatsApp</div>
+            <div class="channel-value">+91 63060 08818</div>
+          </div>
+          <i class="fa-solid fa-arrow-right channel-arrow" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
+          <div class="channel-info">
+            <div class="channel-label">LinkedIn</div>
+            <div class="channel-value">dharmendra0107</div>
+          </div>
+          <i class="fa-solid fa-arrow-right channel-arrow" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+          <div class="channel-info">
+            <div class="channel-label">GitHub</div>
+            <div class="channel-value">@dharmendra0107</div>
+          </div>
+          <i class="fa-solid fa-arrow-right channel-arrow" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="socials-section">
+        <div class="socials-label">Also find me on</div>
+        <div class="socials-grid">
+          <a href="https://www.instagram.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://in.pinterest.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+            <span>Pinterest</span>
+          </a>
+          <a href="https://youtube.com/@dksilentkiller" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-quote">
+        <p>"Great software is built by people who care — about the code, the user, and each other."</p>
+        <cite>— Dharmendra Kumar Yadav</cite>
+      </div>
+
+    </div><!-- /left-panel -->
+
+    <!-- RIGHT — terminal form -->
+    <div class="right-panel">
+      <div class="terminal-frame">
+
+        <!-- terminal chrome -->
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">dk@portfolio ~ contact.sh</span>
+        </div>
+
+        <!-- terminal body -->
+        <div class="terminal-body">
+          <div class="prompt-line">
+            <span class="ps">dharmendra@portfolio:~$</span>
+            <span class="cmd">send_message --interactive</span>
+          </div>
+
+          <form id="contactForm" class="form-grid" novalidate>
+
+            <!-- Name + Email -->
+            <div class="field-row">
+              <div class="field-wrap">
+                <div class="field-label-top">Name <span class="req">*</span></div>
+                <div class="field-icon-wrap">
+                  <input class="form-input" type="text" id="cName" name="name"
+                         placeholder="Your full name"
+                         pattern="^[a-zA-Z\s]+" required
+                         title="Letters and spaces only"/>
+                  <i class="field-icon fa-solid fa-user" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="field-wrap">
+                <div class="field-label-top">Gmail <span class="req">*</span></div>
+                <div class="field-icon-wrap">
+                  <input class="form-input" type="email" id="cEmail" name="email"
+                         placeholder="you@gmail.com"
+                         pattern="[a-z0-9._%+\-]+@gmail\.com" required
+                         title="Valid Gmail address only"/>
+                  <i class="field-icon fa-solid fa-at" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="field-wrap">
+              <div class="field-label-top">Phone <span class="req">*</span></div>
+              <div class="field-icon-wrap">
+                <input class="form-input" type="tel" id="cPhone" name="phone"
+                       placeholder="10-digit mobile number"
+                       pattern="^\d{10}$" required
+                       title="10-digit number only"/>
+                <i class="field-icon fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- Subject chips -->
+            <div class="field-wrap">
+              <div class="field-label-top">I'm reaching out about</div>
+              <div class="subject-chips" id="subjectChips">
+                <button type="button" class="schip" data-val="Freelance Project">Freelance Project</button>
+                <button type="button" class="schip" data-val="Full-time Role">Full-time Role</button>
+                <button type="button" class="schip" data-val="Collaboration">Collaboration</button>
+                <button type="button" class="schip" data-val="Just Saying Hi">Just Saying Hi 👋</button>
+                <button type="button" class="schip" data-val="Other">Other</button>
+              </div>
+              <input type="hidden" id="subjectVal" name="subject"/>
+            </div>
+
+            <!-- Message -->
+            <div class="field-wrap">
+              <div class="field-label-top">Message <span class="req">*</span></div>
+              <textarea class="form-input" id="cMessage" name="message"
+                        placeholder="Tell me about your project or idea..." rows="5" required></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div>
+              <button type="submit" class="send-btn" id="sendBtn">
+                <i class="fa-solid fa-paper-plane btn-icon" aria-hidden="true"></i>
+                Send Message
+              </button>
+              <div class="send-progress">
+                <div class="send-progress-bar" id="progressBar"></div>
+              </div>
+            </div>
+
+          </form><!-- /form -->
+        </div><!-- /terminal-body -->
+
+        <!-- success overlay -->
+        <div class="success-overlay" id="successOverlay">
+          <div class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+          <div class="success-title">Message Sent!</div>
+          <p class="success-msg">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+          <button class="success-back" onclick="resetForm()">Send Another</button>
+        </div>
+
+      </div><!-- /terminal-frame -->
+    </div><!-- /right-panel -->
+
+  </div><!-- /contact-wrap -->
+
+  <!-- ─── LOCATION SECTION ──────────────── -->
+  <div class="location-section">
+    <div class="location-grid">
+
+      <div class="loc-info-card">
+        <div>
+          <div class="loc-label">Based in</div>
+          <div class="loc-city">Lucknow</div>
+          <div class="loc-state">Uttar Pradesh, India 🇮🇳</div>
+        </div>
+        <div class="loc-details">
+          <div class="loc-row">
+            <div class="loc-row-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+            <div class="loc-row-text">
+              <b>IST (UTC +5:30)</b><br>Working hours: 9 AM – 9 PM IST
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-row-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+            <div class="loc-row-text">
+              <b>Remote & On-site</b><br>Open to remote worldwide or local Lucknow
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-row-icon"><i class="fa-solid fa-reply" aria-hidden="true"></i></div>
+            <div class="loc-row-text">
+              <b>Response Time</b><br>Usually within 6–24 hours
+            </div>
+          </div>
+        </div>
+        <div class="loc-timezone">
+          <div>
+            <div class="tz-label">Current Local Time</div>
+            <div class="tz-time" id="localTime">--:-- --</div>
+            <div class="tz-live" id="tzStatus">● Live</div>
+          </div>
+          <div style="font-size:.7rem;color:var(--muted);font-family:var(--mono);text-align:right">
+            IST<br>UTC +5:30
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-map-card">
+        <div class="map-grid"></div>
+        <div class="map-overlay"></div>
+        <div class="map-label-box">
+          <div class="city">Lucknow</div>
+          <div class="country">INDIA · 26.8467°N, 80.9462°E</div>
+        </div>
+        <div class="map-pin">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <div class="map-pin-pulse"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── FAQ SECTION ───────────────────── -->
+  <div class="faq-section">
+    <div class="faq-header">
+      <h2 class="faq-title">Quick <span>Questions</span></h2>
+    </div>
+    <div class="faq-grid" id="faqGrid">
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+          <div class="faq-q-text">How quickly do you respond?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">I typically respond within 6–24 hours on weekdays. For urgent enquiries, WhatsApp is the fastest way to reach me.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+          <div class="faq-q-text">Do you work with international clients?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely! I work fully remote and have collaborated with clients across time zones. I'm comfortable with async communication and video calls.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+          <div class="faq-q-text">What tech stacks do you work with?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Django, Laravel, MERN (MongoDB, Express, React, Node.js), HTML/CSS, Bootstrap, Tailwind, MySQL, REST APIs, and Docker. Open to learning what your project needs.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-file-contract" aria-hidden="true"></i></div>
+          <div class="faq-q-text">Do you take on freelance projects?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes! I take on freelance web development projects alongside my full-time work. Drop me a message with the project scope and timeline and we'll take it from there.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+          <div class="faq-q-text">Are you open to full-time roles?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes, I'm actively looking for full-time Full Stack Developer roles — remote or Lucknow-based. Feel free to reach out with opportunities.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">
+          <div class="faq-q-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+          <div class="faq-q-text">Can I see more of your work?</div>
+          <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Of course! Check out my <a href="project.html" style="color:var(--gold);font-weight:700">Projects page</a> for a full showcase, or visit my <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-weight:700">GitHub</a> for the source code.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-socials mb-3">
+      <a href="https://api.whatsapp.com/send/?phone=916306008818" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="mailto:dkmom00@gmail.com" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://in.pinterest.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+      <a href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+    </div>
+    <p class="footer-tagline">Coding, learning, evolving. Join me on this journey of continuous improvement.</p>
+    <p class="footer-credit">&copy; <span id="footerYear"></span> Designed with <i class="fa fa-heart" aria-label="love"></i> by
+      <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer">Dharmendra Kumar Yadav</a></p>
+  </div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<div class="mobile-bottom-tab d-lg-none">
+  <a href="index.html" class="mobile-bottom-tab-link">
+    <i class="fa-solid fa-house" aria-hidden="true"></i><span>Back to Home</span>
+  </a>
+</div>
+
+<script>
+/* Particles */
+window.addEventListener('load', function(){
+  var m = window.innerWidth < 768;
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: m ? 20 : 70, density: { enable: true, value_area: 800 } },
+      color: { value: '#ffc200' }, shape: { type: 'circle' },
+      opacity: { value: 0.45, random: true },
+      size: { value: 3, random: true },
+      line_linked: { enable: !m, distance: 150, color: '#ffc200', opacity: 0.28, width: 1 },
+      move: { enable: true, speed: m ? 2 : 3, out_mode: 'out' }
+    },
+    interactivity: {
+      detect_on: 'window',
+      events: { onhover: { enable: !m, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+      modes: { repulse: { distance: 100 }, push: { particles_nb: 3 } }
+    },
+    retina_detect: true
+  });
+});
+
+/* Navbar */
+(function(){
+  var nav = document.getElementById('siteNavbar'), ly = 0, tick = false;
+  function upd(){ var y = window.scrollY, d = y > ly, t = y < 40;
+    nav.classList.toggle('navbar-hidden', d && !t);
+    nav.classList.toggle('navbar-visible', !d || t);
+    ly = y; tick = false; }
+  window.addEventListener('scroll', function(){ if(!tick){ requestAnimationFrame(upd); tick = true; } }, { passive: true });
+  upd();
+})();
+document.querySelectorAll('#navMenu .nav-link').forEach(function(l){
+  l.addEventListener('click', function(){
+    var c = document.getElementById('navMenu');
+    if(c.classList.contains('show')) bootstrap.Collapse.getInstance(c)?.hide();
+  });
+});
+
+/* Scroll top */
+var tb = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', function(){ tb.classList.toggle('show', window.scrollY > 350); });
+tb.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+/* Footer year */
+document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+/* Toast */
+function showToast(msg, type){
+  var t = document.getElementById('dkToast');
+  t.textContent = msg; t.className = 'dk-toast show ' + (type || '');
+  setTimeout(function(){ t.className = 'dk-toast'; }, 3800);
+}
+
+/* Subject chips */
+document.querySelectorAll('.schip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.schip').forEach(function(c){ c.classList.remove('picked'); });
+    chip.classList.add('picked');
+    document.getElementById('subjectVal').value = chip.dataset.val;
+  });
+});
+
+/* Real-time field validation */
+['cName','cEmail','cPhone','cMessage'].forEach(function(id){
+  var el = document.getElementById(id);
+  if(!el) return;
+  el.addEventListener('blur', function(){
+    if(el.value.trim() && el.checkValidity()){
+      el.classList.remove('invalid'); el.classList.add('valid');
+    } else if(el.value.trim()){
+      el.classList.remove('valid'); el.classList.add('invalid');
+    }
+  });
+  el.addEventListener('input', function(){
+    el.classList.remove('invalid');
+    if(el.value.trim() && el.checkValidity()) el.classList.add('valid');
+    else el.classList.remove('valid');
+  });
+});
+
+/* Progress bar animation */
+function animateProgress(cb){
+  var bar = document.getElementById('progressBar');
+  var w = 0;
+  var iv = setInterval(function(){
+    w = Math.min(w + 4, 90);
+    bar.style.width = w + '%';
+    if(w >= 90){ clearInterval(iv); if(cb) cb(); }
+  }, 40);
+  return function done(){
+    clearInterval(iv);
+    bar.style.width = '100%';
+    setTimeout(function(){ bar.style.width = '0'; }, 600);
+  };
+}
+
+/* Form submit */
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  var name    = document.getElementById('cName').value.trim();
+  var email   = document.getElementById('cEmail').value.trim();
+  var phone   = document.getElementById('cPhone').value.trim();
+  var msg     = document.getElementById('cMessage').value.trim();
+  var subject = document.getElementById('subjectVal').value || 'General Enquiry';
+
+  if(!name || !email || !phone || !msg){
+    showToast('Please fill all required fields.', 'error'); return;
+  }
+
+  var btn = document.getElementById('sendBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+
+  var done = animateProgress();
+
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    from_name:  name,
+    from_email: email,
+    phone:      phone,
+    subject:    subject,
+    message:    msg
+  })
+  .then(function(){
+    done();
+    document.getElementById('successOverlay').classList.add('show');
+  })
+  .catch(function(err){
+    done();
+    console.error('EmailJS:', err);
+    showToast('Something went wrong. Please try again.', 'error');
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fa-solid fa-paper-plane btn-icon"></i> Send Message';
+  });
+});
+
+function resetForm(){
+  document.getElementById('successOverlay').classList.remove('show');
+  document.getElementById('contactForm').reset();
+  document.querySelectorAll('.form-input').forEach(function(el){
+    el.classList.remove('valid','invalid');
+  });
+  document.querySelectorAll('.schip').forEach(function(c){ c.classList.remove('picked'); });
+  document.getElementById('subjectVal').value = '';
+  var btn = document.getElementById('sendBtn');
+  btn.disabled = false;
+  btn.innerHTML = '<i class="fa-solid fa-paper-plane btn-icon"></i> Send Message';
+}
+
+/* Live IST clock */
+function updateClock(){
+  var now = new Date();
+  var ist = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+  var h = ist.getHours(), m = ist.getMinutes(), s = ist.getSeconds();
+  var ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  var timeStr = (h < 10 ? '0' : '') + h + ':' +
+                (m < 10 ? '0' : '') + m + ':' +
+                (s < 10 ? '0' : '') + s + ' ' + ampm;
+  var el = document.getElementById('localTime');
+  if(el) el.textContent = timeStr;
+
+  // Working hours check
+  var rawH = ist.getHours();
+  var status = document.getElementById('tzStatus');
+  if(status){
+    if(rawH >= 9 && rawH < 21){
+      status.textContent = '● Online & Working';
+      status.style.color = '#22c55e';
+    } else {
+      status.textContent = '◌ Off hours — will reply soon';
+      status.style.color = '#f59e0b';
+    }
+  }
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* FAQ toggle */
+function toggleFaq(item){
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(f){ f.classList.remove('open'); });
+  if(!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

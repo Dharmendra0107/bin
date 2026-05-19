@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>Projects | Dharmendra Kumar Yadav – Full Stack Developer</title>
+  <meta name="description" content="Explore all projects by Dharmendra Kumar Yadav – Django, Laravel, MERN, HTML/CSS web apps."/>
+  <meta name="author" content="Dharmendra Kumar Yadav"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#ffc200"/>
+  <link rel="canonical" href="https://dharmendra0107.github.io/project.html"/>
+  <meta property="og:title"       content="Projects | Dharmendra Kumar Yadav"/>
+  <meta property="og:description" content="Full Stack Developer project showcase – Django · Laravel · MERN"/>
+  <meta property="og:image"       content="https://dharmendra0107.github.io/images/og-cover.png"/>
+  <meta property="og:url"         content="https://dharmendra0107.github.io/project.html"/>
+  <meta name="twitter:card"       content="summary_large_image"/>
+  <link rel="icon" href="images/dklogo.png" type="image/png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700;900&family=Space+Mono:wght@400;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+  /* ════════════════════════════════════════
+     ROOT
+  ════════════════════════════════════════ */
+  :root{
+    --gold:#ffc200;--gold-dark:#ffb300;--gold-glow:rgba(255,194,0,.22);
+    --bg:#000;--bg2:#080808;--bg3:#0d0d0d;
+    --card-bg:rgba(255,255,255,.04);
+    --border:rgba(255,194,0,.18);--border2:rgba(255,255,255,.07);
+    --muted:#b9b8b8;
+    --font:'Maven Pro',sans-serif;
+    --serif:'Cormorant Garamond',serif;
+    --mono:'Space Mono',monospace;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --ease-back:cubic-bezier(.34,1.56,.64,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:var(--font);background:var(--bg);color:#fff;overflow-x:hidden;padding-top:92px}
+  a{text-decoration:none!important;transition:color .3s}
+  a:hover{color:var(--gold)!important}
+  img{max-width:100%}
+  p{color:var(--muted);line-height:1.7}
+  ul{list-style:none;margin:0;padding:0}
+  #particles-js{position:fixed;inset:0;z-index:-1}
+
+  /* ════════════════════════════════════════
+     NAVBAR
+  ════════════════════════════════════════ */
+  .navbar{position:fixed;top:0;left:0;width:100%;z-index:9999;background:transparent!important;
+    transition:transform .3s,opacity .3s;padding:12px 0 0;animation:navFade .9s linear forwards}
+  .navbar.navbar-hidden{transform:translateY(-115%);opacity:0;pointer-events:none}
+  .navbar.navbar-visible{transform:translateY(0);opacity:1;pointer-events:auto}
+  .navbar>.container{max-width:1240px;background:rgba(18,18,18,.62);
+    backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);
+    border:1px solid rgba(255,194,0,.18);border-radius:22px;
+    box-shadow:0 16px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05);
+    padding:12px 18px;transition:border-color .3s,box-shadow .3s}
+  .navbar:hover>.container{border-color:var(--gold);
+    box-shadow:0 16px 40px rgba(0,0,0,.35),0 0 22px rgba(255,194,0,.2),inset 0 1px 0 rgba(255,255,255,.05)}
+  .navbar-brand{font-weight:800;font-size:1.18rem;color:#fff!important;display:flex;align-items:center;gap:10px}
+  .navbar-brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,194,0,.18)}
+  .navbar-collapse{justify-content:center}
+  .navbar-nav{gap:.35rem;align-items:center}
+  .nav-link{color:rgba(255,255,255,.82)!important;font-weight:600;font-size:.95rem;
+    padding:.55rem 1rem!important;border-radius:999px;
+    transition:color .3s,background .3s,transform .3s,border-color .3s;border:1px solid transparent}
+  .nav-link:hover,.nav-link.active{color:var(--gold)!important;background:rgba(255,194,0,.12);
+    border-color:rgba(255,194,0,.18);transform:translateY(-1px)}
+  .navbar-toggler{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.03);
+    border:none!important;outline:none!important;box-shadow:none!important}
+  .navbar-toggler i{color:var(--gold);font-size:1.6rem}
+  .navbar-collapse.show{margin-top:12px;padding:14px 12px 6px;border-radius:18px;
+    background:rgba(12,12,12,.72);border:1px solid rgba(255,194,0,.16);backdrop-filter:blur(18px)}
+  .navbar-collapse.show .nav-link{text-align:center;width:100%}
+  @keyframes navFade{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ════════════════════════════════════════
+     TICKER
+  ════════════════════════════════════════ */
+  .projects-ticker{
+    background:rgba(255,194,0,.06);
+    border-top:1px solid rgba(255,194,0,.18);
+    border-bottom:1px solid rgba(255,194,0,.18);
+    padding:11px 0;overflow:hidden;white-space:nowrap;
+  }
+  .ticker-inner{display:inline-flex;gap:0;animation:ticker 28s linear infinite}
+  .ticker-item{display:inline-flex;align-items:center;gap:8px;padding:0 28px;
+    font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(255,255,255,.4);font-family:var(--mono)}
+  .ticker-item span{color:var(--gold)}
+  .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.4;flex-shrink:0}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ════════════════════════════════════════
+     PAGE HEADER
+  ════════════════════════════════════════ */
+  .page-header{
+    position:relative;padding:80px 6% 60px;
+    display:grid;grid-template-columns:1fr auto;
+    align-items:end;gap:40px;overflow:hidden;
+  }
+  .page-header::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse at 20% 50%,rgba(255,194,0,.06) 0%,transparent 65%);
+    pointer-events:none;
+  }
+  .ph-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+  .ph-eyebrow-line{width:32px;height:2px;
+    background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px}
+  .ph-eyebrow-text{font-size:.68rem;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--gold);font-family:var(--mono)}
+  .ph-title{font-family:var(--serif);font-size:clamp(2.8rem,6vw,5.2rem);
+    font-weight:600;color:#fff;line-height:1.06;letter-spacing:-.03em}
+  .ph-title em{font-style:italic;color:var(--gold);display:block}
+  .ph-right{max-width:320px;padding-bottom:10px}
+  .ph-desc{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:20px}
+  .ph-stats{display:flex;gap:22px}
+  .ph-stat{text-align:center}
+  .ph-num{font-family:var(--mono);font-size:1.9rem;font-weight:700;
+    color:var(--gold);line-height:1;display:block}
+  .ph-lbl{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-top:3px;display:block}
+  .ph-sep{width:1px;background:rgba(255,194,0,.18)}
+  @media(max-width:768px){
+    .page-header{grid-template-columns:1fr;padding:50px 5% 36px}
+    .ph-right{max-width:100%}
+  }
+
+  /* ════════════════════════════════════════
+     HORIZONTAL ACCORDION  (desktop)
+  ════════════════════════════════════════ */
+  .acc-wrap{padding:0 6% 70px;position:relative}
+
+  .acc-panels{
+    display:flex;gap:3px;height:580px;
+    border-radius:22px;overflow:hidden;
+    box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,194,0,.12);
+  }
+
+  .acc-panel{
+    position:relative;flex:0 0 68px;cursor:pointer;
+    overflow:hidden;transition:flex .65s var(--ease);
+  }
+  .acc-panel:first-child{border-radius:22px 0 0 22px}
+  .acc-panel:last-child{border-radius:0 22px 22px 0}
+  .acc-panel.open{flex:1}
+
+  /* bg image */
+  .acc-img{position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;transition:transform .8s var(--ease),filter .5s ease;
+    filter:brightness(.3) saturate(.6)}
+  .acc-panel.open .acc-img{filter:brightness(.25) saturate(.5);transform:scale(1.04)}
+  .acc-panel:not(.open):hover .acc-img{filter:brightness(.4) saturate(.7)}
+
+  /* overlay */
+  .acc-overlay{position:absolute;inset:0;
+    background:linear-gradient(to right,rgba(0,0,0,.96) 0%,rgba(0,0,0,.65) 50%,rgba(0,0,0,.35) 100%);
+    transition:opacity .5s ease}
+  .acc-panel.open .acc-overlay{
+    background:linear-gradient(150deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.8) 50%,rgba(0,0,0,.45) 100%)}
+
+  /* collapsed label */
+  .acc-label{position:absolute;inset:0;display:flex;align-items:center;
+    justify-content:center;opacity:1;transition:opacity .3s ease;z-index:2}
+  .acc-panel.open .acc-label{opacity:0;pointer-events:none}
+  .acc-label-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .acc-label-icon{width:34px;height:34px;border-radius:10px;
+    background:rgba(255,194,0,.12);border:1px solid rgba(255,194,0,.3);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.85rem;color:var(--gold)}
+  .acc-label-text{font-family:var(--mono);font-size:.72rem;font-weight:700;
+    color:rgba(255,255,255,.6);writing-mode:vertical-rl;
+    text-orientation:mixed;transform:rotate(180deg);
+    white-space:nowrap;letter-spacing:.06em}
+  .acc-label-num{font-family:var(--mono);font-size:.65rem;color:var(--gold);
+    font-weight:700;letter-spacing:.1em}
+
+  /* watermark number */
+  .acc-watermark{position:absolute;top:16px;right:22px;
+    font-family:var(--mono);font-size:6.5rem;font-weight:700;line-height:1;
+    color:rgba(255,194,0,.05);letter-spacing:-.05em;
+    z-index:1;pointer-events:none}
+
+  /* expanded content */
+  .acc-content{position:absolute;inset:0;padding:38px 38px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    z-index:2;opacity:0;transform:translateY(16px);
+    transition:opacity .4s ease .12s,transform .4s var(--ease) .12s;
+    pointer-events:none;min-width:400px}
+  .acc-panel.open .acc-content{opacity:1;transform:translateY(0);pointer-events:auto}
+
+  /* content pieces */
+  .acc-badge{display:inline-flex;align-items:center;gap:6px;
+    background:rgba(255,194,0,.12);border:1px solid rgba(255,194,0,.28);
+    color:var(--gold);font-size:.63rem;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;
+    padding:5px 12px;border-radius:50px;margin-bottom:14px;width:fit-content}
+  .acc-badge i{font-size:.52rem}
+  .acc-title{font-family:var(--serif);font-size:clamp(1.7rem,2.4vw,2.5rem);
+    font-weight:600;color:#fff;line-height:1.15;margin-bottom:10px}
+  .acc-title span{color:var(--gold);font-style:italic}
+  .acc-desc{font-size:.82rem;color:rgba(255,255,255,.6);
+    line-height:1.8;margin-bottom:20px;max-width:460px}
+  .acc-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+  .acc-chip{display:inline-flex;align-items:center;gap:5px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+    color:rgba(255,255,255,.75);font-size:.68rem;font-weight:500;
+    padding:5px 11px;border-radius:6px;transition:all .2s ease}
+  .acc-chip i{color:var(--gold);font-size:.56rem}
+  .acc-chip:hover{background:rgba(255,194,0,.12);border-color:rgba(255,194,0,.28);color:var(--gold)}
+  .acc-cta{display:flex;gap:10px;align-items:center}
+  .acc-btn-primary{display:inline-flex;align-items:center;gap:8px;
+    background:var(--gold);color:#181818;font-family:var(--font);
+    font-size:.73rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:11px 20px;border-radius:50px;border:none;text-decoration:none!important;
+    cursor:pointer;transition:all .25s ease;
+    box-shadow:0 6px 24px rgba(255,194,0,.3)}
+  .acc-btn-primary:hover{background:var(--gold-dark);transform:translateY(-2px);
+    box-shadow:0 10px 32px rgba(255,194,0,.45);color:#181818!important}
+  .acc-btn-ghost{display:inline-flex;align-items:center;gap:6px;
+    background:transparent;color:rgba(255,255,255,.55);font-size:.73rem;
+    font-weight:600;text-decoration:none!important;cursor:pointer;
+    transition:color .2s ease;border:none;padding:0}
+  .acc-btn-ghost:hover{color:#fff!important}
+  .acc-btn-ghost i{font-size:.58rem}
+
+  /* ════════════════════════════════════════
+     MOBILE CARDS  (≤992px)
+  ════════════════════════════════════════ */
+  .mob-projects{display:none;padding:0 5% 60px;flex-direction:column;gap:14px}
+  .mob-card{background:var(--card-bg);border-radius:18px;overflow:hidden;
+    border:1.5px solid rgba(255,194,0,.15);cursor:pointer;
+    transition:box-shadow .3s,transform .3s,border-color .3s}
+  .mob-card:hover{transform:translateY(-3px);border-color:rgba(255,194,0,.4);
+    box-shadow:0 12px 40px rgba(255,194,0,.12)}
+  .mob-card-header{display:flex;align-items:center;gap:14px;padding:18px 20px;position:relative}
+  .mob-card-icon{width:44px;height:44px;border-radius:12px;
+    background:rgba(255,194,0,.1);border:1.5px solid rgba(255,194,0,.25);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1rem;color:var(--gold);flex-shrink:0;transition:all .25s}
+  .mob-card.open .mob-card-icon{background:var(--gold);color:#181818;border-color:var(--gold)}
+  .mob-card-num{position:absolute;right:18px;top:50%;transform:translateY(-50%);
+    font-family:var(--mono);font-size:2rem;font-weight:700;
+    color:rgba(255,194,0,.06);line-height:1}
+  .mob-card-title{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff;line-height:1.25}
+  .mob-card-sub{font-size:.68rem;color:var(--muted);margin-top:2px;font-family:var(--mono)}
+  .mob-card-toggle{margin-left:auto;width:28px;height:28px;border-radius:50%;
+    background:rgba(255,194,0,.08);border:1px solid rgba(255,194,0,.2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.62rem;color:var(--gold);flex-shrink:0;transition:all .3s}
+  .mob-card.open .mob-card-toggle{background:var(--gold);color:#181818;transform:rotate(45deg)}
+  .mob-card-body{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+  .mob-card.open .mob-card-body{max-height:520px}
+  .mob-card-inner{padding:0 20px 20px;border-top:1px solid rgba(255,194,0,.1)}
+  .mob-card-img{width:100%;height:170px;object-fit:cover;border-radius:12px;
+    margin:16px 0;display:block;filter:brightness(.85)}
+  .mob-card-desc{font-size:.82rem;color:var(--muted);line-height:1.75;margin-bottom:14px}
+  .mob-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+  .mob-chip{display:inline-flex;align-items:center;gap:5px;
+    background:rgba(255,194,0,.08);border:1px solid rgba(255,194,0,.18);
+    color:rgba(255,255,255,.7);font-size:.68rem;font-weight:500;
+    padding:4px 10px;border-radius:6px}
+  .mob-chip i{color:var(--gold);font-size:.52rem}
+  .mob-cta-row{display:flex;gap:8px;flex-wrap:wrap}
+  .mob-cta{display:inline-flex;align-items:center;gap:7px;
+    background:var(--gold);color:#181818;font-size:.73rem;font-weight:700;
+    padding:10px 18px;border-radius:50px;text-decoration:none!important;
+    transition:background .2s}
+  .mob-cta:hover{background:var(--gold-dark);color:#181818!important}
+  .mob-cta-ghost{display:inline-flex;align-items:center;gap:7px;
+    background:transparent;color:var(--gold);font-size:.73rem;font-weight:600;
+    padding:10px 18px;border-radius:50px;border:1.5px solid rgba(255,194,0,.35);
+    text-decoration:none!important;transition:all .2s}
+  .mob-cta-ghost:hover{background:rgba(255,194,0,.1);color:var(--gold)!important}
+
+  /* ════════════════════════════════════════
+     BENTO SECTION  (All projects at a glance)
+  ════════════════════════════════════════ */
+  .bento-section{
+    background:var(--bg2);position:relative;overflow:hidden;
+  }
+  .bento-section::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:80px;
+    background:var(--bg);
+    clip-path:polygon(0 0,100% 0,100% 0%,0 100%);z-index:1;
+  }
+  .bento-inner{position:relative;z-index:2;padding:90px 6% 80px}
+  .bento-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
+  .bento-title{font-family:var(--serif);font-size:clamp(1.9rem,4vw,3.2rem);
+    font-weight:600;color:#fff;line-height:1.1}
+  .bento-title span{color:var(--gold);font-style:italic}
+  .bento-link{display:inline-flex;align-items:center;gap:7px;
+    color:var(--gold);font-size:.76rem;font-weight:700;
+    text-decoration:none!important;letter-spacing:.08em;text-transform:uppercase;
+    padding-bottom:2px;border-bottom:1px solid rgba(255,194,0,.3);
+    transition:all .2s;white-space:nowrap}
+  .bento-link:hover{color:var(--gold)!important;border-bottom-color:var(--gold);gap:12px}
+
+  /* grid */
+  .bento-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+  .bc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;padding:24px 22px;position:relative;overflow:hidden;
+    cursor:pointer;transition:all .35s var(--ease)}
+  .bc::before{content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,rgba(255,194,0,.06),transparent 60%);
+    opacity:0;transition:opacity .3s}
+  .bc:hover{background:rgba(255,255,255,.07);border-color:rgba(255,194,0,.28);
+    transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .bc:hover::before{opacity:1}
+  .bc.feat{background:linear-gradient(135deg,rgba(255,194,0,.1),rgba(0,0,0,.5));
+    border-color:rgba(255,194,0,.22)}
+  .bc.feat:hover{border-color:rgba(255,194,0,.5)}
+  .bc.dark{background:rgba(255,255,255,.02)}
+
+  /* grid placements */
+  .bc-1{grid-column:1/5;grid-row:1}
+  .bc-2{grid-column:5/9;grid-row:1}
+  .bc-3{grid-column:9/13;grid-row:1}
+  .bc-4{grid-column:1/4;grid-row:2}
+  .bc-5{grid-column:4/8;grid-row:2}
+  .bc-6{grid-column:8/10;grid-row:2}
+  .bc-7{grid-column:10/13;grid-row:2}
+  .bc-8{grid-column:1/5;grid-row:3}
+  .bc-9{grid-column:5/13;grid-row:3}
+
+  .bc-icon{width:42px;height:42px;border-radius:11px;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.9rem;color:var(--gold);margin-bottom:16px;transition:all .25s}
+  .bc:hover .bc-icon{background:rgba(255,194,0,.16);border-color:rgba(255,194,0,.35)}
+  .bc-num{position:absolute;top:14px;right:16px;font-family:var(--mono);
+    font-size:2.8rem;font-weight:700;color:rgba(255,255,255,.04);line-height:1}
+  .bc-title{font-family:var(--serif);font-size:1.1rem;font-weight:600;
+    color:#fff;margin-bottom:7px;line-height:1.25}
+  .bc-desc{font-size:.73rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:12px}
+  .bc-tags{display:flex;flex-wrap:wrap;gap:5px}
+  .bc-tag{font-size:.6rem;color:rgba(255,255,255,.4);
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+    padding:2px 8px;border-radius:4px;font-weight:500}
+  .bc:hover .bc-tag{border-color:rgba(255,194,0,.2);color:rgba(255,194,0,.65)}
+  .bc-arrow{display:inline-flex;align-items:center;gap:5px;margin-top:14px;
+    font-size:.68rem;font-weight:700;color:var(--gold);
+    text-transform:uppercase;letter-spacing:.1em;
+    opacity:0;transform:translateX(-6px);transition:all .25s}
+  .bc:hover .bc-arrow{opacity:1;transform:translateX(0)}
+  .bc-arrow i{font-size:.52rem}
+
+  /* ════════════════════════════════════════
+     TECH JOURNEY STRIP  (like process strip)
+  ════════════════════════════════════════ */
+  .journey-strip{background:var(--bg3);padding:70px 6%;position:relative}
+  .journey-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--bg2),var(--gold),var(--gold-dark),var(--gold),var(--bg2))}
+  .js-header{text-align:center;margin-bottom:50px}
+  .js-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);
+    font-weight:600;color:#fff;margin-bottom:8px}
+  .js-sub{font-size:.85rem;color:var(--muted)}
+  .journey-steps{display:grid;grid-template-columns:repeat(4,1fr);
+    gap:0;position:relative}
+  .journey-steps::before{content:'';position:absolute;top:26px;
+    left:calc(12.5% + 16px);right:calc(12.5% + 16px);height:2px;
+    background:linear-gradient(90deg,rgba(255,194,0,.1),rgba(255,194,0,.6),rgba(255,194,0,.1));
+    z-index:0}
+  .j-step{text-align:center;padding:0 14px;position:relative;z-index:1}
+  .j-circle{width:52px;height:52px;border-radius:50%;
+    background:var(--bg);border:2px solid rgba(255,194,0,.25);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+    font-size:1rem;color:var(--gold);position:relative;z-index:2;
+    transition:all .3s ease}
+  .j-step:hover .j-circle{background:var(--gold);border-color:var(--gold);
+    color:#181818;transform:scale(1.1);box-shadow:0 8px 24px rgba(255,194,0,.3)}
+  .j-step-num{position:absolute;top:-5px;right:-3px;width:18px;height:18px;
+    border-radius:50%;background:rgba(255,194,0,.9);color:#181818;
+    font-size:.52rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .j-label{font-family:var(--serif);font-size:1rem;font-weight:600;
+    color:#fff;margin-bottom:5px}
+  .j-note{font-size:.73rem;color:var(--muted);line-height:1.6}
+
+  /* ════════════════════════════════════════
+     FOOTER
+  ════════════════════════════════════════ */
+  .site-footer{background:rgba(18,18,18,.62);
+    backdrop-filter:blur(18px) saturate(150%);
+    border-top:1px solid rgba(255,194,0,.18);
+    padding:40px 0 24px;text-align:center;position:relative;z-index:2}
+  .footer-socials a{display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:50%;color:var(--gold);font-size:1.35rem;
+    border:2px solid rgba(255,194,0,.3);margin:0 5px 12px;
+    transition:color .25s,background .25s,transform .25s,border-color .25s}
+  .footer-socials a:hover{background:rgba(255,194,0,.12);color:var(--gold)!important;
+    transform:scale(1.12) rotate(-4deg);border-color:var(--gold)}
+  .footer-tagline{color:var(--muted);font-size:.95rem;margin:12px 0 6px}
+  .footer-credit{color:rgba(255,255,255,.5);font-size:.88rem}
+  .footer-credit a{color:var(--gold)}
+  .footer-credit i{color:#e74c3c;animation:hb 1.2s infinite}
+  @keyframes hb{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+
+  .scroll-top-btn{position:fixed;bottom:30px;right:30px;width:52px;height:52px;
+    border-radius:50%;background:var(--gold);color:#181818;
+    display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+    z-index:9998;opacity:0;pointer-events:none;
+    transition:opacity .4s,transform .3s;border:none;cursor:pointer;
+    box-shadow:0 4px 20px rgba(255,194,0,.35)}
+  .scroll-top-btn.show{opacity:1;pointer-events:auto}
+  .scroll-top-btn:hover{transform:translateY(-4px);background:var(--gold-dark)}
+
+  /* mobile bottom tab */
+  .mobile-bottom-tab{display:none}
+  @media(max-width:991px){
+    .navbar>.container{padding:10px 14px;border-radius:18px}
+    .acc-wrap{display:none}
+    .mob-projects{display:flex}
+    .bento-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .bc-1,.bc-2,.bc-3,.bc-4,.bc-5,.bc-6,.bc-7,.bc-8,.bc-9{grid-column:auto;grid-row:auto}
+    .bc-9{grid-column:1/3}
+    .journey-steps{grid-template-columns:1fr 1fr;gap:28px}
+    .journey-steps::before{display:none}
+    .bento-head{flex-direction:column;align-items:flex-start;gap:14px}
+    .mobile-bottom-tab{position:fixed;left:12px;right:12px;
+      bottom:calc(14px + env(safe-area-inset-bottom));
+      z-index:9997;display:flex;justify-content:center;pointer-events:none}
+    .mobile-bottom-tab-link{pointer-events:auto;display:flex;align-items:center;
+      gap:9px;justify-content:center;width:100%;padding:13px 22px;border-radius:18px;
+      background:rgba(18,18,18,.78);border:1px solid rgba(255,194,0,.18);
+      box-shadow:0 14px 32px rgba(0,0,0,.34);backdrop-filter:blur(18px);
+      color:rgba(255,255,255,.86)!important;font-weight:700;font-size:.95rem;transition:all .25s}
+    .mobile-bottom-tab-link i{color:var(--gold);font-size:1rem}
+  }
+  @media(max-width:768px){
+    body{padding-top:84px;padding-bottom:88px}
+    .navbar{padding:12px 12px 0}
+  }
+  @media(max-width:576px){
+    .bento-grid{grid-template-columns:1fr}
+    .bc-9{grid-column:auto}
+    .journey-steps{grid-template-columns:1fr;gap:22px}
+    .bento-inner{padding:70px 5% 55px}
+    .journey-strip{padding:50px 5%}
+  }
+  </style>
+</head>
+<body>
+<div id="particles-js" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header role="banner">
+<nav class="navbar navbar-expand-lg navbar-visible" id="siteNavbar" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/dklogo.png" alt="DK Logo" onerror="this.style.display='none'" width="36" height="36">
+      Dharmendra
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li><a class="nav-link" href="index.html#home">Home</a></li>
+        <li><a class="nav-link" href="index.html#about">About</a></li>
+        <li><a class="nav-link" href="index.html#skills">Skills</a></li>
+        <li><a class="nav-link" href="index.html#education">Education</a></li>
+        <li><a class="nav-link active" href="project.html">Projects</a></li>
+        <li><a class="nav-link" href="index.html#experiences">Experience</a></li>
+        <li><a class="nav-link" href="index.html#achievements">Achievements</a></li>
+        <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- ══════ TICKER ══════ -->
+<div class="projects-ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span>Portfolio Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Laravel E-Commerce</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Quiz App MERN</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Weather App</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Django Admission System</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Hotel Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Clinic Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Travel Fun</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>BMI Calculator</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Age Calculator</span></span><span class="ticker-dot"></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span>Portfolio Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Laravel E-Commerce</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Quiz App MERN</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Weather App</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Django Admission System</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Hotel Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Clinic Website</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Travel Fun</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>BMI Calculator</span></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><span>Age Calculator</span></span><span class="ticker-dot"></span>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ══════ PAGE HEADER ══════ -->
+  <div class="page-header">
+    <div>
+      <div class="ph-eyebrow">
+        <div class="ph-eyebrow-line"></div>
+        <span class="ph-eyebrow-text">Full Stack Developer · Lucknow</span>
+      </div>
+      <h1 class="ph-title">
+        Things I've<br>
+        <em>Built</em>
+      </h1>
+    </div>
+    <div class="ph-right">
+      <p class="ph-desc">Click any panel to explore the project in detail — stack, features, and live links. Hover to preview.</p>
+      <div class="ph-stats">
+        <div class="ph-stat">
+          <span class="ph-num counter" data-target="12">0</span>
+          <span class="ph-lbl">Projects</span>
+        </div>
+        <div class="ph-sep"></div>
+        <div class="ph-stat">
+          <span class="ph-num counter" data-target="6">0</span>
+          <span class="ph-lbl">Stacks</span>
+        </div>
+        <div class="ph-sep"></div>
+        <div class="ph-stat">
+          <span class="ph-num">5+</span>
+          <span class="ph-lbl">Live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ HORIZONTAL ACCORDION  (desktop) ══════ -->
+  <div class="acc-wrap">
+    <div class="acc-panels" id="accPanels">
+
+      <!-- 1 · Laravel E-Commerce -->
+      <div class="acc-panel open" tabindex="0" role="button" aria-label="Laravel E-Commerce">
+        <img class="acc-img" src="images/project/laravel_ecom.png" alt="Laravel E-Commerce"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Laravel+E-Commerce'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">01</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-brands fa-laravel"></i></div>
+          <span class="acc-label-text">Laravel E-Commerce</span>
+          <span class="acc-label-num">01</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-star"></i> Featured · Production</div>
+          <h2 class="acc-title">Laravel <span>E-Commerce</span> Platform</h2>
+          <p class="acc-desc">Production-grade e-commerce system built at NDMEAA Technology. Product management, cart, orders, REST APIs. Delivered 30% backend efficiency improvement through optimised query architecture.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> REST APIs</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Cart & Orders</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Admin Panel</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> 30% Efficiency↑</span>
+          </div>
+          <div class="acc-cta">
+            <span class="acc-btn-primary"><i class="fa-solid fa-lock"></i> Private Repo</span>
+            <a href="index.html#experiences" class="acc-btn-ghost">View Experience <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 · Quiz App -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Quiz App MERN">
+        <img class="acc-img" src="images/project/quiz_app.png" alt="Quiz App"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Quiz+App'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">02</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-brands fa-react"></i></div>
+          <span class="acc-label-text">Quiz App MERN</span>
+          <span class="acc-label-num">02</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-code"></i> MERN · In Progress</div>
+          <h2 class="acc-title">Full-Stack <span>Quiz App</span></h2>
+          <p class="acc-desc">Full-stack quiz platform built during internship at Softpro India. Student and admin panels, role-based access, quiz management, and performance tracking analytics.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Role-Based Auth</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Admin Panel</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> JWT Secured</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Analytics</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="acc-btn-ghost">Demo Soon <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 · Django Admission System -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Django Admission System">
+        <img class="acc-img" src="images/project/admission.png" alt="Admission System"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Admission+System'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">03</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-brands fa-python"></i></div>
+          <span class="acc-label-text">Admission System</span>
+          <span class="acc-label-num">03</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-brands fa-python"></i> Django · Full Stack</div>
+          <h2 class="acc-title">Online <span>Admission</span> System</h2>
+          <p class="acc-desc">Django-based admission portal with student registration, document upload, admin review workflow, and automated email notifications. Clean CRUD architecture.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Doc Upload</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Admin Workflow</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Email Alerts</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> REST API</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="acc-btn-ghost">Coming Soon <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 · Weather App -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Weather App">
+        <img class="acc-img" src="images/project/4Weather.png" alt="Weather App"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Weather+App'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">04</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+          <span class="acc-label-text">Weather App</span>
+          <span class="acc-label-num">04</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-satellite-dish"></i> Live API · Public</div>
+          <h2 class="acc-title">Real-Time <span>Weather</span> App</h2>
+          <p class="acc-desc">Live weather for any city worldwide. Animated icons, temperature, humidity, wind speed, and browser geolocation support via OpenWeather API.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> OpenWeather API</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Geolocation</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Animated Icons</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Live Demo</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 · Portfolio Website -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Portfolio Website">
+        <img class="acc-img" src="images/project/1Portfolio web.png" alt="Portfolio Website"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Portfolio'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">05</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <span class="acc-label-text">Portfolio Website</span>
+          <span class="acc-label-num">05</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-star"></i> Featured · You're Here!</div>
+          <h2 class="acc-title">Personal <span>Portfolio</span> Website</h2>
+          <p class="acc-desc">The site you're on right now. Particles.js, AOS animations, sticky glassmorphism navbar, responsive dark-gold theme, EmailJS contact form, and full SEO optimisation.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Particles.js</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> SEO Optimised</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> EmailJS</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Responsive</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site</a>
+            <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 · Hotel Website -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Hotel Website">
+        <img class="acc-img" src="images/project/2Food web.png" alt="Hotel Website"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Hotel+Web'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">06</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-utensils"></i></div>
+          <span class="acc-label-text">Hotel Website</span>
+          <span class="acc-label-num">06</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-utensils"></i> Frontend · Responsive</div>
+          <h2 class="acc-title">Hotel &amp; <span>Food</span> Website</h2>
+          <p class="acc-desc">Restaurant and food services website with menu pages, recipe sections, and booking functionality. Fully responsive Bootstrap design with smooth interactions.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Menu Pages</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Booking Form</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Bootstrap</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Live Demo</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a href="https://github.com/Dharmendra0107/Hotel_Web" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 · Blogger Website -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Blogger Website">
+        <img class="acc-img" src="images/project/9BloggerWebsite.png" alt="Blogger Website"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Blogger'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">07</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <span class="acc-label-text">Blogger Website</span>
+          <span class="acc-label-num">07</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-pen-nib"></i> Frontend · Blog</div>
+          <h2 class="acc-title">Blogger <span>Platform</span></h2>
+          <p class="acc-desc">Full-featured blogging platform with post creation, category filtering, and archive sections. Designed for a seamless reading and content browsing experience.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Category Filter</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Archives</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Responsive</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Live Demo</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 · Clinic Website -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Clinic Website">
+        <img class="acc-img" src="images/project/10ClinicWebsite.png" alt="Clinic Website"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Clinic'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">08</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-hospital"></i></div>
+          <span class="acc-label-text">Clinic Website</span>
+          <span class="acc-label-num">08</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-hospital"></i> Frontend · Healthcare</div>
+          <h2 class="acc-title">Clinic <span>Healthcare</span> Website</h2>
+          <p class="acc-desc">Healthcare website with appointment booking, doctor profiles, services listing, and contact forms. Clean, accessible medical design with professional layout.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Appointment Form</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Doctor Profiles</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Accessible</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Live Demo</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/clinic/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a href="https://github.com/Dharmendra0107/clinic" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 · Travel Fun -->
+      <div class="acc-panel" tabindex="0" role="button" aria-label="Travel Fun">
+        <img class="acc-img" src="images/project/8Travelling web.png" alt="Travel Fun"
+             onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Travel+Fun'"/>
+        <div class="acc-overlay"></div>
+        <div class="acc-watermark">09</div>
+        <div class="acc-label"><div class="acc-label-inner">
+          <div class="acc-label-icon"><i class="fa-solid fa-plane"></i></div>
+          <span class="acc-label-text">Travel Fun</span>
+          <span class="acc-label-num">09</span>
+        </div></div>
+        <div class="acc-content">
+          <div class="acc-badge"><i class="fa-solid fa-plane"></i> Frontend · Travel</div>
+          <h2 class="acc-title">Travel <span>Fun</span> Website</h2>
+          <p class="acc-desc">Vibrant travel website with destination cards, trip planner sections, and interactive components. Bold visual design for travel enthusiasts to explore destinations.</p>
+          <div class="acc-chips">
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Destination Cards</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Trip Planner</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Animations</span>
+            <span class="acc-chip"><i class="fa-solid fa-check"></i> Live Demo</span>
+          </div>
+          <div class="acc-cta">
+            <a href="https://dharmendra0107.github.io/Travel_Fun/" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a href="https://github.com/Dharmendra0107/Travel_Fun" target="_blank" rel="noopener noreferrer" class="acc-btn-ghost">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /acc-panels -->
+  </div>
+
+  <!-- ══════ MOBILE CARDS ══════ -->
+  <div class="mob-projects" id="mobProjects">
+
+    <div class="mob-card open">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-brands fa-laravel"></i></div>
+        <div>
+          <div class="mob-card-title">Laravel E-Commerce</div>
+          <div class="mob-card-sub">Production · REST API · MySQL</div>
+        </div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">01</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/laravel_ecom.png" alt="Laravel E-Commerce"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Laravel+E-Commerce'"/>
+        <p class="mob-card-desc">Production e-commerce at NDMEAA Technology. Product management, cart, orders, REST APIs. 30% backend efficiency improvement.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> Laravel</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> MySQL</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> REST API</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> JS</span>
+        </div>
+        <div class="mob-cta-row">
+          <span class="mob-cta" style="opacity:.5;pointer-events:none"><i class="fa-solid fa-lock"></i> Private</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="mob-card">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-brands fa-react"></i></div>
+        <div><div class="mob-card-title">Quiz App MERN</div><div class="mob-card-sub">MongoDB · Express · React · Node</div></div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">02</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/quiz_app.png" alt="Quiz App"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Quiz+App'"/>
+        <p class="mob-card-desc">Full-stack quiz platform with student and admin panels, role-based access, quiz management and performance analytics. Built at Softpro India internship.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> MongoDB</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> React</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> JWT</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> Node.js</span>
+        </div>
+        <div class="mob-cta-row">
+          <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="mob-card">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+        <div><div class="mob-card-title">Weather App</div><div class="mob-card-sub">OpenWeather API · Geolocation</div></div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">03</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/4Weather.png" alt="Weather App"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Weather+App'"/>
+        <p class="mob-card-desc">Real-time weather for any city with animated icons, temperature, humidity, and geolocation support via OpenWeather API.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> JavaScript</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> REST API</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> CSS3</span>
+        </div>
+        <div class="mob-cta-row">
+          <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+          <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank" rel="noopener noreferrer" class="mob-cta-ghost"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="mob-card">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-brands fa-python"></i></div>
+        <div><div class="mob-card-title">Django Admission System</div><div class="mob-card-sub">Python · Django · SQLite</div></div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">04</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/admission.png" alt="Admission System"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Admission+System'"/>
+        <p class="mob-card-desc">Django admission portal with student registration, document upload, admin review workflow and email notifications.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> Django</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> SQLite</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> Bootstrap</span>
+        </div>
+        <div class="mob-cta-row">
+          <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="mob-card">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-solid fa-utensils"></i></div>
+        <div><div class="mob-card-title">Hotel Website</div><div class="mob-card-sub">HTML · Bootstrap · JavaScript</div></div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">05</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/2Food web.png" alt="Hotel Website"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Hotel+Web'"/>
+        <p class="mob-card-desc">Restaurant and food services website with menu, recipes and booking. Fully responsive Bootstrap design.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> HTML5</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> Bootstrap</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> JS</span>
+        </div>
+        <div class="mob-cta-row">
+          <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+          <a href="https://github.com/Dharmendra0107/Hotel_Web" target="_blank" rel="noopener noreferrer" class="mob-cta-ghost"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="mob-card">
+      <div class="mob-card-header" onclick="toggleMob(this.parentElement)">
+        <div class="mob-card-icon"><i class="fa-solid fa-calculator"></i></div>
+        <div><div class="mob-card-title">BMI & Age Calculators</div><div class="mob-card-sub">JavaScript · HTML · CSS</div></div>
+        <div class="mob-card-toggle"><i class="fa-solid fa-plus"></i></div>
+        <span class="mob-card-num">06</span>
+      </div>
+      <div class="mob-card-body"><div class="mob-card-inner">
+        <img class="mob-card-img" src="images/project/5BMI calculator.png" alt="BMI Calculator"
+             onerror="this.src='https://placehold.co/400x170/0a0a0a/ffc200?text=Calculators'"/>
+        <p class="mob-card-desc">BMI calculator with color-coded health guide and age calculator with animated date picker. Both live with clean UIs.</p>
+        <div class="mob-chips">
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> JavaScript</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> HTML5</span>
+          <span class="mob-chip"><i class="fa-solid fa-check"></i> CSS3</span>
+        </div>
+        <div class="mob-cta-row">
+          <a href="https://dharmendra0107.github.io/BMI_calculator/" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i> BMI Live</a>
+          <a href="https://dharmendra0107.github.io/age_calculater/" target="_blank" rel="noopener noreferrer" class="mob-cta-ghost"><i class="fa-solid fa-arrow-up-right-from-square"></i> Age Live</a>
+        </div>
+      </div></div>
+    </div>
+
+  </div><!-- /mob-projects -->
+
+  <!-- ══════ BENTO SECTION ══════ -->
+  <section class="bento-section">
+    <div class="bento-inner">
+      <div class="bento-head">
+        <h2 class="bento-title">All Projects<br><span>at a Glance</span></h2>
+        <a href="index.html#contact" class="bento-link">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="bento-grid">
+
+        <div class="bc bc-1 feat">
+          <span class="bc-num">01</span>
+          <div class="bc-icon"><i class="fa-brands fa-laravel"></i></div>
+          <h3 class="bc-title">Laravel E-Commerce</h3>
+          <p class="bc-desc">Production app at NDMEAA Technology. 30% backend efficiency improvement.</p>
+          <div class="bc-tags"><span class="bc-tag">Laravel</span><span class="bc-tag">MySQL</span><span class="bc-tag">REST API</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-2">
+          <span class="bc-num">02</span>
+          <div class="bc-icon"><i class="fa-brands fa-react"></i></div>
+          <h3 class="bc-title">Quiz App MERN</h3>
+          <p class="bc-desc">Full-stack quiz platform. Student & admin panels, role-based auth, analytics.</p>
+          <div class="bc-tags"><span class="bc-tag">MongoDB</span><span class="bc-tag">React</span><span class="bc-tag">Node.js</span><span class="bc-tag">JWT</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-3">
+          <span class="bc-num">03</span>
+          <div class="bc-icon"><i class="fa-brands fa-python"></i></div>
+          <h3 class="bc-title">Admission System</h3>
+          <p class="bc-desc">Django portal with doc upload, admin workflow and email alerts.</p>
+          <div class="bc-tags"><span class="bc-tag">Django</span><span class="bc-tag">SQLite</span><span class="bc-tag">Bootstrap</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-4">
+          <span class="bc-num">04</span>
+          <div class="bc-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+          <h3 class="bc-title">Weather App</h3>
+          <p class="bc-desc">Real-time weather with OpenWeather API & geolocation.</p>
+          <div class="bc-tags"><span class="bc-tag">JavaScript</span><span class="bc-tag">REST API</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-5 feat">
+          <span class="bc-num">05</span>
+          <div class="bc-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h3 class="bc-title">Portfolio Website</h3>
+          <p class="bc-desc">Particles, AOS, EmailJS, SEO, glassmorphism navbar, fully responsive. The site you're on!</p>
+          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">CSS3</span><span class="bc-tag">JavaScript</span><span class="bc-tag">Bootstrap</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-6 dark">
+          <span class="bc-num">06</span>
+          <div class="bc-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3 class="bc-title">Hotel Website</h3>
+          <p class="bc-desc">Restaurant site with menu, recipes & booking.</p>
+          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">Bootstrap</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-7 dark">
+          <span class="bc-num">07</span>
+          <div class="bc-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3 class="bc-title">Blogger Platform</h3>
+          <p class="bc-desc">Blog with categories, archives & post creation.</p>
+          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">JavaScript</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-8 dark">
+          <span class="bc-num">08</span>
+          <div class="bc-icon"><i class="fa-solid fa-hospital"></i></div>
+          <h3 class="bc-title">Clinic Website</h3>
+          <p class="bc-desc">Healthcare site with appointments & doctor profiles.</p>
+          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">Bootstrap</span><span class="bc-tag">CSS3</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+        <div class="bc bc-9">
+          <span class="bc-num">09</span>
+          <div class="bc-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3 class="bc-title">Utility Tools — BMI, Age &amp; Simple Calculator</h3>
+          <p class="bc-desc">Three standalone JavaScript tools: BMI Calculator with color-coded health guide, Age Calculator with date precision in years/months/days, and a Simple Arithmetic Calculator with keyboard support. All live, zero dependencies, clean UIs.</p>
+          <div class="bc-tags"><span class="bc-tag">JavaScript</span><span class="bc-tag">HTML5</span><span class="bc-tag">CSS3</span><span class="bc-tag">Zero Deps</span><span class="bc-tag">Live Demos</span></div>
+          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+
+      </div><!-- /bento-grid -->
+    </div>
+  </section>
+
+  <!-- ══════ TECH JOURNEY STRIP ══════ -->
+  <section class="journey-strip">
+    <div class="js-header">
+      <h2 class="js-title">How I <em style="font-style:italic;color:var(--gold)">Build</em></h2>
+      <p class="js-sub">From idea to deployed product — my development process.</p>
+    </div>
+    <div class="journey-steps">
+      <div class="j-step">
+        <div class="j-circle">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span class="j-step-num">1</span>
+        </div>
+        <div class="j-label">Plan</div>
+        <p class="j-note">Define requirements, architecture, database schema and tech stack before writing a single line.</p>
+      </div>
+      <div class="j-step">
+        <div class="j-circle">
+          <i class="fa-solid fa-code"></i>
+          <span class="j-step-num">2</span>
+        </div>
+        <div class="j-label">Build</div>
+        <p class="j-note">Backend APIs first, then frontend. Iterative commits, clean code, and modular components throughout.</p>
+      </div>
+      <div class="j-step">
+        <div class="j-circle">
+          <i class="fa-solid fa-vial"></i>
+          <span class="j-step-num">3</span>
+        </div>
+        <div class="j-label">Test</div>
+        <p class="j-note">Cross-browser testing, mobile responsiveness, form validation, and API error handling before deploy.</p>
+      </div>
+      <div class="j-step">
+        <div class="j-circle">
+          <i class="fa-solid fa-rocket"></i>
+          <span class="j-step-num">4</span>
+        </div>
+        <div class="j-label">Deploy</div>
+        <p class="j-note">GitHub Pages, shared hosting, or cloud deploy. SEO optimised, fast-loading, production ready.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-socials mb-3">
+      <a href="https://api.whatsapp.com/send/?phone=916306008818" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="mailto:dkmom00@gmail.com" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://in.pinterest.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+      <a href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+    </div>
+    <p class="footer-tagline">Coding, learning, evolving. Join me on this journey of continuous improvement.</p>
+    <p class="footer-credit">&copy; <span id="footerYear"></span> Designed with <i class="fa fa-heart" aria-label="love"></i> by
+      <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer">Dharmendra Kumar Yadav</a></p>
+  </div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" title="Back to top" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<div class="mobile-bottom-tab d-lg-none">
+  <a href="index.html#contact" class="mobile-bottom-tab-link">
+    <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact Me</span>
+  </a>
+</div>
+
+<script>
+/* Particles */
+window.addEventListener('load', function(){
+  var m = window.innerWidth < 768;
+  particlesJS('particles-js',{
+    particles:{number:{value:m?18:60,density:{enable:true,value_area:800}},
+      color:{value:'#ffc200'},shape:{type:'circle'},opacity:{value:.4},
+      size:{value:3,random:true},
+      line_linked:{enable:!m,distance:150,color:'#ffc200',opacity:.28,width:1},
+      move:{enable:true,speed:m?2:3,out_mode:'out'}},
+    interactivity:{detect_on:'window',
+      events:{onhover:{enable:!m,mode:'repulse'},onclick:{enable:true,mode:'push'},resize:true},
+      modes:{repulse:{distance:100},push:{particles_nb:3}}},
+    retina_detect:true
+  });
+});
+
+/* Navbar */
+(function(){
+  var nav=document.getElementById('siteNavbar'),ly=0,tick=false;
+  function upd(){var y=window.scrollY,d=y>ly,t=y<40;
+    nav.classList.toggle('navbar-hidden',d&&!t);
+    nav.classList.toggle('navbar-visible',!d||t);
+    ly=y;tick=false;}
+  window.addEventListener('scroll',function(){if(!tick){requestAnimationFrame(upd);tick=true;}},{passive:true});
+  upd();
+})();
+document.querySelectorAll('#navMenu .nav-link').forEach(function(l){
+  l.addEventListener('click',function(){
+    var c=document.getElementById('navMenu');
+    if(c.classList.contains('show'))bootstrap.Collapse.getInstance(c)?.hide();
+  });
+});
+
+/* Scroll top */
+var tb=document.getElementById('scrollTopBtn');
+window.addEventListener('scroll',function(){tb.classList.toggle('show',window.scrollY>350);});
+tb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+/* Footer year */
+document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+/* ── Horizontal Accordion ── */
+var panels = document.querySelectorAll('.acc-panel');
+panels.forEach(function(panel){
+  panel.addEventListener('click',function(){
+    if(panel.classList.contains('open')) return;
+    panels.forEach(function(p){ p.classList.remove('open'); });
+    panel.classList.add('open');
+  });
+  panel.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); panel.click(); }
+  });
+});
+
+/* ── Mobile accordion ── */
+function toggleMob(card){
+  var isOpen = card.classList.contains('open');
+  document.querySelectorAll('.mob-card').forEach(function(c){ c.classList.remove('open'); });
+  if(!isOpen) card.classList.add('open');
+}
+
+/* ── Counter animation ── */
+var counters = document.querySelectorAll('.counter');
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el = e.target;
+    var target = parseInt(el.dataset.target, 10);
+    var cur = 0, step = target/(1400/16);
+    function tick(){ cur=Math.min(cur+step,target);
+      el.textContent=Math.floor(cur);
+      if(cur<target) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+    obs.unobserve(el);
+  });
+},{threshold:.6});
+counters.forEach(function(c){ obs.observe(c); });
+</script>
+</body>
+</html>
