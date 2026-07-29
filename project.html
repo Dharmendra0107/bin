@@ -60,12 +60,6 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <style>
-  /* ════════════════════════════════════════════════════════════
-     ROOT · RESET
-     One page, many UI styles for the same project list:
-     Slider · Image Bento · Magazine · Vertical Accordion ·
-     Classic Grid · Horizontal Filmstrip · Glance Bento · Timeline
-  ════════════════════════════════════════════════════════════ */
   :root{
     --gold:#ffc200;--gold-dark:#ffb300;
     --bg-dark:#000000;--card-bg:rgba(255,255,255,0.06);
@@ -83,7 +77,6 @@
   ul{list-style:none;margin:0;padding:0}
   #particles-js{position:fixed;inset:0;z-index:-1}
 
-  /* ── CUSTOM CURSOR styles (hiding rule is in the accessibility block below) ── */
   .cursor-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);
     position:fixed;pointer-events:none;z-index:999998;transform:translate(-50%,-50%);
     box-shadow:0 0 10px rgba(255,194,0,.6)}
@@ -92,7 +85,6 @@
   .cursor-dot.hovered{width:12px;height:12px;background:#fff}
   .cursor-ring.hovered{width:48px;height:48px;border-color:var(--gold)}
 
-  /* ── NAVBAR ── */
   .navbar{position:fixed;top:0;left:0;width:100%;z-index:9999;background:transparent!important;
     transition:transform .3s,opacity .3s;padding:12px 0 0;animation:navFade .9s linear forwards}
   .navbar.navbar-hidden{transform:translateY(-115%);opacity:0;pointer-events:none}
@@ -122,7 +114,6 @@
   .navbar-collapse.show .nav-link{text-align:center;width:100%}
   @keyframes navFade{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
 
-  /* ── TICKER ── */
   .projects-ticker{background:rgba(255,194,0,.06);border-top:1px solid rgba(255,194,0,.18);
     border-bottom:1px solid rgba(255,194,0,.18);padding:11px 0;overflow:hidden;white-space:nowrap}
   .ticker-inner{display:inline-flex;gap:0;animation:ticker 28s linear infinite}
@@ -133,7 +124,6 @@
   .ticker-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.4;flex-shrink:0}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* ── PAGE HERO ── */
   .page-hero{padding:70px 0 55px;text-align:center;position:relative;z-index:2;overflow:hidden}
   .page-hero::before{content:'< PROJECTS />';position:absolute;top:50%;left:50%;
     transform:translate(-50%,-50%);
@@ -152,7 +142,6 @@
   .stat-num{font-size:2.2rem;font-weight:900;color:var(--gold);line-height:1}
   .stat-label{font-size:.72rem;color:var(--text-muted);letter-spacing:1px;margin-top:4px}
 
-  /* ── FILTER BAR ── */
   .filter-bar{position:sticky;top:82px;z-index:500;
     background:rgba(0,0,0,.9);backdrop-filter:blur(24px) saturate(160%);
     -webkit-backdrop-filter:blur(24px) saturate(160%);
@@ -179,7 +168,6 @@
   .result-count{margin-left:auto;font-size:.82rem;color:var(--text-muted);white-space:nowrap}
   .result-count b{color:var(--gold)}
 
-  /* ── SECTION DIVIDER (tag style, used by slider/bento/magazine/accordion modules) ── */
   .sec-label{display:flex;align-items:center;gap:14px;margin:60px 0 26px}
   .sec-label::before,.sec-label::after{content:'';flex:1;height:1px;
     background:linear-gradient(to right,transparent,rgba(255,194,0,.4))}
@@ -188,11 +176,6 @@
     white-space:nowrap;border:1px solid rgba(255,194,0,.3);padding:5px 16px;
     border-radius:20px;background:rgba(255,194,0,.06)}
 
-  /* ══════════════════════════
-     SLIDER MODULE (Featured Work / Frontend Builds)
-     + shared card utilities reused by Slider, Magazine,
-       Utility Bento and the Products accordion
-  ══════════════════════════ */
   .slider-wrap{position:relative;overflow:hidden;margin:0 -20px;padding:0 20px}
   .slider-wrap::before,.slider-wrap::after{content:'';position:absolute;top:0;bottom:0;
     width:70px;z-index:10;pointer-events:none}
@@ -211,9 +194,9 @@
 
   .feat-card{flex:0 0 370px;scroll-snap-align:start;border-radius:22px;overflow:hidden;
     position:relative;height:470px;border:2px solid rgba(255,194,0,.16);
-    transition:border-color .35s,transform .35s,box-shadow .35s;background:#0a0a0a}
-  .feat-card:hover{border-color:var(--gold);transform:translateY(-10px) scale(1.015);
-    box-shadow:0 24px 60px rgba(255,194,0,.22)}
+    transition:border-color .3s,transform .3s,box-shadow .3s;background:#0a0a0a}
+  .feat-card:hover{border-color:var(--gold);transform:translateY(-6px);
+    box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .feat-card .card-img{width:100%;height:55%;object-fit:cover;
     filter:brightness(.72) saturate(1.1);transition:filter .45s,transform .45s;display:block}
   .feat-card:hover .card-img{filter:brightness(.9) saturate(1.3);transform:scale(1.07)}
@@ -226,7 +209,6 @@
   .feat-desc{font-size:.82rem;color:var(--text-muted);line-height:1.55;margin-bottom:12px;
     display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 
-  /* shared tag / button / ribbon / entrance utilities */
   .tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
   .tag{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:10px;
     background:rgba(255,194,0,.12);border:1px solid rgba(255,194,0,.28);color:var(--gold)}
@@ -250,15 +232,12 @@
   .card-enter{animation:cardIn .5s ease both}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
-  /* ══════════════════════════
-     UTILITY BENTO MODULE (image-driven hover reveal)
-  ══════════════════════════ */
   .bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:16px}
   .bento-card{border-radius:20px;overflow:hidden;position:relative;
     background:var(--card-bg);border:2px solid rgba(255,194,0,.14);
     transition:border-color .3s,transform .3s,box-shadow .3s;cursor:pointer}
   .bento-card:hover{border-color:var(--gold);transform:translateY(-6px);
-    box-shadow:0 16px 40px rgba(255,194,0,.2)}
+    box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .bento-card.wide{grid-column:span 2}
   .bento-card.tall{grid-row:span 2}
   .bento-bg{width:100%;height:100%;object-fit:cover;
@@ -282,14 +261,11 @@
     max-height:0;overflow:hidden;opacity:0;transition:max-height .3s,opacity .3s}
   .bento-card:hover .bento-btns{max-height:50px;opacity:1}
 
-  /* ══════════════════════════
-     MAGAZINE MODULE (Full Stack Systems)
-  ══════════════════════════ */
   .magazine{display:grid;grid-template-columns:1.45fr 1fr;gap:18px}
   .mag-hero{border-radius:22px;overflow:hidden;position:relative;
     height:480px;border:2px solid rgba(255,194,0,.16);background:#050505;
-    transition:border-color .3s,box-shadow .3s}
-  .mag-hero:hover{border-color:var(--gold);box-shadow:0 16px 50px rgba(255,194,0,.2)}
+    transition:border-color .3s,box-shadow .3s,transform .3s}
+  .mag-hero:hover{border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18);transform:translateY(-6px)}
   .mag-hero img{width:100%;height:58%;object-fit:cover;
     filter:brightness(.65);transition:filter .4s,transform .4s;display:block}
   .mag-hero:hover img{filter:brightness(.85);transform:scale(1.04)}
@@ -305,8 +281,8 @@
     border:2px solid rgba(255,194,0,.14);background:#050505;
     display:flex;flex-direction:column;
     transition:border-color .3s,transform .3s,box-shadow .3s;flex:1;min-height:190px}
-  .mag-card:hover{border-color:var(--gold);transform:translateX(6px);
-    box-shadow:0 8px 28px rgba(255,194,0,.16)}
+  .mag-card:hover{border-color:var(--gold);transform:translateY(-6px);
+    box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .mag-card-img{height:100px;object-fit:cover;width:100%;
     filter:brightness(.6);transition:filter .4s;display:block}
   .mag-card:hover .mag-card-img{filter:brightness(.8)}
@@ -320,15 +296,11 @@
     padding:3px 10px;background:rgba(255,194,0,.07)}
   .wip-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 1.4s infinite}
 
-  /* ══════════════════════════
-     VERTICAL ACCORDION MODULE — PRODUCTS  (prefixed "pacc-" so it
-     never collides with the horizontal filmstrip accordion below)
-  ══════════════════════════ */
   .pacc-wrap{margin-top:0}
   .pacc-item{border:1.5px solid rgba(255,194,0,.18);border-radius:18px;margin-bottom:14px;
     overflow:hidden;background:rgba(255,255,255,.03);transition:border-color .3s,box-shadow .3s}
-  .pacc-item:hover{border-color:rgba(255,194,0,.45)}
-  .pacc-item.open{border-color:var(--gold);box-shadow:0 8px 40px rgba(255,194,0,.14)}
+  .pacc-item:hover{border-color:var(--gold)}
+  .pacc-item.open{border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .pacc-trigger{width:100%;display:flex;align-items:center;gap:16px;padding:18px 22px;
     background:transparent;border:none;cursor:pointer;font-family:var(--font);
     text-align:left;transition:background .25s}
@@ -378,7 +350,6 @@
   .pacc-divider{height:1px;background:rgba(255,194,0,.12);margin:2px 0}
   .pacc-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:2px}
 
-  /* ── FILTER-DRIVEN SECTION VISIBILITY (Slider/Bento/Magazine/Products) ── */
   .proj-section{transition:opacity .3s}
   .proj-section.hidden{display:none}
   .empty-state{text-align:center;padding:80px 20px;display:none}
@@ -387,9 +358,6 @@
   .empty-state h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
   .empty-state p{color:var(--text-muted);font-size:.9rem}
 
-  /* ══════════════════════════
-     CLASSIC GRID MODULE (plain responsive card grid)
-  ══════════════════════════ */
   .classic-section{padding:40px 0;position:relative;z-index:2}
   .section-head{text-align:center;margin-bottom:40px}
   .section-head h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;color:#fff;margin-bottom:12px}
@@ -399,7 +367,7 @@
   .project-card{background:var(--card-bg);border:2px solid var(--border);border-radius:20px;
     overflow:hidden;display:flex;flex-direction:column;position:relative;
     transition:border-color .3s,box-shadow .3s,transform .3s}
-  .project-card:hover{border-color:var(--gold);box-shadow:0 12px 40px rgba(255,194,0,.2);transform:translateY(-8px)}
+  .project-card:hover{border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18);transform:translateY(-6px)}
   .project-card img{width:100%;height:180px;object-fit:cover;filter:brightness(.85);transition:filter .3s,transform .3s}
   .project-card:hover img{filter:brightness(1);transform:scale(1.04)}
   .project-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
@@ -419,9 +387,6 @@
   .btn-proj-outline{background:transparent;color:var(--gold)}
   .btn-proj-outline:hover{background:var(--gold);color:#181818!important}
 
-  /* ══════════════════════════
-     SERIF SPLIT HEADER (intro for the Filmstrip module)
-  ══════════════════════════ */
   .page-header{position:relative;padding:80px 6% 60px;display:grid;
     grid-template-columns:1fr auto;align-items:end;gap:40px;overflow:hidden}
   .page-header::before{content:'';position:absolute;inset:0;
@@ -441,9 +406,6 @@
   .ph-lbl{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-top:3px;display:block}
   .ph-sep{width:1px;background:rgba(255,194,0,.18)}
 
-  /* ══════════════════════════
-     HORIZONTAL FILMSTRIP ACCORDION MODULE  (desktop)
-  ══════════════════════════ */
   .acc-wrap{padding:0 6% 70px;position:relative}
   .acc-panels{display:flex;gap:3px;height:580px;border-radius:22px;overflow:hidden;
     box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,194,0,.12)}
@@ -503,12 +465,11 @@
   .acc-btn-ghost:hover{color:#fff!important}
   .acc-btn-ghost i{font-size:.58rem}
 
-  /* ── MOBILE FILMSTRIP CARDS (≤991px equivalent of the horizontal accordion) ── */
   .mob-projects{display:none;padding:0 5% 60px;flex-direction:column;gap:14px}
   .mob-card{background:var(--card-bg);border-radius:18px;overflow:hidden;
     border:1.5px solid rgba(255,194,0,.15);cursor:pointer;
     transition:box-shadow .3s,transform .3s,border-color .3s}
-  .mob-card:hover{transform:translateY(-3px);border-color:rgba(255,194,0,.4);box-shadow:0 12px 40px rgba(255,194,0,.12)}
+  .mob-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .mob-card-header{display:flex;align-items:center;gap:14px;padding:18px 20px;position:relative}
   .mob-card-icon{width:44px;height:44px;border-radius:12px;background:rgba(255,194,0,.1);
     border:1.5px solid rgba(255,194,0,.25);display:flex;align-items:center;justify-content:center;
@@ -542,9 +503,6 @@
     text-decoration:none!important;transition:all .2s}
   .mob-cta-ghost:hover{background:rgba(255,194,0,.1);color:var(--gold)!important}
 
-  /* ══════════════════════════
-     GLANCE BENTO MODULE  (All Projects at a Glance — 9-card overview)
-  ══════════════════════════ */
   .bento-section{position:relative;overflow:hidden}
   .bento-inner{position:relative;z-index:2;padding:90px 6% 80px}
   .bento-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
@@ -561,11 +519,11 @@
     backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
   .bc::before{content:'';position:absolute;inset:0;
     background:linear-gradient(135deg,rgba(255,194,0,.06),transparent 60%);opacity:0;transition:opacity .3s}
-  .bc:hover{background:rgba(255,255,255,.07);border-color:rgba(255,194,0,.28);
-    transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .bc:hover{background:rgba(255,255,255,.07);border-color:var(--gold);
+    transform:translateY(-6px);box-shadow:0 12px 32px rgba(255,194,0,.18)}
   .bc:hover::before{opacity:1}
   .bc.feat{background:rgba(255,194,0,.08);border-color:rgba(255,194,0,.22)}
-  .bc.feat:hover{border-color:rgba(255,194,0,.5)}
+  .bc.feat:hover{border-color:var(--gold)}
   .bc.dark{background:rgba(0,0,0,.6)}
   .bc-1{grid-column:1/5;grid-row:1}
   .bc-2{grid-column:5/9;grid-row:1}
@@ -594,9 +552,6 @@
   .bc:hover .bc-arrow{opacity:1;transform:translateX(0)}
   .bc-arrow i{font-size:.52rem}
 
-  /* ══════════════════════════
-     TIMELINE MODULE  (How I Build)
-  ══════════════════════════ */
   .journey-strip{padding:70px 6%;position:relative}
   .journey-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
     background:linear-gradient(90deg,transparent,rgba(255,194,0,.5),var(--gold),rgba(255,194,0,.5),transparent)}
@@ -620,9 +575,6 @@
   .j-label{font-size:1rem;font-weight:700;color:#fff;margin-bottom:5px}
   .j-note{font-size:.73rem;color:var(--text-muted);line-height:1.6}
 
-  /* ══════════════════════════
-     FOOTER CTA
-  ══════════════════════════ */
   .footer-cta{background:rgba(255,194,0,.06);border:1px solid rgba(255,194,0,.22);border-radius:20px;
     padding:2.4rem 2rem;text-align:center;margin:60px 0;position:relative;overflow:hidden}
   .footer-cta::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);
@@ -639,7 +591,6 @@
   .footer-cta-btn.outline{background:transparent;color:var(--gold);border:2px solid var(--gold)}
   .footer-cta-btn.outline:hover{background:var(--gold);color:#181818!important}
 
-  /* ── FOOTER ── */
   .site-footer{background:rgba(18,18,18,.62);backdrop-filter:blur(18px) saturate(150%);
     -webkit-backdrop-filter:blur(18px) saturate(150%);border-top:1px solid rgba(255,194,0,.18);
     padding:40px 0 24px;text-align:center;position:relative;z-index:2;margin-top:40px}
@@ -654,7 +605,6 @@
   .footer-credit i{color:#e74c3c;animation:hb 1.2s infinite}
   @keyframes hb{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
 
-  /* ── SCROLL TOP ── */
   .scroll-top-btn{position:fixed;bottom:30px;right:30px;width:52px;height:52px;border-radius:50%;
     background:var(--gold);color:#181818;display:flex;align-items:center;justify-content:center;
     font-size:1.3rem;z-index:9998;opacity:0;pointer-events:none;transition:opacity .4s,transform .3s;
@@ -662,12 +612,8 @@
   .scroll-top-btn.show{opacity:1;pointer-events:auto}
   .scroll-top-btn:hover{transform:translateY(-4px);background:var(--gold-dark)}
 
-  /* ── MOBILE BOTTOM TAB ── */
   .mobile-bottom-tab{display:none}
 
-  /* ════════════════════════════════════════════════════════════
-     QUICK-JUMP SECTION NAV  (sticky pill row below the filter bar)
-  ════════════════════════════════════════════════════════════ */
   .section-nav{
     position:sticky;top:131px;z-index:490;
     display:flex;justify-content:center;gap:6px;flex-wrap:wrap;
@@ -696,25 +642,21 @@
     .section-nav::-webkit-scrollbar{display:none}
   }
 
-  /* ════════════════════════════════════════════════════════════
-     ACCESSIBILITY — keyboard focus states
-  ════════════════════════════════════════════════════════════ */
   a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .acc-panel:focus-visible,.bc:focus-visible,.fpill:focus-visible,.snav:focus-visible,
   .mob-card-header:focus-visible,.pacc-trigger:focus-visible,.scroll-top-btn:focus-visible,
-  .nav-link:focus-visible,.navbar-toggler:focus-visible{
+  .nav-link:focus-visible,.navbar-toggler:focus-visible,.slider-track:focus-visible,
+  .tag:focus-visible{
     outline:2px solid var(--gold)!important;outline-offset:3px;border-radius:8px}
   .search-input:focus-visible{outline:2px solid var(--gold)!important;outline-offset:0}
 
-  /* Only hide the native cursor for mouse users who haven't asked for reduced motion */
   @media (pointer:fine) and (prefers-reduced-motion:no-preference){
-    body{cursor:none}
-    a,button,.nav-link,.project-card,.btn-proj,.bc,.j-circle{cursor:none}
+    body.cursor-ready{cursor:none}
+    body.cursor-ready a,body.cursor-ready button,body.cursor-ready .nav-link,
+    body.cursor-ready .project-card,body.cursor-ready .btn-proj,
+    body.cursor-ready .bc,body.cursor-ready .j-circle{cursor:none}
   }
 
-  /* ════════════════════════════════════════════════════════════
-     ACCESSIBILITY — prefers-reduced-motion
-  ════════════════════════════════════════════════════════════ */
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{
       animation-duration:.01ms!important;animation-iteration-count:1!important;
@@ -723,9 +665,6 @@
     html{scroll-behavior:auto}
   }
 
-  /* ════════════════════════════════════════════════════════════
-     RESPONSIVE — consolidated by breakpoint (no repeated rules)
-  ════════════════════════════════════════════════════════════ */
   @media(max-width:991px){
     .navbar>.container{padding:10px 14px;border-radius:18px}
     .acc-wrap{display:none}
@@ -781,17 +720,206 @@
     .feat-card{flex:0 0 88vw}
     .filter-inner{gap:8px}
   }
+  /* ── SCROLL PROGRESS BAR ── */
+  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:100000;
+    background:linear-gradient(90deg,var(--gold),#fff8dc,var(--gold));
+    box-shadow:0 0 8px rgba(255,194,0,.5);transition:width .1s linear;pointer-events:none}
+
+  /* ── MAGNETIC CTA BUTTONS ── */
+  .magnetic{transition:transform .25s cubic-bezier(.22,.61,.36,1)}
+
+  /* ── ANIMATED DIVIDER DRAW-IN ── */
+  .sec-label::before,.sec-label::after{transform-origin:center;transform:scaleX(0);transition:transform .8s ease}
+  .sec-label.draw-in::before{transform-origin:right;transform:scaleX(1)}
+  .sec-label.draw-in::after{transform-origin:left;transform:scaleX(1)}
+  .hero-divider{transform:scaleX(0);transition:transform 1s ease .2s}
+  .hero-divider.draw-in{transform:scaleX(1)}
+  @media(prefers-reduced-motion:reduce){
+    .sec-label::before,.sec-label::after,.hero-divider{transform:none!important;transition:none!important}
+  }
+  /* ── COMMAND PALETTE ── */
+  .cmd-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;
+    justify-content:center;padding-top:80px;opacity:0;pointer-events:none;transition:opacity .2s}
+  .cmd-overlay.open{opacity:1;pointer-events:auto}
+  .cmd-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px)}
+  .cmd-box{position:relative;z-index:1;background:#111;border:1px solid rgba(255,194,0,.35);
+    border-radius:16px;width:100%;max-width:540px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+  .cmd-input-wrap{display:flex;align-items:center;gap:10px;padding:14px 18px;
+    border-bottom:1px solid rgba(255,255,255,.08)}
+  .cmd-search-icon{color:rgba(255,194,0,.6);font-size:1rem;flex-shrink:0}
+  .cmd-input{flex:1;background:transparent;border:none;outline:none;color:#fff;
+    font-size:.95rem;font-family:var(--font)}
+  .cmd-input::placeholder{color:rgba(255,255,255,.3)}
+  .cmd-esc{font-size:.65rem;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4);
+    padding:2px 7px;border-radius:4px;border:1px solid rgba(255,255,255,.12);
+    font-family:monospace;white-space:nowrap}
+  .cmd-list{max-height:320px;overflow-y:auto;padding:8px;scrollbar-width:thin}
+  .cmd-section{font-size:.65rem;font-weight:700;color:rgba(255,255,255,.35);
+    letter-spacing:.1em;text-transform:uppercase;padding:8px 10px 4px}
+  .cmd-item{display:flex;align-items:center;gap:12px;padding:10px 12px;
+    border-radius:10px;cursor:pointer;transition:background .15s;color:#fff}
+  .cmd-item:hover,.cmd-item.selected{background:rgba(255,194,0,.1)}
+  .cmd-item-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,194,0,.1);
+    border:1px solid rgba(255,194,0,.2);display:flex;align-items:center;justify-content:center;
+    font-size:.75rem;color:var(--gold);flex-shrink:0}
+  .cmd-item-text{flex:1;font-size:.85rem}
+  .cmd-item-sub{font-size:.68rem;color:var(--text-muted);margin-top:1px}
+  .cmd-footer{padding:8px 14px;border-top:1px solid rgba(255,255,255,.06);
+    display:flex;gap:16px;align-items:center}
+  .cmd-hint{font-size:.62rem;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:4px}
+  .cmd-kbd{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+    border-radius:3px;padding:1px 5px;font-family:monospace}
+  .cmd-trigger-hint{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;
+    color:rgba(255,255,255,.3);cursor:pointer;transition:color .2s;user-select:none}
+  .cmd-trigger-hint:hover{color:var(--gold)}
+  .cmd-trigger-hint kbd{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+    border-radius:4px;padding:1px 6px;font-family:monospace;font-size:.62rem}
+
+  /* ── CASE STUDY MODAL ── */
+  .cs-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;
+    justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+  .cs-overlay.open{opacity:1;pointer-events:auto}
+  .cs-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(8px)}
+  .cs-modal{position:relative;z-index:1;background:#0a0a0a;border:1.5px solid rgba(255,194,0,.3);
+    border-radius:24px;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;
+    padding:32px;scrollbar-width:thin;scrollbar-color:rgba(255,194,0,.3) transparent}
+  .cs-close{position:absolute;top:16px;right:18px;width:34px;height:34px;border-radius:50%;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    color:#fff;font-size:.9rem;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;transition:all .2s}
+  .cs-close:hover{background:rgba(255,194,0,.15);border-color:var(--gold);color:var(--gold)}
+  .cs-tag{display:inline-block;background:rgba(255,194,0,.1);color:var(--gold);
+    font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:20px;
+    border:1px solid rgba(255,194,0,.3);margin-bottom:12px;letter-spacing:.5px}
+  .cs-title{font-size:1.4rem;font-weight:900;color:#fff;letter-spacing:-.5px;margin-bottom:20px}
+  .cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+  .cs-block{background:rgba(255,255,255,.04);border-radius:14px;padding:16px}
+  .cs-block-label{font-size:.68rem;font-weight:700;color:var(--gold);
+    letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  .cs-block-text{font-size:.85rem;color:var(--text-muted);line-height:1.65}
+  .cs-metrics{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .cs-metric{background:rgba(255,194,0,.08);border:1px solid rgba(255,194,0,.25);
+    border-radius:12px;padding:10px 16px;text-align:center;flex:1;min-width:110px}
+  .cs-metric-num{font-size:1.4rem;font-weight:900;color:var(--gold);
+    font-family:monospace;line-height:1}
+  .cs-metric-label{font-size:.68rem;color:var(--text-muted);margin-top:3px}
+  .cs-stack{display:flex;gap:6px;flex-wrap:wrap}
+  .cs-tech{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:8px;
+    background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);
+    border:1px solid rgba(255,255,255,.1)}
+  @media(max-width:580px){.cs-grid{grid-template-columns:1fr}}
+
+  /* ── CLICKABLE TAGS ── */
+  .tag{cursor:pointer;transition:background .2s,color .2s,transform .15s}
+  .tag:hover{background:var(--gold);color:#181818;transform:translateY(-1px)}
+
   </style>
 </head>
 <body>
 
-<!-- Custom cursor (desktop only, see @media(pointer:fine) above) -->
+<!-- ── COMMAND PALETTE ── -->
+<div class="cmd-overlay" id="cmdOverlay" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="cmd-backdrop" id="cmdBackdrop"></div>
+  <div class="cmd-box">
+    <div class="cmd-input-wrap">
+      <i class="fa-solid fa-magnifying-glass cmd-search-icon" aria-hidden="true"></i>
+      <input class="cmd-input" id="cmdInput" type="text" placeholder="Jump to a section, tech stack, or action..." autocomplete="off" aria-label="Command search"/>
+      <span class="cmd-esc" aria-label="Press Escape to close">ESC</span>
+    </div>
+    <div class="cmd-list" id="cmdList"></div>
+    <div class="cmd-footer">
+      <span class="cmd-hint"><kbd class="cmd-kbd">↑↓</kbd> navigate</span>
+      <span class="cmd-hint"><kbd class="cmd-kbd">↵</kbd> open</span>
+      <span class="cmd-hint"><kbd class="cmd-kbd">ESC</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── CASE STUDY MODAL — LARAVEL E-COMMERCE ── -->
+<div class="cs-overlay" id="csModal1" role="dialog" aria-modal="true" aria-label="Laravel E-Commerce case study">
+  <div class="cs-backdrop" onclick="closeCS('csModal1')"></div>
+  <div class="cs-modal">
+    <button class="cs-close" onclick="closeCS('csModal1')" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <span class="cs-tag">CASE STUDY · FULL STACK</span>
+    <h2 class="cs-title">Laravel E-Commerce Platform</h2>
+    <div class="cs-metrics">
+      <div class="cs-metric"><div class="cs-metric-num">30%</div><div class="cs-metric-label">Backend Efficiency ↑</div></div>
+      <div class="cs-metric"><div class="cs-metric-num">~40%</div><div class="cs-metric-label">Query Time ↓</div></div>
+      <div class="cs-metric"><div class="cs-metric-num">Live</div><div class="cs-metric-label">Production Status</div></div>
+    </div>
+    <div class="cs-grid">
+      <div class="cs-block">
+        <div class="cs-block-label">🎯 Problem</div>
+        <div class="cs-block-text">NDMEAA Technology needed a production-grade e-commerce platform to manage products, orders, and customers. Existing SQL queries were unoptimised, causing slow admin dashboard loads and poor user experience under moderate traffic.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">⚙️ Solution</div>
+        <div class="cs-block-text">Rebuilt the backend using Laravel's Eloquent ORM with eager loading and query caching. Introduced REST APIs to decouple frontend (JavaScript/React) from backend, improving maintainability and future scalability.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">🧠 Tech Decisions</div>
+        <div class="cs-block-text">Chose Laravel over raw PHP for its built-in auth, migrations, and Artisan CLI. MySQL with indexed columns and composite queries replaced multiple N+1 patterns. REST API design allowed a parallel React frontend build without backend blockers.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">📈 Outcome</div>
+        <div class="cs-block-text">30% overall backend efficiency improvement measured by admin response times. Cart-to-order flow reduced from 6 SQL calls to 2. Deployed to shared Linux hosting via Git + Nginx with zero-downtime deploy script.</div>
+      </div>
+    </div>
+    <div class="cs-block-label" style="margin-bottom:8px">🛠 Stack</div>
+    <div class="cs-stack">
+      <span class="cs-tech">Laravel</span><span class="cs-tech">PHP 8</span>
+      <span class="cs-tech">MySQL</span><span class="cs-tech">REST API</span>
+      <span class="cs-tech">React</span><span class="cs-tech">JavaScript</span>
+      <span class="cs-tech">Nginx</span><span class="cs-tech">Linux</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── CASE STUDY MODAL — QUIZ APP MERN ── -->
+<div class="cs-overlay" id="csModal2" role="dialog" aria-modal="true" aria-label="Quiz App MERN case study">
+  <div class="cs-backdrop" onclick="closeCS('csModal2')"></div>
+  <div class="cs-modal">
+    <button class="cs-close" onclick="closeCS('csModal2')" aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <span class="cs-tag">CASE STUDY · MERN STACK</span>
+    <h2 class="cs-title">Full-Stack Quiz App Platform</h2>
+    <div class="cs-metrics">
+      <div class="cs-metric"><div class="cs-metric-num">2</div><div class="cs-metric-label">Role Types (Admin/Student)</div></div>
+      <div class="cs-metric"><div class="cs-metric-num">JWT</div><div class="cs-metric-label">Secured Auth</div></div>
+      <div class="cs-metric"><div class="cs-metric-num">MERN</div><div class="cs-metric-label">Full Stack</div></div>
+    </div>
+    <div class="cs-grid">
+      <div class="cs-block">
+        <div class="cs-block-label">🎯 Problem</div>
+        <div class="cs-block-text">Softpro India needed an internal quiz platform for assessments. Students needed a clean interface to take timed quizzes; admins needed to create, manage, and analyse quiz results — all in one system with strict access separation.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">⚙️ Solution</div>
+        <div class="cs-block-text">Built a MERN stack application with role-based JWT authentication. Two completely separate dashboards: student portal for quiz-taking with real-time countdown, and admin panel for CRUD quiz management and performance analytics.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">🧠 Tech Decisions</div>
+        <div class="cs-block-text">Chose MongoDB for flexible quiz schema (variable question types). React Context API for state management kept the bundle lean without Redux overhead. Express.js middleware chain handles auth, validation, and error responses uniformly.</div>
+      </div>
+      <div class="cs-block">
+        <div class="cs-block-label">📈 Outcome</div>
+        <div class="cs-block-text">Delivered within the 8-week internship window. Earned "Outstanding Intern" recognition. Admin analytics reduced manual result-checking effort by ~70%. Role-based access prevented any data leakage between student and admin contexts in all test cases.</div>
+      </div>
+    </div>
+    <div class="cs-block-label" style="margin-bottom:8px">🛠 Stack</div>
+    <div class="cs-stack">
+      <span class="cs-tech">MongoDB</span><span class="cs-tech">Express.js</span>
+      <span class="cs-tech">React</span><span class="cs-tech">Node.js</span>
+      <span class="cs-tech">JWT</span><span class="cs-tech">REST API</span>
+      <span class="cs-tech">Context API</span>
+    </div>
+  </div>
+</div>
+
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <div id="particles-js" aria-hidden="true"></div>
 
-<!-- NAVBAR -->
 <header role="banner">
 <nav class="navbar navbar-expand-lg navbar-visible" id="siteNavbar" aria-label="Main navigation">
   <div class="container">
@@ -818,7 +946,6 @@
 </nav>
 </header>
 
-<!-- TICKER -->
 <div class="projects-ticker" aria-hidden="true">
   <div class="ticker-inner">
     <span class="ticker-item"><span>Portfolio Website</span></span><span class="ticker-dot"></span>
@@ -831,7 +958,6 @@
     <span class="ticker-item"><span>Travel Fun</span></span><span class="ticker-dot"></span>
     <span class="ticker-item"><span>BMI Calculator</span></span><span class="ticker-dot"></span>
     <span class="ticker-item"><span>Age Calculator</span></span><span class="ticker-dot"></span>
-    <!-- duplicate run for seamless loop -->
     <span class="ticker-item"><span>Portfolio Website</span></span><span class="ticker-dot"></span>
     <span class="ticker-item"><span>Laravel E-Commerce</span></span><span class="ticker-dot"></span>
     <span class="ticker-item"><span>Quiz App MERN</span></span><span class="ticker-dot"></span>
@@ -847,7 +973,6 @@
 
 <main id="main-content">
 
-  <!-- HERO -->
   <div class="page-hero container">
     <div class="hero-badge"><i class="fa-solid fa-terminal" aria-hidden="true"></i>&nbsp; PORTFOLIO.PROJECTS</div>
     <h1>Things I've <span>Built</span></h1>
@@ -860,7 +985,6 @@
     </div>
   </div>
 
-  <!-- QUICK-JUMP SECTION NAV — scrolls to each layout module -->
   <nav class="section-nav" id="sectionNav" aria-label="Jump to section">
     <button class="sn-pill active" data-target="sec-featured"><i class="fa-solid fa-star"></i>Featured</button>
     <button class="sn-pill" data-target="sec-tools"><i class="fa-solid fa-wrench"></i>Tools</button>
@@ -873,7 +997,6 @@
     <button class="sn-pill" data-target="sec-timeline"><i class="fa-solid fa-timeline"></i>Timeline</button>
   </nav>
 
-  <!-- FILTER BAR (drives the five sections directly below: Slider / Tools / Slider / Magazine / Products) -->
   <div class="filter-bar" role="search">
     <div class="filter-inner">
       <div class="search-wrap">
@@ -894,7 +1017,6 @@
 
   <div class="container" style="padding-bottom:20px">
 
-    <!-- ══════════════ MODULE 1 · FEATURED SLIDER ══════════════ -->
     <div class="proj-section" id="sec-featured">
       <div class="sec-label"><span>⭐ FEATURED WORK</span></div>
       <div class="slider-wrap">
@@ -939,8 +1061,8 @@
               <div class="feat-desc">Production e-commerce at NDMEAA Technology. Product management, cart, orders, REST APIs. 30% backend efficiency improvement.</div>
               <div class="tags"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST API</span></div>
               <div class="btns">
+                <button class="btn-s btn-solid" onclick="openCS('csModal1')"><i class="fa-solid fa-book-open"></i> Case Study</button>
                 <span class="btn-s btn-dim"><i class="fa-solid fa-lock"></i> Private</span>
-                <span class="btn-s btn-dim"><i class="fa-solid fa-clock"></i> Soon</span>
               </div>
             </div>
           </div>
@@ -967,7 +1089,6 @@
       </div>
     </div>
 
-    <!-- ══════════════ MODULE 2 · BENTO TOOLS (image hover) ══════════════ -->
     <div class="proj-section" id="sec-tools">
       <div class="sec-label"><span>🔧 UTILITY TOOLS</span></div>
       <div class="bento">
@@ -1035,7 +1156,6 @@
       </div>
     </div>
 
-    <!-- ══════════════ MODULE 3 · FRONTEND SLIDER (same slider UI, different builds) ══════════════ -->
     <div class="proj-section" id="sec-frontend">
       <div class="sec-label"><span>🎨 FRONTEND BUILDS</span></div>
       <div class="slider-wrap">
@@ -1105,7 +1225,6 @@
       </div>
     </div>
 
-    <!-- ══════════════ MODULE 4 · MAGAZINE LAYOUT (Full Stack Systems) ══════════════ -->
     <div class="proj-section" id="sec-fullstack">
       <div class="sec-label"><span>⚙️ FULL STACK SYSTEMS</span></div>
       <div class="magazine">
@@ -1122,8 +1241,8 @@
               <span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">JavaScript</span>
             </div>
             <div class="btns">
+              <button class="btn-s btn-solid" onclick="openCS('csModal1')"><i class="fa-solid fa-book-open"></i> Case Study</button>
               <span class="btn-s btn-dim"><i class="fa-solid fa-lock"></i> Private Repo</span>
-              <span class="btn-s btn-dim"><i class="fa-solid fa-clock"></i> Demo Soon</span>
             </div>
           </div>
         </div>
@@ -1139,6 +1258,7 @@
             </div>
             <div class="mag-card-foot">
               <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
+              <button class="btn-s btn-outline" onclick="openCS('csModal2')"><i class="fa-solid fa-book-open"></i> Case Study</button>
               <div class="wip"><div class="wip-dot"></div> In Progress</div>
             </div>
           </div>
@@ -1160,13 +1280,11 @@
       </div>
     </div>
 
-    <!-- ══════════════ MODULE 5 · VERTICAL ACCORDION (Products: client / open source / SaaS ideas) ══════════════ -->
     <div class="proj-section" id="sec-product">
       <div class="sec-label"><span>📦 PRODUCTS</span></div>
 
       <div class="pacc-wrap" id="paccWrap">
 
-        <!-- 1 · Client: Hotel Booking System -->
         <div class="pacc-item" data-cat="product client" data-name="Hotel Booking System">
           <button class="pacc-trigger" aria-expanded="false" aria-controls="pacc-panel-1">
             <span class="pacc-type client">Client</span>
@@ -1213,7 +1331,6 @@
           </div>
         </div>
 
-        <!-- 2 · Client: School Management Portal -->
         <div class="pacc-item" data-cat="product client" data-name="School Management Portal">
           <button class="pacc-trigger" aria-expanded="false" aria-controls="pacc-panel-2">
             <span class="pacc-type client">Client</span>
@@ -1259,7 +1376,6 @@
           </div>
         </div>
 
-        <!-- 3 · OSS: DK Form Validator -->
         <div class="pacc-item" data-cat="product oss" data-name="DK Form Validator">
           <button class="pacc-trigger" aria-expanded="false" aria-controls="pacc-panel-3">
             <span class="pacc-type oss">Open Source</span>
@@ -1305,7 +1421,6 @@
           </div>
         </div>
 
-        <!-- 4 · SaaS: DevTrack -->
         <div class="pacc-item" data-cat="product saas" data-name="DevTrack Task Manager">
           <button class="pacc-trigger" aria-expanded="false" aria-controls="pacc-panel-4">
             <span class="pacc-type saas">SaaS Idea</span>
@@ -1352,7 +1467,6 @@
           </div>
         </div>
 
-        <!-- 5 · SaaS: ResumeAI Builder -->
         <div class="pacc-item" data-cat="product saas" data-name="ResumeAI Builder">
           <button class="pacc-trigger" aria-expanded="false" aria-controls="pacc-panel-5">
             <span class="pacc-type saas">SaaS Idea</span>
@@ -1399,8 +1513,8 @@
           </div>
         </div>
 
-      </div><!-- /pacc-wrap -->
-    </div><!-- /sec-product -->
+      </div>
+    </div>
 
     <div class="empty-state" id="emptyState">
       <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
@@ -1408,16 +1522,14 @@
       <p>Try a different search term or filter.</p>
     </div>
 
-  </div><!-- /container (modules 1–5) -->
+  </div>
 
-  <!-- ══════════════ MODULE 6 · CLASSIC CARD GRID ══════════════ -->
   <section class="classic-section container" id="sec-classic">
     <div class="section-head">
       <h2><i class="fa-solid fa-star"></i> Featured <span>Works</span></h2>
       <p>Handpicked projects showcasing production-grade development and full-stack expertise.</p>
     </div>
     <div class="project-grid" id="classic-featured-grid" aria-label="Featured projects">
-      <!-- Rendered from DK_PROJECTS by renderClassicGrids() -->
     </div>
   </section>
 
@@ -1427,18 +1539,16 @@
       <p>Complete project portfolio across frontend, tools, and full-stack development.</p>
     </div>
     <div class="project-grid" id="classic-all-grid" aria-label="All projects">
-      <!-- Rendered from DK_PROJECTS by renderClassicGrids() -->
     </div>
   </section>
 
-  <!-- ══════════════ MODULE 7 · HORIZONTAL FILMSTRIP ACCORDION ══════════════ -->
   <div class="page-header" id="sec-filmstrip">
     <div>
       <div class="ph-eyebrow">
         <div class="ph-eyebrow-line"></div>
         <span class="ph-eyebrow-text">Full Stack Developer · Lucknow</span>
       </div>
-      <h1 class="ph-title">Take a Closer<br><em>Look</em></h1>
+      <h2 class="ph-title">Take a Closer<br><em>Look</em></h2>
     </div>
     <div class="ph-right">
       <p class="ph-desc">Click any panel to open it up — stack, features, and live links. Hover to preview.</p>
@@ -1464,7 +1574,6 @@
   <div class="acc-wrap">
     <div class="acc-panels" id="accPanels">
 
-      <!-- 1 · Laravel E-Commerce -->
       <div class="acc-panel open" tabindex="0" role="button" aria-label="Laravel E-Commerce">
         <img class="acc-img" src="images/project/laravel_ecom.png" alt="Laravel E-Commerce"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Laravel+E-Commerce'"/>
@@ -1486,13 +1595,12 @@
             <span class="acc-chip"><i class="fa-solid fa-check"></i> 30% Efficiency↑</span>
           </div>
           <div class="acc-cta">
-            <span class="acc-btn-primary"><i class="fa-solid fa-lock"></i> Private Repo</span>
+            <button class="acc-btn-primary" onclick="event.stopPropagation();openCS('csModal1')"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Case Study</button>
             <a href="index.html#experiences" class="acc-btn-ghost">View Experience <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
-      <!-- 2 · Quiz App -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Quiz App MERN">
         <img class="acc-img" src="images/project/quiz_app.png" alt="Quiz App"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Quiz+App'"/>
@@ -1515,12 +1623,11 @@
           </div>
           <div class="acc-cta">
             <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="acc-btn-primary"><i class="fab fa-github"></i> View Code</a>
-            <a href="#" class="acc-btn-ghost">Demo Soon <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="acc-btn-ghost" onclick="event.stopPropagation();openCS('csModal2')" style="cursor:pointer">Case Study <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
 
-      <!-- 3 · Django Admission System -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Django Admission System">
         <img class="acc-img" src="images/project/admission.png" alt="Admission System"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Admission+System'"/>
@@ -1548,7 +1655,6 @@
         </div>
       </div>
 
-      <!-- 4 · Weather App -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Weather App">
         <img class="acc-img" src="images/project/4Weather.png" alt="Weather App"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Weather+App'"/>
@@ -1576,7 +1682,6 @@
         </div>
       </div>
 
-      <!-- 5 · Portfolio Website -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Portfolio Website">
         <img class="acc-img" src="images/project/1Portfolio web.png" alt="Portfolio Website"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Portfolio'"/>
@@ -1604,7 +1709,6 @@
         </div>
       </div>
 
-      <!-- 6 · Hotel Website -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Hotel Website">
         <img class="acc-img" src="images/project/2Food web.png" alt="Hotel Website"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Hotel+Web'"/>
@@ -1632,7 +1736,6 @@
         </div>
       </div>
 
-      <!-- 7 · Blogger Website -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Blogger Website">
         <img class="acc-img" src="images/project/9BloggerWebsite.png" alt="Blogger Website"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Blogger'"/>
@@ -1660,7 +1763,6 @@
         </div>
       </div>
 
-      <!-- 8 · Clinic Website -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Clinic Website">
         <img class="acc-img" src="images/project/10ClinicWebsite.png" alt="Clinic Website"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Clinic'"/>
@@ -1688,7 +1790,6 @@
         </div>
       </div>
 
-      <!-- 9 · Travel Fun -->
       <div class="acc-panel" tabindex="0" role="button" aria-label="Travel Fun">
         <img class="acc-img" src="images/project/8Travelling web.png" alt="Travel Fun"
              onerror="this.src='https://placehold.co/900x580/0a0a0a/ffc200?text=Travel+Fun'"/>
@@ -1716,10 +1817,9 @@
         </div>
       </div>
 
-    </div><!-- /acc-panels -->
-  </div><!-- /acc-wrap -->
+    </div>
+  </div>
 
-  <!-- Mobile equivalent of the filmstrip accordion above (≤991px) -->
   <div class="mob-projects" id="mobProjects">
 
     <div class="mob-card open">
@@ -1743,7 +1843,7 @@
           <span class="mob-chip"><i class="fa-solid fa-check"></i> JS</span>
         </div>
         <div class="mob-cta-row">
-          <span class="mob-cta" style="opacity:.5;pointer-events:none"><i class="fa-solid fa-lock"></i> Private</span>
+          <button class="mob-cta" onclick="openCS('csModal1')"><i class="fa-solid fa-book-open"></i> Case Study</button>
         </div>
       </div></div>
     </div>
@@ -1767,6 +1867,7 @@
         </div>
         <div class="mob-cta-row">
           <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="mob-cta"><i class="fab fa-github"></i> Code</a>
+          <button class="mob-cta-ghost" onclick="openCS('csModal2')"><i class="fa-solid fa-book-open"></i> Case Study</button>
         </div>
       </div></div>
     </div>
@@ -1862,9 +1963,8 @@
       </div></div>
     </div>
 
-  </div><!-- /mob-projects -->
+  </div>
 
-  <!-- ══════════════ MODULE 8 · GLANCE BENTO (asymmetric overview grid) ══════════════ -->
   <section class="bento-section" id="sec-glance">
     <div class="bento-inner">
       <div class="bento-head">
@@ -1874,22 +1974,22 @@
 
       <div class="bento-grid">
 
-        <div class="bc bc-1 feat">
+        <div class="bc bc-1 feat" role="button" tabindex="0" onclick="openCS('csModal1')" onkeydown="if(event.key==='Enter')openCS('csModal1')">
           <span class="bc-num">01</span>
           <div class="bc-icon"><i class="fa-brands fa-laravel"></i></div>
           <h3 class="bc-title">Laravel E-Commerce</h3>
           <p class="bc-desc">Production app at NDMEAA Technology. 30% backend efficiency improvement.</p>
           <div class="bc-tags"><span class="bc-tag">Laravel</span><span class="bc-tag">MySQL</span><span class="bc-tag">REST API</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+          <div class="bc-arrow">Case Study <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
-        <div class="bc bc-2">
+        <div class="bc bc-2" role="button" tabindex="0" onclick="openCS('csModal2')" onkeydown="if(event.key==='Enter')openCS('csModal2')">
           <span class="bc-num">02</span>
           <div class="bc-icon"><i class="fa-brands fa-react"></i></div>
           <h3 class="bc-title">Quiz App MERN</h3>
           <p class="bc-desc">Full-stack quiz platform. Student &amp; admin panels, role-based auth, analytics.</p>
           <div class="bc-tags"><span class="bc-tag">MongoDB</span><span class="bc-tag">React</span><span class="bc-tag">Node.js</span><span class="bc-tag">JWT</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
+          <div class="bc-arrow">Case Study <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
         <div class="bc bc-3">
@@ -1955,11 +2055,10 @@
           <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
         </div>
 
-      </div><!-- /bento-grid -->
+      </div>
     </div>
   </section>
 
-  <!-- ══════════════ MODULE 9 · TIMELINE (How I Build) ══════════════ -->
   <section class="journey-strip" id="sec-timeline">
     <div class="js-header">
       <h2 class="js-title">How I <em>Build</em></h2>
@@ -2001,21 +2100,19 @@
     </div>
   </section>
 
-  <!-- ══════════════ FOOTER CTA ══════════════ -->
   <div class="container">
     <div class="footer-cta">
       <h3>Let's build something <span>amazing</span> together</h3>
       <p>Open to freelance projects, full-time roles, and exciting collaborations.</p>
       <div class="footer-cta-btns">
-        <a href="index.html#contact" class="footer-cta-btn primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
-        <a href="images/Dharmendra_DevOps_Resume.pdf" download class="footer-cta-btn outline"><i class="fa-solid fa-file-lines"></i> Download CV</a>
+        <a href="index.html#contact" class="footer-cta-btn primary magnetic"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+        <a href="images/Dharmendra_DevOps_Resume.pdf" download class="footer-cta-btn outline magnetic"><i class="fa-solid fa-file-lines"></i> Download CV</a>
       </div>
     </div>
   </div>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-socials mb-3">
@@ -2028,6 +2125,9 @@
       <a href="https://in.pinterest.com/dksilentkiller/" target="_blank" rel="noopener noreferrer" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
       <a href="https://youtube.com/@dksilentkiller/channel?sub_confirmation=1" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
     </div>
+    <p style="font-size:.65rem;color:rgba(255,255,255,.25);margin-bottom:8px">
+      <i class="fa-brands fa-chrome" aria-hidden="true"></i> Press <kbd style="background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px;font-family:monospace">Ctrl+K</kbd> for quick navigation
+    </p>
     <p class="footer-tagline">Coding, deploying, automating — evolving as a developer headed into DevOps.</p>
     <p class="footer-credit">&copy; <span id="footerYear"></span> Designed with <i class="fa fa-heart" aria-label="love"></i> by
       <a href="https://www.linkedin.com/in/dharmendra0107/" target="_blank" rel="noopener noreferrer">Dharmendra Kumar Yadav</a></p>
@@ -2045,7 +2145,6 @@
 </div>
 
 <script>
-/* ── Particles background ── */
 window.addEventListener('load', function () {
   var m = window.innerWidth < 768;
   particlesJS('particles-js', {
@@ -2065,7 +2164,6 @@ window.addEventListener('load', function () {
   });
 });
 
-/* ── Navbar show/hide on scroll ── */
 (function () {
   var navbar = document.getElementById('siteNavbar');
   if (!navbar) return;
@@ -2086,15 +2184,12 @@ document.querySelectorAll('#navMenu .nav-link').forEach(function (link) {
   });
 });
 
-/* ── Scroll-to-top button ── */
 var topBtn = document.getElementById('scrollTopBtn');
 window.addEventListener('scroll', function () { topBtn.classList.toggle('show', window.scrollY > 350); });
 topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-/* ── Footer year ── */
 document.getElementById('footerYear').textContent = new Date().getFullYear();
 
-/* ── Slider drag-to-scroll (Featured Work + Frontend Builds) ── */
 function dragSlider(id) {
   var el = document.getElementById(id); if (!el) return;
   var down = false, startX, sl;
@@ -2113,11 +2208,17 @@ function arrows(prevId, nextId, trackId) {
   function cw() { return (track.querySelector('.feat-card')?.offsetWidth || 370) + 22; }
   document.getElementById(prevId)?.addEventListener('click', function () { track.scrollBy({ left: -cw(), behavior: 'smooth' }); });
   document.getElementById(nextId)?.addEventListener('click', function () { track.scrollBy({ left: cw(), behavior: 'smooth' }); });
+
+  /* KEYBOARD ARROW NAV — left/right when the slider itself has focus */
+  track.setAttribute('tabindex', '0');
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: -cw(), behavior: 'smooth' }); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: cw(), behavior: 'smooth' }); }
+  });
 }
 arrows('f1p', 'f1n', 'featSlider');
 arrows('f2p', 'f2n', 'frontSlider');
 
-/* ── Filter + Search engine — drives Slider / Bento Tools / Slider / Magazine / Products ── */
 (function () {
   var inp = document.getElementById('searchInput');
   var pills = document.querySelectorAll('.fpill');
@@ -2176,9 +2277,22 @@ arrows('f2p', 'f2n', 'frontSlider');
   });
   inp.addEventListener('input', function () { q = inp.value.trim().toLowerCase(); render(); });
   render();
+
+  /* CLICKABLE TAGS — click any tech tag on any card to filter the whole page by it */
+  document.querySelectorAll('.tag').forEach(function (tagEl) {
+    tagEl.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var text = tagEl.textContent.trim();
+      inp.value = text;
+      q = text.toLowerCase();
+      af = 'all';
+      pills.forEach(function (p) { p.classList.toggle('active', p.dataset.filter === 'all'); });
+      render();
+      document.querySelector('.filter-bar')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 })();
 
-/* ── Vertical Products accordion ── */
 (function () {
   var items = document.querySelectorAll('.pacc-item');
   items.forEach(function (item) {
@@ -2203,7 +2317,6 @@ arrows('f2p', 'f2n', 'frontSlider');
   });
 })();
 
-/* ── Horizontal filmstrip accordion ── */
 var filmPanels = document.querySelectorAll('.acc-panel');
 filmPanels.forEach(function (panel) {
   panel.addEventListener('click', function () {
@@ -2216,36 +2329,36 @@ filmPanels.forEach(function (panel) {
   });
 });
 
-/* ── Mobile filmstrip cards ── */
 function toggleMob(card) {
   var isOpen = card.classList.contains('open');
   document.querySelectorAll('.mob-card').forEach(function (c) { c.classList.remove('open'); });
   if (!isOpen) card.classList.add('open');
 }
 
-/* ── Custom cursor ── */
 (function () {
-  var dot = document.getElementById('cursorDot');
-  var ring = document.getElementById('cursorRing');
-  if (!dot || !ring) return;
-  var mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', function (e) {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-  });
-  function animRing() {
-    rx += (mx - rx) * .15; ry += (my - ry) * .15;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(animRing);
-  }
-  animRing();
-  document.querySelectorAll('a, button, .nav-link, .project-card, .btn-proj, .bc, .j-circle').forEach(function (el) {
-    el.addEventListener('mouseenter', function () { dot.classList.add('hovered'); ring.classList.add('hovered'); });
-    el.addEventListener('mouseleave', function () { dot.classList.remove('hovered'); ring.classList.remove('hovered'); });
-  });
+  try {
+    var dot = document.getElementById('cursorDot');
+    var ring = document.getElementById('cursorRing');
+    if (!dot || !ring) return;
+    var mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', function (e) {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    });
+    function animRing() {
+      rx += (mx - rx) * .15; ry += (my - ry) * .15;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(animRing);
+    }
+    animRing();
+    document.querySelectorAll('a, button, .nav-link, .project-card, .btn-proj, .bc, .j-circle').forEach(function (el) {
+      el.addEventListener('mouseenter', function () { dot.classList.add('hovered'); ring.classList.add('hovered'); });
+      el.addEventListener('mouseleave', function () { dot.classList.remove('hovered'); ring.classList.remove('hovered'); });
+    });
+    document.body.classList.add('cursor-ready');
+  } catch (err) { /* custom cursor failed — native cursor stays visible */ }
 })();
 
-/* ── Stat counters (hero + filmstrip intro) ── */
 var counters = document.querySelectorAll('.counter');
 var counterObs = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
@@ -2262,7 +2375,6 @@ var counterObs = new IntersectionObserver(function (entries) {
 }, { threshold: .6 });
 counters.forEach(function (c) { counterObs.observe(c); });
 
-/* ── Quick-jump section nav — scroll + active highlight ── */
 (function () {
   var pills = document.querySelectorAll('.sn-pill');
   pills.forEach(function (pill) {
@@ -2270,7 +2382,6 @@ counters.forEach(function (c) { counterObs.observe(c); });
       var id = pill.dataset.target;
       var el = document.getElementById(id);
       if (!el) return;
-      /* offset = navbar (92px) + filter bar (~52px) + section-nav (~44px) + 12px gap */
       var offset = 200;
       var top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: top, behavior: 'smooth' });
@@ -2279,7 +2390,6 @@ counters.forEach(function (c) { counterObs.observe(c); });
     });
   });
 
-  /* Passive scroll spy — highlight the pill whose section is nearest the viewport top */
   var targets = Array.from(pills).map(function (p) {
     return { pill: p, el: document.getElementById(p.dataset.target) };
   }).filter(function (t) { return t.el; });
@@ -2304,18 +2414,6 @@ counters.forEach(function (c) { counterObs.observe(c); });
   }, { passive: true });
 })();
 
-/* ════════════════════════════════════════════════════════════
-   SINGLE SOURCE OF TRUTH — project data
-   Edit a project here once; all rendered sections update.
-   NOTE: the 9 hand-crafted layout modules (slider, bento,
-   magazine, filmstrip accordion, mobile cards, glance bento)
-   are intentionally kept as authored HTML for their unique
-   structural markup. The data array below drives:
-     • the classic card grid (modules 6a + 6b)
-     • the GitHub stars fetcher
-     • the copy-link feature
-   Future renders of any module can consume DK_PROJECTS too.
-════════════════════════════════════════════════════════════ */
 var DK_PROJECTS = [
   {
     id: 'portfolio',
@@ -2337,7 +2435,8 @@ var DK_PROJECTS = [
     repo: null,
     live: null,
     img: 'images/project/laravel_ecom.png',
-    featured: true
+    featured: true,
+    caseStudy: 'csModal1'
   },
   {
     id: 'quiz-app',
@@ -2348,7 +2447,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/dharmendra0107',
     live: null,
     img: 'images/project/quiz_app.png',
-    featured: false
+    featured: false,
+    caseStudy: 'csModal2'
   },
   {
     id: 'weather-app',
@@ -2429,19 +2529,20 @@ var DK_PROJECTS = [
   }
 ];
 
-/* Helper: build a single classic card from DK_PROJECTS data */
 function buildCard(p) {
   var tagHTML = p.tags.map(function (t) { return '<span class="project-tag">' + t + '</span>'; }).join('');
   var btnsHTML = '';
+  if (p.caseStudy) {
+    btnsHTML += '<button class="btn-proj btn-proj-solid" onclick="openCS(\'' + p.caseStudy + '\')" aria-label="Read ' + p.title + ' case study"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Case Study</button>';
+  }
   if (p.repo) {
-    btnsHTML += '<a href="' + p.repo + '" target="_blank" rel="noopener noreferrer" class="btn-proj btn-proj-solid" aria-label="View ' + p.title + ' code on GitHub"><i class="fab fa-github" aria-hidden="true"></i> Code</a>';
-  } else {
+    btnsHTML += '<a href="' + p.repo + '" target="_blank" rel="noopener noreferrer" class="btn-proj ' + (p.caseStudy ? 'btn-proj-outline' : 'btn-proj-solid') + '" aria-label="View ' + p.title + ' code on GitHub"><i class="fab fa-github" aria-hidden="true"></i> Code</a>';
+  } else if (!p.caseStudy) {
     btnsHTML += '<span class="btn-proj" style="opacity:.5;cursor:default" aria-label="Private repository"><i class="fa-solid fa-lock" aria-hidden="true"></i> Private</span>';
   }
   if (p.live) {
     btnsHTML += '<a href="' + p.live + '" target="_blank" rel="noopener noreferrer" class="btn-proj btn-proj-outline" aria-label="View ' + p.title + ' live demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>';
   }
-  /* Copy-link button */
   btnsHTML += '<button class="btn-proj btn-proj-outline copy-link-btn" data-href="' + (p.live || p.repo || '#') + '" title="Copy link" aria-label="Copy link to ' + p.title + '" style="padding:7px 11px"><i class="fa-solid fa-link" aria-hidden="true"></i></button>';
 
   var ribbon = p.featured ? '<div class="ribbon" aria-label="Featured project">⭐ Featured</div>' : '';
@@ -2457,7 +2558,6 @@ function buildCard(p) {
     + '</div></article>';
 }
 
-/* Render the two classic-grid sub-sections from DK_PROJECTS */
 (function renderClassicGrids() {
   var featured = document.getElementById('classic-featured-grid');
   var all      = document.getElementById('classic-all-grid');
@@ -2470,7 +2570,6 @@ function buildCard(p) {
     all.insertAdjacentHTML('beforeend', buildCard(p));
   });
 
-  /* Wire copy-link buttons */
   document.querySelectorAll('.copy-link-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -2486,7 +2585,6 @@ function buildCard(p) {
           btn.style.borderColor = '';
         }, 1600);
       }).catch(function () {
-        /* fallback for older browsers */
         var ta = document.createElement('textarea');
         ta.value = url; ta.style.position = 'fixed'; ta.style.opacity = '0';
         document.body.appendChild(ta); ta.select();
@@ -2500,7 +2598,6 @@ function buildCard(p) {
   });
 })();
 
-/* GitHub live star counts — gracefully degraded (badge updates if API responds) */
 (function fetchStars() {
   var repoMap = {
     'Weather_App':     'weather-app',
@@ -2527,6 +2624,157 @@ function buildCard(p) {
       })
       .catch(function () { /* silently skip — no error if offline or rate-limited */ });
   });
+})();
+
+/* SCROLL PROGRESS BAR */
+(function () {
+  var bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  function update() {
+    var h = document.documentElement;
+    var scrolled = h.scrollTop || document.body.scrollTop;
+    var max = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+    var pct = max > 0 ? (scrolled / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')
+      || href.startsWith('tel:') || link.hasAttribute('target') || link.hasAttribute('download')) return;
+    if (!href.endsWith('.html') && href.indexOf('.html#') === -1) return;
+    e.preventDefault();
+    overlay.classList.remove('hide');
+    overlay.classList.add('show');
+    setTimeout(function () { window.location.href = href; }, reduceM ? 0 : 380);
+  });
+})();
+
+/* ANIMATED DIVIDER DRAW-IN */
+(function () {
+  var labels = document.querySelectorAll('.sec-label');
+  if (!labels.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    labels.forEach(function (l) { l.classList.add('draw-in'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('draw-in'); obs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.4 });
+  labels.forEach(function (l) { obs.observe(l); });
+})();
+
+/* MAGNETIC CTA BUTTONS */
+(function () {
+  var reduceM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePtr = window.matchMedia('(pointer: fine)').matches;
+  if (reduceM || !finePtr) return;
+  document.querySelectorAll('.magnetic').forEach(function (btn) {
+    btn.addEventListener('mousemove', function (e) {
+      var r = btn.getBoundingClientRect();
+      var x = (e.clientX - r.left - r.width / 2) * 0.3;
+      var y = (e.clientY - r.top - r.height / 2) * 0.3;
+      btn.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    });
+    btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+  });
+})();
+
+/* CASE STUDY MODALS */
+function openCS(id) { var el = document.getElementById(id); if (el) { el.classList.add('open'); document.body.style.overflow = 'hidden'; } }
+function closeCS(id) { var el = document.getElementById(id); if (el) { el.classList.remove('open'); document.body.style.overflow = ''; } }
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { ['csModal1', 'csModal2'].forEach(function (id) { closeCS(id); }); } });
+
+/* COMMAND PALETTE (Ctrl+K) */
+(function () {
+  var overlay = document.getElementById('cmdOverlay');
+  var backdrop = document.getElementById('cmdBackdrop');
+  var input = document.getElementById('cmdInput');
+  var list = document.getElementById('cmdList');
+  if (!overlay || !input || !list) return;
+
+  var items = [
+    { section: 'Sections', label: 'Featured Work',    sub: 'Slider · top of page',   icon: 'fa-solid fa-star',       action: function () { scrollToId('sec-featured'); } },
+    { section: 'Sections', label: 'Utility Tools',     sub: 'Bento grid',             icon: 'fa-solid fa-wrench',     action: function () { scrollToId('sec-tools'); } },
+    { section: 'Sections', label: 'Frontend Builds',   sub: 'Slider',                 icon: 'fa-solid fa-paint-brush',action: function () { scrollToId('sec-frontend'); } },
+    { section: 'Sections', label: 'Full Stack Systems',sub: 'Magazine layout',        icon: 'fa-solid fa-gears',      action: function () { scrollToId('sec-fullstack'); } },
+    { section: 'Sections', label: 'Products',          sub: 'Accordion — client/OSS/SaaS', icon: 'fa-solid fa-box',   action: function () { scrollToId('sec-product'); } },
+    { section: 'Sections', label: 'Featured & All Projects', sub: 'Classic grid',      icon: 'fa-solid fa-grip',       action: function () { scrollToId('sec-classic'); } },
+    { section: 'Sections', label: 'Take a Closer Look', sub: 'Filmstrip / mobile cards', icon: 'fa-solid fa-film',     action: function () { scrollToId('sec-filmstrip'); } },
+    { section: 'Sections', label: 'All Projects at a Glance', sub: 'Bento overview',   icon: 'fa-solid fa-table-cells',action: function () { scrollToId('sec-glance'); } },
+    { section: 'Sections', label: 'How I Build',       sub: 'Process timeline',        icon: 'fa-solid fa-timeline',   action: function () { scrollToId('sec-timeline'); } },
+    { section: 'Case Studies', label: 'Laravel E-Commerce', sub: 'Full case study',    icon: 'fa-solid fa-book-open',  action: function () { openCS('csModal1'); } },
+    { section: 'Case Studies', label: 'Quiz App MERN', sub: 'Full case study',         icon: 'fa-solid fa-book-open',  action: function () { openCS('csModal2'); } },
+    { section: 'Actions', label: 'Back to Home',        sub: 'index.html',             icon: 'fa-solid fa-house',      action: function () { window.location.href = 'index.html'; } },
+    { section: 'Actions', label: 'Open GitHub',         sub: 'github.com/dharmendra0107', icon: 'fab fa-github',      action: function () { window.open('https://github.com/dharmendra0107', '_blank'); } },
+    { section: 'Actions', label: 'Open LinkedIn',       sub: 'linkedin.com/in/dharmendra0107', icon: 'fab fa-linkedin', action: function () { window.open('https://www.linkedin.com/in/dharmendra0107/', '_blank'); } },
+    { section: 'Actions', label: 'Send Email',          sub: 'dkmom00@gmail.com',      icon: 'fa-solid fa-paper-plane',action: function () { window.location = 'mailto:dkmom00@gmail.com'; } },
+    { section: 'Actions', label: 'WhatsApp',            sub: '+91 6306008818',         icon: 'fab fa-whatsapp',        action: function () { window.open('https://api.whatsapp.com/send/?phone=916306008818', '_blank'); } },
+    { section: 'Actions', label: 'Download CV',         sub: 'Download PDF',           icon: 'fa-solid fa-download',   action: function () { var a = document.createElement('a'); a.href = 'images/Dharmendra_DevOps_Resume.pdf'; a.download = ''; a.click(); } }
+  ];
+
+  function scrollToId(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var top = el.getBoundingClientRect().top + window.scrollY - 200;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
+  var filtered = items, sel = 0;
+
+  function render(query) {
+    var q = (query || '').toLowerCase().trim();
+    filtered = q ? items.filter(function (it) { return it.label.toLowerCase().includes(q) || (it.sub && it.sub.toLowerCase().includes(q)); }) : items;
+    sel = 0;
+    var sections = {};
+    list.innerHTML = '';
+    filtered.forEach(function (item, idx) {
+      if (!sections[item.section]) {
+        sections[item.section] = true;
+        var sec = document.createElement('div');
+        sec.className = 'cmd-section';
+        sec.textContent = item.section;
+        list.appendChild(sec);
+      }
+      var el = document.createElement('div');
+      el.className = 'cmd-item' + (idx === sel ? ' selected' : '');
+      el.setAttribute('role', 'option');
+      el.setAttribute('tabindex', '0');
+      el.innerHTML = '<div class="cmd-item-icon"><i class="' + item.icon + '" aria-hidden="true"></i></div><div><div class="cmd-item-text">' + item.label + '</div><div class="cmd-item-sub">' + (item.sub || '') + '</div></div>';
+      el.addEventListener('click', function () { closeCmd(); item.action(); });
+      el.addEventListener('mouseenter', function () { sel = idx; highlight(); });
+      list.appendChild(el);
+    });
+  }
+
+  function highlight() {
+    list.querySelectorAll('.cmd-item').forEach(function (el, i) { el.classList.toggle('selected', i === sel); });
+    var selEl = list.querySelectorAll('.cmd-item')[sel];
+    if (selEl) selEl.scrollIntoView({ block: 'nearest' });
+  }
+
+  function openCmd() { overlay.classList.add('open'); input.value = ''; render(''); input.focus(); }
+  function closeCmd() { overlay.classList.remove('open'); }
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); overlay.classList.contains('open') ? closeCmd() : openCmd(); }
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeCmd(); return; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); sel = Math.min(sel + 1, filtered.length - 1); highlight(); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); sel = Math.max(sel - 1, 0); highlight(); }
+    if (e.key === 'Enter' && filtered[sel]) { closeCmd(); filtered[sel].action(); }
+  });
+  input.addEventListener('input', function () { render(input.value); });
+  if (backdrop) backdrop.addEventListener('click', closeCmd);
 })();
 </script>
 </body>
