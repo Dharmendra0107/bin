@@ -1,0 +1,15 @@
+{
+  "name": "Dharmendra Kumar Yadav — Portfolio",
+  "short_name": "DK Portfolio",
+  "description": "Software Developer transitioning into DevOps Engineering — Python, Django, PHP, Laravel, React, Docker, Terraform, Azure, CI/CD.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ffc200",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "images/dklogo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/dklogo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
