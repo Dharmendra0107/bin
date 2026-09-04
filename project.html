@@ -23,7 +23,6 @@
   <meta name="twitter:image" content="https://dharmendra0107.tech/images/og-preview.jpg"/>
   <link rel="shortcut icon" href="images/dklogo.png" type="image/x-png"/>
   <link rel="apple-touch-icon" href="images/dklogo.png"/>
-  <link rel="manifest" href="manifest.json"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <meta name="apple-mobile-web-app-title" content="DK Portfolio"/>
@@ -216,53 +215,6 @@
     .award-chip-text small{font-size:.64rem}
   }
 
-  /* ═══ TESTIMONIALS ═══ */
-  .testi-section{padding:74px 6%;position:relative;overflow:hidden}
-  .testi-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
-    background:linear-gradient(90deg,transparent,rgba(255,194,0,.5),var(--gold),rgba(255,194,0,.5),transparent)}
-  .testi-section::after{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);
-    width:520px;height:320px;background:radial-gradient(ellipse,rgba(255,194,0,.06),transparent 70%);pointer-events:none}
-  .testi-head{text-align:center;margin-bottom:46px;position:relative;z-index:1}
-  .testi-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:700;
-    letter-spacing:.2em;text-transform:uppercase;color:rgba(255,194,0,.7);margin-bottom:12px}
-  .testi-eyebrow::before,.testi-eyebrow::after{content:'';width:26px;height:1px;background:rgba(255,194,0,.35)}
-  .testi-head h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-1px}
-  .testi-head h2 em{font-style:normal;color:var(--gold)}
-  .testi-head p{font-size:.85rem;color:var(--text-muted);max-width:520px;margin:0 auto}
-  .testi-grid{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;
-    scrollbar-width:none;-ms-overflow-style:none;padding:10px 4px 14px;cursor:grab;
-    max-width:1180px;margin:0 auto;position:relative;z-index:1}
-  .testi-grid.auto-scrolling{scroll-snap-type:none}
-  .testi-grid::-webkit-scrollbar{display:none}
-  .testi-grid:active{cursor:grabbing}
-  .testi-card{flex:0 0 350px;scroll-snap-align:start;
-    background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
-    border:1px solid var(--border);border-left:3px solid rgba(255,194,0,.45);
-    border-radius:4px 16px 16px 4px;padding:30px 26px 26px;position:relative;overflow:hidden;
-    transition:transform .3s,border-color .3s,box-shadow .3s;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-    min-height:252px;display:flex;flex-direction:column;justify-content:space-between}
-  .testi-card:hover{transform:translateY(-6px);border-left-color:var(--gold);box-shadow:0 18px 40px rgba(255,194,0,.16)}
-  .testi-card-quote-bg{position:absolute;top:-18px;right:6px;font-size:5.5rem;line-height:1;
-    color:rgba(255,194,0,.08);font-family:Georgia,serif;font-weight:900;pointer-events:none;user-select:none}
-  .testi-quote-icon{display:none}
-  .testi-text{font-size:.9rem;line-height:1.72;color:rgba(255,255,255,.82);margin-bottom:22px;
-    flex:1;position:relative;z-index:1}
-  .testi-person{display:flex;align-items:center;gap:12px;flex-shrink:0;position:relative;z-index:1;
-    padding-top:16px;border-top:1px solid rgba(255,255,255,.07)}
-  .testi-avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;
-    background:linear-gradient(150deg,rgba(255,194,0,.22),rgba(255,194,0,.06));
-    border:1.5px solid rgba(255,194,0,.35);display:flex;align-items:center;justify-content:center;
-    color:var(--gold);font-size:.85rem}
-  .testi-person-text{line-height:1.35}
-  .testi-name{font-size:.85rem;font-weight:700;color:#fff}
-  .testi-role{font-size:.72rem;color:var(--text-muted)}
-  .testi-placeholder-tag{position:absolute;top:14px;right:14px;font-size:.56rem;font-weight:700;
-    color:rgba(255,194,0,.6);background:rgba(0,0,0,.4);border:1px solid rgba(255,194,0,.22);
-    padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;z-index:2;
-    backdrop-filter:blur(4px)}
-  @media(max-width:600px){.testi-card{flex:0 0 82vw}.testi-section{padding:50px 5%}}
-
   /* ═══ GITHUB ACTIVITY ═══ */
   .gh-activity-strip{padding:0 6% 50px}
   .gh-activity-card{max-width:920px;margin:0 auto;background:var(--card-bg);border:1.5px solid var(--border);
@@ -347,109 +299,6 @@
   @media(prefers-reduced-motion:reduce){
     .polaroid{transition:none}
   }
-
-  /* ═══════════════════════════════════════════
-     MY DESKTOP — projects as files on a retro OS desktop.
-     Click an icon, a "window" opens with the project's details.
-     A third distinct metaphor: physical corkboard → digital OS.
-  ═══════════════════════════════════════════ */
-  .desktop-section{padding:70px 6%}
-  .desktop-head{text-align:center;margin-bottom:36px}
-  .desktop-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:700;
-    letter-spacing:.2em;text-transform:uppercase;color:rgba(255,194,0,.7);margin-bottom:12px}
-  .desktop-eyebrow::before,.desktop-eyebrow::after{content:'';width:26px;height:1px;background:rgba(255,194,0,.35)}
-  .desktop-head h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;margin-bottom:8px}
-  .desktop-head h2 span{color:var(--gold)}
-  .desktop-head p{max-width:480px;margin:0 auto;font-size:.88rem;color:var(--text-muted)}
-
-  .os-frame{max-width:1100px;margin:0 auto;border-radius:16px;overflow:hidden;
-    border:1.5px solid rgba(255,194,0,.2);box-shadow:0 24px 60px rgba(0,0,0,.5)}
-  .os-menubar{display:flex;align-items:center;justify-content:space-between;gap:14px;
-    padding:8px 16px;background:rgba(10,10,10,.9);border-bottom:1px solid rgba(255,194,0,.16);
-    font-family:'Courier New',monospace;font-size:.72rem}
-  .os-logo{color:var(--gold);font-weight:700;display:flex;align-items:center;gap:7px}
-  .os-menu-items{color:rgba(255,255,255,.3);display:none}
-  .os-clock{color:rgba(255,255,255,.5);letter-spacing:.03em}
-  .os-menubar-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
-  .os-item-count{color:rgba(255,255,255,.28);letter-spacing:.02em;display:none}
-  @media(min-width:480px){.os-item-count{display:inline}}
-  @media(min-width:640px){.os-menu-items{display:inline}}
-
-  .os-desktop{position:relative;padding:34px 5% 46px;min-height:320px;
-    background:
-      radial-gradient(circle at 18% 12%,rgba(255,194,0,.07),transparent 45%),
-      radial-gradient(circle at 82% 88%,rgba(255,194,0,.05),transparent 50%),
-      linear-gradient(165deg,#0d0d0d,#050505 60%,#000)}
-  .os-icon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:20px 8px;
-    max-width:920px;margin:0 auto}
-  .os-icon{--file-accent:var(--gold);background:none;border:none;cursor:pointer;display:flex;
-    flex-direction:column;align-items:center;gap:9px;padding:12px 6px;border-radius:12px;
-    transition:background .18s,transform .18s;font-family:var(--font)}
-  .os-icon:hover,.os-icon:focus-visible{background:rgba(255,255,255,.05);outline:none;transform:translateY(-2px)}
-  .os-icon:active{transform:translateY(0) scale(.96)}
-  .os-icon:focus-visible{box-shadow:0 0 0 2px var(--file-accent)}
-  .os-icon-glyph{width:54px;height:54px;border-radius:14px;
-    background:rgba(255,194,0,.14);
-    background:color-mix(in srgb, var(--file-accent) 14%, transparent);
-    border:1.5px solid rgba(255,194,0,.45);
-    border-color:color-mix(in srgb, var(--file-accent) 45%, transparent);
-    box-shadow:0 6px 16px rgba(255,194,0,.18);
-    box-shadow:0 6px 16px color-mix(in srgb, var(--file-accent) 18%, transparent);
-    display:flex;align-items:center;justify-content:center;
-    font-size:1.35rem;color:var(--file-accent);position:relative;transition:all .2s}
-  .os-icon:hover .os-icon-glyph,.os-icon:focus-visible .os-icon-glyph{
-    border-color:var(--file-accent);
-    background:rgba(255,194,0,.24);
-    background:color-mix(in srgb, var(--file-accent) 24%, transparent);
-    box-shadow:0 10px 24px rgba(255,194,0,.3);
-    box-shadow:0 10px 24px color-mix(in srgb, var(--file-accent) 30%, transparent)}
-  .os-icon-badge{position:absolute;bottom:-5px;right:-5px;width:19px;height:19px;border-radius:50%;
-    background:#0a0a0a;border:1.5px solid var(--file-accent);display:flex;align-items:center;justify-content:center;
-    font-size:.5rem;color:var(--file-accent)}
-  .os-icon-label{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.8);text-align:center;
-    line-height:1.3;max-width:98px;display:flex;flex-direction:column;align-items:center;gap:1px}
-  .os-icon-ext{font-size:.6rem;font-weight:500;color:rgba(255,255,255,.32);letter-spacing:.02em}
-  .os-icon-star{position:absolute;top:-6px;left:-6px;color:var(--gold);font-size:.6rem;
-    filter:drop-shadow(0 0 4px rgba(255,194,0,.6))}
-
-  /* window overlay — same open/close convention as .cs-overlay */
-  .os-window-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
-    padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}
-  .os-window-overlay.open{opacity:1;pointer-events:auto}
-  .os-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px)}
-  .os-window{position:relative;z-index:1;background:#0a0a0a;border:1.5px solid rgba(255,194,0,.3);
-    border-radius:14px;max-width:640px;width:100%;max-height:86vh;overflow:hidden;
-    display:flex;flex-direction:column;box-shadow:0 40px 90px rgba(0,0,0,.6);
-    transform:scale(.96);transition:transform .25s}
-  .os-window-overlay.open .os-window{transform:scale(1)}
-  .os-window-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;
-    background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,194,0,.14);flex-shrink:0}
-  .os-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
-  .os-dot.r{background:#ff5f57}.os-dot.y{background:#febc2e}.os-dot.g{background:#28c840}
-  .os-window-path{margin-left:8px;font-family:'Courier New',monospace;font-size:.7rem;
-    color:rgba(255,255,255,.4);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .os-window-close{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
-    width:26px;height:26px;border-radius:50%;color:#fff;font-size:.75rem;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
-  .os-window-close:hover{background:rgba(255,194,0,.15);border-color:var(--gold);color:var(--gold)}
-  .os-window-body{padding:0;overflow-y:auto;overflow-x:hidden}
-  .os-window-img{width:100%;height:220px;object-fit:cover;display:block;background:#000}
-  .os-window-content{padding:22px 24px 26px}
-  .os-window-cat{display:inline-block;font-size:.66rem;font-weight:700;color:var(--gold);
-    background:rgba(255,194,0,.1);border:1px solid rgba(255,194,0,.3);border-radius:20px;
-    padding:2px 12px;letter-spacing:.4px;margin-bottom:10px}
-  .os-window-title{font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px}
-  .os-window-desc{font-size:.86rem;color:var(--text-muted);line-height:1.65;margin-bottom:16px}
-  .os-window-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-  .os-window-actions{display:flex;gap:10px;flex-wrap:wrap}
-
-  @media(max-width:640px){
-    .os-icon-grid{grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:14px 4px}
-    .os-icon-glyph{width:44px;height:44px;font-size:1.1rem}
-    .os-window-img{height:170px}
-    .os-window-content{padding:18px 18px 22px}
-  }
-
   /* ═══════════════════════════════════════════
      MOOD BOARD — cinematic, full-bleed photo cards.
      A fourth distinct language: editorial/magazine-cover,
@@ -587,55 +436,136 @@
   .playlist-head h2 span{color:var(--gold)}
   .playlist-head p{max-width:480px;margin:0 auto;font-size:.88rem;color:var(--text-muted)}
 
-  .playlist-layout{display:grid;grid-template-columns:320px 1fr;gap:28px;max-width:1080px;margin:0 auto;align-items:start}
-  .now-playing-card{background:linear-gradient(160deg,#181818,#080808);border:1.5px solid rgba(255,194,0,.22);
-    border-radius:20px;padding:24px;text-align:center;position:sticky;top:96px}
-  .np-art-wrap{width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;position:relative;
-    margin-bottom:18px;box-shadow:0 20px 46px rgba(0,0,0,.5);border:1px solid rgba(255,194,0,.15)}
+  .playlist-layout{display:grid;grid-template-columns:320px 1fr;gap:0;max-width:1080px;margin:0 auto;
+    align-items:stretch;background:rgba(255,255,255,.02);border:1.5px solid var(--border);
+    border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+  .now-playing-card{background:linear-gradient(160deg,#181818,#080808);border-right:1.5px solid rgba(255,194,0,.16);
+    border-radius:0;padding:28px;text-align:center;position:sticky;top:96px;align-self:start;height:100%}
+  .np-art-ring-wrap{position:relative;padding:3px;border-radius:19px;margin-bottom:18px}
+  .np-art-ring-wrap::before{content:'';position:absolute;inset:0;border-radius:19px;z-index:0;
+    background:conic-gradient(from 0deg,var(--gold),transparent 30%,transparent 70%,var(--gold));
+    opacity:0;transition:opacity .3s;animation:npRingSpin 3.5s linear infinite;animation-play-state:paused}
+  .np-art-ring-wrap.playing::before{opacity:1;animation-play-state:running}
+  @keyframes npRingSpin{to{transform:rotate(360deg)}}
+  .np-art-wrap{width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;position:relative;z-index:1;
+    box-shadow:0 20px 46px rgba(0,0,0,.5);border:1px solid rgba(255,194,0,.15)}
   .np-art-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .25s}
   .np-cat{font-size:.66rem;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:6px}
   .np-title{font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:16px;min-height:1.4em}
-  .np-eq{display:flex;gap:3px;align-items:flex-end;justify-content:center;height:20px;margin-bottom:18px}
-  .np-eq span{width:4px;background:var(--gold);border-radius:2px;animation:eqBounce 1s ease-in-out infinite;animation-play-state:paused}
+  .np-eq{display:flex;gap:3px;align-items:flex-end;justify-content:center;height:22px;margin-bottom:18px}
+  .np-eq span{width:3.5px;background:linear-gradient(180deg,var(--gold),var(--gold-dark));border-radius:2px;
+    animation:eqBounce 1s ease-in-out infinite;animation-play-state:paused}
   .np-eq.playing span{animation-play-state:running}
-  .np-eq span:nth-child(1){animation-delay:0s;height:9px}
-  .np-eq span:nth-child(2){animation-delay:.15s;height:18px}
-  .np-eq span:nth-child(3){animation-delay:.3s;height:7px}
-  .np-eq span:nth-child(4){animation-delay:.45s;height:16px}
-  .np-eq span:nth-child(5){animation-delay:.6s;height:11px}
-  @keyframes eqBounce{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
-  .np-progress{height:4px;background:rgba(255,194,0,.14);border-radius:4px;overflow:hidden;margin-bottom:18px}
-  .np-progress-fill{height:100%;width:35%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));border-radius:4px}
-  .np-controls{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:18px}
+  .np-eq span:nth-child(1){animation-delay:0s;height:8px}
+  .np-eq span:nth-child(2){animation-delay:.12s;height:16px}
+  .np-eq span:nth-child(3){animation-delay:.24s;height:22px}
+  .np-eq span:nth-child(4){animation-delay:.36s;height:13px}
+  .np-eq span:nth-child(5){animation-delay:.48s;height:19px}
+  .np-eq span:nth-child(6){animation-delay:.6s;height:9px}
+  .np-eq span:nth-child(7){animation-delay:.72s;height:15px}
+  @keyframes eqBounce{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+  .np-progress{position:relative;height:4px;background:rgba(255,194,0,.14);border-radius:4px;margin-bottom:18px}
+  .np-progress-fill{position:relative;height:100%;width:0%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));border-radius:4px;transition:width .1s linear}
+  .np-progress-fill::after{content:'';position:absolute;right:-4px;top:50%;transform:translateY(-50%);
+    width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px rgba(255,194,0,.7)}
+  .np-controls{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:18px}
+  .np-deco-btn{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:rgba(255,194,0,.35);font-size:.7rem;flex-shrink:0;transition:color .2s}
+  .np-deco-btn:hover{color:rgba(255,194,0,.7)}
   .np-btn{width:38px;height:38px;border-radius:50%;background:rgba(255,194,0,.08);border:1.5px solid rgba(255,194,0,.3);
     color:var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0}
   .np-btn:hover{transform:scale(1.08);border-color:var(--gold)}
   .np-btn.play{width:50px;height:50px;background:var(--gold);color:#181818;border-color:var(--gold);font-size:1.05rem}
   .np-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .np-audio-note{font-size:.66rem;color:rgba(255,255,255,.32);margin:-6px 0 14px;text-align:center}
 
-  .playlist-list{display:flex;flex-direction:column;gap:3px;max-height:560px;overflow-y:auto;overflow-x:hidden;
-    padding-right:6px;scrollbar-width:thin;scrollbar-color:rgba(255,194,0,.3) transparent}
-  .playlist-list::-webkit-scrollbar{width:6px}
-  .playlist-list::-webkit-scrollbar-thumb{background:rgba(255,194,0,.3);border-radius:3px}
-  .track-row{display:flex;align-items:center;gap:13px;padding:10px 12px;border-radius:12px;cursor:pointer;
-    transition:background .2s,border-color .2s;border:1px solid transparent;background:none;width:100%;text-align:left;
-    font-family:var(--font)}
-  .track-row:hover,.track-row.active{background:rgba(255,194,0,.08);border-color:rgba(255,194,0,.2)}
+  .music-widget{position:fixed;bottom:22px;left:22px;z-index:999}
+  .music-toggle{position:relative;width:52px;height:52px;border-radius:50%;
+    background:var(--gold);color:#181818;border:none;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;font-size:1.15rem;z-index:2;
+    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;box-shadow:0 6px 22px rgba(255,194,0,.4)}
+  .music-toggle:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(255,194,0,.55)}
+  .music-toggle:active{transform:scale(.94)}
+  .music-toggle.is-muted{background:rgba(255,194,0,.1);color:var(--gold);border:1.5px solid rgba(255,194,0,.4)}
+
+  /* EXPANDABLE PANEL — same pattern as the DevOps homepage widget: hover
+     (or tap on touch) reveals a dedicated play/pause button and a volume
+     slider, both wired to the same "Now Playing" audio element.
+     Anchored with position:absolute from the widget's own left edge
+     (not a negative-margin overlap) so it always connects seamlessly to
+     the toggle button regardless of surrounding layout. */
+  .music-panel{
+    position:absolute;top:50%;left:26px;transform:translateY(-50%);
+    display:flex;align-items:center;gap:12px;height:52px;
+    background:rgba(18,18,18,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border:1.5px solid rgba(255,194,0,.3);border-radius:26px;
+    padding:0 18px 0 34px;z-index:1;
+    max-width:0;overflow:hidden;opacity:0;
+    transition:max-width .35s ease,opacity .3s ease;white-space:nowrap}
+  .music-widget:hover .music-panel,
+  .music-widget:focus-within .music-panel,
+  .music-widget.widget-open .music-panel{
+    max-width:220px;opacity:1}
+  .music-panel-play{
+    width:30px;height:30px;border-radius:50%;flex:0 0 auto;border:none;cursor:pointer;
+    background:var(--gold);color:#181818;display:flex;align-items:center;justify-content:center;
+    font-size:.72rem;transition:transform .2s}
+  .music-panel-play:hover{transform:scale(1.1)}
+  .music-panel-play .fa-pause{display:none}
+  .music-toggle.playing ~ .music-panel .music-panel-play .fa-play{display:none}
+  .music-toggle.playing ~ .music-panel .music-panel-play .fa-pause{display:block}
+  .music-panel-volume{display:flex;align-items:center;gap:8px;color:var(--gold);font-size:.85rem}
+  .music-panel-volume input[type="range"]{
+    -webkit-appearance:none;appearance:none;width:90px;height:4px;border-radius:4px;
+    background:rgba(255,194,0,.25);outline:none;cursor:pointer}
+  .music-panel-volume input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;
+    background:var(--gold);border:2px solid #181818;box-shadow:0 0 6px rgba(255,194,0,.6);cursor:pointer}
+  .music-panel-volume input[type="range"]::-moz-range-thumb{
+    width:14px;height:14px;border-radius:50%;background:var(--gold);
+    border:2px solid #181818;box-shadow:0 0 6px rgba(255,194,0,.6);cursor:pointer}
+  @media (max-width:640px){
+    .music-widget{left:14px;bottom:14px}
+    .music-toggle{width:46px;height:46px;font-size:1rem}
+    .music-panel{height:46px;left:23px}
+    .music-panel-volume input[type="range"]{width:64px}
+  }
+
+  .playlist-list-wrap{padding:24px 22px;display:flex;flex-direction:column;min-width:0}
+  .playlist-list-head{display:flex;align-items:center;justify-content:space-between;
+    padding:0 10px 14px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .playlist-list-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.4);display:flex;align-items:center;gap:8px}
+  .playlist-list-title i{color:var(--gold);font-size:.72rem}
+  .playlist-list-count{font-family:'Courier New',monospace;font-size:.68rem;color:rgba(255,255,255,.3)}
+  .playlist-list{display:flex;flex-direction:column;gap:2px;overflow:visible}
+  .track-row{display:flex;align-items:center;gap:13px;padding:10px 12px;border-radius:10px;cursor:pointer;
+    transition:background .2s,border-color .2s;border:1px solid transparent;border-left:3px solid transparent;
+    background:none;width:100%;text-align:left;font-family:var(--font)}
+  .track-row:hover{background:rgba(255,255,255,.04)}
+  .track-row.active{background:rgba(255,194,0,.09);border-color:rgba(255,194,0,.18);border-left-color:var(--gold)}
   .track-num{width:20px;text-align:center;font-family:'Courier New',monospace;font-size:.72rem;
-    color:rgba(255,255,255,.35);flex-shrink:0}
+    color:rgba(255,255,255,.3);flex-shrink:0}
   .track-row.active .track-num{color:var(--gold)}
-  .track-thumb{width:42px;height:42px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#000}
+  .track-thumb{width:42px;height:42px;border-radius:8px;overflow:hidden;flex-shrink:0;background:#000;position:relative}
   .track-thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .track-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
   .track-title{font-size:.85rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .track-row.active .track-title{color:var(--gold)}
   .track-cat{font-size:.66rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .track-play-icon{color:var(--gold);opacity:0;transition:opacity .2s;flex-shrink:0;font-size:.8rem}
-  .track-row:hover .track-play-icon,.track-row.active .track-play-icon{opacity:1}
+  .track-row:hover .track-play-icon{opacity:1}
+  .track-row.active .track-play-icon{display:none}
+  .track-eq{display:none;gap:2.5px;align-items:flex-end;height:14px;flex-shrink:0}
+  .track-row.active .track-eq{display:flex}
+  .track-eq span{width:2.5px;background:var(--gold);border-radius:1px;animation:eqBounce .9s ease-in-out infinite}
+  .track-eq span:nth-child(1){height:6px;animation-delay:0s}
+  .track-eq span:nth-child(2){height:13px;animation-delay:.18s}
+  .track-eq span:nth-child(3){height:9px;animation-delay:.34s}
 
   @media(max-width:860px){
-    .playlist-layout{grid-template-columns:1fr}
-    .now-playing-card{position:static}
-    .playlist-list{max-height:none}
+    .playlist-layout{grid-template-columns:1fr;border-radius:18px}
+    .now-playing-card{position:static;border-right:none;border-bottom:1.5px solid rgba(255,194,0,.16)}
   }
   @media(prefers-reduced-motion:reduce){
     .np-eq span{animation:none!important}
@@ -910,13 +840,15 @@
   .pindex-thumb{width:52px;height:52px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#000}
   .pindex-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
   .pindex-row:hover .pindex-thumb img{transform:scale(1.1)}
-  .pindex-main{min-width:0}
-  .pindex-title{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:3px;
+  .pindex-main{min-width:0;display:flex;flex-direction:column;gap:2px;overflow:hidden}
+  .pindex-title{display:block;min-width:0;font-size:.92rem;font-weight:700;color:#fff;
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .pindex-desc{font-size:.76rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .pindex-meta{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+  .pindex-desc{display:block;min-width:0;font-size:.76rem;color:var(--text-muted);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pindex-meta{display:flex;flex-direction:column;gap:5px;align-items:flex-start;min-width:0;overflow:hidden}
   .pindex-cat{display:inline-flex;align-items:center;gap:5px;font-size:.64rem;font-weight:700;
-    color:var(--gold);letter-spacing:.04em;text-transform:uppercase}
+    color:var(--gold);letter-spacing:.04em;text-transform:uppercase;max-width:100%;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .pindex-cat i{font-size:.6rem;opacity:.8}
   .pindex-tags{display:flex;gap:5px;flex-wrap:wrap}
   .pindex-tag{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.4);background:rgba(255,255,255,.05);
@@ -1132,8 +1064,6 @@
   .bc-arrow i{font-size:.52rem}
 
   .journey-strip{padding:70px 6%;position:relative}
-  .journey-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
-    background:linear-gradient(90deg,transparent,rgba(255,194,0,.5),var(--gold),rgba(255,194,0,.5),transparent)}
   .js-header{text-align:center;margin-bottom:50px}
   .js-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;
     margin-bottom:8px;letter-spacing:-1px}
@@ -1309,6 +1239,8 @@
       border:1px solid rgba(255,194,0,.18);box-shadow:0 14px 32px rgba(0,0,0,.34);backdrop-filter:blur(18px);
       color:rgba(255,255,255,.86)!important;font-weight:700;font-size:.95rem;transition:all .25s}
     .mobile-bottom-tab-link i{color:var(--gold);font-size:1rem}
+    .scroll-top-btn{bottom:calc(78px + env(safe-area-inset-bottom))}
+    .music-widget{bottom:calc(78px + env(safe-area-inset-bottom))}
   }
   @media(max-width:768px){
     body{padding-top:84px;padding-bottom:88px}
@@ -1481,12 +1413,8 @@
   /* Section-nav is now a continuous marquee (see base .section-nav rule
      above) so it no longer needs a breakpoint-triggered scroll fallback. */
 
-  /* Playlist grid → single column earlier, matching how every other
-     two-column layout on this page collapses. */
-  @media(max-width:900px){
-    .playlist-layout{grid-template-columns:1fr}
-    .now-playing-card{position:static}
-  }
+  /* Playlist grid → single column (see the 860px breakpoint on
+     .playlist-layout above, which already handles this collapse). */
 
   @media(max-width:768px){
     .page-hero{padding:56px 5% 40px}
@@ -1510,18 +1438,15 @@
     .corkboard{padding:32px 5% 38px}
     .wall-grid{gap:26px 14px}
 
-    .desktop-section{padding:52px 5%}
     .mood-section{padding:52px 5%}
     .mood-grid{gap:14px}
     .playlist-section{padding:52px 5%}
-    .testi-section{padding:48px 5%}
     .journey-strip{padding:48px 5%}
 
-    .wall-head h2,.desktop-head h2,.mood-head h2,.stories-head h2,
+    .wall-head h2,.mood-head h2,.stories-head h2,
     .playlist-head h2{font-size:clamp(1.5rem,5vw,2rem)}
-    .wall-head p,.desktop-head p,.mood-head p,.stories-head p,.playlist-head p{font-size:.82rem}
+    .wall-head p,.mood-head p,.stories-head p,.playlist-head p{font-size:.82rem}
 
-    .os-window-content{padding:18px 16px 22px}
     .story-viewer-content{padding:24px 18px 32px}
     .np-title{font-size:1.05rem}
   }
@@ -1551,42 +1476,24 @@
     .polaroid-img-wrap img{height:90px}
     .polaroid-caption{font-size:1rem;padding:7px 3px 11px}
 
-    .desktop-section{padding:44px 4.5%}
-    .os-frame{border-radius:12px}
-    .os-desktop{padding:24px 4% 32px;min-height:auto}
-    .os-icon-grid{grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:10px 2px}
-    .os-icon-glyph{width:42px;height:42px;font-size:1.05rem}
-    .os-icon-label{font-size:.62rem}
-    .os-icon-ext{display:none}
-    .os-menu-items{display:none}
-    .os-item-count{display:none}
-
     .mood-section{padding:44px 4.5%}
     .mood-card{flex:0 0 74vw}
     .mood-grid{gap:10px}
     .mood-title{font-size:.95rem}
 
     .playlist-section{padding:44px 4.5%}
-    .now-playing-card{padding:18px 14px;border-radius:16px}
+    .now-playing-card{padding:18px 14px}
     .np-controls{gap:12px}
     .np-btn{width:34px;height:34px}
     .np-btn.play{width:44px;height:44px}
     .track-row{gap:10px;padding:8px 9px}
     .track-thumb{width:38px;height:38px}
 
-    .testi-section{padding:40px 4.5%}
-    .testi-card{padding:20px 18px}
-
     .journey-strip{padding:40px 4.5%}
 
     .story-viewer-content{padding:20px 14px 28px}
     .story-title{font-size:1.2rem}
     .story-viewer-top{top:20px;left:12px;right:12px}
-
-    .os-window{border-radius:12px}
-    .os-window-content{padding:16px 14px 20px}
-    .os-window-title{font-size:1.1rem}
-    .os-window-img{height:150px}
 
     .cs-modal{padding:22px;border-radius:16px}
     .cs-metrics{gap:8px}
@@ -1597,7 +1504,6 @@
     .polaroid{width:112px}
     .polaroid-img-wrap img{height:78px}
     .polaroid-caption{font-size:.9rem}
-    .os-icon-grid{grid-template-columns:repeat(auto-fill,minmax(62px,1fr))}
     .mood-card{flex:0 0 70vw}
     .stat-num{font-size:1.35rem}
     .hero-stats{gap:12px 16px}
@@ -1859,327 +1765,35 @@
     </div>
     <div class="playlist-layout">
       <div class="now-playing-card" data-aos="fade-right">
-        <div class="np-art-wrap"><img id="npArt" src="" alt=""></div>
+        <div class="np-art-ring-wrap" id="npArtWrap">
+          <div class="np-art-wrap"><img id="npArt" src="" alt=""></div>
+        </div>
         <div class="np-cat" id="npCat"></div>
         <div class="np-title" id="npTitle"></div>
-        <div class="np-eq" id="npEq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-        <div class="np-progress"><div class="np-progress-fill"></div></div>
+        <div class="np-eq" id="npEq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="np-progress"><div class="np-progress-fill" id="npProgressFill"></div></div>
         <div class="np-controls">
+          <span class="np-deco-btn" aria-hidden="true" title="Shuffle"><i class="fa-solid fa-shuffle"></i></span>
           <button class="np-btn" id="npPrev" type="button" aria-label="Previous project"><i class="fa-solid fa-backward-step" aria-hidden="true"></i></button>
-          <button class="np-btn play" id="npPlay" type="button" aria-label="Toggle playing indicator" aria-pressed="false"><i class="fa-solid fa-play" aria-hidden="true"></i></button>
+          <button class="np-btn play" id="npPlay" type="button" aria-label="Play or pause background music" aria-pressed="false"><i class="fa-solid fa-play" aria-hidden="true"></i></button>
           <button class="np-btn" id="npNext" type="button" aria-label="Next project"><i class="fa-solid fa-forward-step" aria-hidden="true"></i></button>
+          <span class="np-deco-btn" aria-hidden="true" title="Repeat"><i class="fa-solid fa-repeat"></i></span>
         </div>
+        <p class="np-audio-note" id="npAudioNote">🎧 Royalty-free instrumental — hit play</p>
+        <audio id="npAudio" loop preload="none"></audio>
         <div class="np-actions" id="npActions"></div>
       </div>
-      <div class="playlist-list" id="playlistList" role="list" aria-label="Project playlist"></div>
+      <div class="playlist-list-wrap">
+        <div class="playlist-list-head">
+          <span class="playlist-list-title"><i class="fa-solid fa-list-ul" aria-hidden="true"></i> Up Next</span>
+          <span class="playlist-list-count" id="playlistCount"></span>
+        </div>
+        <div class="playlist-list" id="playlistList" role="list" aria-label="Project playlist"></div>
+      </div>
     </div>
   </section>
 
-  <nav class="section-nav" id="sectionNav" aria-label="Jump to section">
-    <div class="sn-track" id="snTrack">
-      <div class="sn-set" id="snSetReal">
-        <button class="sn-pill" data-target="sec-github"><i class="fa-brands fa-github"></i>Activity</button>
-        <button class="sn-pill" data-target="sec-stories"><i class="fa-solid fa-circle-play"></i>Stories</button>
-        <button class="sn-pill" data-target="sec-playlist"><i class="fa-solid fa-music"></i>Playlist</button>
-        <button class="sn-pill active" data-target="sec-featured"><i class="fa-solid fa-star"></i>Featured</button>
-        <button class="sn-pill" data-target="sec-tools"><i class="fa-solid fa-wrench"></i>Tools</button>
-        <button class="sn-pill" data-target="sec-frontend"><i class="fa-solid fa-paint-brush"></i>Frontend</button>
-        <button class="sn-pill" data-target="sec-fullstack"><i class="fa-solid fa-gears"></i>Full Stack</button>
-        <button class="sn-pill" data-target="sec-product"><i class="fa-solid fa-box"></i>Products</button>
-        <button class="sn-pill" data-target="sec-classic"><i class="fa-solid fa-grip"></i>Grid</button>
-        <button class="sn-pill" data-target="sec-filmstrip"><i class="fa-solid fa-film"></i>Filmstrip</button>
-        <button class="sn-pill" data-target="sec-glance"><i class="fa-solid fa-table-cells"></i>Glance</button>
-        <button class="sn-pill" data-target="sec-wall"><i class="fa-solid fa-thumbtack"></i>Corkboard</button>
-        <button class="sn-pill" data-target="sec-desktop"><i class="fa-solid fa-desktop"></i>Desktop</button>
-        <button class="sn-pill" data-target="sec-mood"><i class="fa-solid fa-image"></i>Mood Board</button>
-        <button class="sn-pill" data-target="sec-timeline"><i class="fa-solid fa-timeline"></i>Timeline</button>
-        <button class="sn-pill" data-target="sec-testimonials"><i class="fa-solid fa-comment-dots"></i>Testimonials</button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="filter-bar" role="search">
-    <div class="filter-inner">
-      <div class="search-wrap">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        <input class="search-input" type="search" id="searchInput" placeholder="Search…" autocomplete="off" aria-label="Search projects"/>
-      </div>
-      <div class="filter-pills" role="group">
-        <button class="fpill active" data-filter="all">All</button>
-        <button class="fpill" data-filter="featured">⭐ Featured</button>
-        <button class="fpill" data-filter="fullstack">Full Stack</button>
-        <button class="fpill" data-filter="frontend">Frontend</button>
-        <button class="fpill" data-filter="tool">Tools</button>
-        <button class="fpill" data-filter="product">📦 Products</button>
-      </div>
-      <div class="result-count">Showing <b id="showCount">12</b> projects</div>
-    </div>
-  </div>
-
   <div class="container" style="padding-bottom:20px">
-
-    <div class="proj-section" id="sec-featured">
-      <div class="sec-label"><span>⭐ FEATURED WORK</span></div>
-      <div class="slider-wrap">
-        <div class="slider-track" id="featSlider">
-
-          <div class="feat-card card-enter" data-cat="featured frontend" data-name="Portfolio Website">
-            <div class="ribbon">⭐ Featured</div>
-            <img class="card-img" src="https://images.unsplash.com/photo-1487523117656-d5d117ad47c5?auto=format&fit=crop&w=500&h=400&q=70" alt="Portfolio Website" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Portfolio'"/>
-            <div class="feat-body">
-              <div class="feat-num">01 · FRONTEND</div>
-              <div class="feat-title">Portfolio Website</div>
-              <div class="feat-desc">Personal portfolio with particles, AOS animations, dark-gold theme and fully responsive layout. The site you're visiting right now!</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span></div>
-              <div class="btns">
-                <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.tech/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="featured tool" data-name="Weather App" style="animation-delay:.07s">
-            <div class="ribbon">🔥 API</div>
-            <img class="card-img" src="https://images.unsplash.com/photo-1603437873662-dc1f44901825?auto=format&fit=crop&w=500&h=400&q=70" alt="Weather App" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Weather+App'"/>
-            <div class="feat-body">
-              <div class="feat-num">02 · TOOL</div>
-              <div class="feat-title">Weather App</div>
-              <div class="feat-desc">Real-time weather for any city with animated icons, temperature, humidity and geolocation via OpenWeather API.</div>
-              <div class="tags"><span class="tag">JavaScript</span><span class="tag">REST API</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="featured fullstack" data-name="Laravel E-Commerce" style="animation-delay:.14s">
-            <div class="ribbon">⭐ Featured</div>
-            <img class="card-img" src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=500&h=400&q=70" alt="Laravel E-Commerce" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Laravel+E-Commerce'"/>
-            <div class="feat-body">
-              <div class="feat-num">03 · FULL STACK</div>
-              <div class="feat-title">Laravel E-Commerce</div>
-              <div class="feat-desc">Production e-commerce at NDMEAA Technology. Product management, cart, orders, REST APIs. 30% backend efficiency improvement.</div>
-              <div class="tags"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST API</span></div>
-              <div class="btns">
-                <button class="btn-s btn-solid" onclick="openCS('csModal1')"><i class="fa-solid fa-book-open"></i> Case Study</button>
-                <span class="btn-s btn-dim"><i class="fa-solid fa-lock"></i> Private</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="featured frontend" data-name="Blogger Website" style="animation-delay:.21s">
-            <img class="card-img" src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&w=500&h=400&q=70" alt="Blogger Website" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Blogger'"/>
-            <div class="feat-body">
-              <div class="feat-num">04 · FRONTEND</div>
-              <div class="feat-title">Blogger Website</div>
-              <div class="feat-desc">Full-featured blogging platform with post creation, category filtering and archive sections built for seamless reading.</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="slider-nav">
-        <button class="snav" id="f1p" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="snav" id="f1n" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </div>
-
-    <div class="proj-section" id="sec-tools">
-      <div class="sec-label"><span>🔧 UTILITY TOOLS</span></div>
-      <div class="bento">
-
-        <div class="bento-card wide card-enter" data-cat="tool featured" data-name="Weather App" style="animation-delay:.05s">
-          <img class="bento-bg" src="https://images.unsplash.com/photo-1603437873662-dc1f44901825?auto=format&fit=crop&w=500&h=400&q=70" alt="Weather App" loading="lazy" onerror="this.src='https://placehold.co/600x210/111/ffc200?text=Weather'"/>
-          <div class="bento-over">
-            <div class="bento-icon"><i class="fa-solid fa-cloud-sun"></i></div>
-            <div class="bento-lbl">TOOL · API</div>
-            <div class="bento-title">Weather App</div>
-            <div class="bento-desc">Real-time weather for any city with animated icons, temp, humidity &amp; geolocation via OpenWeather API.</div>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">REST API</span><span class="tag">CSS3</span></div>
-            <div class="bento-btns">
-              <a href="https://github.com/Dharmendra0107/Weather_App" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <a href="https://dharmendra0107.github.io/Weather_App/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card tall card-enter" data-cat="tool" data-name="BMI Calculator" style="animation-delay:.1s">
-          <img class="bento-bg" src="https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=500&h=400&q=70" alt="BMI Calculator" loading="lazy" onerror="this.src='https://placehold.co/300x420/111/ffc200?text=BMI'"/>
-          <div class="bento-over">
-            <div class="bento-icon"><i class="fa-solid fa-weight-scale"></i></div>
-            <div class="bento-lbl">TOOL · HEALTH</div>
-            <div class="bento-title">BMI Calculator</div>
-            <div class="bento-desc">BMI calculator with color-coded health guide and metric/imperial unit support.</div>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
-            <div class="bento-btns">
-              <a href="https://github.com/Dharmendra0107/BMI_calculator" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <a href="https://dharmendra0107.github.io/BMI_calculator/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card card-enter" data-cat="tool" data-name="Simple Calculator" style="animation-delay:.15s">
-          <img class="bento-bg" src="https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=500&h=400&q=70" alt="Calculator" loading="lazy" onerror="this.src='https://placehold.co/300x210/111/ffc200?text=Calculator'"/>
-          <div class="bento-over">
-            <div class="bento-icon"><i class="fa-solid fa-calculator"></i></div>
-            <div class="bento-lbl">TOOL</div>
-            <div class="bento-title">Simple Calculator</div>
-            <div class="bento-desc">Arithmetic calculator with keyboard support and elegant UI.</div>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span></div>
-            <div class="bento-btns">
-              <a href="https://github.com/Dharmendra0107/Simple_Calculator" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <a href="https://dharmendra0107.github.io/Simple_Calculator/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card card-enter" data-cat="tool" data-name="Age Calculator" style="animation-delay:.2s">
-          <img class="bento-bg" src="https://images.unsplash.com/photo-1635372722656-389f87a941b7?auto=format&fit=crop&w=500&h=400&q=70" alt="Age Calculator" loading="lazy" onerror="this.src='https://placehold.co/300x210/111/ffc200?text=Age+Calc'"/>
-          <div class="bento-over">
-            <div class="bento-icon"><i class="fa-solid fa-calendar-days"></i></div>
-            <div class="bento-lbl">TOOL</div>
-            <div class="bento-title">Age Calculator</div>
-            <div class="bento-desc">Precise age in years, months &amp; days with animated date picker UI.</div>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span></div>
-            <div class="bento-btns">
-              <a href="https://github.com/Dharmendra0107/age_calculater" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <a href="https://dharmendra0107.github.io/age_calculater/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="proj-section" id="sec-frontend">
-      <div class="sec-label"><span>🎨 FRONTEND BUILDS</span></div>
-      <div class="slider-wrap">
-        <div class="slider-track" id="frontSlider">
-
-          <div class="feat-card card-enter" data-cat="frontend" data-name="Hotel Website">
-            <img class="card-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&h=400&q=70" alt="Hotel Website" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Hotel+Web'"/>
-            <div class="feat-body">
-              <div class="feat-num">01 · FRONTEND</div>
-              <div class="feat-title">Hotel Website</div>
-              <div class="feat-desc">Restaurant &amp; food services site with menu, recipes and booking. Fully responsive Bootstrap design with smooth interactions.</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/Hotel_Web" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/Hotel_Web/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="frontend" data-name="Clinic Website" style="animation-delay:.07s">
-            <img class="card-img" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=500&h=400&q=70" alt="Clinic Website" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Clinic'"/>
-            <div class="feat-body">
-              <div class="feat-num">02 · FRONTEND</div>
-              <div class="feat-title">Clinic Website</div>
-              <div class="feat-desc">Healthcare website with appointment booking, doctor profiles and service listings. Clean, accessible medical design.</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">CSS3</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/clinic" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/clinic/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="frontend" data-name="Travel Fun" style="animation-delay:.14s">
-            <img class="card-img" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=500&h=400&q=70" alt="Travel Fun" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Travel+Fun'"/>
-            <div class="feat-body">
-              <div class="feat-num">03 · FRONTEND</div>
-              <div class="feat-title">Travel Fun</div>
-              <div class="feat-desc">Vibrant travel site with destination cards, trip planner and interactive components for travel enthusiasts.</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/Travel_Fun" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/Travel_Fun/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-card card-enter" data-cat="frontend" data-name="Blogger Website" style="animation-delay:.21s">
-            <img class="card-img" src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&w=500&h=400&q=70" alt="Blogger Website" loading="lazy" onerror="this.src='https://placehold.co/370x260/0a0a0a/ffc200?text=Blogger'"/>
-            <div class="feat-body">
-              <div class="feat-num">04 · FRONTEND</div>
-              <div class="feat-title">Blogger Website</div>
-              <div class="feat-desc">Blogging platform with post creation, category filtering and archive sections for seamless content consumption.</div>
-              <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span></div>
-              <div class="btns">
-                <a href="https://github.com/Dharmendra0107/Blogger_Website" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-                <a href="https://dharmendra0107.github.io/Blogger_Website/" target="_blank" rel="noopener noreferrer" class="btn-s btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="slider-nav">
-        <button class="snav" id="f2p" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="snav" id="f2n" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </div>
-
-    <div class="proj-section" id="sec-fullstack">
-      <div class="sec-label"><span>⚙️ FULL STACK SYSTEMS</span></div>
-      <div class="magazine">
-
-        <div class="mag-hero card-enter">
-          <div class="ribbon">⭐ Featured</div>
-          <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=500&h=400&q=70" alt="Laravel E-Commerce" loading="lazy" onerror="this.src='https://placehold.co/600x280/050505/ffc200?text=Laravel+E-Commerce'"/>
-          <div class="mag-hero-body">
-            <span class="mag-cat">FULL STACK</span>
-            <div class="mag-hero-title">Laravel E-Commerce Platform</div>
-            <p class="mag-hero-desc">Production-grade e-commerce application built at NDMEAA Technology, Lucknow. Features product management, cart, order tracking and REST APIs. Delivered 30% backend efficiency improvement through optimised query architecture.</p>
-            <div class="tags" style="margin-bottom:14px">
-              <span class="tag">Laravel</span><span class="tag">PHP</span>
-              <span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">JavaScript</span>
-            </div>
-            <div class="btns">
-              <button class="btn-s btn-solid" onclick="openCS('csModal1')"><i class="fa-solid fa-book-open"></i> Case Study</button>
-              <span class="btn-s btn-dim"><i class="fa-solid fa-lock"></i> Private Repo</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="mag-stack">
-          <div class="mag-card card-enter" data-cat="fullstack" data-name="Quiz App" style="animation-delay:.1s">
-            <div class="ribbon" style="font-size:.6rem">🚧 Building</div>
-            <img class="mag-card-img" src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=500&h=400&q=70" alt="Quiz App" loading="lazy" onerror="this.src='https://placehold.co/400x100/050505/ffc200?text=Quiz+App'"/>
-            <div class="mag-card-body">
-              <div class="mag-card-title">Quiz App <span style="font-size:.7rem;color:var(--gold)">(MERN)</span></div>
-              <div class="mag-card-desc">Full-stack quiz platform with student/admin panels, role-based access, quiz management and performance analytics.</div>
-              <div class="tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">JWT</span></div>
-            </div>
-            <div class="mag-card-foot">
-              <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <button class="btn-s btn-outline" onclick="openCS('csModal2')"><i class="fa-solid fa-book-open"></i> Case Study</button>
-              <div class="wip"><div class="wip-dot"></div> In Progress</div>
-            </div>
-          </div>
-
-          <div class="mag-card card-enter" data-cat="fullstack" data-name="Online Admission System" style="animation-delay:.18s">
-            <img class="mag-card-img" src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&w=500&h=400&q=70" alt="Online Admission System" loading="lazy" onerror="this.src='https://placehold.co/400x100/050505/ffc200?text=Admission+System'"/>
-            <div class="mag-card-body">
-              <div class="mag-card-title">Online Admission System</div>
-              <div class="mag-card-desc">Django portal with student registration, document upload, admin review workflow and email notifications.</div>
-              <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQLite</span><span class="tag">Bootstrap</span></div>
-            </div>
-            <div class="mag-card-foot">
-              <a href="https://github.com/dharmendra0107" target="_blank" rel="noopener noreferrer" class="btn-s btn-solid"><i class="fab fa-github"></i> Code</a>
-              <span class="btn-s btn-dim"><i class="fa-solid fa-clock"></i> Soon</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
     <div class="proj-section" id="sec-product">
       <div class="sec-label"><span>📦 PRODUCTS</span></div>
@@ -2431,35 +2045,6 @@
       <p>Handpicked projects showcasing production-grade development and full-stack expertise.</p>
     </div>
     <div class="project-grid" id="classic-featured-grid" aria-label="Featured projects">
-    </div>
-  </section>
-
-  <section class="pindex-section container">
-    <div class="pindex-head" data-aos="fade-up">
-      <div class="pindex-eyebrow">The Complete Catalog</div>
-      <h2><i class="fa-solid fa-list-check"></i> All <span>Projects</span></h2>
-      <p>Complete project portfolio across frontend, tools, and full-stack development — filter by category or just scan the list.</p>
-    </div>
-    <div class="pindex-filters" id="pindexFilters" role="tablist" aria-label="Filter projects by category">
-      <button class="pindex-filter active" data-filter="all" role="tab" aria-selected="true">
-        <i class="fa-solid fa-border-all" aria-hidden="true"></i> All <span class="pindex-filter-count" id="pfCountAll"></span>
-      </button>
-      <button class="pindex-filter" data-filter="frontend" role="tab" aria-selected="false">
-        <i class="fa-solid fa-paint-brush" aria-hidden="true"></i> Frontend <span class="pindex-filter-count" id="pfCountFrontend"></span>
-      </button>
-      <button class="pindex-filter" data-filter="full stack" role="tab" aria-selected="false">
-        <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Full Stack <span class="pindex-filter-count" id="pfCountFullstack"></span>
-      </button>
-      <button class="pindex-filter" data-filter="tool" role="tab" aria-selected="false">
-        <i class="fa-solid fa-wrench" aria-hidden="true"></i> Tools <span class="pindex-filter-count" id="pfCountTool"></span>
-      </button>
-    </div>
-    <div class="pindex-list" data-aos="fade-up">
-      <div class="pindex-list-head" aria-hidden="true">
-        <span>#</span><span></span><span>Project</span><span>Category</span><span>Links</span>
-      </div>
-      <div id="pindexRows"></div>
-      <p class="pindex-empty" id="pindexEmpty">No projects in this category yet.</p>
     </div>
   </section>
 
@@ -2886,100 +2471,6 @@
 
   </div>
 
-  <section class="bento-section" id="sec-glance">
-    <div class="bento-inner">
-      <div class="bento-head" data-aos="fade-up">
-        <h2 class="glance-title">All Projects<br><span>at a Glance</span></h2>
-        <a href="index.html#contact" class="bento-link">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-
-      <div class="bento-grid">
-
-        <div class="bc bc-1 feat" data-aos="zoom-in" data-aos-delay="0" role="button" tabindex="0" onclick="openCS('csModal1')" onkeydown="if(event.key==='Enter')openCS('csModal1')">
-          <span class="bc-num">01</span>
-          <div class="bc-icon"><i class="fa-brands fa-laravel"></i></div>
-          <h3 class="bc-title">Laravel E-Commerce</h3>
-          <p class="bc-desc">Production app at NDMEAA Technology. 30% backend efficiency improvement.</p>
-          <div class="bc-tags"><span class="bc-tag">Laravel</span><span class="bc-tag">MySQL</span><span class="bc-tag">REST API</span></div>
-          <div class="bc-arrow">Case Study <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-2" data-aos="zoom-in" data-aos-delay="60" role="button" tabindex="0" onclick="openCS('csModal2')" onkeydown="if(event.key==='Enter')openCS('csModal2')">
-          <span class="bc-num">02</span>
-          <div class="bc-icon"><i class="fa-brands fa-react"></i></div>
-          <h3 class="bc-title">Quiz App MERN</h3>
-          <p class="bc-desc">Full-stack quiz platform. Student &amp; admin panels, role-based auth, analytics.</p>
-          <div class="bc-tags"><span class="bc-tag">MongoDB</span><span class="bc-tag">React</span><span class="bc-tag">Node.js</span><span class="bc-tag">JWT</span></div>
-          <div class="bc-arrow">Case Study <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-3" data-aos="zoom-in" data-aos-delay="120">
-          <span class="bc-num">03</span>
-          <div class="bc-icon"><i class="fa-brands fa-python"></i></div>
-          <h3 class="bc-title">Admission System</h3>
-          <p class="bc-desc">Django portal with doc upload, admin workflow and email alerts.</p>
-          <div class="bc-tags"><span class="bc-tag">Django</span><span class="bc-tag">SQLite</span><span class="bc-tag">Bootstrap</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-4" data-aos="zoom-in" data-aos-delay="180">
-          <span class="bc-num">04</span>
-          <div class="bc-icon"><i class="fa-solid fa-cloud-sun"></i></div>
-          <h3 class="bc-title">Weather App</h3>
-          <p class="bc-desc">Real-time weather with OpenWeather API &amp; geolocation.</p>
-          <div class="bc-tags"><span class="bc-tag">JavaScript</span><span class="bc-tag">REST API</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-5 feat" data-aos="zoom-in" data-aos-delay="240">
-          <span class="bc-num">05</span>
-          <div class="bc-icon"><i class="fa-solid fa-user-tie"></i></div>
-          <h3 class="bc-title">Portfolio Website</h3>
-          <p class="bc-desc">Particles, AOS, EmailJS, SEO, glassmorphism navbar, fully responsive. The site you're on!</p>
-          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">CSS3</span><span class="bc-tag">JavaScript</span><span class="bc-tag">Bootstrap</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-6 dark" data-aos="zoom-in" data-aos-delay="300">
-          <span class="bc-num">06</span>
-          <div class="bc-icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3 class="bc-title">Hotel Website</h3>
-          <p class="bc-desc">Restaurant site with menu, recipes &amp; booking.</p>
-          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">Bootstrap</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-7 dark" data-aos="zoom-in" data-aos-delay="360">
-          <span class="bc-num">07</span>
-          <div class="bc-icon"><i class="fa-solid fa-pen-nib"></i></div>
-          <h3 class="bc-title">Blogger Platform</h3>
-          <p class="bc-desc">Blog with categories, archives &amp; post creation.</p>
-          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">JavaScript</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-8 dark" data-aos="zoom-in" data-aos-delay="420">
-          <span class="bc-num">08</span>
-          <div class="bc-icon"><i class="fa-solid fa-hospital"></i></div>
-          <h3 class="bc-title">Clinic Website</h3>
-          <p class="bc-desc">Healthcare site with appointments &amp; doctor profiles.</p>
-          <div class="bc-tags"><span class="bc-tag">HTML5</span><span class="bc-tag">Bootstrap</span><span class="bc-tag">CSS3</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <div class="bc bc-9" data-aos="zoom-in" data-aos-delay="480">
-          <span class="bc-num">09</span>
-          <div class="bc-icon"><i class="fa-solid fa-calculator"></i></div>
-          <h3 class="bc-title">Utility Tools — BMI, Age &amp; Simple Calculator</h3>
-          <p class="bc-desc">Three standalone JavaScript tools: BMI Calculator with color-coded health guide, Age Calculator with date precision in years/months/days, and a Simple Arithmetic Calculator with keyboard support. All live, zero dependencies, clean UIs.</p>
-          <div class="bc-tags"><span class="bc-tag">JavaScript</span><span class="bc-tag">HTML5</span><span class="bc-tag">CSS3</span><span class="bc-tag">Zero Deps</span><span class="bc-tag">Live Demos</span></div>
-          <div class="bc-arrow">Explore <i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <section class="wall-section" id="sec-wall" aria-labelledby="wallHeading">
     <div class="wall-head" data-aos="fade-up">
       <div class="wall-eyebrow">One More Way To Look</div>
@@ -2991,40 +2482,6 @@
     </div>
     <p class="wall-note">10 snapshots, one shared source of truth — this wall renders straight from the same project data as the grid above.</p>
   </section>
-
-  <section class="desktop-section" id="sec-desktop" aria-labelledby="desktopHeading">
-    <div class="desktop-head" data-aos="fade-up">
-      <div class="desktop-eyebrow">Yet Another Angle</div>
-      <h2 id="desktopHeading">My <span>Desktop</span></h2>
-      <p>Every project, filed like it's sitting on my desktop. Click a file to open it.</p>
-    </div>
-    <div class="os-frame">
-      <div class="os-menubar">
-        <span class="os-logo"><i class="fa-solid fa-terminal" aria-hidden="true"></i> DK OS</span>
-        <span class="os-menu-items">File &nbsp;·&nbsp; Edit &nbsp;·&nbsp; View &nbsp;·&nbsp; Window</span>
-        <span class="os-menubar-right">
-          <span class="os-item-count" id="osItemCount"></span>
-          <span class="os-clock" id="osClock" aria-live="off">--:--</span>
-        </span>
-      </div>
-      <div class="os-desktop">
-        <div class="os-icon-grid" id="osDesktopGrid" role="list" aria-label="Project files"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- reusable "window" — filled per project on click -->
-  <div class="os-window-overlay" id="osWindowOverlay" role="dialog" aria-modal="true" aria-label="Project details window">
-    <div class="os-backdrop" id="osBackdrop"></div>
-    <div class="os-window">
-      <div class="os-window-bar">
-        <span class="os-dot r"></span><span class="os-dot y"></span><span class="os-dot g"></span>
-        <span class="os-window-path" id="osWindowPath">~/Desktop/projects/</span>
-        <button class="os-window-close" id="osWindowClose" aria-label="Close window"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      </div>
-      <div class="os-window-body" id="osWindowBody"></div>
-    </div>
-  </div>
 
   <section class="mood-section" id="sec-mood" aria-labelledby="moodHeading">
     <div class="mood-head" data-aos="fade-up">
@@ -3039,7 +2496,6 @@
       <button class="snav" id="moodPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
       <button class="snav" id="moodNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
-    <p class="mood-note">Photography via Unsplash, chosen to match each project's theme — not literal screenshots.</p>
   </section>
 
   <section class="journey-strip" id="sec-timeline">
@@ -3083,91 +2539,32 @@
     </div>
   </section>
 
-  <section class="testi-section" id="sec-testimonials" aria-labelledby="testiHeading">
-    <div class="testi-head" data-aos="fade-up">
-      <div class="testi-eyebrow">In Their Words</div>
-      <h2 id="testiHeading">What People <em>Say</em></h2>
-      <p>A few words from people I've worked with — swap these in as real feedback comes in.</p>
+  <section class="pindex-section container">
+    <div class="pindex-head" data-aos="fade-up">
+      <div class="pindex-eyebrow">The Complete Catalog</div>
+      <h2><i class="fa-solid fa-list-check"></i> All <span>Projects</span></h2>
+      <p>Complete project portfolio across frontend, tools, and full-stack development — filter by category or just scan the list.</p>
     </div>
-    <div class="slider-wrap">
-      <div class="testi-grid" id="testiSlider">
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">Add a short quote here about working with Dharmendra — what he delivered, how he communicated, or what stood out about the collaboration.</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="60">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">Add a second quote here — a manager, senior dev, or client reference works well. Keep it to two or three sentences.</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="120">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">A LinkedIn recommendation, a message from a client after launch, or feedback from a teammate all work great here.</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="180">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">Something a teammate said about handing off a feature to you, or how a bug got resolved under a deadline, works well here too.</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="240">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">A short note on reliability or communication style — did you hit deadlines, explain trade-offs clearly, ask good questions?</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
-          <span class="testi-card-quote-bg" aria-hidden="true">&rdquo;</span>
-          <span class="testi-placeholder-tag">Sample quote</span>
-          <p class="testi-text">A closing recommendation — would they work with you again, and what would they tell someone considering hiring you?</p>
-          <div class="testi-person">
-            <span class="testi-avatar" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
-            <div class="testi-person-text">
-              <div class="testi-name">[Name]</div>
-              <div class="testi-role">[Role · Company]</div>
-            </div>
-          </div>
-        </div>
+    <div class="pindex-filters" id="pindexFilters" role="tablist" aria-label="Filter projects by category">
+      <button class="pindex-filter active" data-filter="all" role="tab" aria-selected="true">
+        <i class="fa-solid fa-border-all" aria-hidden="true"></i> All <span class="pindex-filter-count" id="pfCountAll"></span>
+      </button>
+      <button class="pindex-filter" data-filter="frontend" role="tab" aria-selected="false">
+        <i class="fa-solid fa-paint-brush" aria-hidden="true"></i> Frontend <span class="pindex-filter-count" id="pfCountFrontend"></span>
+      </button>
+      <button class="pindex-filter" data-filter="full stack" role="tab" aria-selected="false">
+        <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Full Stack <span class="pindex-filter-count" id="pfCountFullstack"></span>
+      </button>
+      <button class="pindex-filter" data-filter="tool" role="tab" aria-selected="false">
+        <i class="fa-solid fa-wrench" aria-hidden="true"></i> Tools <span class="pindex-filter-count" id="pfCountTool"></span>
+      </button>
+    </div>
+    <div class="pindex-list" data-aos="fade-up">
+      <div class="pindex-list-head" aria-hidden="true">
+        <span>#</span><span></span><span>Project</span><span>Category</span><span>Links</span>
       </div>
-    </div>
-    <div class="slider-nav">
-      <button class="snav" id="testiPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="snav" id="testiNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      <div id="pindexRows"></div>
+      <p class="pindex-empty" id="pindexEmpty">No projects in this category yet.</p>
     </div>
   </section>
 
@@ -3213,6 +2610,23 @@
   <a href="index.html#contact" class="mobile-bottom-tab-link">
     <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact Me</span>
   </a>
+</div>
+
+<div class="music-widget" id="musicWidget">
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music" aria-pressed="false" title="Play">
+    <i class="fa-solid fa-play" id="musicToggleIcon" aria-hidden="true"></i>
+  </button>
+
+  <div class="music-panel" id="musicPanel" role="group" aria-label="Music controls">
+    <button class="music-panel-play" id="musicPanelPlay" aria-label="Play or pause background music">
+      <i class="fa-solid fa-play" aria-hidden="true"></i>
+      <i class="fa-solid fa-pause" aria-hidden="true"></i>
+    </button>
+    <div class="music-panel-volume">
+      <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+      <input type="range" id="musicVolume" min="0" max="100" value="50" aria-label="Music volume">
+    </div>
+  </div>
 </div>
 
 <script>
@@ -3281,8 +2695,6 @@ function dragSlider(id) {
   el.addEventListener('touchstart', function (e) { tx = e.touches[0].pageX; ts = el.scrollLeft; }, { passive: true });
   el.addEventListener('touchmove', function (e) { el.scrollLeft = ts - (e.touches[0].pageX - tx) * 1.2; }, { passive: true });
 }
-dragSlider('featSlider');
-dragSlider('frontSlider');
 
 function arrows(prevId, nextId, trackId, cardSelector) {
   var track = document.getElementById(trackId); if (!track) return;
@@ -3298,15 +2710,11 @@ function arrows(prevId, nextId, trackId, cardSelector) {
     if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: cw(), behavior: 'smooth' }); }
   });
 }
-arrows('f1p', 'f1n', 'featSlider', '.feat-card');
-arrows('f2p', 'f2n', 'frontSlider', '.feat-card');
 arrows('moodPrev', 'moodNext', 'moodGrid', '.mood-card');
 dragSlider('moodGrid');
-arrows('testiPrev', 'testiNext', 'testiSlider', '.testi-card');
-dragSlider('testiSlider');
 
-/* AUTO-SLIDE — Featured Work, Frontend Builds, Mood Board, and Testimonials
-   glide smoothly to the next card, then REST there long enough to actually
+/* AUTO-SLIDE — Featured Work, Frontend Builds, and Mood Board glide
+   smoothly to the next card, then REST there long enough to actually
    read it, then glide again. Direction alternates section to section so
    the whole page doesn't feel like it's all flowing the same way.
 
@@ -3403,88 +2811,13 @@ function autoSlideTrack(trackId, cardSelector, direction) {
   start();
   requestAnimationFrame(tick);
 }
-autoSlideTrack('featSlider', '.feat-card', 1);
-autoSlideTrack('frontSlider', '.feat-card', -1);
 /* Mood Board cards render asynchronously (built from DK_PROJECTS by a
    later script block) — defer its autoplay setup to the next tick so
    the cards already exist and scrollWidth is measurable by the time
    this starts. */
 setTimeout(function () { autoSlideTrack('moodGrid', '.mood-card', 1); }, 0);
-autoSlideTrack('testiSlider', '.testi-card', -1);
 
-(function () {
-  var inp = document.getElementById('searchInput');
-  var pills = document.querySelectorAll('.fpill');
-  var cnt = document.getElementById('showCount');
-  var empty = document.getElementById('emptyState');
-  var allCards = Array.from(document.querySelectorAll('[data-cat][data-name]'));
-  var sections = {
-    featured: document.getElementById('sec-featured'),
-    tool: document.getElementById('sec-tools'),
-    frontend: document.getElementById('sec-frontend'),
-    fullstack: document.getElementById('sec-fullstack'),
-    product: document.getElementById('sec-product')
-  };
-  var af = 'all', q = '';
 
-  function catsMatch(filter, sectionKey) {
-    if (filter === 'featured') return true;
-    return filter === sectionKey;
-  }
-
-  function render() {
-    if (af === 'all' && !q) {
-      Object.values(sections).forEach(function (s) { if (s) s.classList.remove('hidden'); });
-      empty.classList.remove('show');
-      cnt.textContent = allCards.length;
-      return;
-    }
-    var map = { featured: false, tool: false, frontend: false, fullstack: false, product: false };
-    var total = 0;
-    allCards.forEach(function (c) {
-      var cats = c.dataset.cat || '';
-      var name = (c.dataset.name || '').toLowerCase();
-      var tags = Array.from(c.querySelectorAll('.tag')).map(function (t) { return t.textContent; }).join(' ').toLowerCase();
-      var matchF = af === 'all' || cats.includes(af);
-      var matchS = !q || name.includes(q) || tags.includes(q);
-      if (matchF && matchS) {
-        total++;
-        Object.keys(map).forEach(function (k) { if (cats.includes(k)) map[k] = true; });
-      }
-    });
-    Object.keys(sections).forEach(function (k) {
-      var s = sections[k]; if (!s) return;
-      var show = map[k];
-      if (af !== 'all') show = show && catsMatch(af, k);
-      s.classList.toggle('hidden', !show);
-    });
-    empty.classList.toggle('show', total === 0);
-    cnt.textContent = total;
-  }
-
-  pills.forEach(function (p) {
-    p.addEventListener('click', function () {
-      pills.forEach(function (x) { x.classList.remove('active'); });
-      p.classList.add('active'); af = p.dataset.filter; render();
-    });
-  });
-  inp.addEventListener('input', function () { q = inp.value.trim().toLowerCase(); render(); });
-  render();
-
-  /* CLICKABLE TAGS — click any tech tag on any card to filter the whole page by it */
-  document.querySelectorAll('.tag').forEach(function (tagEl) {
-    tagEl.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var text = tagEl.textContent.trim();
-      inp.value = text;
-      q = text.toLowerCase();
-      af = 'all';
-      pills.forEach(function (p) { p.classList.toggle('active', p.dataset.filter === 'all'); });
-      render();
-      document.querySelector('.filter-bar')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-})();
 
 (function () {
   var items = document.querySelectorAll('.pacc-item');
@@ -3631,6 +2964,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/dharmendra0107',
     live: 'https://dharmendra0107.github.io/',
     img: 'https://images.unsplash.com/photo-1487523117656-d5d117ad47c5?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/gvidon-spinning-head-271171.mp3',
+    audioTitle: 'Spinning Head — gvidon',
     featured: true
   },
   {
@@ -3642,6 +2977,8 @@ var DK_PROJECTS = [
     repo: null,
     live: null,
     img: 'https://images.unsplash.com/photo-1586880244406-556ebe35f282?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/denys_brodovskyi-sandbreaker-379630.mp3',
+    audioTitle: 'Sandbreaker — Denys Brodovskyi',
     featured: true,
     caseStudy: 'csModal1'
   },
@@ -3654,6 +2991,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/dharmendra0107',
     live: null,
     img: 'https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/denys_brodovskyi-tell-me-what-379638.mp3',
+    audioTitle: 'Tell Me What — Denys Brodovskyi',
     featured: false,
     caseStudy: 'csModal2'
   },
@@ -3666,6 +3005,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/Dharmendra0107/Weather_App',
     live: 'https://dharmendra0107.github.io/Weather_App/',
     img: 'https://images.unsplash.com/photo-1603437873662-dc1f44901825?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/tunetank-vlog-beat-background-349853.mp3',
+    audioTitle: 'Vlog Beat — TuneTank',
     featured: true
   },
   {
@@ -3677,6 +3018,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/Dharmendra0107/Hotel_Web',
     live: 'https://dharmendra0107.github.io/Hotel_Web/',
     img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/producesplatinum-vlog-hip-hop-483574.mp3',
+    audioTitle: 'Vlog Hip Hop — ProducesPlatinum',
     featured: false
   },
   {
@@ -3688,6 +3031,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/Dharmendra0107/Blogger_Website',
     live: 'https://dharmendra0107.github.io/Blogger_Website/',
     img: 'https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/audiocopper-dark-571483.mp3',
+    audioTitle: 'Dark — AudioCopper',
     featured: false
   },
   {
@@ -3699,6 +3044,8 @@ var DK_PROJECTS = [
     repo: 'https://github.com/Dharmendra0107/clinic',
     live: 'https://dharmendra0107.github.io/clinic/',
     img: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=500&h=400&q=70',
+    audio: 'audio/ikoliks_aj-background-music-320427.mp3',
+    audioTitle: 'Background Music — ikoliks_aj',
     featured: false
   },
   {
@@ -3929,116 +3276,6 @@ function buildCard(p, delay) {
   });
 })();
 
-/* MY DESKTOP — icon grid + a single reusable "window" modal, both driven
-   by DK_PROJECTS so this stays in sync with every other section. */
-(function () {
-  var grid = document.getElementById('osDesktopGrid');
-  var overlay = document.getElementById('osWindowOverlay');
-  var body = document.getElementById('osWindowBody');
-  var pathLabel = document.getElementById('osWindowPath');
-  var closeBtn = document.getElementById('osWindowClose');
-  var backdrop = document.getElementById('osBackdrop');
-  if (!grid || typeof DK_PROJECTS === 'undefined') return;
-
-  /* Curated per-project icon + accent color + fake file extension —
-     replaces tag-based guessing, which collapsed almost everything to
-     the same Bootstrap glyph since nearly every project shares that tag.
-     Each project now reads as visually distinct at a glance. */
-  var FILE_META = {
-    'portfolio':    { icon: 'fa-solid fa-user',              color: '#ffc200', ext: '.site' },
-    'laravel-ecom': { icon: 'fa-solid fa-cart-shopping',     color: '#ff8a3d', ext: '.app'  },
-    'quiz-app':     { icon: 'fa-solid fa-clipboard-question', color: '#4dabf7', ext: '.app'  },
-    'weather-app':  { icon: 'fa-solid fa-cloud-sun',          color: '#74c0fc', ext: '.app'  },
-    'hotel-web':    { icon: 'fa-solid fa-bed',                color: '#c084fc', ext: '.site' },
-    'blogger':      { icon: 'fa-solid fa-pen-nib',            color: '#f783ac', ext: '.blog' },
-    'clinic':       { icon: 'fa-solid fa-stethoscope',        color: '#51cf66', ext: '.site' },
-    'travel':       { icon: 'fa-solid fa-plane',              color: '#3bc9db', ext: '.site' },
-    'calculators':  { icon: 'fa-solid fa-calculator',         color: '#ffa94d', ext: '.app'  },
-    'admission':    { icon: 'fa-solid fa-graduation-cap',     color: '#748ffc', ext: '.app'  }
-  };
-  function metaFor(p) {
-    return FILE_META[p.id] || { icon: 'fa-regular fa-folder', color: '#ffc200', ext: '' };
-  }
-
-  function slug(p) { return p.id || p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
-
-  DK_PROJECTS.forEach(function (p, i) {
-    var meta = metaFor(p);
-    var btn = document.createElement('button');
-    btn.className = 'os-icon';
-    btn.type = 'button';
-    btn.setAttribute('role', 'listitem');
-    btn.setAttribute('aria-label', 'Open ' + p.title);
-    btn.setAttribute('data-aos', 'zoom-in');
-    btn.setAttribute('data-aos-delay', String((i % 10) * 40));
-    btn.style.setProperty('--file-accent', meta.color);
-    btn.innerHTML =
-      '<span class="os-icon-glyph">' +
-      (p.featured ? '<i class="fa-solid fa-star os-icon-star" aria-hidden="true"></i>' : '') +
-      '<i class="' + meta.icon + '" aria-hidden="true"></i>' +
-      '<span class="os-icon-badge" aria-hidden="true"><i class="fa-solid fa-file"></i></span>' +
-      '</span>' +
-      '<span class="os-icon-label">' + p.title + '<small class="os-icon-ext">' + meta.ext + '</small></span>';
-    btn.addEventListener('click', function () { openWindow(p); });
-    grid.appendChild(btn);
-  });
-
-  /* Finder/Explorer-style item count next to the clock, for authenticity */
-  var countEl = document.getElementById('osItemCount');
-  if (countEl) countEl.textContent = DK_PROJECTS.length + ' items';
-
-  function openWindow(p) {
-    var tagHTML = (p.tags || []).map(function (t) { return '<span class="project-tag">' + t + '</span>'; }).join('');
-    var actions = '';
-    if (p.caseStudy) {
-      actions += '<button class="btn-proj btn-proj-solid" onclick="openCS(\'' + p.caseStudy + '\')"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Case Study</button>';
-    }
-    if (p.repo) {
-      actions += '<a class="btn-proj ' + (p.caseStudy ? 'btn-proj-outline' : 'btn-proj-solid') + '" href="' + p.repo + '" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code</a>';
-    } else if (!p.caseStudy) {
-      actions += '<span class="btn-proj" style="opacity:.5;cursor:default"><i class="fa-solid fa-lock" aria-hidden="true"></i> Private</span>';
-    }
-    if (p.live) {
-      actions += '<a class="btn-proj btn-proj-outline" href="' + p.live + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>';
-    }
-
-    pathLabel.textContent = '~/Desktop/projects/' + slug(p) + '.app';
-    body.innerHTML =
-      '<img class="os-window-img" src="' + p.img + '" alt="' + p.title + ' screenshot" loading="lazy" onerror="this.src=\'https://placehold.co/640x220/0a0a0a/ffc200?text=' + encodeURIComponent(p.title) + '\'">' +
-      '<div class="os-window-content">' +
-      '<span class="os-window-cat">' + p.cat + '</span>' +
-      '<h3 class="os-window-title">' + p.title + '</h3>' +
-      '<p class="os-window-desc">' + p.desc + '</p>' +
-      '<div class="os-window-tags">' + tagHTML + '</div>' +
-      '<div class="os-window-actions">' + actions + '</div>' +
-      '</div>';
-
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    dkFocusTrap.activate(overlay.querySelector('.os-window'));
-  }
-
-  function closeWindow() {
-    if (!overlay.classList.contains('open')) return;
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    dkFocusTrap.deactivate();
-  }
-
-  closeBtn.addEventListener('click', closeWindow);
-  backdrop.addEventListener('click', closeWindow);
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeWindow(); });
-
-  /* live menu-bar clock — a small authentic touch, updates every 30s */
-  var clockEl = document.getElementById('osClock');
-  if (clockEl) {
-    function tick() {
-      clockEl.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    }
-    tick();
-    setInterval(tick, 30000);
-  }
-})();
 
 /* MOOD BOARD — real photography standing in for each project's theme
    (not screenshots). Renders from the same DK_PROJECTS array, reusing
@@ -4230,12 +3467,17 @@ function buildCard(p, delay) {
 
 /* NOW PLAYING — projects as a music playlist. Renders from DK_PROJECTS;
    thumbnails and "album art" reuse p.img (the same Unsplash photos used
-   everywhere else on the page). */
+   everywhere else on the page). Capped at 7 tracks — one per uploaded
+   royalty-free audio file. */
 (function () {
   var list = document.getElementById('playlistList');
   if (!list || typeof DK_PROJECTS === 'undefined') return;
+  var PLAYLIST_TRACKS = DK_PROJECTS.slice(0, 7);
+  var countEl = document.getElementById('playlistCount');
+  if (countEl) countEl.textContent = PLAYLIST_TRACKS.length + ' tracks';
 
   var artEl = document.getElementById('npArt');
+  var artWrapEl = document.getElementById('npArtWrap');
   var catEl = document.getElementById('npCat');
   var titleEl = document.getElementById('npTitle');
   var eqEl = document.getElementById('npEq');
@@ -4248,7 +3490,7 @@ function buildCard(p, delay) {
   var current = 0;
   var playing = false;
 
-  DK_PROJECTS.forEach(function (p, i) {
+  PLAYLIST_TRACKS.forEach(function (p, i) {
     var row = document.createElement('button');
     row.type = 'button';
     row.className = 'track-row';
@@ -4260,7 +3502,8 @@ function buildCard(p, delay) {
       '<span class="track-num">' + String(i + 1).padStart(2, '0') + '</span>' +
       '<span class="track-thumb"><img src="' + p.img + '" alt="" loading="lazy"></span>' +
       '<span class="track-info"><span class="track-title">' + p.title + '</span><span class="track-cat">' + p.cat + '</span></span>' +
-      '<i class="fa-solid fa-play track-play-icon" aria-hidden="true"></i>';
+      '<i class="fa-solid fa-play track-play-icon" aria-hidden="true"></i>' +
+      '<span class="track-eq" aria-hidden="true"><span></span><span></span><span></span></span>';
     row.addEventListener('click', function () { load(i, true); });
     list.appendChild(row);
     rows.push(row);
@@ -4268,7 +3511,7 @@ function buildCard(p, delay) {
 
   function load(i, scrollIntoView) {
     current = i;
-    var p = DK_PROJECTS[i];
+    var p = PLAYLIST_TRACKS[i];
 
     rows.forEach(function (r, idx) { r.classList.toggle('active', idx === i); });
     /* only nudge the row into view for an actual user pick — calling this
@@ -4290,22 +3533,167 @@ function buildCard(p, delay) {
     else if (!p.caseStudy) actions += '<span class="btn-proj" style="opacity:.5;cursor:default"><i class="fa-solid fa-lock" aria-hidden="true"></i> Private</span>';
     if (p.live) actions += '<a class="btn-proj btn-proj-outline" href="' + p.live + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>';
     actionsEl.innerHTML = actions;
+
+    /* swap in this track's real audio — each project plays a genuinely
+       different royalty-free instrumental, not just a shared loop */
+    if (audioEl && p.audio) {
+      var wasPlaying = playing;
+      audioEl.pause();
+      if (progressFillEl) progressFillEl.style.width = '0%';
+      if (audioNoteEl) audioNoteEl.textContent = '🎧 ' + (p.audioTitle || 'Royalty-free instrumental') + ' — hit play';
+      audioEl.src = p.audio;
+      audioEl.load();
+      if (wasPlaying) {
+        audioEl.play().catch(function () {
+          if (audioNoteEl) audioNoteEl.textContent = '⚠️ Couldn\'t play this track — try again';
+          setPlaying(false);
+        });
+      }
+    }
   }
+
+  /* Real audio playback — each track in the list plays its own royalty-free
+     instrumental (swapped in by load() above), not a single shared loop.
+     Play/Pause controls actual sound; the equalizer, spinning ring, and
+     progress bar all reflect genuine playback state via audio events. */
+  var audioEl = document.getElementById('npAudio');
+  var progressFillEl = document.getElementById('npProgressFill');
+  var audioNoteEl = document.getElementById('npAudioNote');
 
   function setPlaying(v) {
     playing = v;
     eqEl.classList.toggle('playing', playing);
+    if (artWrapEl) artWrapEl.classList.toggle('playing', playing);
     playBtn.setAttribute('aria-pressed', String(playing));
     playBtn.innerHTML = playing
       ? '<i class="fa-solid fa-pause" aria-hidden="true"></i>'
       : '<i class="fa-solid fa-play" aria-hidden="true"></i>';
   }
 
-  playBtn.addEventListener('click', function () { setPlaying(!playing); });
-  prevBtn.addEventListener('click', function () { load((current - 1 + DK_PROJECTS.length) % DK_PROJECTS.length, true); });
-  nextBtn.addEventListener('click', function () { load((current + 1) % DK_PROJECTS.length, true); });
+  if (audioEl) {
+    audioEl.volume = 0.5;
+    audioEl.addEventListener('play', function () { setPlaying(true); });
+    audioEl.addEventListener('pause', function () { setPlaying(false); });
+    audioEl.addEventListener('timeupdate', function () {
+      if (!progressFillEl || !audioEl.duration || isNaN(audioEl.duration)) return;
+      progressFillEl.style.width = (audioEl.currentTime / audioEl.duration * 100) + '%';
+    });
+
+    /* Simple, direct play/pause toggle — no autoplay tricks. The visitor
+       clicks Play, the browser treats that as a genuine user gesture, and
+       playback just works. This mirrors the minimal test that was
+       confirmed working, rather than the more fragile auto-start chain
+       we had before. */
+    playBtn.addEventListener('click', function () {
+      if (audioEl.paused) {
+        if (!audioEl.src) audioEl.src = PLAYLIST_TRACKS[current].audio;
+        audioEl.play().catch(function () {
+          if (audioNoteEl) audioNoteEl.textContent = '⚠️ Couldn\'t play this track — try again';
+          setPlaying(false);
+        });
+      } else {
+        audioEl.pause();
+      }
+    });
+  } else {
+    playBtn.addEventListener('click', function () { setPlaying(!playing); });
+  }
+
+  prevBtn.addEventListener('click', function () { load((current - 1 + PLAYLIST_TRACKS.length) % PLAYLIST_TRACKS.length, true); });
+  nextBtn.addEventListener('click', function () { load((current + 1) % PLAYLIST_TRACKS.length, true); });
 
   load(0, false);
+
+  /* Autoplay by default — plays automatically once the first track is
+     loaded, with a muted fallback for browsers that block audible
+     autoplay outright. The visitor can pause any time via either play
+     button; an explicit pause is remembered across visits. */
+  if (audioEl) {
+    var wantsPlay = true;
+    try {
+      var savedPref = localStorage.getItem('dkProjectMusicOn');
+      if (savedPref !== null) wantsPlay = savedPref === '1';
+    } catch (err) {}
+
+    if (wantsPlay) {
+      audioEl.play().catch(function () {
+        audioEl.muted = true;
+        audioEl.play().catch(function () { /* fully blocked — manual play still works */ });
+      });
+    }
+
+    audioEl.addEventListener('play', function () {
+      try { localStorage.setItem('dkProjectMusicOn', '1'); } catch (err) {}
+    });
+    audioEl.addEventListener('pause', function () {
+      try { localStorage.setItem('dkProjectMusicOn', '0'); } catch (err) {}
+    });
+  }
+
+  /* FLOATING MUSIC WIDGET — same hover-expandable UI as the homepage:
+     main button plays/pauses the current playlist track, hovering
+     reveals a panel with a duplicate play/pause button and a volume
+     slider. All wired to the same "Now Playing" audio element and
+     playing state already managed above, so it always stays in sync
+     with the in-page player controls. */
+  var musicWidget = document.getElementById('musicWidget');
+  var musicToggle = document.getElementById('musicToggle');
+  var musicToggleIcon = document.getElementById('musicToggleIcon');
+  var musicPanelPlay = document.getElementById('musicPanelPlay');
+  var musicVolumeSlider = document.getElementById('musicVolume');
+
+  function syncMusicWidget() {
+    if (!musicToggle || !audioEl) return;
+    var isPlaying = !audioEl.paused;
+    musicToggle.classList.toggle('playing', isPlaying);
+    musicToggle.setAttribute('aria-pressed', String(isPlaying));
+    musicToggle.setAttribute('aria-label', isPlaying ? 'Pause background music' : 'Play background music');
+    musicToggle.title = isPlaying ? 'Pause' : 'Play';
+    if (musicToggleIcon) {
+      musicToggleIcon.className = isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+    }
+    if (musicPanelPlay) {
+      musicPanelPlay.setAttribute('aria-label', isPlaying ? 'Pause background music' : 'Play background music');
+    }
+  }
+
+  function toggleWidgetPlay() {
+    if (!audioEl) return;
+    if (audioEl.paused) {
+      audioEl.play().catch(function () {
+        if (audioNoteEl) audioNoteEl.textContent = '⚠️ Couldn\'t play this track — try again';
+      });
+    } else {
+      audioEl.pause();
+    }
+  }
+
+  if (musicToggle && audioEl) {
+    musicToggle.addEventListener('click', toggleWidgetPlay);
+    if (musicPanelPlay) musicPanelPlay.addEventListener('click', toggleWidgetPlay);
+
+    if (musicVolumeSlider) {
+      audioEl.volume = musicVolumeSlider.value / 100;
+      musicVolumeSlider.addEventListener('input', function () {
+        audioEl.volume = musicVolumeSlider.value / 100;
+      });
+    }
+
+    audioEl.addEventListener('play', syncMusicWidget);
+    audioEl.addEventListener('pause', syncMusicWidget);
+    syncMusicWidget();
+
+    /* Touch devices have no hover — tapping the main button also pops
+       the panel open, closing again on an outside tap. */
+    musicToggle.addEventListener('click', function () {
+      musicWidget.classList.add('widget-open');
+    });
+    document.addEventListener('click', function (e) {
+      if (musicWidget && !musicWidget.contains(e.target)) {
+        musicWidget.classList.remove('widget-open');
+      }
+    });
+  }
 })();
 
 (function fetchStars() {
@@ -4494,19 +3882,12 @@ document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { ['
     { section: 'Sections', label: 'GitHub Activity',   sub: 'Live contribution graph', icon: 'fab fa-github',        action: function () { scrollToId('sec-github'); } },
     { section: 'Sections', label: 'Quick Look',         sub: 'Story-style viewer',      icon: 'fa-solid fa-circle-play', action: function () { scrollToId('sec-stories'); } },
     { section: 'Sections', label: 'Now Playing',        sub: 'Project playlist',        icon: 'fa-solid fa-music',      action: function () { scrollToId('sec-playlist'); } },
-    { section: 'Sections', label: 'Featured Work',    sub: 'Slider · top of page',   icon: 'fa-solid fa-star',       action: function () { scrollToId('sec-featured'); } },
-    { section: 'Sections', label: 'Utility Tools',     sub: 'Bento grid',             icon: 'fa-solid fa-wrench',     action: function () { scrollToId('sec-tools'); } },
-    { section: 'Sections', label: 'Frontend Builds',   sub: 'Slider',                 icon: 'fa-solid fa-paint-brush',action: function () { scrollToId('sec-frontend'); } },
-    { section: 'Sections', label: 'Full Stack Systems',sub: 'Magazine layout',        icon: 'fa-solid fa-gears',      action: function () { scrollToId('sec-fullstack'); } },
     { section: 'Sections', label: 'Products',          sub: 'Accordion — client/OSS/SaaS', icon: 'fa-solid fa-box',   action: function () { scrollToId('sec-product'); } },
     { section: 'Sections', label: 'Featured & All Projects', sub: 'Classic grid',      icon: 'fa-solid fa-grip',       action: function () { scrollToId('sec-classic'); } },
     { section: 'Sections', label: 'Take a Closer Look', sub: 'Filmstrip / mobile cards', icon: 'fa-solid fa-film',     action: function () { scrollToId('sec-filmstrip'); } },
-    { section: 'Sections', label: 'All Projects at a Glance', sub: 'Bento overview',   icon: 'fa-solid fa-table-cells',action: function () { scrollToId('sec-glance'); } },
     { section: 'Sections', label: 'Project Corkboard', sub: 'Pinned snapshots',        icon: 'fa-solid fa-thumbtack',  action: function () { scrollToId('sec-wall'); } },
-    { section: 'Sections', label: 'My Desktop',        sub: 'Click a file to open',    icon: 'fa-solid fa-desktop',    action: function () { scrollToId('sec-desktop'); } },
     { section: 'Sections', label: 'Mood Board',         sub: 'Cinematic photo cards',   icon: 'fa-solid fa-image',      action: function () { scrollToId('sec-mood'); } },
     { section: 'Sections', label: 'How I Build',       sub: 'Process timeline',        icon: 'fa-solid fa-timeline',   action: function () { scrollToId('sec-timeline'); } },
-    { section: 'Sections', label: 'Testimonials',      sub: 'What people say',         icon: 'fa-solid fa-comment-dots', action: function () { scrollToId('sec-testimonials'); } },
     { section: 'Case Studies', label: 'Laravel E-Commerce', sub: 'Full case study',    icon: 'fa-solid fa-book-open',  action: function () { openCS('csModal1'); } },
     { section: 'Case Studies', label: 'Quiz App MERN', sub: 'Full case study',         icon: 'fa-solid fa-book-open',  action: function () { openCS('csModal2'); } },
     { section: 'Actions', label: 'Back to Home',        sub: 'index.html',             icon: 'fa-solid fa-house',      action: function () { window.location.href = 'index.html'; } },
@@ -4572,5 +3953,6 @@ document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { ['
   if (backdrop) backdrop.addEventListener('click', closeCmd);
 })();
 </script>
+
 </body>
 </html>
